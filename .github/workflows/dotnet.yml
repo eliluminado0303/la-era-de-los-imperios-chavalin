@@ -1,28 +1,11 @@
-# This workflow will build a .NET project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
-
 name: .NET
 
+# This repository is a Unity project, not a standalone .NET project.
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  workflow_dispatch:
 
 jobs:
-  build:
-
+  disabled:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v4
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: 8.0.x
-    - name: Restore dependencies
-      run: dotnet restore ./la-era-de-los-imperios-chavalin
-    - name: Build
-      run: dotnet build ./la-era-de-los-imperios-chavalin --no-restore
-    - name: Test
-      run: dotnet test ./la-era-de-los-imperios-chavalin --no-build --verbosity normal
+      - run: echo "The Unity workflow is used for this repository."
