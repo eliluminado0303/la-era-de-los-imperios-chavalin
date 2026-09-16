@@ -1,4 +1,6 @@
-using System;   
+using System;
+using UnityEngine;
+   
 
 public class Unidad {
     public int Vida;
@@ -26,7 +28,7 @@ public class Unidad {
     {
         if (Esquivar())
         {
-            Debug.WriteLine($"{Civilizacion}: esquivó el ataque :o");
+            UnityEngine.Debug.Log($"{Civilizacion}: esquivó el ataque :o");
             return;
         }
         Vida -= Math.Max(0, daño - Defensa);
@@ -37,7 +39,7 @@ public class Unidad {
         if (EsCritico())
         {
             daño *= multiplicadorCritico;
-            Debug.WriteLine($"{Civilizacion}: hizo un golpe crítico!");
+            UnityEngine.Debug.Log($"{Civilizacion}: hizo un golpe crítico!");
         }
         objetivo.RecibirDaño(daño);
 
