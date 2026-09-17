@@ -1,5 +1,7 @@
+/// <summary>Unidad ofensiva exclusiva de la civilización Vikingos.</summary>
 public class Berserker: Unidad
 {
+    /// <summary>Inicializa las estadísticas del berserker.</summary>
      public Berserker()
     {
         Vida = 125;

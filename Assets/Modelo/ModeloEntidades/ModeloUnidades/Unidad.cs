@@ -1,20 +1,28 @@
 using System;
-using UnityEngine;
-   
 
+/// <summary>Clase base para las unidades que participan en combate.</summary>
 public class Unidad {
+    /// <summary>Puntos de vida actuales.</summary>
     public int Vida;
+    /// <summary>Daño base de los ataques.</summary>
     public int Ataque;
+    /// <summary>Defensa que reduce el daño recibido.</summary>
     public int Defensa;
+    /// <summary>Velocidad de desplazamiento.</summary>
     public int Velocidad;
+    /// <summary>Distancia máxima de ataque.</summary>
     public int Rango;
+    /// <summary>Civilización propietaria.</summary>
     public string Civilizacion;
 
-    // cada clase elije como modificar estos stats
+    /// <summary>Probabilidad de evitar un ataque.</summary>
     protected float ProbabilidadEsquivar;
+    /// <summary>Probabilidad de realizar un golpe crítico.</summary>
     protected float ProbabilidadCritico;
+    /// <summary>Multiplicador aplicado al daño crítico.</summary>
     protected float multiplicadorCritico;
     
+    /// <summary>Determina si la unidad esquiva el ataque.</summary>
     protected virtual bool Esquivar()
     {
         return UnityEngine.Random.value < ProbabilidadEsquivar;
@@ -46,3 +54,6 @@ public class Unidad {
     }
    
 }
+    /// <summary>Determina si el ataque actual es crítico.</summary>
+    /// <summary>Aplica daño teniendo en cuenta esquiva y defensa.</summary>
+    /// <summary>Ataca a la unidad objetivo.</summary>

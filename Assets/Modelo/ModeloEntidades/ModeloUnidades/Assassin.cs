@@ -1,6 +1,9 @@
 using System;   
+
+/// <summary>Unidad ofensiva exclusiva de la civilización Nipones.</summary>
 public class Assassin: Unidad
 {
+    /// <summary>Inicializa las estadísticas del asesino.</summary>
     public Assassin()
     {
         Vida = 75;

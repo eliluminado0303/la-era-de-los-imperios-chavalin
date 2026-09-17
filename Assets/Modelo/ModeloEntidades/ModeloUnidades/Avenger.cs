@@ -1,6 +1,7 @@
+/// <summary>Unidad defensiva exclusiva de la civilización Griegos.</summary>
 public class Avenger : Unidad
 {
-
+    /// <summary>Inicializa las estadísticas del vengador.</summary>
     public Avenger()
     {
         Vida = 175;
