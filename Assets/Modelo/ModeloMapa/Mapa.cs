@@ -123,4 +123,25 @@ public class Mapa
 
         return true;
     }
+    public bool MoverUnidad(int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino) {
+    if (!EsPosicionValida(filaOrigen, columnaOrigen) || !EsPosicionValida(filaDestino, columnaDestino)) {
+        return false;
+    }
+
+    Celda origen = celdas[filaOrigen, columnaOrigen];
+    Celda destino = celdas[filaDestino, columnaDestino];
+
+    if (origen.Unidad == null) {
+        return false;
+    }
+
+    if (destino.Unidad != null || destino.Edificio != null) {
+        return false;
+    }
+
+    destino.Unidad = origen.Unidad;
+    origen.Unidad = null;
+
+    return true;
+}
 }

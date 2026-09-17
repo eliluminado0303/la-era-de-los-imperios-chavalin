@@ -6,7 +6,7 @@ public class GestorRecoleccion {
     public ConcurrentQueue<ResultadoRecoleccion> ResultadosPendientes { get; private set; }
 
     private readonly object candadoRecursos = new object();
-
+    private readonly GestorArchivos gestorArchivos = new GestorArchivos();
     public GestorRecoleccion() {
         ResultadosPendientes = new ConcurrentQueue<ResultadoRecoleccion>();
     }
@@ -36,6 +36,10 @@ public class GestorRecoleccion {
         jugador.AgregarRecurso(recurso.Tipo, cantidadObtenida);
 
         aldeano.Ocupado = false;
+        gestorArchivos.RegistrarEvento(
+    jugador.Nombre,
+    "Recoleccion",
+    $"{aldeano.Nombre} recolecto {cantidadObtenida} de {recurso.Tipo}");
 
         
         ResultadosPendientes.Enqueue(new ResultadoRecoleccion {

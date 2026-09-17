@@ -5,7 +5,7 @@ public class GestorConstruccion {
 
     public ConcurrentQueue<ResultadoConstruccion> ResultadosPendientes { get; private set; }
     private readonly object candadoMapa = new object();
-
+    private readonly GestorArchivos gestorArchivos = new GestorArchivos();
     public GestorConstruccion() {
         ResultadosPendientes = new ConcurrentQueue<ResultadoConstruccion>();
     }
@@ -40,6 +40,10 @@ public class GestorConstruccion {
         if (colocado) {
             jugador.AgregarEdificio(edificio);
         }
+        gestorArchivos.RegistrarEvento(
+        jugador.Nombre,
+        "Construccion",
+        colocado ? $"{edificio.Nombre} construido en ({fila},{columna})" : "Construccion fallida: celda ocupada");
 
         ResultadosPendientes.Enqueue(new ResultadoConstruccion {
             NombreEdificio = edificio.Nombre,
