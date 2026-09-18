@@ -12,7 +12,7 @@ public class GestorRecoleccion {
     }
 
     public void IniciarRecoleccion(Aldeano aldeano, Recurso recurso, Jugador jugador) {
-        if (aldeano.Ocupado) {
+        if (aldeano.Ocupado || aldeano.EstaEscondido) {
             return;
         }
 
