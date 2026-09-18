@@ -149,4 +149,31 @@ public class Ralentizado : EfectoEstado
         objetivo.Velocidad -= cantidadReal;
     }
     public override void OnExpirar(Unidad objetivo) => objetivo.Velocidad += cantidadReal;
+
+    public class Bendicion : EfectoEstado
+{
+    private int deltaAtaque;
+    private int deltaDefensa;
+
+    public Bendicion(int deltaAtaque, int deltaDefensa, float duracion)
+        : base("Bendicion", duracion, duracion)
+    {
+        this.deltaAtaque = deltaAtaque;
+        this.deltaDefensa = deltaDefensa;
+    }
+
+    protected override void AplicarTick(Unidad objetivo) { }
+
+    public override void OnAplicar(Unidad objetivo)
+    {
+        objetivo.Ataque += deltaAtaque;
+        objetivo.Defensa += deltaDefensa;
+    }
+
+    public override void OnExpirar(Unidad objetivo)
+    {
+        objetivo.Ataque -= deltaAtaque;
+        objetivo.Defensa -= deltaDefensa;
+    }
+}
 }

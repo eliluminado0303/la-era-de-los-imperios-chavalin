@@ -15,6 +15,10 @@ public class Unidad
     protected float ProbabilidadEsquivar;
     protected float ProbabilidadCritico;
     protected float multiplicadorCritico;
+    // En Unidad, junto a los demás campos:
+    public int CostoOro { get; protected set; }
+    public int CostoMadera { get; protected set; }
+    public int CostoComida { get; protected set; }
 
     private List<EfectoEstado> efectos = new List<EfectoEstado>();
 
@@ -39,10 +43,10 @@ public class Unidad
     public void RecibirAtaqueEspecial(float daño, bool ignorarDefensa = false)
         => RecibirDaño(daño, ignorarDefensa);
 
-    /// <summary>Se dispara una vez cuando la unidad llega a cero de vida.</summary>
+    // Se dispara una vez cuando la unidad llega a cero de vida.
     public event Action<Unidad> Muerte;
 
-    /// <summary>Notifica la muerte de la unidad a los sistemas suscritos.</summary>
+    // Notifica la muerte de la unidad a los sistemas suscritos.
     protected virtual void AlMorir() => Muerte?.Invoke(this);
 
     public virtual void Atacar(Unidad objetivo)
@@ -56,10 +60,8 @@ public class Unidad
         AplicarEfectoAlGolpear(objetivo);
     }
 
-    /// <summary>
-    /// Ejecuta el ataque básico contra todos los objetivos recibidos.
-    /// Las unidades normales mantienen un ataque individual por objetivo.
-    /// </summary>
+    // Ejecuta el ataque básico contra todos los objetivos recibidos.
+    // Las unidades normales mantienen un ataque individual por objetivo.
     public virtual void Atacar(List<Unidad> objetivos)
     {
         if (objetivos == null) throw new ArgumentNullException(nameof(objetivos));
@@ -91,4 +93,15 @@ public class Unidad
     }
 
     public bool EstaAturdido => efectos.Exists(e => e is Aturdimiento);
+    
+    // En Unidad — necesarios para que la curación tenga sentido:
+    public void RecibirCuracion(float cantidad)
+    {
+    Vida = Math.Min(VidaMaxima, Vida + (int)cantidad);
+    }
+
+    public bool TieneCuracionReducida => efectos.Exists(e => e is Quemadura);
+
+    // Gancho opcional, igual que HabilidadEspecial — vacío por defecto, solo Healer lo llena
+    public virtual void Curar(Unidad objetivo) { }
 }

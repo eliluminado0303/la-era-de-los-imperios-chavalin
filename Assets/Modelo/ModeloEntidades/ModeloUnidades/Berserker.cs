@@ -1,4 +1,4 @@
-/// <summary>Unidad ofensiva exclusiva de la civilización Vikingos.</summary>
+// Unidad ofensiva exclusiva de la civilización Vikingos.
 public class Berserker : Unidad
 {
     private bool furiaActiva = false;
@@ -17,7 +17,10 @@ public class Berserker : Unidad
         Civilizacion = "Vikingos";
         ProbabilidadEsquivar = 0f; 
         ProbabilidadCritico = 0.35f; 
-        multiplicadorCritico = 1.5f;
+        multiplicadorCritico = 1.5f; 
+        CostoOro = 100;
+        CostoMadera = 50;
+        CostoComida = 25;
 
         ataqueOriginal = Ataque;
         velocidadOriginal = Velocidad;

@@ -1,24 +1,27 @@
 using System;
 
-/// <summary>Representa una unidad civil encargada de recolectar un recurso.</summary>
+// Representa una unidad civil encargada de recolectar un recurso.
 public class Aldeano
 {
-    /// <summary>Nombre identificador del aldeano.</summary>
+    // Nombre identificador del aldeano.
     public string Nombre;
-    /// <summary>Civilización a la que pertenece.</summary>
+    // Civilización a la que pertenece.
     public string Civilizacion;
-    /// <summary>Velocidad de movimiento del aldeano.</summary>
+    // Velocidad de movimiento del aldeano.
     public float Velocidad;
+    public int CostoOro = 25;
+    public int CostoMadera = 0;
+    public int CostoComida = 30;
 
-    /// <summary>Nombre del recurso que recolecta.</summary>
+    // Nombre del recurso que recolecta.
     public string TipoRecurso;
-    /// <summary>Cantidad producida en cada ciclo de recolección.</summary>
+    // Cantidad producida en cada ciclo de recolección.
     public float CantidadPorTick;
 
-    /// <summary>Indica si el aldeano está oculto y no puede recolectar.</summary>
+    // Indica si el aldeano está oculto y no puede recolectar.
     public bool EstaEscondido = false;
 
-    /// <summary>Crea un aldeano con sus estadísticas de recolección.</summary>
+    // Crea un aldeano con sus estadísticas de recolección.
     public Aldeano(string nombre, string civilizacion, float velocidad, string tipoRecurso, float cantidadPorTick)
     {
         Nombre = nombre;
@@ -28,20 +31,20 @@ public class Aldeano
         CantidadPorTick = cantidadPorTick;
     }
 
-    /// <summary>Oculta al aldeano y detiene su producción.</summary>
+    // Oculta al aldeano y detiene su producción.
     public void Esconder()
     {
         EstaEscondido = true;
         Console.WriteLine($"{Nombre} se escondió.");
     }
 
-    /// <summary>Hace que el aldeano vuelva a estar disponible.</summary>
+    // Hace que el aldeano vuelva a estar disponible.
     public void Salir()
     {
         EstaEscondido = false;
     }
 
-    /// <summary>Calcula la producción de un ciclo de recolección.</summary>
+    // Calcula la producción de un ciclo de recolección.
     public float RecolectarTick()
     {
         if (EstaEscondido) return 0;

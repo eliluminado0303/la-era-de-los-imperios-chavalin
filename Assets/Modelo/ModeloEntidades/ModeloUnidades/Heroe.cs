@@ -3,6 +3,7 @@ using System.Collections.Generic;
 public abstract class Heroe : Unidad
 {
     public abstract override void HabilidadEspecial(List<Unidad> objetivos);
+    public AreaEfecto AreaHabilidad { get; protected set; }
 }
 
 public class Gilgamesh : Heroe
@@ -18,6 +19,10 @@ public class Gilgamesh : Heroe
         ProbabilidadEsquivar = 0f; 
         ProbabilidadCritico = 0.35f; 
         multiplicadorCritico = 2f;
+        CostoOro = 100;
+        CostoMadera = 50;
+        CostoComida = 25;
+        AreaHabilidad = new AreaEfecto(FormaArea.Circulo, rangoLanzamiento: 3f, tamaño: 3.5f);
     }
 
     // Enuma Elish: área que IGNORA defensa
@@ -43,12 +48,16 @@ public class Godzilla : Heroe
         ProbabilidadEsquivar = 0.30f; 
         ProbabilidadCritico = 0.30f; 
         multiplicadorCritico = 2.5f;
+        CostoOro = 100;
+        CostoMadera = 50;
+        CostoComida = 25;
+        AreaAtaqueBasico = new AreaEfecto(FormaArea.Circulo, rangoLanzamiento: 0f, tamaño: 2.5f);
+        AreaHabilidad    = new AreaEfecto(FormaArea.Linea, rangoLanzamiento: 0f, tamaño: 9f, ancho: 1.5f);
+
     }
 
-    /// <summary>
-    /// Ataque básico en área: el rayo atómico golpea a cada objetivo
-    /// usando el daño y la probabilidad de crítico normales.
-    /// </summary>
+    // Ataque básico en área: el rayo atómico golpea a cada objetivo
+    // usando el daño y la probabilidad de crítico normales.
     public override void Atacar(List<Unidad> objetivos)
     {
         if (objetivos == null) throw new System.ArgumentNullException(nameof(objetivos));
@@ -66,6 +75,7 @@ public class Godzilla : Heroe
     // Rayo atómico: área que ASEGURA crítico (pero sí respeta Defensa/Esquivar de cada objetivo)
     public override void HabilidadEspecial(List<Unidad> objetivos)
     {
+        
         float daño = Ataque * 1.5f * multiplicadorCritico;
         foreach (var objetivo in objetivos)
             objetivo.RecibirAtaqueEspecial(daño);
@@ -86,12 +96,15 @@ public class Jormungandr : Heroe
         ProbabilidadEsquivar = 0.15f; 
         ProbabilidadCritico = 0.25f; 
         multiplicadorCritico = 2f;
+        CostoOro = 100;
+        CostoMadera = 50;
+        CostoComida = 25;
+        AreaAtaqueBasico = new AreaEfecto(FormaArea.Circulo, rangoLanzamiento: 0f, tamaño: 2f);
+        AreaHabilidad    = new AreaEfecto(FormaArea.Circulo, rangoLanzamiento: 4f, tamaño: 3f);
     }
 
-    /// <summary>
-    /// Ataque básico en área: la embestida golpea individualmente a todos
-    /// los objetivos, aplicando el daño normal y sus críticos habituales.
-    /// </summary>
+    // Ataque básico en área: la embestida golpea individualmente a todos
+    // los objetivos, aplicando el daño normal y sus críticos habituales.
     public override void Atacar(List<Unidad> objetivos)
     {
         if (objetivos == null) throw new System.ArgumentNullException(nameof(objetivos));
@@ -132,8 +145,12 @@ public class Medusa : Heroe
         Rango = 1; 
         Civilizacion = "Griegos";
         ProbabilidadEsquivar = 0.30f; 
-        ProbabilidadCritico = 0.25f; 
+        ProbabilidadCritico = 0.30f; 
         multiplicadorCritico = 2f;
+        AreaHabilidad = new AreaEfecto(FormaArea.Circulo, rangoLanzamiento: 4f, tamaño: 2.5f);
+        CostoOro = 100;
+        CostoMadera = 50;
+        CostoComida = 25;
     }
 
     protected override void AplicarEfectoAlGolpear(Unidad objetivo)

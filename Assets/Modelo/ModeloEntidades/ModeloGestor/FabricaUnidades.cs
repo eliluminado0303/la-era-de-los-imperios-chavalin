@@ -1,13 +1,10 @@
 using System;
 
-/// <summary>Crea unidades a partir de su tipo y civilización.</summary>
+// Crea unidades a partir de su tipo y civilización.
 public static class FabricaUnidades
 {
-    /// <summary>
-    /// Crea una unidad válida para la civilización indicada.
-    /// </summary>
-    /// <exception cref="ArgumentException">El tipo de unidad no existe.</exception>
-    /// <exception cref="InvalidOperationException">La unidad no pertenece a la civilización.</exception>
+    // Crea una unidad válida para la civilización indicada.
+    // Lanza una excepción si el tipo no existe o no pertenece a la civilización.
     public static Unidad Crear(string tipoUnidad, string civilizacion)
     {
         switch (tipoUnidad)

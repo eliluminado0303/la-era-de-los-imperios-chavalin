@@ -50,4 +50,37 @@ public class Edificio
             if (progresoConstruccion >= 100) { estaConstruido = true; Console.WriteLine($"{Nombre} terminado."); }
         }
     }
+
+    
+    public class EdificioPrincipal : Edificio
+    {
+    public EdificioPrincipal(string civilizacion, int costoOro, int costoMadera, int costoComida)
+        : base("Principal", civilizacion, vidaMaxima: 500, defensa: 30, costoOro, costoMadera, costoComida)
+    {
+    }
+
+    public bool ProducirAldeano(Jugador jugador, GestorEntrenamiento gestor)
+    {
+        if (!EstaConstruido) return false; // no puede producir nada mientras se sigue construyendo
+        return gestor.EntrenarAldeano(jugador, Civilizacion);
+    }
+    }
+
+    public class EdificioEntrenamiento : Edificio
+    {
+    public List<string> UnidadesDisponibles { get; private set; }
+
+    public EdificioEntrenamiento(string civilizacion, int costoOro, int costoMadera, int costoComida, List<string> unidadesDisponibles)
+        : base("Entrenamiento", civilizacion, vidaMaxima: 200, defensa: 10, costoOro, costoMadera, costoComida)
+    {
+        UnidadesDisponibles = unidadesDisponibles;
+    }
+
+    public bool ProducirUnidad(Jugador jugador, GestorEntrenamiento gestor, string tipoUnidad)
+    {
+        if (!EstaConstruido) return false;
+        if (!UnidadesDisponibles.Contains(tipoUnidad)) return false; // solo entrena lo que tiene habilitado
+        return gestor.EntrenarUnidad(jugador, tipoUnidad, Civilizacion);
+    }
+    }
 }

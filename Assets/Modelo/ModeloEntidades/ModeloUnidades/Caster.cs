@@ -1,10 +1,11 @@
-/// <summary>Unidad a distancia exclusiva de la civilización Sumerios.</summary>
+// Unidad a distancia exclusiva de la civilización Sumerios.
 public class Caster : Unidad
 {
     private float probabilidadQuemadura = 0.25f;
 
     // Radio de área para el básico. 0 = ataque normal de un solo objetivo.
-    public float RadioAreaAtaque { get; private set; }
+    public AreaEfecto AreaAtaqueBasico { get; protected set; } // null = ataque normal de un solo objetivo
+    
 
     public Caster()
     {
@@ -18,7 +19,11 @@ public class Caster : Unidad
         ProbabilidadEsquivar = 0.05f; 
         ProbabilidadCritico = 0.25f; 
         multiplicadorCritico = 1.5f;
-        RadioAreaAtaque = 2.5f;
+        AreaAtaqueBasico = new AreaEfecto(FormaArea.Circulo, rangoLanzamiento: 0f, tamaño: 2.5f);
+        CostoOro = 100;
+        CostoMadera = 50;
+        CostoComida = 25;
+
     }
 
     protected override void AplicarEfectoAlGolpear(Unidad objetivo)

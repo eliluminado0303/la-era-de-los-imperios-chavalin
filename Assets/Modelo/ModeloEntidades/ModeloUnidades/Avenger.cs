@@ -1,4 +1,4 @@
-/// <summary>Unidad defensiva exclusiva de la civilización Griegos.</summary>
+// Unidad defensiva exclusiva de la civilización Griegos.
 public class Avenger : Unidad
 {
     public int TropasALiberar = 2;
@@ -15,6 +15,9 @@ public class Avenger : Unidad
         ProbabilidadEsquivar = 0f; 
         ProbabilidadCritico = 0f; 
         multiplicadorCritico = 0f;
+        CostoOro = 100;
+        CostoMadera = 50;
+        CostoComida = 25;
     }
 
     protected override void AlMorir()

@@ -1,7 +1,7 @@
 using System;   
 using System.Collections.Generic;
 
-/// <summary>Unidad ofensiva exclusiva de la civilización Nipones.</summary>
+// Unidad ofensiva exclusiva de la civilización Nipones.
 public class Assassin : Unidad
 {
     private float probabilidadSangradoBasico = 0.15f;
@@ -17,6 +17,9 @@ public class Assassin : Unidad
         ProbabilidadEsquivar = 0.30f; 
         ProbabilidadCritico = 0.20f; 
         multiplicadorCritico = 2.2f;
+        CostoOro = 100;
+        CostoMadera = 50;
+        CostoComida = 25;
     }
 
     protected override void AplicarEfectoAlGolpear(Unidad objetivo)
