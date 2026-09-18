@@ -1,20 +1,26 @@
 /// <summary>Unidad defensiva exclusiva de la civilización Griegos.</summary>
 public class Avenger : Unidad
 {
-    /// <summary>Inicializa las estadísticas del vengador.</summary>
+    public int TropasALiberar = 2;
+
     public Avenger()
     {
         Vida = 175;
-        Ataque = 0;
-        Defensa = 20;
-        Velocidad = 5;
-        Rango = 0;
+         VidaMaxima = Vida; 
+         Ataque = 0; 
+         Defensa = 20; 
+         Velocidad = 5; 
+         Rango = 0;
         Civilizacion = "Griegos";
-        ProbabilidadEsquivar = 0f;
-        ProbabilidadCritico = 0f;
+        ProbabilidadEsquivar = 0f; 
+        ProbabilidadCritico = 0f; 
         multiplicadorCritico = 0f;
     }
+
+    protected override void AlMorir()
+    {
+        base.AlMorir(); // IMPORTANTE: dispara el evento Muerte, si no lo llamas el Controller nunca se entera
+        UnityEngine.Debug.Log($"{Civilizacion}: el caballo de Troya cayó, liberando {TropasALiberar} tropas!");
+    }
 }
-
-
  

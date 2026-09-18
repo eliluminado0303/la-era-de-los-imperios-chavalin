@@ -1,59 +1,94 @@
 using System;
+using System.Collections.Generic;
 
-/// <summary>Clase base para las unidades que participan en combate.</summary>
-public class Unidad {
-    /// <summary>Puntos de vida actuales.</summary>
+public class Unidad
+{
     public int Vida;
-    /// <summary>Daño base de los ataques.</summary>
+    // En Unidad, junto a los demás campos:
+    public int VidaMaxima { get; protected set; }
     public int Ataque;
-    /// <summary>Defensa que reduce el daño recibido.</summary>
     public int Defensa;
-    /// <summary>Velocidad de desplazamiento.</summary>
     public int Velocidad;
-    /// <summary>Distancia máxima de ataque.</summary>
     public int Rango;
-    /// <summary>Civilización propietaria.</summary>
     public string Civilizacion;
 
-    /// <summary>Probabilidad de evitar un ataque.</summary>
     protected float ProbabilidadEsquivar;
-    /// <summary>Probabilidad de realizar un golpe crítico.</summary>
     protected float ProbabilidadCritico;
-    /// <summary>Multiplicador aplicado al daño crítico.</summary>
     protected float multiplicadorCritico;
-    
-    /// <summary>Determina si la unidad esquiva el ataque.</summary>
-    protected virtual bool Esquivar()
-    {
-        return UnityEngine.Random.value < ProbabilidadEsquivar;
-        
-    }
-    protected virtual bool EsCritico()
-    {
-        return UnityEngine.Random.value < ProbabilidadCritico;
-    }
-    protected virtual void RecibirDaño(float daño)
+
+    private List<EfectoEstado> efectos = new List<EfectoEstado>();
+
+    protected virtual bool Esquivar() => UnityEngine.Random.value < ProbabilidadEsquivar;
+    protected virtual bool EsCritico() => UnityEngine.Random.value < ProbabilidadCritico;
+
+    public void ModificarProbabilidadCritico(float delta) => ProbabilidadCritico += delta;
+
+    protected virtual void RecibirDaño(float daño, bool ignorarDefensa = false)
     {
         if (Esquivar())
         {
             UnityEngine.Debug.Log($"{Civilizacion}: esquivó el ataque :o");
             return;
         }
-        Vida -= Math.Max(0, daño - Defensa);
+        float defensaEfectiva = ignorarDefensa ? 0 : Defensa;
+        Vida -= Math.Max(0, (int)daño - defensaEfectiva);
+        if (Vida <= 0) { Vida = 0; AlMorir(); }
     }
+
+    // Público a propósito: así cualquier habilidad especial puede usarlo sin CS1540
+    public void RecibirAtaqueEspecial(float daño, bool ignorarDefensa = false)
+        => RecibirDaño(daño, ignorarDefensa);
+
+    /// <summary>Se dispara una vez cuando la unidad llega a cero de vida.</summary>
+    public event Action<Unidad> Muerte;
+
+    /// <summary>Notifica la muerte de la unidad a los sistemas suscritos.</summary>
+    protected virtual void AlMorir() => Muerte?.Invoke(this);
+
     public virtual void Atacar(Unidad objetivo)
     {
-        float daño = Ataque;
-        if (EsCritico())
-        {
-            daño *= multiplicadorCritico;
-            UnityEngine.Debug.Log($"{Civilizacion}: hizo un golpe crítico!");
-        }
-        objetivo.RecibirDaño(daño);
+        if (objetivo == null) throw new ArgumentNullException(nameof(objetivo));
+        if (EstaAturdido) return;
 
+        float daño = Ataque;
+        if (EsCritico()) daño *= multiplicadorCritico;
+        objetivo.RecibirDaño(daño);
+        AplicarEfectoAlGolpear(objetivo);
     }
-   
+
+    /// <summary>
+    /// Ejecuta el ataque básico contra todos los objetivos recibidos.
+    /// Las unidades normales mantienen un ataque individual por objetivo.
+    /// </summary>
+    public virtual void Atacar(List<Unidad> objetivos)
+    {
+        if (objetivos == null) throw new ArgumentNullException(nameof(objetivos));
+
+        foreach (var objetivo in objetivos)
+        {
+            if (objetivo != null)
+                Atacar(objetivo);
+        }
+    }
+
+    protected virtual void AplicarEfectoAlGolpear(Unidad objetivo) { }
+
+    // Cambiado: ahora recibe una lista, para soportar habilidades en área
+    public virtual void HabilidadEspecial(List<Unidad> objetivos) { }
+
+    public void AgregarEfecto(EfectoEstado nuevo)
+    {
+        nuevo.AlSerAgregado(efectos);
+        nuevo.OnAplicar(this);
+    }
+
+    public void ActualizarEfectos(float deltaTime)
+    {
+        foreach (var efecto in efectos) efecto.Actualizar(deltaTime, this);
+        var expirados = efectos.FindAll(e => e.HaExpirado);
+        foreach (var e in expirados) e.OnExpirar(this);
+        efectos.RemoveAll(e => e.HaExpirado);
+    }
+
+    public bool EstaAturdido => efectos.Exists(e => e is Aturdimiento);
 }
-    /// <summary>Determina si el ataque actual es crítico.</summary>
-    /// <summary>Aplica daño teniendo en cuenta esquiva y defensa.</summary>
-    /// <summary>Ataca a la unidad objetivo.</summary>

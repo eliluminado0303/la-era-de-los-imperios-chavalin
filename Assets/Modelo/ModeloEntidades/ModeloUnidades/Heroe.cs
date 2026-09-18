@@ -1,114 +1,156 @@
-/// <summary>Clase base para unidades con habilidades especiales.</summary>
-public abstract class Heroe: Unidad
+using System.Collections.Generic;
+
+public abstract class Heroe : Unidad
 {
-    /// <summary>Ejecuta la habilidad especial contra una unidad objetivo.</summary>
-     public abstract void HabilidadEspecial(Unidad objetivo);
-    
+    public abstract override void HabilidadEspecial(List<Unidad> objetivos);
 }
 
-/// <summary>Héroe sumerio con ataque especial potenciado.</summary>
-public class Gilgamesh: Heroe
+public class Gilgamesh : Heroe
 {
-    /// <summary>Inicializa las estadísticas de Gilgamesh.</summary>
     public Gilgamesh()
     {
-        Vida = 250;
-        Ataque = 20;
-        Defensa = 15;
-        Velocidad = 5;
-        Rango = 1;
+        Vida = 250; 
+        Ataque = 20; 
+        Defensa = 15; 
+        Velocidad = 5; 
+        Rango = 1; 
         Civilizacion = "Sumerios";
-        ProbabilidadEsquivar = 0.05f;
-        ProbabilidadCritico = 0.35f;
+        ProbabilidadEsquivar = 0f; 
+        ProbabilidadCritico = 0.35f; 
         multiplicadorCritico = 2f;
     }
 
-    public override void HabilidadEspecial(Unidad objetivo)
+    // Enuma Elish: área que IGNORA defensa
+    public override void HabilidadEspecial(List<Unidad> objetivos)
     {
-        // Habilidad especial de Gilgamesh: Invoca a EA para un ataque en area devastador ignorando la defensa del oponente 
         float daño = Ataque * 2;
-        if (EsCritico())
-        {
-            daño *= multiplicadorCritico;
-            UnityEngine.Debug.Log($"{Civilizacion}: hizo un golpe crítico con su habilidad especial!");
-        }
-        objetivo.RecibirDaño(daño);
+        foreach (var objetivo in objetivos)
+            objetivo.RecibirAtaqueEspecial(daño, ignorarDefensa: true);
+        UnityEngine.Debug.Log($"{Civilizacion}: invocó a EA  sobre {objetivos.Count} unidades!");
     }
-}   
+}
 
-/// <summary>Héroe nipón con ataque masivo que ignora defensa.</summary>
-public class Godzilla: Heroe
+public class Godzilla : Heroe
 {
-    /// <summary>Inicializa las estadísticas de Godzilla.</summary>
     public Godzilla()
     {
-        Vida = 300;
-        Ataque = 25;
-        Defensa = 20;
-        Velocidad = 3;
-        Rango = 1;
+        Vida = 300; 
+        Ataque = 25; 
+        Defensa = 20; 
+        Velocidad = 3; 
+        Rango = 1; 
         Civilizacion = "Nipones";
-        ProbabilidadEsquivar = 0.10f;
-        ProbabilidadCritico = 0.30f;
+        ProbabilidadEsquivar = 0.30f; 
+        ProbabilidadCritico = 0.30f; 
         multiplicadorCritico = 2.5f;
     }
 
-    public override void HabilidadEspecial(Unidad objetivo)
+    /// <summary>
+    /// Ataque básico en área: el rayo atómico golpea a cada objetivo
+    /// usando el daño y la probabilidad de crítico normales.
+    /// </summary>
+    public override void Atacar(List<Unidad> objetivos)
     {
-        // Habilidad especial de Godzilla: Ataque masivo en linea recta que asegura critico
-        float daño = Ataque * 1.5f; // Daño aumentado
-        objetivo.Vida -= daño; // Ignora la defensa del objetivo
-        UnityEngine.Debug.Log($"{Civilizacion}: hizo un ataque masivo con su habilidad especial!");
+        if (objetivos == null) throw new System.ArgumentNullException(nameof(objetivos));
+        if (EstaAturdido) return;
+
+        foreach (var objetivo in objetivos)
+        {
+            if (objetivo != null)
+                Atacar(objetivo);
+        }
+
+        UnityEngine.Debug.Log($"{Civilizacion}: ataque básico en área sobre {objetivos.Count} unidades.");
+    }
+
+    // Rayo atómico: área que ASEGURA crítico (pero sí respeta Defensa/Esquivar de cada objetivo)
+    public override void HabilidadEspecial(List<Unidad> objetivos)
+    {
+        float daño = Ataque * 1.5f * multiplicadorCritico;
+        foreach (var objetivo in objetivos)
+            objetivo.RecibirAtaqueEspecial(daño);
+        UnityEngine.Debug.Log($"{Civilizacion}: rayo atómico crítico sobre {objetivos.Count} unidades!");
     }
 }
 
-/// <summary>Héroe vikingo que aplica daño de veneno.</summary>
-public class jormungandr: Heroe
+public class Jormungandr : Heroe
 {
-    /// <summary>Inicializa las estadísticas de Jormungandr.</summary>
-    public jormungandr()
+    public Jormungandr()
     {
-        Vida = 200;
-        Ataque = 15;
-        Defensa = 10;
-        Velocidad = 4;
-        Rango = 1;
+        Vida = 200; 
+        Ataque = 15; 
+        Defensa = 10; 
+        Velocidad = 4; 
+        Rango = 1; 
         Civilizacion = "Vikingos";
-        ProbabilidadEsquivar = 0.15f;
-        ProbabilidadCritico = 0.25f;
+        ProbabilidadEsquivar = 0.15f; 
+        ProbabilidadCritico = 0.25f; 
         multiplicadorCritico = 2f;
     }
 
-    public override void HabilidadEspecial(Unidad objetivo)
+    /// <summary>
+    /// Ataque básico en área: la embestida golpea individualmente a todos
+    /// los objetivos, aplicando el daño normal y sus críticos habituales.
+    /// </summary>
+    public override void Atacar(List<Unidad> objetivos)
     {
-        // Habilidad especial de Jormungandr: Causa envenamiento como dots a los enemigos y los relentiza
-        float dañoPorTurno = Ataque * 0.5f; // Daño por turno
-        objetivo.Vida -= dañoPorTurno; // Aplica el daño por turno
-        UnityEngine.Debug.Log($"{Civilizacion}: envenenó al enemigo con su habilidad especial!");
+        if (objetivos == null) throw new System.ArgumentNullException(nameof(objetivos));
+        if (EstaAturdido) return;
+
+        foreach (var objetivo in objetivos)
+        {
+            if (objetivo != null)
+                Atacar(objetivo);
+        }
+
+        UnityEngine.Debug.Log($"{Civilizacion}: ataque básico en área sobre {objetivos.Count} unidades.");
+    }
+
+    // Ralentiza + veneno garantizado (ambos, sobre toda el área)
+    public override void HabilidadEspecial(List<Unidad> objetivos)
+    {
+        foreach (var objetivo in objetivos)
+        {
+            objetivo.AgregarEfecto(new Veneno(0.05f, 5f, 1f));
+            objetivo.AgregarEfecto(new Ralentizado(0.4f, 4f));
+        }
+        UnityEngine.Debug.Log($"{Civilizacion}: envenenó y ralentizó a {objetivos.Count} unidades!");
     }
 }
 
-/// <summary>Héroe griego especializado en petrificar enemigos.</summary>
-public class Medusa: Heroe
+public class Medusa : Heroe
 {
-    /// <summary>Inicializa las estadísticas de Medusa.</summary>
+    private float probabilidadSangrado = 0.30f;
+    private float probabilidadAturdimientoBasico = 0.08f;
+
     public Medusa()
     {
-        Vida = 180;
-        Ataque = 18;
-        Defensa = 12;
-        Velocidad = 4;
-        Rango = 1;
+        Vida = 90; 
+        Ataque = 12; 
+        Defensa = 6; 
+        Velocidad = 5; 
+        Rango = 1; 
         Civilizacion = "Griegos";
-        ProbabilidadEsquivar = 0.10f;
-        ProbabilidadCritico = 0.30f;
+        ProbabilidadEsquivar = 0.30f; 
+        ProbabilidadCritico = 0.25f; 
         multiplicadorCritico = 2f;
     }
 
-    public override void HabilidadEspecial(Unidad objetivo)
+    protected override void AplicarEfectoAlGolpear(Unidad objetivo)
     {
-        // Habilidad especial de Medusa: Petrificación que inmoviliza a los enemigos y reduce su defensa, tambien los embiste con su caballito
-        UnityEngine.Debug.Log($"{Civilizacion}: petrificó al enemigo con su habilidad especial!");
-        // Aquí podrías implementar la lógica para inmovilizar al objetivo por un turno
+        if (UnityEngine.Random.value < probabilidadSangrado)
+            objetivo.AgregarEfecto(new Sangrado(4f));
+        if (UnityEngine.Random.value < probabilidadAturdimientoBasico)
+            objetivo.AgregarEfecto(new Aturdimiento(1f));
+    }
+
+    // Petrificación: aturde + reduce defensa a TODA el área
+    public override void HabilidadEspecial(List<Unidad> objetivos)
+    {
+        foreach (var objetivo in objetivos)
+        {
+            objetivo.AgregarEfecto(new Aturdimiento(3f));
+            objetivo.AgregarEfecto(new ReduccionDefensa(5, 4f));
+        }
     }
 }

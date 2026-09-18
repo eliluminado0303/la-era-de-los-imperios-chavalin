@@ -1,24 +1,34 @@
 using System;   
+using System.Collections.Generic;
 
 /// <summary>Unidad ofensiva exclusiva de la civilización Nipones.</summary>
-public class Assassin: Unidad
+public class Assassin : Unidad
 {
-    /// <summary>Inicializa las estadísticas del asesino.</summary>
+    private float probabilidadSangradoBasico = 0.15f;
+
     public Assassin()
     {
-        Vida = 75;
-        Ataque = 18;
-        Defensa = 5;
-        Velocidad = 7;
-        Rango = 1;
+        Vida = 75; 
+        Ataque = 18; 
+        Defensa = 5; 
+        Velocidad = 7; 
+        Rango = 1; 
         Civilizacion = "Nipones";
-        ProbabilidadEsquivar = 0.38f; // 38% de probabilidad de esquivar
-        ProbabilidadCritico = 0.20f; // 20% de probabilidad de crítico
-        multiplicadorCritico = 2.2f; // Daño crítico es el doble del daño normal
+        ProbabilidadEsquivar = 0.30f; 
+        ProbabilidadCritico = 0.20f; 
+        multiplicadorCritico = 2.2f;
     }
 
+    protected override void AplicarEfectoAlGolpear(Unidad objetivo)
+    {
+        if (UnityEngine.Random.value < probabilidadSangradoBasico)
+            objetivo.AgregarEfecto(new Sangrado(4f));
+    }
 
-
-
-   
+   public override void HabilidadEspecial(List<Unidad> objetivos)
+    {
+    this.AgregarEfecto(new BuffCritico(0.25f, 5f));
+    foreach (var objetivo in objetivos)
+        objetivo.AgregarEfecto(new Sangrado(6f));
+    }
 }
