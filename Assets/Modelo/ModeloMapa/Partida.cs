@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 
-public class Partida
+public partial class Partida
 {
-    public Jugador JugadorHumano { get; set; }
+    public  Jugador JugadorHumano { get; set; }
     public List<Jugador> Oponentes { get; set; }
     public Mapa Mapa { get; set; }
     public bool Finalizada { get; set; }
