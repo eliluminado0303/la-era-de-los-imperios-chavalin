@@ -54,6 +54,14 @@ public class Unidad
     // Se dispara una vez cuando la unidad llega a cero de vida.
     public event Action<Unidad> Muerte;
 
+    // Se dispara cada vez que alguien la ataca (haya esquivado o no) — así
+    // cualquier IA que controle a esta unidad puede reaccionar en el momento.
+    public event Action<Unidad, Unidad> FueAtacada; // (yo, quien me atacó)
+
+    // Público a propósito, igual que RecibirAtaqueEspecial: permite que quien
+    // controla a esta unidad (la IA) sepa que está bajo ataque.
+    public void NotificarAtaqueRecibido(Unidad atacante) => FueAtacada?.Invoke(this, atacante);
+
     // Notifica la muerte de la unidad a los sistemas suscritos.
     protected virtual void AlMorir() => Muerte?.Invoke(this);
 
@@ -65,6 +73,7 @@ public class Unidad
 
         float daño = Ataque;
         if (EsCritico()) daño *= multiplicadorCritico;
+        objetivo.NotificarAtaqueRecibido(this);
         objetivo.RecibirDaño(daño);
         AplicarEfectoAlGolpear(objetivo);
     }

@@ -9,6 +9,10 @@ public class Edificio
     private float progresoConstruccion;
     private bool estaConstruido;
 
+    // Avisa a quien controla este edificio (la IA, o un log de la Vista)
+    // cada vez que recibe daño, sin importar si sobrevive o no.
+    public event Action<Edificio, float> FueAtacado;
+
     public string Nombre { get; }
     public string Civilizacion { get; }
     public float Vida { get; private set; }
@@ -38,6 +42,7 @@ public class Edificio
     // Aplica daño después de descontar la defensa.
     public void RecibirDaño(float daño)
     {
+        FueAtacado?.Invoke(this, daño);
         lock (sync)
         {
             Vida -= Math.Max(0, daño - Defensa);

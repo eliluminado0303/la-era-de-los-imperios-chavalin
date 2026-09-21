@@ -17,6 +17,11 @@ public class GestorEntrenamiento
     {
         if (jugador == null) throw new ArgumentNullException(nameof(jugador));
         Unidad unidad = FabricaUnidades.Crear(tipoUnidad, civilizacion);
+
+        // Solo puede haber un héroe vivo en batalla por jugador a la vez.
+        if (unidad is Heroe && jugador.Unidades.Exists(u => u is Heroe && u.Vida > 0))
+            return false;
+
         if (!CobrarCosto(jugador, unidad.CostoOro, unidad.CostoMadera, unidad.CostoComida)) return false;
 
         _ = EntrenarAsync(unidad, 3000, cancelacion.Token);

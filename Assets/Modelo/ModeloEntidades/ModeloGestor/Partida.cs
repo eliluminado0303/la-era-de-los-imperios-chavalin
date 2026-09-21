@@ -1,13 +1,12 @@
 using System.Collections.Generic;
 
 // Operaciones de combate que se ejecutan dentro de una partida.
+// Nota: "Finalizada" y "VerificarGanador()" viven en la otra mitad de esta
+// clase partial (Modelo7/ModeloMapa/Partida.cs). No se redeclaran aquí para
+// evitar el conflicto de compilación; en su lugar, este archivo llama a
+// VerificarGanador() cada vez que el combate puede haber terminado la partida.
 public partial class Partida
 {
-    // Indica si la partida ya terminó.
-    public bool Finalizada { get; private set; }
-
-    // Pendiente de conectarse con la condición completa de victoria.
-  
     // Ejecuta un ataque individual validando que la unidad pertenezca al jugador.
     public void EjecutarAtaque(Jugador jugadorAtacante, Unidad atacante, Unidad objetivo)
     {
@@ -16,7 +15,7 @@ public partial class Partida
         if (jugadorAtacante.Unidades.Contains(objetivo)) return;    // no puede atacarse a sí mismo/aliados
 
         atacante.Atacar(objetivo);
-       
+        VerificarGanador();
     }
 
     // Filtra aliados y objetivos nulos antes de delegar el ataque en área a la unidad.
@@ -33,7 +32,7 @@ public partial class Partida
         }
 
         atacante.Atacar(objetivosValidos);
-       
+        VerificarGanador();
     }
 
     // Ejecuta una habilidad especial contra los objetivos seleccionados.
@@ -43,7 +42,7 @@ public partial class Partida
         if (!jugadorAtacante.Unidades.Contains(heroe)) return;
 
         heroe.HabilidadEspecial(objetivos);
-        
+        VerificarGanador();
     }
 
     // Permite a una unidad atacar una estructura enemiga.
@@ -54,7 +53,7 @@ public partial class Partida
         if (jugadorAtacante.Edificios.Contains(objetivo)) return;
 
         atacante.Atacar(objetivo);
-        
+        VerificarGanador();
     }
 
     // Se llama UNA vez por frame desde el Controller — nada de Task aquí

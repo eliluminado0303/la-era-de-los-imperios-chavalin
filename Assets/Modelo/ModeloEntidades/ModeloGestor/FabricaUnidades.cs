@@ -38,6 +38,31 @@ public static class FabricaUnidades
             case "Ranger":
                 return new Ranger(civilizacion);
 
+            case "Healer":
+                return new Healer(civilizacion);
+
+            // Héroes: uno exclusivo por civilización. GestorEntrenamiento es quien
+            // además valida que el jugador no tenga ya un héroe vivo en batalla.
+            case "Gilgamesh":
+                if (civilizacion != "Sumerios")
+                    throw new InvalidOperationException("Gilgamesh es exclusivo de Sumerios.");
+                return new Gilgamesh();
+
+            case "Godzilla":
+                if (civilizacion != "Nipones")
+                    throw new InvalidOperationException("Godzilla es exclusivo de Nipones.");
+                return new Godzilla();
+
+            case "Jormungandr":
+                if (civilizacion != "Vikingos")
+                    throw new InvalidOperationException("Jormungandr es exclusivo de Vikingos.");
+                return new Jormungandr();
+
+            case "Medusa":
+                if (civilizacion != "Griegos")
+                    throw new InvalidOperationException("Medusa es exclusiva de Griegos.");
+                return new Medusa();
+
             default:
                 throw new ArgumentException($"Tipo de unidad desconocido: {tipoUnidad}");
         }
