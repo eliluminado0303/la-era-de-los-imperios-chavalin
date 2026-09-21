@@ -1,7 +1,10 @@
 using System;
+using System.Collections.Generic;
 
+// Estructura con vida, defensa, costes y progreso de construcción.
 public class Edificio
 {
+    // Protege el estado que puede consultarse o actualizarse desde tareas.
     private readonly object sync = new object();
     private float progresoConstruccion;
     private bool estaConstruido;
@@ -12,6 +15,7 @@ public class Edificio
     public int Defensa { get; }
 
     // Fusionado desde la versión de tu compañera
+    // Coste necesario para construir el edificio.
     public int CostoOro { get; }
     public int CostoMadera { get; }
     public int CostoComida { get; }
@@ -31,6 +35,7 @@ public class Edificio
         CostoComida = costoComida;
     }
 
+    // Aplica daño después de descontar la defensa.
     public void RecibirDaño(float daño)
     {
         lock (sync)
@@ -40,6 +45,7 @@ public class Edificio
         }
     }
 
+    // Avanza el porcentaje de construcción hasta completarlo.
     public void AvanzarConstruccion(float porcentaje)
     {
         if (porcentaje <= 0) return;
@@ -50,8 +56,9 @@ public class Edificio
             if (progresoConstruccion >= 100) { estaConstruido = true; Console.WriteLine($"{Nombre} terminado."); }
         }
     }
-
+}
     
+    // Edificio que puede producir aldeanos una vez terminado.
     public class EdificioPrincipal : Edificio
     {
     public EdificioPrincipal(string civilizacion, int costoOro, int costoMadera, int costoComida)
@@ -66,6 +73,7 @@ public class Edificio
     }
     }
 
+    // Edificio que limita qué tipos de unidades puede producir.
     public class EdificioEntrenamiento : Edificio
     {
     public List<string> UnidadesDisponibles { get; private set; }
@@ -83,4 +91,3 @@ public class Edificio
         return gestor.EntrenarUnidad(jugador, tipoUnidad, Civilizacion);
     }
     }
-}

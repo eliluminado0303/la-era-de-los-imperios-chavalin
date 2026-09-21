@@ -1,47 +1,60 @@
 using System.Collections.Generic;
 
-public partial class PartidaP
+// Operaciones de combate que se ejecutan dentro de una partida.
+public partial class Partida
 {
+    // Indica si la partida ya terminó.
+    public bool Finalizada { get; private set; }
+
+    // Pendiente de conectarse con la condición completa de victoria.
+  
+    // Ejecuta un ataque individual validando que la unidad pertenezca al jugador.
     public void EjecutarAtaque(Jugador jugadorAtacante, Unidad atacante, Unidad objetivo)
     {
-        if (Finalizada) return;
+       
         if (!jugadorAtacante.Unidades.Contains(atacante)) return;   // no controla esa unidad
         if (jugadorAtacante.Unidades.Contains(objetivo)) return;    // no puede atacarse a sí mismo/aliados
 
         atacante.Atacar(objetivo);
-        VerificarGanador();
+       
     }
 
+    // Filtra aliados y objetivos nulos antes de delegar el ataque en área a la unidad.
     public void EjecutarAtaqueEnArea(Jugador jugadorAtacante, Unidad atacante, List<Unidad> objetivos)
     {
-        if (Finalizada) return;
+        
         if (!jugadorAtacante.Unidades.Contains(atacante)) return;
 
+        var objetivosValidos = new List<Unidad>();
         foreach (var objetivo in objetivos)
         {
-            if (jugadorAtacante.Unidades.Contains(objetivo)) continue; // se salta aliados en el área
-            atacante.Atacar(objetivo);
+            if (objetivo == null || jugadorAtacante.Unidades.Contains(objetivo)) continue;
+            objetivosValidos.Add(objetivo);
         }
-        VerificarGanador();
+
+        atacante.Atacar(objetivosValidos);
+       
     }
 
+    // Ejecuta una habilidad especial contra los objetivos seleccionados.
     public void EjecutarHabilidadEspecial(Jugador jugadorAtacante, Heroe heroe, List<Unidad> objetivos)
     {
-        if (Finalizada) return;
+        
         if (!jugadorAtacante.Unidades.Contains(heroe)) return;
 
         heroe.HabilidadEspecial(objetivos);
-        VerificarGanador();
+        
     }
 
+    // Permite a una unidad atacar una estructura enemiga.
     public void EjecutarAtaqueAEdificio(Jugador jugadorAtacante, Unidad atacante, Edificio objetivo)
     {
-        if (Finalizada) return;
+      
         if (!jugadorAtacante.Unidades.Contains(atacante)) return;
         if (jugadorAtacante.Edificios.Contains(objetivo)) return;
 
         atacante.Atacar(objetivo);
-        VerificarGanador();
+        
     }
 
     // Se llama UNA vez por frame desde el Controller — nada de Task aquí

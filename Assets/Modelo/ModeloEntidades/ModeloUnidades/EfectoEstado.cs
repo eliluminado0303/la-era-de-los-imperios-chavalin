@@ -38,7 +38,7 @@ public abstract class EfectoEstado
     // Nuevos: se llaman UNA vez, al entrar y al salir de la lista de efectos
     public virtual void OnAplicar(Unidad objetivo) { }
     public virtual void OnExpirar(Unidad objetivo) { }
-}
+    }
 public class Sangrado : EfectoEstado
 {
     private float dañoPorTick;
@@ -149,8 +149,8 @@ public class Ralentizado : EfectoEstado
         objetivo.Velocidad -= cantidadReal;
     }
     public override void OnExpirar(Unidad objetivo) => objetivo.Velocidad += cantidadReal;
-
-    public class Bendicion : EfectoEstado
+}
+public class Bendicion : EfectoEstado
 {
     private int deltaAtaque;
     private int deltaDefensa;
@@ -176,4 +176,4 @@ public class Ralentizado : EfectoEstado
         objetivo.Defensa -= deltaDefensa;
     }
 }
-}
+

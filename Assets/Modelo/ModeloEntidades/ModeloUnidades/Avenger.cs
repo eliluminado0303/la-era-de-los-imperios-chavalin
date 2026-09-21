@@ -23,7 +23,7 @@ public class Avenger : Unidad
     protected override void AlMorir()
     {
         base.AlMorir(); // IMPORTANTE: dispara el evento Muerte, si no lo llamas el Controller nunca se entera
-        UnityEngine.Debug.Log($"{Civilizacion}: el caballo de Troya cayó, liberando {TropasALiberar} tropas!");
+        Registro.Escribir($"{Civilizacion}: el caballo de Troya cayó, liberando {TropasALiberar} tropas!");
     }
 }
  

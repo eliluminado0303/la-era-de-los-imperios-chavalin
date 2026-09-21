@@ -43,7 +43,7 @@ public class Berserker : Unidad
             Ataque = (int)(ataqueOriginal * 1.4f);      // +40% ataque
             Velocidad = (int)(velocidadOriginal * 1.3f); // +30% velocidad
             Defensa = (int)(defensaOriginal * 0.7f);     // -30% defensa
-            UnityEngine.Debug.Log($"{Civilizacion}: ¡Berserker entra en furia!");
+            Registro.Escribir($"{Civilizacion}: ¡Berserker entra en furia!");
         }
     }
 }

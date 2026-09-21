@@ -31,7 +31,7 @@ public class Gilgamesh : Heroe
         float daño = Ataque * 2;
         foreach (var objetivo in objetivos)
             objetivo.RecibirAtaqueEspecial(daño, ignorarDefensa: true);
-        UnityEngine.Debug.Log($"{Civilizacion}: invocó a EA  sobre {objetivos.Count} unidades!");
+        Registro.Escribir($"{Civilizacion}: invocó a EA  sobre {objetivos.Count} unidades!");
     }
 }
 
@@ -69,7 +69,7 @@ public class Godzilla : Heroe
                 Atacar(objetivo);
         }
 
-        UnityEngine.Debug.Log($"{Civilizacion}: ataque básico en área sobre {objetivos.Count} unidades.");
+        Registro.Escribir($"{Civilizacion}: ataque básico en área sobre {objetivos.Count} unidades.");
     }
 
     // Rayo atómico: área que ASEGURA crítico (pero sí respeta Defensa/Esquivar de cada objetivo)
@@ -79,7 +79,7 @@ public class Godzilla : Heroe
         float daño = Ataque * 1.5f * multiplicadorCritico;
         foreach (var objetivo in objetivos)
             objetivo.RecibirAtaqueEspecial(daño);
-        UnityEngine.Debug.Log($"{Civilizacion}: rayo atómico crítico sobre {objetivos.Count} unidades!");
+        Registro.Escribir($"{Civilizacion}: rayo atómico crítico sobre {objetivos.Count} unidades!");
     }
 }
 
@@ -116,7 +116,7 @@ public class Jormungandr : Heroe
                 Atacar(objetivo);
         }
 
-        UnityEngine.Debug.Log($"{Civilizacion}: ataque básico en área sobre {objetivos.Count} unidades.");
+        Registro.Escribir($"{Civilizacion}: ataque básico en área sobre {objetivos.Count} unidades.");
     }
 
     // Ralentiza + veneno garantizado (ambos, sobre toda el área)
@@ -127,7 +127,7 @@ public class Jormungandr : Heroe
             objetivo.AgregarEfecto(new Veneno(0.05f, 5f, 1f));
             objetivo.AgregarEfecto(new Ralentizado(0.4f, 4f));
         }
-        UnityEngine.Debug.Log($"{Civilizacion}: envenenó y ralentizó a {objetivos.Count} unidades!");
+        Registro.Escribir($"{Civilizacion}: envenenó y ralentizó a {objetivos.Count} unidades!");
     }
 }
 
@@ -155,9 +155,9 @@ public class Medusa : Heroe
 
     protected override void AplicarEfectoAlGolpear(Unidad objetivo)
     {
-        if (UnityEngine.Random.value < probabilidadSangrado)
+        if (Aleatorio.Valor() < probabilidadSangrado)
             objetivo.AgregarEfecto(new Sangrado(4f));
-        if (UnityEngine.Random.value < probabilidadAturdimientoBasico)
+        if (Aleatorio.Valor() < probabilidadAturdimientoBasico)
             objetivo.AgregarEfecto(new Aturdimiento(1f));
     }
 
