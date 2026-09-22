@@ -1,10 +1,10 @@
-using System;
+using System.Collections.Generic;
+using System.Linq;
 
 // Recibe las acciones de combate que el jugador humano dispara desde la
-// interfaz (clic en una unidad propia + clic en un objetivo), valida que
-// sean posibles, y solo entonces las traslada al Modelo (Partida).
-// Por MVC: este controlador nunca toca sprites ni UI directamente, solo
-// devuelve bool para que la Vista decida cómo mostrar éxito/error.
+// interfaz (clic en una unidad propia + clic en un punto objetivo), valida
+// que sean posibles, y solo entonces las traslada al Modelo (Partida).
+// La geometría de áreas vive en ResolutorArea (compartida con ControladorIA).
 public class ControladorCombate
 {
     private readonly Jugador miJugador;
@@ -18,8 +18,6 @@ public class ControladorCombate
         this.partida = partida;
     }
 
-    // Intenta atacar desde una celda de origen hacia una celda objetivo.
-    // Devuelve false (sin hacer nada) si la acción no es válida.
     public bool SolicitarAtaque(int filaOrigen, int columnaOrigen, int filaObjetivo, int columnaObjetivo)
     {
         Celda origen = mapa.ObtenerCelda(filaOrigen, columnaOrigen);
@@ -27,30 +25,87 @@ public class ControladorCombate
         if (origen?.Unidad == null || destino == null) return false;
 
         Unidad atacante = origen.Unidad;
-        if (!miJugador.Unidades.Contains(atacante)) return false; // no controlas esa unidad
+        if (!miJugador.Unidades.Contains(atacante)) return false;
 
-        int distancia = Distancia(filaOrigen, columnaOrigen, filaObjetivo, columnaObjetivo);
-        if (distancia > atacante.Rango) return false; // fuera de rango: la Vista no debería ni dejar hacer clic, pero igual se valida aquí
+        int distancia = ResolutorArea.Distancia(filaOrigen, columnaOrigen, filaObjetivo, columnaObjetivo);
+        if (distancia > atacante.Rango) return false;
 
         if (destino.Unidad != null)
         {
-            if (miJugador.Unidades.Contains(destino.Unidad)) return false; // es aliado, no se puede
+            if (miJugador.Unidades.Contains(destino.Unidad)) return false;
             partida.EjecutarAtaque(miJugador, atacante, destino.Unidad);
             return true;
         }
 
         if (destino.Edificio != null)
         {
-            if (miJugador.Edificios.Contains(destino.Edificio)) return false; // es tuyo
+            if (miJugador.Edificios.Contains(destino.Edificio)) return false;
             partida.EjecutarAtaqueAEdificio(miJugador, atacante, destino.Edificio);
             return true;
         }
 
-        return false; // celda vacía: no hay nada que atacar
+        return false;
     }
 
-    // Distancia tipo "tablero de ajedrez" (misma métrica que Mapa.UnidadesEnRadio,
-    // para que rango de ataque y radio de detección de la IA sean consistentes).
-    private int Distancia(int f1, int c1, int f2, int c2)
-        => Math.Max(Math.Abs(f1 - f2), Math.Abs(c1 - c2));
+    public bool SolicitarAtaqueEnArea(int filaOrigen, int columnaOrigen, int filaObjetivo, int columnaObjetivo)
+    {
+        Celda origen = mapa.ObtenerCelda(filaOrigen, columnaOrigen);
+        if (origen?.Unidad == null || !miJugador.Unidades.Contains(origen.Unidad)) return false;
+
+        Unidad atacante = origen.Unidad;
+        if (atacante.AreaAtaqueBasico == null) return false;
+
+        int distanciaLanzamiento = ResolutorArea.Distancia(filaOrigen, columnaOrigen, filaObjetivo, columnaObjetivo);
+        if (distanciaLanzamiento > atacante.Rango) return false;
+
+        var objetivos = ResolutorArea.ObtenerCeldasEnArea(mapa, atacante.AreaAtaqueBasico, filaOrigen, columnaOrigen, filaObjetivo, columnaObjetivo)
+            .Where(celda => celda.Unidad != null && !miJugador.Unidades.Contains(celda.Unidad))
+            .Select(celda => celda.Unidad)
+            .ToList();
+        if (objetivos.Count == 0) return false;
+
+        partida.EjecutarAtaqueEnArea(miJugador, atacante, objetivos);
+        return true;
+    }
+
+    public bool SolicitarHabilidadEspecial(int filaHeroe, int columnaHeroe, int filaObjetivo, int columnaObjetivo)
+    {
+        Celda origen = mapa.ObtenerCelda(filaHeroe, columnaHeroe);
+        if (!(origen?.Unidad is Heroe heroe) || !miJugador.Unidades.Contains(heroe)) return false;
+        if (!heroe.PuedeUsarHabilidad()) return false; // en recarga: la Vista puede usar esto para deshabilitar el botón
+
+        int distanciaLanzamiento = ResolutorArea.Distancia(filaHeroe, columnaHeroe, filaObjetivo, columnaObjetivo);
+        if (distanciaLanzamiento > heroe.AreaHabilidad.RangoLanzamiento) return false;
+
+        var objetivos = ResolutorArea.ObtenerCeldasEnArea(mapa, heroe.AreaHabilidad, filaHeroe, columnaHeroe, filaObjetivo, columnaObjetivo)
+            .Where(celda => celda.Unidad != null && !miJugador.Unidades.Contains(celda.Unidad))
+            .Select(celda => celda.Unidad)
+            .ToList();
+        if (objetivos.Count == 0) return false;
+
+        partida.EjecutarHabilidadEspecial(miJugador, heroe, objetivos);
+        return true;
+    }
+
+    public bool SolicitarCuracion(int filaHealer, int columnaHealer, int filaObjetivo, int columnaObjetivo, bool buff)
+    {
+        Celda origen = mapa.ObtenerCelda(filaHealer, columnaHealer);
+        if (!(origen?.Unidad is Healer healer) || !miJugador.Unidades.Contains(healer)) return false;
+
+        int distanciaLanzamiento = ResolutorArea.Distancia(filaHealer, columnaHealer, filaObjetivo, columnaObjetivo);
+        if (distanciaLanzamiento > healer.AreaBuff.RangoLanzamiento) return false;
+
+        var aliados = ResolutorArea.ObtenerCeldasEnArea(mapa, healer.AreaBuff, filaHealer, columnaHealer, filaObjetivo, columnaObjetivo)
+            .Where(celda => celda.Unidad != null && miJugador.Unidades.Contains(celda.Unidad))
+            .Select(celda => celda.Unidad)
+            .ToList();
+        if (aliados.Count == 0) return false;
+
+        foreach (var aliado in aliados)
+        {
+            if (buff) healer.Buffear(aliado);
+            else healer.Curar(aliado);
+        }
+        return true;
+    }
 }

@@ -9,6 +9,7 @@ public class Assassin : Unidad
     public Assassin()
     {
         Vida = 75; 
+        VidaMaxima = Vida;
         Ataque = 18; 
         Defensa = 5; 
         Velocidad = 7; 
@@ -24,7 +25,7 @@ public class Assassin : Unidad
 
     protected override void AplicarEfectoAlGolpear(Unidad objetivo)
     {
-        if (UnityEngine.Random.value < probabilidadSangradoBasico)
+        if (Aleatorio.Valor() < probabilidadSangradoBasico)
             objetivo.AgregarEfecto(new Sangrado(4f));
     }
 

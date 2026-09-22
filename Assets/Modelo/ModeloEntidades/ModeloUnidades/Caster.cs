@@ -27,7 +27,7 @@ public class Caster : Unidad
     // Aplica una quemadura de forma aleatoria después del impacto.
     protected override void AplicarEfectoAlGolpear(Unidad objetivo)
     {
-        if (UnityEngine.Random.value < probabilidadQuemadura)
+        if (Aleatorio.Valor() < probabilidadQuemadura)
             objetivo.AgregarEfecto(new Quemadura(3f, 1.5f));
     }
 }

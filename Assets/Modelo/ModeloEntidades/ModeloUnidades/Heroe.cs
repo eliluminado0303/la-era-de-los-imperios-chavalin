@@ -1,16 +1,30 @@
+using System;
 using System.Collections.Generic;
 
 public abstract class Heroe : Unidad
 {
     public abstract override void HabilidadEspecial(List<Unidad> objetivos);
     public AreaEfecto AreaHabilidad { get; protected set; }
-}
 
+    // La habilidad especial es fuerte (doble daño ignorando defensa, área
+    // completa) a propósito, así que necesita recarga — si no, se podría
+    // usar sin límite y dejaría de ser "especial". Quien la ejecuta
+    // (Partida.EjecutarHabilidadEspecial) es responsable de chequear
+    // PuedeUsarHabilidad() antes de llamar a HabilidadEspecial().
+    private const float TIEMPO_RECARGA_SEGUNDOS = 15f;
+    private DateTime ultimoUso = DateTime.MinValue;
+
+    public bool PuedeUsarHabilidad() => (DateTime.UtcNow - ultimoUso).TotalSeconds >= TIEMPO_RECARGA_SEGUNDOS;
+    public float TiempoRestanteRecarga()
+    => Math.Max(0f, TIEMPO_RECARGA_SEGUNDOS - (float)(DateTime.UtcNow - ultimoUso).TotalSeconds);
+    public void RegistrarUsoHabilidad() => ultimoUso = DateTime.UtcNow;
+}
 public class Gilgamesh : Heroe
 {
     public Gilgamesh()
     {
         Vida = 250; 
+        VidaMaxima = Vida;
         Ataque = 20; 
         Defensa = 15; 
         Velocidad = 5; 
@@ -40,6 +54,7 @@ public class Godzilla : Heroe
     public Godzilla()
     {
         Vida = 300; 
+        VidaMaxima = Vida;
         Ataque = 25; 
         Defensa = 20; 
         Velocidad = 3; 
@@ -88,6 +103,7 @@ public class Jormungandr : Heroe
     public Jormungandr()
     {
         Vida = 200; 
+        VidaMaxima = Vida;
         Ataque = 15; 
         Defensa = 10; 
         Velocidad = 4; 
@@ -139,6 +155,7 @@ public class Medusa : Heroe
     public Medusa()
     {
         Vida = 90; 
+        VidaMaxima = Vida;
         Ataque = 12; 
         Defensa = 6; 
         Velocidad = 5; 
