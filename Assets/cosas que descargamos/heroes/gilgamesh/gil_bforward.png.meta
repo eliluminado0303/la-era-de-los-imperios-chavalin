@@ -1,0 +1,652 @@
+fileFormatVersion: 2
+guid: e90b4422c703ae246b3468716eb16e15
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3504809082945192785
+    second: gil_bforward_0
+  - first:
+      213: -6364128430022154938
+    second: gil_bforward_1
+  - first:
+      213: 8768698989712897141
+    second: gil_bforward_2
+  - first:
+      213: 2735514657411997660
+    second: gil_bforward_3
+  - first:
+      213: -6488307277829415060
+    second: gil_bforward_4
+  - first:
+      213: -3851422720829436785
+    second: gil_bforward_5
+  - first:
+      213: -6142498816045566009
+    second: gil_bforward_6
+  - first:
+      213: 1895683315845925967
+    second: gil_bforward_7
+  - first:
+      213: -3098828719731764477
+    second: gil_bforward_8
+  - first:
+      213: 6386399005949757500
+    second: gil_bforward_9
+  - first:
+      213: 5790233378006402973
+    second: gil_bforward_10
+  - first:
+      213: 7153047894850487565
+    second: gil_bforward_11
+  - first:
+      213: -8058823788740526934
+    second: gil_bforward_12
+  - first:
+      213: 4417184306283726700
+    second: gil_bforward_13
+  - first:
+      213: -2912453046926973289
+    second: gil_bforward_14
+  - first:
+      213: -833478480850199953
+    second: gil_bforward_15
+  - first:
+      213: -7181000405189839614
+    second: gil_bforward_16
+  - first:
+      213: -2881766985307947533
+    second: gil_bforward_17
+  - first:
+      213: 8057445564379237071
+    second: gil_bforward_18
+  - first:
+      213: 7723903058647461340
+    second: gil_bforward_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gil_bforward_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 3
+        width: 51
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 153c28aaa4593a030800000000000000
+      internalID: 3504809082945192785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_bforward_1
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 3
+        width: 52
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 645a09759e21ea7a0800000000000000
+      internalID: -6364128430022154938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_bforward_2
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 3
+        width: 82
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 574f928c54da0b970800000000000000
+      internalID: 8768698989712897141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_bforward_3
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 3
+        width: 49
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdf9ae8661086f520800000000000000
+      internalID: 2735514657411997660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_bforward_4
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 3
+        width: 48
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6f556748e6e4f5a0800000000000000
+      internalID: -6488307277829415060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_bforward_5
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 3
+        width: 75
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8cc71de07ffc8ac0800000000000000
+      internalID: -3851422720829436785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_bforward_6
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 3
+        width: 67
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c7b8540fd571caa0800000000000000
+      internalID: -6142498816045566009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_bforward_7
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 3
+        width: 91
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4c81a79ee1de4a10800000000000000
+      internalID: 1895683315845925967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_bforward_8
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 3
+        width: 95
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3031c9c92bfbef4d0800000000000000
+      internalID: -3098828719731764477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_bforward_9
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 3
+        width: 64
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c380b8f2f0c01a850800000000000000
+      internalID: 6386399005949757500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_bforward_10
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 3
+        width: 50
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d978eae449a0b5050800000000000000
+      internalID: 5790233378006402973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_bforward_11
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 3
+        width: 41
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d054be1792bb44360800000000000000
+      internalID: 7153047894850487565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_bforward_12
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 3
+        width: 77
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aac37ac267e492090800000000000000
+      internalID: -8058823788740526934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_bforward_13
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 3
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c67c87b29bdfc4d30800000000000000
+      internalID: 4417184306283726700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_bforward_14
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 3
+        width: 60
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 796e9e87263e497d0800000000000000
+      internalID: -2912453046926973289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_bforward_15
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 3
+        width: 41
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6addf4dcb3ee64f0800000000000000
+      internalID: -833478480850199953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_bforward_16
+      rect:
+        serializedVersion: 2
+        x: 1643
+        y: 3
+        width: 46
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20539b49d26f75c90800000000000000
+      internalID: -7181000405189839614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_bforward_17
+      rect:
+        serializedVersion: 2
+        x: 1722
+        y: 3
+        width: 90
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fd7543f138e108d0800000000000000
+      internalID: -2881766985307947533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_bforward_18
+      rect:
+        serializedVersion: 2
+        x: 1838
+        y: 3
+        width: 60
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fca0fd5fc0cc1df60800000000000000
+      internalID: 8057445564379237071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_bforward_19
+      rect:
+        serializedVersion: 2
+        x: 1946
+        y: 3
+        width: 47
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdd2c3aa8e0d03b60800000000000000
+      internalID: 7723903058647461340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      gil_bforward_0: 3504809082945192785
+      gil_bforward_1: -6364128430022154938
+      gil_bforward_10: 5790233378006402973
+      gil_bforward_11: 7153047894850487565
+      gil_bforward_12: -8058823788740526934
+      gil_bforward_13: 4417184306283726700
+      gil_bforward_14: -2912453046926973289
+      gil_bforward_15: -833478480850199953
+      gil_bforward_16: -7181000405189839614
+      gil_bforward_17: -2881766985307947533
+      gil_bforward_18: 8057445564379237071
+      gil_bforward_19: 7723903058647461340
+      gil_bforward_2: 8768698989712897141
+      gil_bforward_3: 2735514657411997660
+      gil_bforward_4: -6488307277829415060
+      gil_bforward_5: -3851422720829436785
+      gil_bforward_6: -6142498816045566009
+      gil_bforward_7: 1895683315845925967
+      gil_bforward_8: -3098828719731764477
+      gil_bforward_9: 6386399005949757500
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

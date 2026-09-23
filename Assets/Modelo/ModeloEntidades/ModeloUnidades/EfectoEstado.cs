@@ -49,7 +49,7 @@ public class Sangrado : EfectoEstado
         this.dañoPorTick = dañoPorTick;
     }
 
-    protected override void AplicarTick(Unidad objetivo) => objetivo.RecibirDaño(dañoPorTick);
+    protected override void AplicarTick(Unidad objetivo) => objetivo.RecibirAtaqueEspecial(dañoPorTick);
     // No sobrescribe AlSerAgregado -> hereda el comportamiento de apilarse.
 }
 
@@ -64,7 +64,7 @@ public class Veneno : EfectoEstado
     }
 
     protected override void AplicarTick(Unidad objetivo)
-        => objetivo.RecibirDaño(objetivo.Vida * porcentajeVidaActual);
+        => objetivo.RecibirAtaqueEspecial(objetivo.Vida * porcentajeVidaActual);
 
     public override void AlSerAgregado(List<EfectoEstado> listaActual)
     {
@@ -89,7 +89,7 @@ public class Quemadura : EfectoEstado
 
     protected override void AplicarTick(Unidad objetivo)
     {
-        objetivo.RecibirDaño(dañoBase + (incrementoPorTick * ticksAplicados));
+        objetivo.RecibirAtaqueEspecial(dañoBase + (incrementoPorTick * ticksAplicados));
         ticksAplicados++;
     }
 
@@ -176,4 +176,3 @@ public class Bendicion : EfectoEstado
         objetivo.Defensa -= deltaDefensa;
     }
 }
-

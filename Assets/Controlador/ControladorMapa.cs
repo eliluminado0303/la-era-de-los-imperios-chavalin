@@ -12,10 +12,14 @@ public class ControladorMapa {
     private readonly GestorArchivos gestorArchivos;
     private readonly ControladorIA controladorIA; // null si este jugador es el humano
 
-    public ControladorMapa(string nombreJugador, List<Jugador> oponentes, Mapa mapaCompartido, ControladorIA controladorIA = null) {
-        Jugador = new Jugador(nombreJugador);
-        Mapa = mapaCompartido; 
-        Partida = new Partida(Jugador, oponentes, Mapa);
+    // mapaCompartido y partidaCompartida se crean UNA sola vez (en el punto
+    // de arranque) y se pasan a las 4 instancias de ControladorMapa — así
+    // los 4 jugadores ven el mismo tablero y la misma condición de victoria,
+    // en vez de cada uno tener su propia copia desincronizada.
+    public ControladorMapa(Jugador jugador, Mapa mapaCompartido, Partida partidaCompartida, ControladorIA controladorIA = null) {
+        Jugador = jugador;
+        Mapa = mapaCompartido;
+        Partida = partidaCompartida;
         this.controladorIA = controladorIA;
 
         gestorRecoleccion = new GestorRecoleccion();
@@ -50,7 +54,7 @@ public class ControladorMapa {
 
     public void ActualizarResultados() {
         while (gestorRecoleccion.ResultadosPendientes.TryDequeue(out ResultadoRecoleccion _)) {
-            
+
         }
 
         while (gestorConstruccion.ResultadosPendientes.TryDequeue(out ResultadoConstruccion resultado)) {

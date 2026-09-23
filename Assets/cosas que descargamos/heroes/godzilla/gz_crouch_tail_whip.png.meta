@@ -1,0 +1,524 @@
+fileFormatVersion: 2
+guid: cf061c7a486cbdc489e06e5fd08a6424
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6382766489976053875
+    second: gz_crouch_tail_whip_0
+  - first:
+      213: 8732381692116152558
+    second: gz_crouch_tail_whip_1
+  - first:
+      213: 8625427668012998704
+    second: gz_crouch_tail_whip_2
+  - first:
+      213: -6314602400124123395
+    second: gz_crouch_tail_whip_3
+  - first:
+      213: -4899330691009273484
+    second: gz_crouch_tail_whip_4
+  - first:
+      213: 4930027379989494089
+    second: gz_crouch_tail_whip_5
+  - first:
+      213: 5296738884975012262
+    second: gz_crouch_tail_whip_6
+  - first:
+      213: 924425465395967734
+    second: gz_crouch_tail_whip_7
+  - first:
+      213: -6756371493344238084
+    second: gz_crouch_tail_whip_8
+  - first:
+      213: -6107425314216961159
+    second: gz_crouch_tail_whip_9
+  - first:
+      213: 4753386145943016623
+    second: gz_crouch_tail_whip_10
+  - first:
+      213: -3466816841547732247
+    second: gz_crouch_tail_whip_11
+  - first:
+      213: 1114531546244041509
+    second: gz_crouch_tail_whip_12
+  - first:
+      213: 2114071410483169756
+    second: gz_crouch_tail_whip_13
+  - first:
+      213: 8740004873010443609
+    second: gz_crouch_tail_whip_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gz_crouch_tail_whip_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 4
+        width: 81
+        height: 55
+      alignment: 9
+      pivot: {x: 0.60667306, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3702a472e44249850800000000000000
+      internalID: 6382766489976053875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gz_crouch_tail_whip_1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 4
+        width: 61
+        height: 55
+      alignment: 9
+      pivot: {x: 0.53879285, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee035b102e6af2970800000000000000
+      internalID: 8732381692116152558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gz_crouch_tail_whip_2
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 4
+        width: 75
+        height: 55
+      alignment: 9
+      pivot: {x: 0.43328002, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 030adbbb3cca3b770800000000000000
+      internalID: 8625427668012998704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gz_crouch_tail_whip_3
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 4
+        width: 97
+        height: 51
+      alignment: 9
+      pivot: {x: 0.3470053, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df6c5c2c2960e58a0800000000000000
+      internalID: -6314602400124123395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gz_crouch_tail_whip_4
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 4
+        width: 94
+        height: 58
+      alignment: 9
+      pivot: {x: 0.35578692, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 471293db1b4120cb0800000000000000
+      internalID: -4899330691009273484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gz_crouch_tail_whip_5
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 3
+        width: 66
+        height: 84
+      alignment: 9
+      pivot: {x: 0.49626946, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 949393d18c9fa6440800000000000000
+      internalID: 4930027379989494089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gz_crouch_tail_whip_6
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 4
+        width: 58
+        height: 82
+      alignment: 9
+      pivot: {x: 0.55184513, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a92fead3fbc18940800000000000000
+      internalID: 5296738884975012262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gz_crouch_tail_whip_7
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 4
+        width: 58
+        height: 66
+      alignment: 9
+      pivot: {x: 0.55637336, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f6704e101834dc00800000000000000
+      internalID: 924425465395967734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gz_crouch_tail_whip_8
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 4
+        width: 58
+        height: 82
+      alignment: 9
+      pivot: {x: 0.5527249, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf524a07ceb8c32a0800000000000000
+      internalID: -6756371493344238084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gz_crouch_tail_whip_9
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 4
+        width: 67
+        height: 83
+      alignment: 9
+      pivot: {x: 0.49499604, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97b9ed509011e3ba0800000000000000
+      internalID: -6107425314216961159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gz_crouch_tail_whip_10
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 4
+        width: 95
+        height: 63
+      alignment: 9
+      pivot: {x: 0.3464471, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa45235e38b67f140800000000000000
+      internalID: 4753386145943016623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gz_crouch_tail_whip_11
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 4
+        width: 99
+        height: 51
+      alignment: 9
+      pivot: {x: 0.33864525, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eaa43a537463efc0800000000000000
+      internalID: -3466816841547732247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gz_crouch_tail_whip_12
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 4
+        width: 81
+        height: 55
+      alignment: 9
+      pivot: {x: 0.40774798, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52bc7d8498c977f00800000000000000
+      internalID: 1114531546244041509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gz_crouch_tail_whip_13
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 4
+        width: 61
+        height: 55
+      alignment: 9
+      pivot: {x: 0.4638772, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd988ab3fb0b65d10800000000000000
+      internalID: 2114071410483169756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gz_crouch_tail_whip_14
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 4
+        width: 75
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5667562, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95578fe102cba4970800000000000000
+      internalID: 8740004873010443609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 87efbea6e55495348ae985f7623955ae
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      gz_crouch_tail_whip_0: 6382766489976053875
+      gz_crouch_tail_whip_1: 8732381692116152558
+      gz_crouch_tail_whip_10: 4753386145943016623
+      gz_crouch_tail_whip_11: -3466816841547732247
+      gz_crouch_tail_whip_12: 1114531546244041509
+      gz_crouch_tail_whip_13: 2114071410483169756
+      gz_crouch_tail_whip_14: 8740004873010443609
+      gz_crouch_tail_whip_2: 8625427668012998704
+      gz_crouch_tail_whip_3: -6314602400124123395
+      gz_crouch_tail_whip_4: -4899330691009273484
+      gz_crouch_tail_whip_5: 4930027379989494089
+      gz_crouch_tail_whip_6: 5296738884975012262
+      gz_crouch_tail_whip_7: 924425465395967734
+      gz_crouch_tail_whip_8: -6756371493344238084
+      gz_crouch_tail_whip_9: -6107425314216961159
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,405 @@
+fileFormatVersion: 2
+guid: 510f24b1abb469448872dd4f47379354
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 950949709540470472
+    second: gz_stance_0
+  - first:
+      213: -6725111608144282766
+    second: gz_stance_1
+  - first:
+      213: -1302078916097794074
+    second: gz_stance_2
+  - first:
+      213: -536178007223169609
+    second: gz_stance_3
+  - first:
+      213: -2562440175994289895
+    second: gz_stance_4
+  - first:
+      213: -5370253788070428551
+    second: gz_stance_5
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gz_stance_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 4
+        width: 97
+        height: 75
+      alignment: 9
+      pivot: {x: 0.6193567, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ceab64f8b3723d00800000000000000
+      internalID: 950949709540470472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gz_stance_1
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 4
+        width: 92
+        height: 75
+      alignment: 9
+      pivot: {x: 0.5968026, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27b34b1af9a9ba2a0800000000000000
+      internalID: -6725111608144282766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gz_stance_2
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 4
+        width: 91
+        height: 75
+      alignment: 9
+      pivot: {x: 0.5978662, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ef1770ef161eede0800000000000000
+      internalID: -1302078916097794074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gz_stance_3
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 4
+        width: 83
+        height: 75
+      alignment: 9
+      pivot: {x: 0.5563321, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bd061771fc1f88f0800000000000000
+      internalID: -536178007223169609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gz_stance_4
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 4
+        width: 84
+        height: 75
+      alignment: 9
+      pivot: {x: 0.5636132, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 911cbaf7c32607cd0800000000000000
+      internalID: -2562440175994289895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gz_stance_5
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 4
+        width: 79
+        height: 75
+      alignment: 9
+      pivot: {x: 0.5310012, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 970cd50f1a60975b0800000000000000
+      internalID: -5370253788070428551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gz_stance_6
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 4
+        width: 76
+        height: 75
+      alignment: 9
+      pivot: {x: 0.5175765, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c52ab3cfe729d24399ddf06973f8569
+      internalID: 283856884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gz_stance_7
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 4
+        width: 78
+        height: 75
+      alignment: 9
+      pivot: {x: 0.52568954, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6901ad280f8bcc8499c8139abfeb3f4d
+      internalID: 1380891576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gz_stance_8
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 4
+        width: 82
+        height: 75
+      alignment: 9
+      pivot: {x: 0.5543042, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc21cdfcee8b8d48baca308cfada893
+      internalID: -1094857135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gz_stance_9
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 4
+        width: 90
+        height: 75
+      alignment: 9
+      pivot: {x: 0.5915324, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f19687e0036e91d48a71ea0eac2a7e1b
+      internalID: 1879127657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gz_stance_10
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 4
+        width: 98
+        height: 75
+      alignment: 9
+      pivot: {x: 0.6226819, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b0e782c3e3c2fe4681a781eec25116b
+      internalID: 1982836558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 88ee7ab1414bcd94ebbc20673688665d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      gz_stance_0: 950949709540470472
+      gz_stance_1: -6725111608144282766
+      gz_stance_10: 1982836558
+      gz_stance_2: -1302078916097794074
+      gz_stance_3: -536178007223169609
+      gz_stance_4: -2562440175994289895
+      gz_stance_5: -5370253788070428551
+      gz_stance_6: 283856884
+      gz_stance_7: 1380891576
+      gz_stance_8: -1094857135
+      gz_stance_9: 1879127657
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

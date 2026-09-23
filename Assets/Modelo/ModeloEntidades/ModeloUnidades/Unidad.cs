@@ -42,7 +42,7 @@ public class Unidad
             return;
         }
         float defensaEfectiva = ignorarDefensa ? 0 : Defensa;
-        Vida -= Math.Max(0, (int)daño - defensaEfectiva);
+        Vida -= Math.Max(0, (int)(daño - defensaEfectiva));
         if (Vida <= 0) { Vida = 0; AlMorir(); }
     }
 
