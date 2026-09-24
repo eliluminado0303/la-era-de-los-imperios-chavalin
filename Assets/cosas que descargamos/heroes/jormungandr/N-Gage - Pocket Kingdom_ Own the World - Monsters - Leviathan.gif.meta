@@ -1,0 +1,1796 @@
+fileFormatVersion: 2
+guid: f29f7796a201c3847b9fa99020bd3a43
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4484739219171580594
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_0
+  - first:
+      213: 1572759618143958052
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_1
+  - first:
+      213: 8296317133319123648
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_2
+  - first:
+      213: -7346114973478636028
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_3
+  - first:
+      213: -8522440003720881836
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_4
+  - first:
+      213: 2008947398190321799
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_5
+  - first:
+      213: 6234900579774617378
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_6
+  - first:
+      213: 8588977522785859574
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_7
+  - first:
+      213: -7394249032725155119
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_8
+  - first:
+      213: 2099807008407294856
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_9
+  - first:
+      213: 6607284383346059099
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_10
+  - first:
+      213: 5421492643911163712
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_11
+  - first:
+      213: -632645485361148133
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_12
+  - first:
+      213: 602326684582114440
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_13
+  - first:
+      213: 7870429357652395461
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_14
+  - first:
+      213: 8862925211527986345
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_15
+  - first:
+      213: -5230731234177974745
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_16
+  - first:
+      213: -8004146522443251504
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_17
+  - first:
+      213: -697018755459077609
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_18
+  - first:
+      213: -4734764141996062977
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_19
+  - first:
+      213: -3539002262794411590
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_20
+  - first:
+      213: -5408851534312838522
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_21
+  - first:
+      213: -6103929136498142743
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_22
+  - first:
+      213: 2614367595133332930
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_23
+  - first:
+      213: -1438054057329473409
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_24
+  - first:
+      213: -2148471387865661001
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_25
+  - first:
+      213: 8882132051921160764
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_26
+  - first:
+      213: -6402275341607511977
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_27
+  - first:
+      213: 8075791537361192945
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_28
+  - first:
+      213: 1132787981563482188
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_29
+  - first:
+      213: 286407732991949792
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_30
+  - first:
+      213: 8483797805622623638
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_31
+  - first:
+      213: 1542394822670007600
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_32
+  - first:
+      213: 6936931083840844571
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_33
+  - first:
+      213: -6748814841619348475
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_34
+  - first:
+      213: -1443817839016772213
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_35
+  - first:
+      213: 1478048990975610423
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_36
+  - first:
+      213: 300993160626095690
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_37
+  - first:
+      213: 1894850388823340990
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_38
+  - first:
+      213: -8849058314081580458
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_39
+  - first:
+      213: -8902304159705871355
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_40
+  - first:
+      213: -4769805771414054949
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_41
+  - first:
+      213: -5561777006459945350
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_42
+  - first:
+      213: 3512383631077022740
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_43
+  - first:
+      213: -1242142757029228196
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_44
+  - first:
+      213: -3955549953084192029
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_45
+  - first:
+      213: 8982704975221293074
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_46
+  - first:
+      213: -2136970940953984126
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_47
+  - first:
+      213: -6129612354656827644
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_48
+  - first:
+      213: 6012227939029154345
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_49
+  - first:
+      213: -7104606698976535022
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_50
+  - first:
+      213: -2002272857953812271
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_51
+  - first:
+      213: 5123131534320214678
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_52
+  - first:
+      213: -7632150563947426967
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_53
+  - first:
+      213: 2945638984338908797
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_54
+  - first:
+      213: 6129867370834042155
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_55
+  - first:
+      213: 6040193403592927974
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_56
+  - first:
+      213: 4732289622115237602
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_57
+  - first:
+      213: -3822240321185196294
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_58
+  - first:
+      213: -3628840704096378503
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_59
+  - first:
+      213: 5427349463318376267
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_60
+  - first:
+      213: -4749283538254038488
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_61
+  - first:
+      213: -3275547268709516110
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_62
+  - first:
+      213: 6636013797943262494
+    second: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_63
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1199
+        width: 74
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e45e30bf07103c1c0800000000000000
+      internalID: -4484739219171580594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_1
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 1189
+        width: 61
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 424bc843a8093d510800000000000000
+      internalID: 1572759618143958052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_2
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 1203
+        width: 88
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c2397b1a70722370800000000000000
+      internalID: 8296317133319123648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1143
+        width: 75
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 406b0ae5a5b5d0a90800000000000000
+      internalID: -7346114973478636028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_4
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1147
+        width: 91
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45953ae68f53ab980800000000000000
+      internalID: -8522440003720881836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_5
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1075
+        width: 99
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7805499c30731eb10800000000000000
+      internalID: 2008947398190321799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_6
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 1041
+        width: 100
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 227d75b1b01d68650800000000000000
+      internalID: 6234900579774617378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_7
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 1091
+        width: 82
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f73775fc8d223770800000000000000
+      internalID: 8588977522785859574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_8
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1043
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d234af5ea9526990800000000000000
+      internalID: -7394249032725155119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_9
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1038
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8831ef05953042d10800000000000000
+      internalID: 2099807008407294856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_10
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 986
+        width: 107
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b57e357c32ac1bb50800000000000000
+      internalID: 6607284383346059099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_11
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1029
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04fd7b8d5d20d3b40800000000000000
+      internalID: 5421492643911163712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_12
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 997
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1f4b4078446837f0800000000000000
+      internalID: -632645485361148133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_13
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 991
+        width: 129
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8847149ade4eb5800800000000000000
+      internalID: 602326684582114440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_14
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 995
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c54dac2dc1693d60800000000000000
+      internalID: 7870429357652395461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_15
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 966
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9acbaf7a58f6ffa70800000000000000
+      internalID: 8862925211527986345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_16
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 893
+        width: 102
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72ef747f7a5b867b0800000000000000
+      internalID: -5230731234177974745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_17
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 938
+        width: 98
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d08797452f8be090800000000000000
+      internalID: -8004146522443251504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 937
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71aa3178221b356f0800000000000000
+      internalID: -697018755459077609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_19
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 954
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff64115491dba4eb0800000000000000
+      internalID: -4734764141996062977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_20
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 942
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab1e5d24130f2eec0800000000000000
+      internalID: -3539002262794411590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_21
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 917
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68ae476df26efe4b0800000000000000
+      internalID: -5408851534312838522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_22
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 916
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e11fd45acc7a4ba0800000000000000
+      internalID: -6103929136498142743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_23
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 849
+        width: 87
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cde63ce979184420800000000000000
+      internalID: 2614367595133332930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_24
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 896
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f78411934710b0ce0800000000000000
+      internalID: -1438054057329473409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_25
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 805
+        width: 101
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b14d24e7a81f22e0800000000000000
+      internalID: -2148471387865661001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_26
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 763
+        width: 74
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3a4fdaaa0ca34b70800000000000000
+      internalID: 8882132051921160764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_27
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 716
+        width: 81
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 758dd3d5f7c8627a0800000000000000
+      internalID: -6402275341607511977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_28
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 652
+        width: 82
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f70588ad99f21070800000000000000
+      internalID: 8075791537361192945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_29
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 717
+        width: 87
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c405ceedaa878bf00800000000000000
+      internalID: 1132787981563482188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_30
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 653
+        width: 102
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ebf8e1d05689f300800000000000000
+      internalID: 286407732991949792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_31
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 599
+        width: 88
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69dff56b7218cb570800000000000000
+      internalID: 8483797805622623638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_32
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 585
+        width: 61
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03db5a45befa76510800000000000000
+      internalID: 1542394822670007600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_33
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 595
+        width: 74
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b13f2bb311ee44060800000000000000
+      internalID: 6936931083840844571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 543
+        width: 91
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 504056688a46752a0800000000000000
+      internalID: -6748814841619348475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_35
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 539
+        width: 75
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8d7809335786fbe0800000000000000
+      internalID: -1443817839016772213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_36
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 437
+        width: 100
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73ec9bbe9b5138410800000000000000
+      internalID: 1478048990975610423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_37
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 487
+        width: 82
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a46c0f25fa75d2400800000000000000
+      internalID: 300993160626095690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_38
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 471
+        width: 99
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb77358a36cdb4a10800000000000000
+      internalID: 1894850388823340990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_39
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 382
+        width: 107
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65a43700954d13580800000000000000
+      internalID: -8849058314081580458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_40
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 434
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50ccf3e7889a47480800000000000000
+      internalID: -8902304159705871355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_41
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 439
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd7d1432cee3ecdb0800000000000000
+      internalID: -4769805771414054949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 387
+        width: 129
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7ef40ab74990d2b0800000000000000
+      internalID: -5561777006459945350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_43
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 393
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41c1e359d4e7eb030800000000000000
+      internalID: 3512383631077022740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_44
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 425
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c51d2fe5eb503cee0800000000000000
+      internalID: -1242142757029228196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_45
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 391
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ea8a1b66401b19c0800000000000000
+      internalID: -3955549953084192029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 334
+        width: 98
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2100332259af8ac70800000000000000
+      internalID: 8982704975221293074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_47
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 289
+        width: 102
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2830b195044f752e0800000000000000
+      internalID: -2136970940953984126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_48
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 362
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40785dd1a0e3feaa0800000000000000
+      internalID: -6129612354656827644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_49
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 338
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92af286d479bf6350800000000000000
+      internalID: 6012227939029154345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_50
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 350
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21e94ae59dd576d90800000000000000
+      internalID: -7104606698976535022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_51
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 333
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d0c146b17f7634e0800000000000000
+      internalID: -2002272857953812271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 245
+        width: 87
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69222c8acf4091740800000000000000
+      internalID: 5123131534320214678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_53
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 312
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96bcd9bbf77251690800000000000000
+      internalID: -7632150563947426967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_54
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 313
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d762012bc0301e820800000000000000
+      internalID: 2945638984338908797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_55
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 292
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2d12d675e9a11550800000000000000
+      internalID: 6129867370834042155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 159
+        width: 74
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ea60d3f5e313d350800000000000000
+      internalID: 6040193403592927974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_57
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 201
+        width: 101
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ee327ca6587ca140800000000000000
+      internalID: 4732289622115237602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_58
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 113
+        width: 87
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af6d491ddaca4fac0800000000000000
+      internalID: -3822240321185196294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_59
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 48
+        width: 82
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9716bd52b94c3adc0800000000000000
+      internalID: -3628840704096378503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_60
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 112
+        width: 81
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4faff0e491d15b40800000000000000
+      internalID: 5427349463318376267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_61
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 49
+        width: 102
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82af1c4e8c7271eb0800000000000000
+      internalID: -4749283538254038488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_62
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 14
+        width: 49
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bc719b1d1bea82d0800000000000000
+      internalID: -3275547268709516110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_63
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 12
+        width: 73
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1dbffed36bd71c50800000000000000
+      internalID: 6636013797943262494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_0: -4484739219171580594
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_1: 1572759618143958052
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_10: 6607284383346059099
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_11: 5421492643911163712
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_12: -632645485361148133
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_13: 602326684582114440
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_14: 7870429357652395461
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_15: 8862925211527986345
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_16: -5230731234177974745
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_17: -8004146522443251504
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_18: -697018755459077609
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_19: -4734764141996062977
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_2: 8296317133319123648
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_20: -3539002262794411590
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_21: -5408851534312838522
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_22: -6103929136498142743
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_23: 2614367595133332930
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_24: -1438054057329473409
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_25: -2148471387865661001
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_26: 8882132051921160764
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_27: -6402275341607511977
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_28: 8075791537361192945
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_29: 1132787981563482188
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_3: -7346114973478636028
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_30: 286407732991949792
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_31: 8483797805622623638
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_32: 1542394822670007600
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_33: 6936931083840844571
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_34: -6748814841619348475
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_35: -1443817839016772213
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_36: 1478048990975610423
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_37: 300993160626095690
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_38: 1894850388823340990
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_39: -8849058314081580458
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_4: -8522440003720881836
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_40: -8902304159705871355
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_41: -4769805771414054949
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_42: -5561777006459945350
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_43: 3512383631077022740
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_44: -1242142757029228196
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_45: -3955549953084192029
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_46: 8982704975221293074
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_47: -2136970940953984126
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_48: -6129612354656827644
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_49: 6012227939029154345
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_5: 2008947398190321799
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_50: -7104606698976535022
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_51: -2002272857953812271
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_52: 5123131534320214678
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_53: -7632150563947426967
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_54: 2945638984338908797
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_55: 6129867370834042155
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_56: 6040193403592927974
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_57: 4732289622115237602
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_58: -3822240321185196294
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_59: -3628840704096378503
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_6: 6234900579774617378
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_60: 5427349463318376267
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_61: -4749283538254038488
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_62: -3275547268709516110
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_63: 6636013797943262494
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_7: 8588977522785859574
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_8: -7394249032725155119
+      N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_9: 2099807008407294856
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

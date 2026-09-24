@@ -187,4 +187,38 @@ public class Medusa : Heroe
             objetivo.AgregarEfecto(new ReduccionDefensa(5, 4f));
         }
     }
+// nekodios llego a destruir el juego, su habilidad especial te mata a un familiar tambien
+// tambien te desinstala system32 y lo reemplaza por system1, hace un ataque DDOs al mossad
+// Te obliga a usar linux y te vuelve gay
+// olvide mencionar que te embaraza y mata a tu hijo
+// que loco el negroarc
+    public class NekoArc : Heroe
+    {
+        public NekoArc(string civilizacion)
+        {
+            Vida = 1; 
+            VidaMaxima = Vida;
+            Ataque = 1000; 
+            Defensa = 0; 
+            Velocidad = 60; 
+            Rango = 10; 
+            Civilizacion = civilizacion;
+            ProbabilidadEsquivar = 100f; 
+            ProbabilidadCritico = 100f; 
+            multiplicadorCritico = 2000f;
+            AreaHabilidad = new AreaEfecto(FormaArea.Circulo, rangoLanzamiento: 3000f, tamaño: 2000f);
+            CostoOro = 1000;
+            CostoMadera = 500;
+            CostoComida = 250;
+        }
+
+        // Habilidad especial: aumenta ataque y velocidad de TODA el área
+        public override void HabilidadEspecial(List<Unidad> objetivos)
+        {
+            foreach (var objetivo in objetivos)
+            {
+            objetivo.AgregarEfecto(new Bendicion(deltaAtaque: 5000, deltaDefensa: 1, duracion: 100f));
+            }
+        }
+    }
 }

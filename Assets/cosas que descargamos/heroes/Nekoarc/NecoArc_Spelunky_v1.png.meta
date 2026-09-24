@@ -1,0 +1,7048 @@
+fileFormatVersion: 2
+guid: 5b89b69afda8a094fbdca67801c25e5f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8952305541594955671
+    second: NecoArc_Spelunky_v1_0
+  - first:
+      213: 5603020293942264058
+    second: NecoArc_Spelunky_v1_1
+  - first:
+      213: -8355703971682471840
+    second: NecoArc_Spelunky_v1_2
+  - first:
+      213: 7967333393370009492
+    second: NecoArc_Spelunky_v1_3
+  - first:
+      213: -4452988274891568074
+    second: NecoArc_Spelunky_v1_4
+  - first:
+      213: -5798777243397377447
+    second: NecoArc_Spelunky_v1_5
+  - first:
+      213: -9154378694358628891
+    second: NecoArc_Spelunky_v1_6
+  - first:
+      213: -1587312167302196694
+    second: NecoArc_Spelunky_v1_7
+  - first:
+      213: -1636691123999385924
+    second: NecoArc_Spelunky_v1_8
+  - first:
+      213: -3562551645468743841
+    second: NecoArc_Spelunky_v1_9
+  - first:
+      213: 1845597435069200406
+    second: NecoArc_Spelunky_v1_10
+  - first:
+      213: -93539126144827988
+    second: NecoArc_Spelunky_v1_11
+  - first:
+      213: -4704114668857437502
+    second: NecoArc_Spelunky_v1_12
+  - first:
+      213: 8982311690742203759
+    second: NecoArc_Spelunky_v1_13
+  - first:
+      213: 1906645106306474771
+    second: NecoArc_Spelunky_v1_14
+  - first:
+      213: 7403555688408693274
+    second: NecoArc_Spelunky_v1_15
+  - first:
+      213: -4571470839061172167
+    second: NecoArc_Spelunky_v1_16
+  - first:
+      213: -5643225738655017240
+    second: NecoArc_Spelunky_v1_17
+  - first:
+      213: 4792121916511681740
+    second: NecoArc_Spelunky_v1_18
+  - first:
+      213: -7620568975028632220
+    second: NecoArc_Spelunky_v1_19
+  - first:
+      213: 182368725888635311
+    second: NecoArc_Spelunky_v1_20
+  - first:
+      213: -4189540435808601089
+    second: NecoArc_Spelunky_v1_21
+  - first:
+      213: -6498736153243784174
+    second: NecoArc_Spelunky_v1_22
+  - first:
+      213: -8711621077369373487
+    second: NecoArc_Spelunky_v1_23
+  - first:
+      213: -7087028947780366496
+    second: NecoArc_Spelunky_v1_24
+  - first:
+      213: 879836567685549686
+    second: NecoArc_Spelunky_v1_25
+  - first:
+      213: 2509752094267959888
+    second: NecoArc_Spelunky_v1_26
+  - first:
+      213: -3166625125319362595
+    second: NecoArc_Spelunky_v1_27
+  - first:
+      213: -1536400046095331489
+    second: NecoArc_Spelunky_v1_28
+  - first:
+      213: 5508440345511210262
+    second: NecoArc_Spelunky_v1_29
+  - first:
+      213: -5293789150875709800
+    second: NecoArc_Spelunky_v1_30
+  - first:
+      213: 2034135375425619954
+    second: NecoArc_Spelunky_v1_31
+  - first:
+      213: -3925964517403259974
+    second: NecoArc_Spelunky_v1_32
+  - first:
+      213: -3406162517351598323
+    second: NecoArc_Spelunky_v1_33
+  - first:
+      213: 6414043357748686127
+    second: NecoArc_Spelunky_v1_34
+  - first:
+      213: 5336804422959780273
+    second: NecoArc_Spelunky_v1_35
+  - first:
+      213: -8231709084690867410
+    second: NecoArc_Spelunky_v1_36
+  - first:
+      213: -4020028824437912660
+    second: NecoArc_Spelunky_v1_37
+  - first:
+      213: 1652506498322720283
+    second: NecoArc_Spelunky_v1_38
+  - first:
+      213: -3394249671910601427
+    second: NecoArc_Spelunky_v1_39
+  - first:
+      213: 6506293698670094663
+    second: NecoArc_Spelunky_v1_40
+  - first:
+      213: 4653048901077514179
+    second: NecoArc_Spelunky_v1_41
+  - first:
+      213: 4827959012211531302
+    second: NecoArc_Spelunky_v1_42
+  - first:
+      213: 8753053992771860704
+    second: NecoArc_Spelunky_v1_43
+  - first:
+      213: 5153707600997091219
+    second: NecoArc_Spelunky_v1_44
+  - first:
+      213: -7203604395102470682
+    second: NecoArc_Spelunky_v1_45
+  - first:
+      213: 116658498581582283
+    second: NecoArc_Spelunky_v1_46
+  - first:
+      213: -5032031901860267918
+    second: NecoArc_Spelunky_v1_47
+  - first:
+      213: 3663711916690660100
+    second: NecoArc_Spelunky_v1_48
+  - first:
+      213: 1094354786403757383
+    second: NecoArc_Spelunky_v1_49
+  - first:
+      213: -463835295611632977
+    second: NecoArc_Spelunky_v1_50
+  - first:
+      213: 5917671937121984923
+    second: NecoArc_Spelunky_v1_51
+  - first:
+      213: -7059384673214430686
+    second: NecoArc_Spelunky_v1_52
+  - first:
+      213: 107345457871630757
+    second: NecoArc_Spelunky_v1_53
+  - first:
+      213: -697066679961321068
+    second: NecoArc_Spelunky_v1_54
+  - first:
+      213: 8249281450442201115
+    second: NecoArc_Spelunky_v1_55
+  - first:
+      213: -8155632510965468269
+    second: NecoArc_Spelunky_v1_56
+  - first:
+      213: 7183533743745663653
+    second: NecoArc_Spelunky_v1_57
+  - first:
+      213: 8004191237413128267
+    second: NecoArc_Spelunky_v1_58
+  - first:
+      213: -2401980883253319439
+    second: NecoArc_Spelunky_v1_59
+  - first:
+      213: 6674081832452753744
+    second: NecoArc_Spelunky_v1_60
+  - first:
+      213: 7769507890797600122
+    second: NecoArc_Spelunky_v1_61
+  - first:
+      213: 7402780263613924234
+    second: NecoArc_Spelunky_v1_62
+  - first:
+      213: 5960364833157158480
+    second: NecoArc_Spelunky_v1_63
+  - first:
+      213: -4606601225363055069
+    second: NecoArc_Spelunky_v1_64
+  - first:
+      213: 2714281066786083852
+    second: NecoArc_Spelunky_v1_65
+  - first:
+      213: 491655909130161603
+    second: NecoArc_Spelunky_v1_66
+  - first:
+      213: 9168514043171753469
+    second: NecoArc_Spelunky_v1_67
+  - first:
+      213: 203386252328007171
+    second: NecoArc_Spelunky_v1_68
+  - first:
+      213: -8845435030902808906
+    second: NecoArc_Spelunky_v1_69
+  - first:
+      213: 8532186401083846172
+    second: NecoArc_Spelunky_v1_70
+  - first:
+      213: -8856580406615383141
+    second: NecoArc_Spelunky_v1_71
+  - first:
+      213: -8664003971075367363
+    second: NecoArc_Spelunky_v1_72
+  - first:
+      213: -7298610466871351548
+    second: NecoArc_Spelunky_v1_73
+  - first:
+      213: -6783275582899144562
+    second: NecoArc_Spelunky_v1_74
+  - first:
+      213: -3441204853135302180
+    second: NecoArc_Spelunky_v1_75
+  - first:
+      213: -8270503516664203177
+    second: NecoArc_Spelunky_v1_76
+  - first:
+      213: -4466653898502213969
+    second: NecoArc_Spelunky_v1_77
+  - first:
+      213: -9117168805615503385
+    second: NecoArc_Spelunky_v1_78
+  - first:
+      213: 957291878891419228
+    second: NecoArc_Spelunky_v1_79
+  - first:
+      213: -2441657323455977409
+    second: NecoArc_Spelunky_v1_80
+  - first:
+      213: -6623330557974928841
+    second: NecoArc_Spelunky_v1_81
+  - first:
+      213: -3181362513854251542
+    second: NecoArc_Spelunky_v1_82
+  - first:
+      213: -7687596404135861437
+    second: NecoArc_Spelunky_v1_83
+  - first:
+      213: -7124489431617796697
+    second: NecoArc_Spelunky_v1_84
+  - first:
+      213: -8751460423281946592
+    second: NecoArc_Spelunky_v1_85
+  - first:
+      213: -4356226134559160032
+    second: NecoArc_Spelunky_v1_86
+  - first:
+      213: 8741074662048816009
+    second: NecoArc_Spelunky_v1_87
+  - first:
+      213: -1988388836357258453
+    second: NecoArc_Spelunky_v1_88
+  - first:
+      213: -4113976073384473744
+    second: NecoArc_Spelunky_v1_89
+  - first:
+      213: 1685949479544327888
+    second: NecoArc_Spelunky_v1_90
+  - first:
+      213: -2248292429384810568
+    second: NecoArc_Spelunky_v1_91
+  - first:
+      213: 1084786347469610289
+    second: NecoArc_Spelunky_v1_92
+  - first:
+      213: 2483828636073111047
+    second: NecoArc_Spelunky_v1_93
+  - first:
+      213: -7878814885810621392
+    second: NecoArc_Spelunky_v1_94
+  - first:
+      213: -1455707727500168316
+    second: NecoArc_Spelunky_v1_95
+  - first:
+      213: -5834036883940641908
+    second: NecoArc_Spelunky_v1_96
+  - first:
+      213: -5302733782160080295
+    second: NecoArc_Spelunky_v1_97
+  - first:
+      213: -9188190227887343343
+    second: NecoArc_Spelunky_v1_98
+  - first:
+      213: 4360280904627649605
+    second: NecoArc_Spelunky_v1_99
+  - first:
+      213: -8082587032244790004
+    second: NecoArc_Spelunky_v1_100
+  - first:
+      213: 8635384113992609699
+    second: NecoArc_Spelunky_v1_101
+  - first:
+      213: 9112475164868448866
+    second: NecoArc_Spelunky_v1_102
+  - first:
+      213: 5010696149682590816
+    second: NecoArc_Spelunky_v1_103
+  - first:
+      213: 2252568514539515011
+    second: NecoArc_Spelunky_v1_104
+  - first:
+      213: -6177173720213189854
+    second: NecoArc_Spelunky_v1_105
+  - first:
+      213: -3355400848652333389
+    second: NecoArc_Spelunky_v1_106
+  - first:
+      213: -9030329104496204710
+    second: NecoArc_Spelunky_v1_107
+  - first:
+      213: 5847120182340435763
+    second: NecoArc_Spelunky_v1_108
+  - first:
+      213: -3259138277441052451
+    second: NecoArc_Spelunky_v1_109
+  - first:
+      213: 2633580434755841369
+    second: NecoArc_Spelunky_v1_110
+  - first:
+      213: 2095112149349791094
+    second: NecoArc_Spelunky_v1_111
+  - first:
+      213: -3027108269637947402
+    second: NecoArc_Spelunky_v1_112
+  - first:
+      213: 8513025859536744344
+    second: NecoArc_Spelunky_v1_113
+  - first:
+      213: 4343107927873778657
+    second: NecoArc_Spelunky_v1_114
+  - first:
+      213: -7614171303687873420
+    second: NecoArc_Spelunky_v1_115
+  - first:
+      213: -8901671381693537211
+    second: NecoArc_Spelunky_v1_116
+  - first:
+      213: 1859822491517720830
+    second: NecoArc_Spelunky_v1_117
+  - first:
+      213: 6758099590068946106
+    second: NecoArc_Spelunky_v1_118
+  - first:
+      213: -7902117823815622831
+    second: NecoArc_Spelunky_v1_119
+  - first:
+      213: 8748512266343804466
+    second: NecoArc_Spelunky_v1_120
+  - first:
+      213: -4333412052332898935
+    second: NecoArc_Spelunky_v1_121
+  - first:
+      213: 316074953866437780
+    second: NecoArc_Spelunky_v1_122
+  - first:
+      213: -7568300937955119728
+    second: NecoArc_Spelunky_v1_123
+  - first:
+      213: 151714726158035005
+    second: NecoArc_Spelunky_v1_124
+  - first:
+      213: -9021090116272906834
+    second: NecoArc_Spelunky_v1_125
+  - first:
+      213: 1126830036566339806
+    second: NecoArc_Spelunky_v1_126
+  - first:
+      213: -4773545295517869502
+    second: NecoArc_Spelunky_v1_127
+  - first:
+      213: 8648381556840760987
+    second: NecoArc_Spelunky_v1_128
+  - first:
+      213: 583206812942267643
+    second: NecoArc_Spelunky_v1_129
+  - first:
+      213: 4182573345805210012
+    second: NecoArc_Spelunky_v1_130
+  - first:
+      213: -7905271321039099570
+    second: NecoArc_Spelunky_v1_131
+  - first:
+      213: -7397391024346862657
+    second: NecoArc_Spelunky_v1_132
+  - first:
+      213: 5763465164106882872
+    second: NecoArc_Spelunky_v1_133
+  - first:
+      213: -1668733384685967522
+    second: NecoArc_Spelunky_v1_134
+  - first:
+      213: 8914737556844212725
+    second: NecoArc_Spelunky_v1_135
+  - first:
+      213: 3649932645907687497
+    second: NecoArc_Spelunky_v1_136
+  - first:
+      213: 8468013035752285788
+    second: NecoArc_Spelunky_v1_137
+  - first:
+      213: 6489535940300283532
+    second: NecoArc_Spelunky_v1_138
+  - first:
+      213: 7896752006866824048
+    second: NecoArc_Spelunky_v1_139
+  - first:
+      213: 8251326723870654013
+    second: NecoArc_Spelunky_v1_140
+  - first:
+      213: -4621704102990968148
+    second: NecoArc_Spelunky_v1_141
+  - first:
+      213: -10167282594423816
+    second: NecoArc_Spelunky_v1_142
+  - first:
+      213: -4876800613513513626
+    second: NecoArc_Spelunky_v1_143
+  - first:
+      213: 7352388414082566070
+    second: NecoArc_Spelunky_v1_144
+  - first:
+      213: -9162856228307426701
+    second: NecoArc_Spelunky_v1_145
+  - first:
+      213: -4525442192975271645
+    second: NecoArc_Spelunky_v1_146
+  - first:
+      213: 2204758735448665865
+    second: NecoArc_Spelunky_v1_147
+  - first:
+      213: -8623839940609175793
+    second: NecoArc_Spelunky_v1_148
+  - first:
+      213: 3614131322218876844
+    second: NecoArc_Spelunky_v1_149
+  - first:
+      213: 8923302517185135457
+    second: NecoArc_Spelunky_v1_150
+  - first:
+      213: 2805029952310906589
+    second: NecoArc_Spelunky_v1_151
+  - first:
+      213: 8737346336407000101
+    second: NecoArc_Spelunky_v1_152
+  - first:
+      213: -980969561078721711
+    second: NecoArc_Spelunky_v1_153
+  - first:
+      213: -1045488237981903304
+    second: NecoArc_Spelunky_v1_154
+  - first:
+      213: 4852991494722513833
+    second: NecoArc_Spelunky_v1_155
+  - first:
+      213: -8723212105493557057
+    second: NecoArc_Spelunky_v1_156
+  - first:
+      213: 7409521209298131086
+    second: NecoArc_Spelunky_v1_157
+  - first:
+      213: -8319189375667616686
+    second: NecoArc_Spelunky_v1_158
+  - first:
+      213: 5673248005599380291
+    second: NecoArc_Spelunky_v1_159
+  - first:
+      213: -1312492153588821409
+    second: NecoArc_Spelunky_v1_160
+  - first:
+      213: 196729100788932177
+    second: NecoArc_Spelunky_v1_161
+  - first:
+      213: 5385003051771682587
+    second: NecoArc_Spelunky_v1_162
+  - first:
+      213: 4392141212326181107
+    second: NecoArc_Spelunky_v1_163
+  - first:
+      213: 2283096287760929650
+    second: NecoArc_Spelunky_v1_164
+  - first:
+      213: -8967776207918926021
+    second: NecoArc_Spelunky_v1_165
+  - first:
+      213: -2357164329968658431
+    second: NecoArc_Spelunky_v1_166
+  - first:
+      213: 6430110140242637017
+    second: NecoArc_Spelunky_v1_167
+  - first:
+      213: 5545711273686058940
+    second: NecoArc_Spelunky_v1_168
+  - first:
+      213: -5690988700094205973
+    second: NecoArc_Spelunky_v1_169
+  - first:
+      213: 4021479489149978821
+    second: NecoArc_Spelunky_v1_170
+  - first:
+      213: 3175333351921596912
+    second: NecoArc_Spelunky_v1_171
+  - first:
+      213: 6021049378183111303
+    second: NecoArc_Spelunky_v1_172
+  - first:
+      213: 89095609287079805
+    second: NecoArc_Spelunky_v1_173
+  - first:
+      213: 6258072361432023149
+    second: NecoArc_Spelunky_v1_174
+  - first:
+      213: 5872885387091086737
+    second: NecoArc_Spelunky_v1_175
+  - first:
+      213: -7128319709329550405
+    second: NecoArc_Spelunky_v1_176
+  - first:
+      213: -4929122642768111871
+    second: NecoArc_Spelunky_v1_177
+  - first:
+      213: -5711480838439351295
+    second: NecoArc_Spelunky_v1_178
+  - first:
+      213: 7233483013232001177
+    second: NecoArc_Spelunky_v1_179
+  - first:
+      213: 3096798382732005603
+    second: NecoArc_Spelunky_v1_180
+  - first:
+      213: -649807149540733775
+    second: NecoArc_Spelunky_v1_181
+  - first:
+      213: 3660891818193991362
+    second: NecoArc_Spelunky_v1_182
+  - first:
+      213: -592044465629884940
+    second: NecoArc_Spelunky_v1_183
+  - first:
+      213: -5895670766077742398
+    second: NecoArc_Spelunky_v1_184
+  - first:
+      213: -4075939085705640309
+    second: NecoArc_Spelunky_v1_185
+  - first:
+      213: -3414122290397770760
+    second: NecoArc_Spelunky_v1_186
+  - first:
+      213: -2632879858026840847
+    second: NecoArc_Spelunky_v1_187
+  - first:
+      213: 5101208773305860821
+    second: NecoArc_Spelunky_v1_188
+  - first:
+      213: -6903138525882169175
+    second: NecoArc_Spelunky_v1_189
+  - first:
+      213: 3365229455136921455
+    second: NecoArc_Spelunky_v1_190
+  - first:
+      213: 3926220187355347094
+    second: NecoArc_Spelunky_v1_191
+  - first:
+      213: 9091068191451233792
+    second: NecoArc_Spelunky_v1_192
+  - first:
+      213: -7755860622315897118
+    second: NecoArc_Spelunky_v1_193
+  - first:
+      213: -8497322056501348308
+    second: NecoArc_Spelunky_v1_194
+  - first:
+      213: -8126194490075058395
+    second: NecoArc_Spelunky_v1_195
+  - first:
+      213: -2643570315427991058
+    second: NecoArc_Spelunky_v1_196
+  - first:
+      213: 2315611295568698426
+    second: NecoArc_Spelunky_v1_197
+  - first:
+      213: 8194765638306664230
+    second: NecoArc_Spelunky_v1_198
+  - first:
+      213: 9056266916369061657
+    second: NecoArc_Spelunky_v1_199
+  - first:
+      213: -4932831185621602803
+    second: NecoArc_Spelunky_v1_200
+  - first:
+      213: 872976829927471304
+    second: NecoArc_Spelunky_v1_201
+  - first:
+      213: -5095842979091271576
+    second: NecoArc_Spelunky_v1_202
+  - first:
+      213: 867741451392391801
+    second: NecoArc_Spelunky_v1_203
+  - first:
+      213: 2942936486205497310
+    second: NecoArc_Spelunky_v1_204
+  - first:
+      213: -627912967842465652
+    second: NecoArc_Spelunky_v1_205
+  - first:
+      213: 9186899173450191418
+    second: NecoArc_Spelunky_v1_206
+  - first:
+      213: -3054718675635515313
+    second: NecoArc_Spelunky_v1_207
+  - first:
+      213: 5566069135709596065
+    second: NecoArc_Spelunky_v1_208
+  - first:
+      213: -351657418889761107
+    second: NecoArc_Spelunky_v1_209
+  - first:
+      213: -2307720259592050443
+    second: NecoArc_Spelunky_v1_210
+  - first:
+      213: 8738544626576566090
+    second: NecoArc_Spelunky_v1_211
+  - first:
+      213: -3179288996337061241
+    second: NecoArc_Spelunky_v1_212
+  - first:
+      213: 8669960980733343077
+    second: NecoArc_Spelunky_v1_213
+  - first:
+      213: -8116032110188034500
+    second: NecoArc_Spelunky_v1_214
+  - first:
+      213: 1487985730080920148
+    second: NecoArc_Spelunky_v1_215
+  - first:
+      213: 6906622019224746002
+    second: NecoArc_Spelunky_v1_216
+  - first:
+      213: -5278086703920020411
+    second: NecoArc_Spelunky_v1_217
+  - first:
+      213: -8065933211865530855
+    second: NecoArc_Spelunky_v1_218
+  - first:
+      213: -6042057605251782542
+    second: NecoArc_Spelunky_v1_219
+  - first:
+      213: 7304652927353288304
+    second: NecoArc_Spelunky_v1_220
+  - first:
+      213: -8225585104815866066
+    second: NecoArc_Spelunky_v1_221
+  - first:
+      213: -4022795207982806780
+    second: NecoArc_Spelunky_v1_222
+  - first:
+      213: 5802316995402609641
+    second: NecoArc_Spelunky_v1_223
+  - first:
+      213: -5939525148032920832
+    second: NecoArc_Spelunky_v1_224
+  - first:
+      213: -1645049469515540320
+    second: NecoArc_Spelunky_v1_225
+  - first:
+      213: 5699736035409430129
+    second: NecoArc_Spelunky_v1_226
+  - first:
+      213: 9054571315186367836
+    second: NecoArc_Spelunky_v1_227
+  - first:
+      213: -1143915450160958998
+    second: NecoArc_Spelunky_v1_228
+  - first:
+      213: 8219804297575743296
+    second: NecoArc_Spelunky_v1_229
+  - first:
+      213: 3234058436610639137
+    second: NecoArc_Spelunky_v1_230
+  - first:
+      213: 8137548123839612248
+    second: NecoArc_Spelunky_v1_231
+  - first:
+      213: -8273358404191705574
+    second: NecoArc_Spelunky_v1_232
+  - first:
+      213: -6522517783774171184
+    second: NecoArc_Spelunky_v1_233
+  - first:
+      213: 261094653938963421
+    second: NecoArc_Spelunky_v1_234
+  - first:
+      213: -3664704302722046609
+    second: NecoArc_Spelunky_v1_235
+  - first:
+      213: 6577276579599758913
+    second: NecoArc_Spelunky_v1_236
+  - first:
+      213: -3492749337138782352
+    second: NecoArc_Spelunky_v1_237
+  - first:
+      213: -976059724770077884
+    second: NecoArc_Spelunky_v1_238
+  - first:
+      213: -5273773196091632899
+    second: NecoArc_Spelunky_v1_239
+  - first:
+      213: -394412928585229353
+    second: NecoArc_Spelunky_v1_240
+  - first:
+      213: -8677351412003628363
+    second: NecoArc_Spelunky_v1_241
+  - first:
+      213: 8829013536751038226
+    second: NecoArc_Spelunky_v1_242
+  - first:
+      213: 6298720339797526475
+    second: NecoArc_Spelunky_v1_243
+  - first:
+      213: -3078674172958469811
+    second: NecoArc_Spelunky_v1_244
+  - first:
+      213: 6913342649660250361
+    second: NecoArc_Spelunky_v1_245
+  - first:
+      213: -4149804043241546153
+    second: NecoArc_Spelunky_v1_246
+  - first:
+      213: 7651779558009936968
+    second: NecoArc_Spelunky_v1_247
+  - first:
+      213: -5153073186454289311
+    second: NecoArc_Spelunky_v1_248
+  - first:
+      213: -7910271624779411861
+    second: NecoArc_Spelunky_v1_249
+  - first:
+      213: -391717613582060736
+    second: NecoArc_Spelunky_v1_250
+  - first:
+      213: -1443455982963791277
+    second: NecoArc_Spelunky_v1_251
+  - first:
+      213: -7403126058431115144
+    second: NecoArc_Spelunky_v1_252
+  - first:
+      213: -3952402372025916831
+    second: NecoArc_Spelunky_v1_253
+  - first:
+      213: -8159365285762254496
+    second: NecoArc_Spelunky_v1_254
+  - first:
+      213: -6745333648225350615
+    second: NecoArc_Spelunky_v1_255
+  - first:
+      213: 2999132308177626911
+    second: NecoArc_Spelunky_v1_256
+  - first:
+      213: 9183640413074661699
+    second: NecoArc_Spelunky_v1_257
+  - first:
+      213: 5413227081400705273
+    second: NecoArc_Spelunky_v1_258
+  - first:
+      213: 805523255821489492
+    second: NecoArc_Spelunky_v1_259
+  - first:
+      213: -380546382180385699
+    second: NecoArc_Spelunky_v1_260
+  - first:
+      213: -2572826484479945010
+    second: NecoArc_Spelunky_v1_261
+  - first:
+      213: -342145009371741760
+    second: NecoArc_Spelunky_v1_262
+  - first:
+      213: 2179930431166045321
+    second: NecoArc_Spelunky_v1_263
+  - first:
+      213: 7900420005188373730
+    second: NecoArc_Spelunky_v1_264
+  - first:
+      213: 2681203607076750790
+    second: NecoArc_Spelunky_v1_265
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 1925
+        width: 72
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 960c8709a8503c380800000000000000
+      internalID: -8952305541594955671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_1
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 1925
+        width: 75
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af0cbb1754de1cd40800000000000000
+      internalID: 5603020293942264058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_2
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 1925
+        width: 75
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 060bb8712839a0c80800000000000000
+      internalID: -8355703971682471840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_3
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 1925
+        width: 75
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49f4dee2287a19e60800000000000000
+      internalID: 7967333393370009492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_4
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 1925
+        width: 72
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63ccb16c1cec332c0800000000000000
+      internalID: -4452988274891568074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_5
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 1925
+        width: 75
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9523ea302da968fa0800000000000000
+      internalID: -5798777243397377447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_6
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 1925
+        width: 75
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e58957541d15f080800000000000000
+      internalID: -9154378694358628891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_7
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 1925
+        width: 75
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a221c486efbb8f9e0800000000000000
+      internalID: -1587312167302196694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_8
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 1925
+        width: 72
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb65bf2281e4949e0800000000000000
+      internalID: -1636691123999385924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_9
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 1919
+        width: 83
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f572ad557264f8ec0800000000000000
+      internalID: -3562551645468743841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_10
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 1942
+        width: 100
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 618fbabb611ec9910800000000000000
+      internalID: 1845597435069200406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_11
+      rect:
+        serializedVersion: 2
+        x: 1324
+        y: 1939
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cad798d09aea3bef0800000000000000
+      internalID: -93539126144827988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_12
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 1937
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c25c04d1a0a7beb0800000000000000
+      internalID: -4704114668857437502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_13
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 1937
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f65078474e497ac70800000000000000
+      internalID: 8982311690742203759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_14
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 1937
+        width: 96
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31362225f93c57a10800000000000000
+      internalID: 1906645106306474771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_15
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 1935
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1a3c624ca6beb660800000000000000
+      internalID: 7403555688408693274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_16
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 1937
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 930b3b81e7fde80c0800000000000000
+      internalID: -4571470839061172167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_17
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 1942
+        width: 100
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e6502cf61c3fa1b0800000000000000
+      internalID: -5643225738655017240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_18
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 1939
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cccfa0a4e79018240800000000000000
+      internalID: 4792121916511681740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_19
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 1937
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4654e0984ec4e3690800000000000000
+      internalID: -7620568975028632220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_20
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 1937
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa19bb4d367e78200800000000000000
+      internalID: 182368725888635311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_21
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 1937
+        width: 96
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffb3e77bb23cbd5c0800000000000000
+      internalID: -4189540435808601089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_22
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 1935
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21c6ae086e9dfc5a0800000000000000
+      internalID: -6498736153243784174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_23
+      rect:
+        serializedVersion: 2
+        x: 1741
+        y: 1937
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dcb79949ca1a1780800000000000000
+      internalID: -8711621077369373487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_24
+      rect:
+        serializedVersion: 2
+        x: 1804
+        y: 1942
+        width: 100
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06f04ae78b0d5ad90800000000000000
+      internalID: -7087028947780366496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_25
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 1939
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67ecb4d52bec53c00800000000000000
+      internalID: 879836567685549686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_26
+      rect:
+        serializedVersion: 2
+        x: 1846
+        y: 1937
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05a62258b3e64d220800000000000000
+      internalID: 2509752094267959888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_27
+      rect:
+        serializedVersion: 2
+        x: 1861
+        y: 1937
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd7338cd933ed04d0800000000000000
+      internalID: -3166625125319362595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_28
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 1937
+        width: 96
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5f089b5c4c9daae0800000000000000
+      internalID: -1536400046095331489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_29
+      rect:
+        serializedVersion: 2
+        x: 1982
+        y: 1935
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61d20ac2f49e17c40800000000000000
+      internalID: 5508440345511210262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_30
+      rect:
+        serializedVersion: 2
+        x: 1997
+        y: 1937
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89e8c32a0dea886b0800000000000000
+      internalID: -5293789150875709800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_31
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 1797
+        width: 83
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f7cc4db853ba3c10800000000000000
+      internalID: 2034135375425619954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_32
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 1797
+        width: 82
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abb0463721c2489c0800000000000000
+      internalID: -3925964517403259974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_33
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1794
+        width: 88
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d07f102bc31eab0d0800000000000000
+      internalID: -3406162517351598323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_34
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 1797
+        width: 82
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2d60986372430950800000000000000
+      internalID: 6414043357748686127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_35
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 1797
+        width: 83
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b1504ad853201a40800000000000000
+      internalID: 5336804422959780273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_36
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 1801
+        width: 126
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2b15a0733813cd80800000000000000
+      internalID: -8231709084690867410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_37
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 1801
+        width: 126
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cab0c8c451df538c0800000000000000
+      internalID: -4020028824437912660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_38
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 1799
+        width: 126
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b16ec85a7e1eee610800000000000000
+      internalID: 1652506498322720283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_39
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 1799
+        width: 126
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2d48ca28e335e0d0800000000000000
+      internalID: -3394249671910601427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_40
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 1799
+        width: 254
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 749e799a5affa4a50800000000000000
+      internalID: 6506293698670094663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_41
+      rect:
+        serializedVersion: 2
+        x: 1407
+        y: 1804
+        width: 128
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c73f379253f29040800000000000000
+      internalID: 4653048901077514179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_42
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1669
+        width: 95
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62e9309542b500340800000000000000
+      internalID: 4827959012211531302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_43
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1669
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e83bf21b38197970800000000000000
+      internalID: 8753053992771860704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_44
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 1674
+        width: 82
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39789a1f1c5a58740800000000000000
+      internalID: 5153707600997091219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_45
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 1675
+        width: 90
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ed797f08f7a70c90800000000000000
+      internalID: -7203604395102470682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_46
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 1669
+        width: 72
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc15cff49447e9100800000000000000
+      internalID: 116658498581582283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_47
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 1667
+        width: 72
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2787f2765a1aa2ab0800000000000000
+      internalID: -5032031901860267918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_48
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 1663
+        width: 78
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40b56b9b39e18d230800000000000000
+      internalID: 3663711916690660100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_49
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 1663
+        width: 65
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74d28dd41edef2f00800000000000000
+      internalID: 1094354786403757383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_50
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 1667
+        width: 90
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa2c7c291402099f0800000000000000
+      internalID: -463835295611632977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_51
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 1698
+        width: 103
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b91247d064bcf1250800000000000000
+      internalID: 5917671937121984923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_52
+      rect:
+        serializedVersion: 2
+        x: 1301
+        y: 1669
+        width: 85
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 222873cba07080e90800000000000000
+      internalID: -7059384673214430686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_53
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1669
+        width: 75
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a1b0bc002e5d7100800000000000000
+      internalID: 107345457871630757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_54
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 1273
+        width: 476
+        height: 506
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 491052c3c858356f0800000000000000
+      internalID: -697066679961321068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_55
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1538
+        width: 83
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1893d9c5c55b7270800000000000000
+      internalID: 8249281450442201115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_56
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 1538
+        width: 80
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 393b641117f51de80800000000000000
+      internalID: -8155632510965468269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_57
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 1541
+        width: 72
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a20ef341e901b360800000000000000
+      internalID: 7183533743745663653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_58
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1538
+        width: 85
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b48cd4cb589941f60800000000000000
+      internalID: 8004191237413128267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_59
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 1538
+        width: 90
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f82868ec137aaed0800000000000000
+      internalID: -2401980883253319439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_60
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 1538
+        width: 90
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0590c39d01a1f9c50800000000000000
+      internalID: 6674081832452753744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_61
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 1538
+        width: 77
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7dd5961346d2db60800000000000000
+      internalID: 7769507890797600122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_62
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 1538
+        width: 80
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a830bfa9d65fbb660800000000000000
+      internalID: 7402780263613924234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_63
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 1541
+        width: 85
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05610148c3877b250800000000000000
+      internalID: 5960364833157158480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_64
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 1541
+        width: 85
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32e1b54a7901210c0800000000000000
+      internalID: -4606601225363055069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_65
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 1541
+        width: 85
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c045a56df301ba520800000000000000
+      internalID: 2714281066786083852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_66
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 1541
+        width: 85
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cdcc67c176b2d600800000000000000
+      internalID: 491655909130161603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_67
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1413
+        width: 73
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfdce6502fa1d3f70800000000000000
+      internalID: 9168514043171753469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_68
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1413
+        width: 78
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 306753a08b292d200800000000000000
+      internalID: 203386252328007171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_69
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1413
+        width: 80
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bedd3b54b3be3580800000000000000
+      internalID: -8845435030902808906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_70
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 1413
+        width: 75
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1e650a835a686670800000000000000
+      internalID: 8532186401083846172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_71
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 1413
+        width: 95
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b93610b5b0b171580800000000000000
+      internalID: -8856580406615383141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_72
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 1413
+        width: 95
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3e9a7bca4643c780800000000000000
+      internalID: -8664003971075367363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_73
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1413
+        width: 73
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4076f28337026ba90800000000000000
+      internalID: -7298610466871351548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_74
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 1413
+        width: 78
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8837b3fbc6fcd1a0800000000000000
+      internalID: -6783275582899144562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_75
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 1413
+        width: 87
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd125891b626e30d0800000000000000
+      internalID: -3441204853135302180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_76
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 1415
+        width: 87
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7587c9fded4493d80800000000000000
+      internalID: -8270503516664203177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_77
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 1410
+        width: 85
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fae6925d1f14302c0800000000000000
+      internalID: -4466653898502213969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_78
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 1285
+        width: 70
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e7f300b64f497180800000000000000
+      internalID: -9117168805615503385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_79
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 1285
+        width: 107
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5670b354ebf84d00800000000000000
+      internalID: 957291878891419228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_80
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1307
+        width: 128
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f38ec2cc99d7d1ed0800000000000000
+      internalID: -2441657323455977409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_81
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1302
+        width: 21
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7322aed03f33514a0800000000000000
+      internalID: -6623330557974928841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_82
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1307
+        width: 128
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aed39f336a789d3d0800000000000000
+      internalID: -3181362513854251542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_83
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 1302
+        width: 46
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34369e21dcb205590800000000000000
+      internalID: -7687596404135861437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_84
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 1297
+        width: 116
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a5856eeb9ab02d90800000000000000
+      internalID: -7124489431617796697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_85
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 1285
+        width: 78
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 020d36cbc119c8680800000000000000
+      internalID: -8751460423281946592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_86
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 1285
+        width: 70
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 029045039639b83c0800000000000000
+      internalID: -4356226134559160032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_87
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 1285
+        width: 107
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98b569ac7198e4970800000000000000
+      internalID: 8741074662048816009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_88
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1307
+        width: 128
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b23c29563e2d764e0800000000000000
+      internalID: -1988388836357258453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_89
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 1302
+        width: 21
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07b467bde8838e6c0800000000000000
+      internalID: -4113976073384473744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_90
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1307
+        width: 128
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0de8e7d7e12b56710800000000000000
+      internalID: 1685949479544327888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_91
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 1302
+        width: 46
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bf715b82f57cc0e0800000000000000
+      internalID: -2248292429384810568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_92
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 1297
+        width: 116
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13d9e128f6fed0f00800000000000000
+      internalID: 1084786347469610289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_93
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 1285
+        width: 78
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70ea4101cf4587220800000000000000
+      internalID: 2483828636073111047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_94
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 1285
+        width: 71
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 034b238ea93d8a290800000000000000
+      internalID: -7878814885810621392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_95
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 1285
+        width: 80
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 483bf85d8894ccbe0800000000000000
+      internalID: -1455707727500168316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_96
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 1285
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c83f0363d56590fa0800000000000000
+      internalID: -5834036883940641908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_97
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 1285
+        width: 58
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95282ef58b7e866b0800000000000000
+      internalID: -5302733782160080295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_98
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 1285
+        width: 71
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1193f0a3badfc7080800000000000000
+      internalID: -9188190227887343343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_99
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 1285
+        width: 80
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54cff398164d28c30800000000000000
+      internalID: 4360280904627649605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_100
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 1285
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0dded4eae1e4df80800000000000000
+      internalID: -8082587032244790004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_101
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 1285
+        width: 58
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3afa495791c07d770800000000000000
+      internalID: 8635384113992609699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_102
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 1152
+        width: 73
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2629d8ae1e3067e70800000000000000
+      internalID: 9112475164868448866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_103
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1157
+        width: 75
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0649f3fa991998540800000000000000
+      internalID: 5010696149682590816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_104
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 1157
+        width: 80
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38c6b5d112bb24f10800000000000000
+      internalID: 2252568514539515011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_105
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 1157
+        width: 82
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22b80d2ca35464aa0800000000000000
+      internalID: -6177173720213189854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_106
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1157
+        width: 78
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3be8801b4b83f61d0800000000000000
+      internalID: -3355400848652333389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_107
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 1152
+        width: 73
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a54e1a13683dda280800000000000000
+      internalID: -9030329104496204710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_108
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 1157
+        width: 63
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33f3b6393d4252150800000000000000
+      internalID: 5847120182340435763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_109
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 1169
+        width: 75
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd06f3b110735c2d0800000000000000
+      internalID: -3259138277441052451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_110
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 1164
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95d6a0db37b5c8420800000000000000
+      internalID: 2633580434755841369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_111
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 1157
+        width: 46
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67579924665531d10800000000000000
+      internalID: 2095112149349791094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_112
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1169
+        width: 81
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ff259b211d8df5d0800000000000000
+      internalID: -3027108269637947402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_113
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 1159
+        width: 41
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89fe6615ae7542670800000000000000
+      internalID: 8513025859536744344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_114
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 1157
+        width: 70
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e3791e46a1d54c30800000000000000
+      internalID: 4343107927873778657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_115
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 1167
+        width: 78
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47c16b87a87055690800000000000000
+      internalID: -7614171303687873420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_116
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 1157
+        width: 63
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54465ea9a09e67480800000000000000
+      internalID: -8901671381693537211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_117
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 1169
+        width: 75
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef81238c3ba6fc910800000000000000
+      internalID: 1859822491517720830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_118
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 1164
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab4c5ce65c799cd50800000000000000
+      internalID: 6758099590068946106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_119
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 1157
+        width: 46
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15fdf2ad4b9065290800000000000000
+      internalID: -7902117823815622831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_120
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 1169
+        width: 81
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23ee19cfd85f86970800000000000000
+      internalID: 8748512266343804466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_121
+      rect:
+        serializedVersion: 2
+        x: 1339
+        y: 1159
+        width: 41
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9851d43a2b0acd3c0800000000000000
+      internalID: -4333412052332898935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_122
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 1157
+        width: 70
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4946b93fe7ce26400800000000000000
+      internalID: 316074953866437780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_123
+      rect:
+        serializedVersion: 2
+        x: 1435
+        y: 1167
+        width: 78
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09dedef356ef7f690800000000000000
+      internalID: -7568300937955119728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_124
+      rect:
+        serializedVersion: 2
+        x: 2002
+        y: 1168
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3868d75dbffa1200800000000000000
+      internalID: 151714726158035005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_125
+      rect:
+        serializedVersion: 2
+        x: 2023
+        y: 1168
+        width: 15
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ead14c4c556aec280800000000000000
+      internalID: -9021090116272906834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_126
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 1024
+        width: 73
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed0f6c3b2fd43af00800000000000000
+      internalID: 1126830036566339806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_127
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1029
+        width: 75
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24a9b6558d5f0cdb0800000000000000
+      internalID: -4773545295517869502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_128
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 1029
+        width: 80
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9688817439350870800000000000000
+      internalID: 8648381556840760987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_129
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 1029
+        width: 82
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf4f204a187f71800800000000000000
+      internalID: 583206812942267643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_130
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1029
+        width: 78
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c919cbb3c4c7b0a30800000000000000
+      internalID: 4182573345805210012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_131
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 1024
+        width: 73
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e49a1601e95da4290800000000000000
+      internalID: -7905271321039099570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_132
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1029
+        width: 75
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbb64217e00375990800000000000000
+      internalID: -7397391024346862657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_133
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 1029
+        width: 80
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83fdde5d701fbff40800000000000000
+      internalID: 5763465164106882872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_134
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 1029
+        width: 82
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5725f4f3d777d8e0800000000000000
+      internalID: -1668733384685967522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_135
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 1029
+        width: 78
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f1788d539287bb70800000000000000
+      internalID: 8914737556844212725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_136
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 1029
+        width: 83
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 948ed6d376a27a230800000000000000
+      internalID: 3649932645907687497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_137
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 1029
+        width: 82
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5664659dfc648570800000000000000
+      internalID: 8468013035752285788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_138
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 1026
+        width: 88
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8e9abefd867f0a50800000000000000
+      internalID: 6489535940300283532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_139
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 1029
+        width: 82
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07b66a88c16e69d60800000000000000
+      internalID: 7896752006866824048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_140
+      rect:
+        serializedVersion: 2
+        x: 1819
+        y: 1029
+        width: 83
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3e7ffd10f9928270800000000000000
+      internalID: 8251326723870654013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_141
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 901
+        width: 70
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caa024cea986cdfb0800000000000000
+      internalID: -4621704102990968148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_142
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 901
+        width: 90
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fbd0ac09e0ebdff0800000000000000
+      internalID: -10167282594423816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_143
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 901
+        width: 93
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 665be1f2eaf125cb0800000000000000
+      internalID: -4876800613513513626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_144
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 901
+        width: 93
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b7c618de4ee80660800000000000000
+      internalID: 7352388414082566070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_145
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 901
+        width: 93
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 372a2c7aecef6d080800000000000000
+      internalID: -9162856228307426701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_146
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 901
+        width: 90
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 329e4246d466231c0800000000000000
+      internalID: -4525442192975271645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_147
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 901
+        width: 70
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90f6bd97360e89e10800000000000000
+      internalID: 2204758735448665865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_148
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 907
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0f0a2cd347f15880800000000000000
+      internalID: -8623839940609175793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_149
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 907
+        width: 83
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caf08700a49f72230800000000000000
+      internalID: 3614131322218876844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_150
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 907
+        width: 80
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1634b289c50f5db70800000000000000
+      internalID: 8923302517185135457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_151
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 907
+        width: 82
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dde82d341e77de620800000000000000
+      internalID: 2805029952310906589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_152
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 904
+        width: 88
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5249915533a414970800000000000000
+      internalID: 8737346336407000101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_153
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 902
+        width: 82
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1539e60b165e262f0800000000000000
+      internalID: -980969561078721711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_154
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 902
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8365d3e9cfdad71f0800000000000000
+      internalID: -1045488237981903304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_155
+      rect:
+        serializedVersion: 2
+        x: 1819
+        y: 902
+        width: 83
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ab6dec5d0a495340800000000000000
+      internalID: 4852991494722513833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_156
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 766
+        width: 70
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb05bafbecce0f680800000000000000
+      internalID: -8723212105493557057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_157
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 766
+        width: 72
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8810f35848e3d660800000000000000
+      internalID: 7409521209298131086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_158
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 766
+        width: 72
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 254c02cf65d4c8c80800000000000000
+      internalID: -8319189375667616686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_159
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 766
+        width: 72
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 343c170c00d6bbe40800000000000000
+      internalID: 5673248005599380291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_160
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 765
+        width: 75
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f52d9d6175719cde0800000000000000
+      internalID: -1312492153588821409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_161
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 780
+        width: 82
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15e9189231ceab200800000000000000
+      internalID: 196729100788932177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_162
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 780
+        width: 82
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1fde3f9ebf5bba40800000000000000
+      internalID: 5385003051771682587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_163
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 780
+        width: 82
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f83e0c792504fc30800000000000000
+      internalID: 4392141212326181107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_164
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 775
+        width: 75
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 273d0043aff2faf10800000000000000
+      internalID: 2283096287760929650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_165
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 780
+        width: 82
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b37facd5d0f0c8380800000000000000
+      internalID: -8967776207918926021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_166
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 780
+        width: 82
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1081ffad78ba94fd0800000000000000
+      internalID: -2357164329968658431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_167
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 780
+        width: 82
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d0bcc7ba175c3950800000000000000
+      internalID: 6430110140242637017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_168
+      rect:
+        serializedVersion: 2
+        x: 1562
+        y: 767
+        width: 83
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb7cfee550356fc40800000000000000
+      internalID: 5545711273686058940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_169
+      rect:
+        serializedVersion: 2
+        x: 1693
+        y: 767
+        width: 72
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bef6f1eedeb8501b0800000000000000
+      internalID: -5690988700094205973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_170
+      rect:
+        serializedVersion: 2
+        x: 1821
+        y: 771
+        width: 72
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c8cd46e94a2fc730800000000000000
+      internalID: 4021479489149978821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_171
+      rect:
+        serializedVersion: 2
+        x: 1949
+        y: 770
+        width: 72
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f9bcb42cdc011c20800000000000000
+      internalID: 3175333351921596912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_172
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 647
+        width: 109
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 782e0b132801f8350800000000000000
+      internalID: 6021049378183111303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_173
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 647
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d777a9e0cf78c3100800000000000000
+      internalID: 89095609287079805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_174
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 647
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6088d1f7a329d650800000000000000
+      internalID: 6258072361432023149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_175
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 647
+        width: 109
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19d8528c42ea08150800000000000000
+      internalID: 5872885387091086737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_176
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 647
+        width: 111
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb31ff7edfe131d90800000000000000
+      internalID: -7128319709329550405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_177
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 647
+        width: 111
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 107d87f621d389bb0800000000000000
+      internalID: -4929122642768111871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_178
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 647
+        width: 111
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10c4f5b207ebcb0b0800000000000000
+      internalID: -5711480838439351295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_179
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 647
+        width: 111
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9900484d97e726460800000000000000
+      internalID: 7233483013232001177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_180
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 647
+        width: 111
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e0deb7b8b90afa20800000000000000
+      internalID: 3096798382732005603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_181
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 647
+        width: 111
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bc8d1f17db6bf6f0800000000000000
+      internalID: -649807149540733775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_182
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 647
+        width: 111
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c6369066b91ec230800000000000000
+      internalID: 3660891818193991362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_183
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 647
+        width: 111
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fd05eef1b2a8c7f0800000000000000
+      internalID: -592044465629884940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_184
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 647
+        width: 117
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c2f743ccae5e2ea0800000000000000
+      internalID: -5895670766077742398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_185
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 647
+        width: 117
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b86826e2ffa5f67c0800000000000000
+      internalID: -4075939085705640309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_186
+      rect:
+        serializedVersion: 2
+        x: 1804
+        y: 647
+        width: 117
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fb091d9dd99e90d0800000000000000
+      internalID: -3414122290397770760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_187
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 647
+        width: 116
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fc770ef7b1267bd0800000000000000
+      internalID: -2632879858026840847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_188
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 538
+        width: 72
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d2800a1a522bc640800000000000000
+      internalID: 5101208773305860821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_189
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 516
+        width: 99
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a8ca79c5102330a0800000000000000
+      internalID: -6903138525882169175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_190
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 517
+        width: 114
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f671e151c52b3be20800000000000000
+      internalID: 3365229455136921455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_191
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 525
+        width: 74
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6987849557cbc7630800000000000000
+      internalID: 3926220187355347094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_192
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 517
+        width: 77
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00ebd448a56f92e70800000000000000
+      internalID: 9091068191451233792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_193
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 514
+        width: 105
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eebb673bd5ad5490800000000000000
+      internalID: -7755860622315897118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_194
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 512
+        width: 97
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2835204c92731a80800000000000000
+      internalID: -8497322056501348308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_195
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 519
+        width: 88
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52fe65b6a25f93f80800000000000000
+      internalID: -8126194490075058395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_196
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 514
+        width: 75
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee1b52aedc6205bd0800000000000000
+      internalID: -2643570315427991058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_197
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 524
+        width: 75
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3c11466434b22020800000000000000
+      internalID: 2315611295568698426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_198
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 513
+        width: 130
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62f88d82ee7a9b170800000000000000
+      internalID: 8194765638306664230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_199
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 383
+        width: 27
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 917dc4d37c25ead70800000000000000
+      internalID: 9056266916369061657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_200
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 431
+        width: 71
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0e2e040c201b8bb0800000000000000
+      internalID: -4932831185621602803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_201
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 415
+        width: 69
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c839f43dcf6d1c00800000000000000
+      internalID: 872976829927471304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_202
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 399
+        width: 69
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 860b8183fcde749b0800000000000000
+      internalID: -5095842979091271576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_203
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 384
+        width: 69
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97a1027a046da0c00800000000000000
+      internalID: 867741451392391801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_204
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 387
+        width: 34
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edf90d0542967d820800000000000000
+      internalID: 2942936486205497310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_205
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 387
+        width: 30
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8873e98b743947f0800000000000000
+      internalID: -627912967842465652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_206
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 415
+        width: 30
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3214dcbf1c6e7f70800000000000000
+      internalID: 9186899173450191418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_207
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 443
+        width: 30
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f405ef19c857b95d0800000000000000
+      internalID: -3054718675635515313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_208
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 469
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a96c3d7366ae3d40800000000000000
+      internalID: 5566069135709596065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_209
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 434
+        width: 71
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daee170d079ae1bf0800000000000000
+      internalID: -351657418889761107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_210
+      rect:
+        serializedVersion: 2
+        x: 1407
+        y: 406
+        width: 98
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f82b0696a459ffd0800000000000000
+      internalID: -2307720259592050443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_211
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 406
+        width: 126
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a47aef00a0c854970800000000000000
+      internalID: 8738544626576566090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_212
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 407
+        width: 253
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 782750f9085e0e3d0800000000000000
+      internalID: -3179288996337061241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_213
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 409
+        width: 125
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 565bb199393e15870800000000000000
+      internalID: 8669960980733343077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_214
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 302
+        width: 32
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c36049edbcf0e5f80800000000000000
+      internalID: -8116032110188034500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_215
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 308
+        width: 32
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 452d258432366a410800000000000000
+      internalID: 1487985730080920148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_216
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 301
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21838c5322049df50800000000000000
+      internalID: 6906622019224746002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_217
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 311
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54482277b1870c6b0800000000000000
+      internalID: -5278086703920020411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_218
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 299
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91ebabc9a7c001090800000000000000
+      internalID: -8065933211865530855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_219
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 312
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2782586ce9c462ca0800000000000000
+      internalID: -6042057605251782542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_220
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 296
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 076f86eb2275f5560800000000000000
+      internalID: 7304652927353288304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_221
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 313
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2fb4bd9de9d8dd80800000000000000
+      internalID: -8225585104815866066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_222
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 297
+        width: 32
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4098a0072192c28c0800000000000000
+      internalID: -4022795207982806780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_223
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 312
+        width: 32
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e33f29b098f58050800000000000000
+      internalID: 5802316995402609641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_224
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 298
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0039ff8c851929da0800000000000000
+      internalID: -5939525148032920832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_225
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 307
+        width: 32
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a8d49b293c9b29e0800000000000000
+      internalID: -1645049469515540320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_226
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 294
+        width: 32
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1768218c9b7891f40800000000000000
+      internalID: 5699736035409430129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_227
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 307
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5dff1353ac48ad70800000000000000
+      internalID: 9054571315186367836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_228
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 296
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae1331475feff10f0800000000000000
+      internalID: -1143915450160958998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_229
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 303
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04f3b30557c921270800000000000000
+      internalID: 8219804297575743296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_230
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 297
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1254809630fa1ec20800000000000000
+      internalID: 3234058436610639137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_231
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 302
+        width: 34
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8554b1077e06ee070800000000000000
+      internalID: 8137548123839612248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_232
+      rect:
+        serializedVersion: 2
+        x: 1231
+        y: 298
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1629a29d502f2d80800000000000000
+      internalID: -8273358404191705574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_233
+      rect:
+        serializedVersion: 2
+        x: 1303
+        y: 302
+        width: 32
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dfe8f822ac5b75a0800000000000000
+      internalID: -6522517783774171184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_234
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 297
+        width: 32
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd319c454389f9300800000000000000
+      internalID: 261094653938963421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_235
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 291
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6528656ada542dc0800000000000000
+      internalID: -3664704302722046609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_236
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 130
+        width: 83
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1463a84833e274b50800000000000000
+      internalID: 6577276579599758913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_237
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 130
+        width: 80
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07f9c56bbf2478fc0800000000000000
+      internalID: -3492749337138782352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_238
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 133
+        width: 72
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44393890ad65472f0800000000000000
+      internalID: -976059724770077884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_239
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 130
+        width: 85
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df25bf4483bcfc6b0800000000000000
+      internalID: -5273773196091632899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_240
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 130
+        width: 90
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7db1bd8f783c68af0800000000000000
+      internalID: -394412928585229353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_241
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 130
+        width: 90
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ba1a488ddad39780800000000000000
+      internalID: -8677351412003628363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_242
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 130
+        width: 77
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21f29279805f68a70800000000000000
+      internalID: 8829013536751038226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_243
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 130
+        width: 80
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc7c829e6cc896750800000000000000
+      internalID: 6298720339797526475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_244
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 18
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4114a5b62a5645d0800000000000000
+      internalID: -3078674172958469811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_245
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 18
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f89e8be28021ff50800000000000000
+      internalID: 6913342649660250361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_246
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 18
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75e9b13953fe866c0800000000000000
+      internalID: -4149804043241546153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_247
+      rect:
+        serializedVersion: 2
+        x: 1571
+        y: 18
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84c17c697f4903a60800000000000000
+      internalID: 7651779558009936968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_248
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 18
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1644dc33d3b9c78b0800000000000000
+      internalID: -5153073186454289311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_249
+      rect:
+        serializedVersion: 2
+        x: 1643
+        y: 18
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6ecb202ed1193290800000000000000
+      internalID: -7910271624779411861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_250
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 18
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0437d26e7e6509af0800000000000000
+      internalID: -391717613582060736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_251
+      rect:
+        serializedVersion: 2
+        x: 1699
+        y: 18
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35ae7866e60d7fbe0800000000000000
+      internalID: -1443455982963791277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_252
+      rect:
+        serializedVersion: 2
+        x: 1727
+        y: 18
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87096c3c210d24990800000000000000
+      internalID: -7403126058431115144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_253
+      rect:
+        serializedVersion: 2
+        x: 1793
+        y: 18
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 162ebfdbbfe3629c0800000000000000
+      internalID: -3952402372025916831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_254
+      rect:
+        serializedVersion: 2
+        x: 1823
+        y: 18
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 069bc75b08c14ce80800000000000000
+      internalID: -8159365285762254496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_255
+      rect:
+        serializedVersion: 2
+        x: 1848
+        y: 18
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92cc90609c2c362a0800000000000000
+      internalID: -6745333648225350615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_256
+      rect:
+        serializedVersion: 2
+        x: 1865
+        y: 18
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f172357b1fe0f9920800000000000000
+      internalID: 2999132308177626911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_257
+      rect:
+        serializedVersion: 2
+        x: 1893
+        y: 18
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 341ac367c48d27f70800000000000000
+      internalID: 9183640413074661699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_258
+      rect:
+        serializedVersion: 2
+        x: 1926
+        y: 18
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f0e96b9955af1b40800000000000000
+      internalID: 5413227081400705273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_259
+      rect:
+        serializedVersion: 2
+        x: 1953
+        y: 41
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4555e81222bcd2b00800000000000000
+      internalID: 805523255821489492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_260
+      rect:
+        serializedVersion: 2
+        x: 1953
+        y: 18
+        width: 11
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5cf395e41708baf0800000000000000
+      internalID: -380546382180385699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_261
+      rect:
+        serializedVersion: 2
+        x: 1965
+        y: 10
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec61bdb91fb7b4cd0800000000000000
+      internalID: -2572826484479945010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_262
+      rect:
+        serializedVersion: 2
+        x: 1993
+        y: 18
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c189be3de4704bf0800000000000000
+      internalID: -342145009371741760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_263
+      rect:
+        serializedVersion: 2
+        x: 2018
+        y: 18
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98c57b86d2ba04e10800000000000000
+      internalID: 2179930431166045321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_264
+      rect:
+        serializedVersion: 2
+        x: 1597
+        y: 25
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ec84a1f22ee3ad60800000000000000
+      internalID: 7900420005188373730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_265
+      rect:
+        serializedVersion: 2
+        x: 1765
+        y: 25
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c54e4a997c853520800000000000000
+      internalID: 2681203607076750790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      NecoArc_Spelunky_v1_0: -8952305541594955671
+      NecoArc_Spelunky_v1_1: 5603020293942264058
+      NecoArc_Spelunky_v1_10: 1845597435069200406
+      NecoArc_Spelunky_v1_100: -8082587032244790004
+      NecoArc_Spelunky_v1_101: 8635384113992609699
+      NecoArc_Spelunky_v1_102: 9112475164868448866
+      NecoArc_Spelunky_v1_103: 5010696149682590816
+      NecoArc_Spelunky_v1_104: 2252568514539515011
+      NecoArc_Spelunky_v1_105: -6177173720213189854
+      NecoArc_Spelunky_v1_106: -3355400848652333389
+      NecoArc_Spelunky_v1_107: -9030329104496204710
+      NecoArc_Spelunky_v1_108: 5847120182340435763
+      NecoArc_Spelunky_v1_109: -3259138277441052451
+      NecoArc_Spelunky_v1_11: -93539126144827988
+      NecoArc_Spelunky_v1_110: 2633580434755841369
+      NecoArc_Spelunky_v1_111: 2095112149349791094
+      NecoArc_Spelunky_v1_112: -3027108269637947402
+      NecoArc_Spelunky_v1_113: 8513025859536744344
+      NecoArc_Spelunky_v1_114: 4343107927873778657
+      NecoArc_Spelunky_v1_115: -7614171303687873420
+      NecoArc_Spelunky_v1_116: -8901671381693537211
+      NecoArc_Spelunky_v1_117: 1859822491517720830
+      NecoArc_Spelunky_v1_118: 6758099590068946106
+      NecoArc_Spelunky_v1_119: -7902117823815622831
+      NecoArc_Spelunky_v1_12: -4704114668857437502
+      NecoArc_Spelunky_v1_120: 8748512266343804466
+      NecoArc_Spelunky_v1_121: -4333412052332898935
+      NecoArc_Spelunky_v1_122: 316074953866437780
+      NecoArc_Spelunky_v1_123: -7568300937955119728
+      NecoArc_Spelunky_v1_124: 151714726158035005
+      NecoArc_Spelunky_v1_125: -9021090116272906834
+      NecoArc_Spelunky_v1_126: 1126830036566339806
+      NecoArc_Spelunky_v1_127: -4773545295517869502
+      NecoArc_Spelunky_v1_128: 8648381556840760987
+      NecoArc_Spelunky_v1_129: 583206812942267643
+      NecoArc_Spelunky_v1_13: 8982311690742203759
+      NecoArc_Spelunky_v1_130: 4182573345805210012
+      NecoArc_Spelunky_v1_131: -7905271321039099570
+      NecoArc_Spelunky_v1_132: -7397391024346862657
+      NecoArc_Spelunky_v1_133: 5763465164106882872
+      NecoArc_Spelunky_v1_134: -1668733384685967522
+      NecoArc_Spelunky_v1_135: 8914737556844212725
+      NecoArc_Spelunky_v1_136: 3649932645907687497
+      NecoArc_Spelunky_v1_137: 8468013035752285788
+      NecoArc_Spelunky_v1_138: 6489535940300283532
+      NecoArc_Spelunky_v1_139: 7896752006866824048
+      NecoArc_Spelunky_v1_14: 1906645106306474771
+      NecoArc_Spelunky_v1_140: 8251326723870654013
+      NecoArc_Spelunky_v1_141: -4621704102990968148
+      NecoArc_Spelunky_v1_142: -10167282594423816
+      NecoArc_Spelunky_v1_143: -4876800613513513626
+      NecoArc_Spelunky_v1_144: 7352388414082566070
+      NecoArc_Spelunky_v1_145: -9162856228307426701
+      NecoArc_Spelunky_v1_146: -4525442192975271645
+      NecoArc_Spelunky_v1_147: 2204758735448665865
+      NecoArc_Spelunky_v1_148: -8623839940609175793
+      NecoArc_Spelunky_v1_149: 3614131322218876844
+      NecoArc_Spelunky_v1_15: 7403555688408693274
+      NecoArc_Spelunky_v1_150: 8923302517185135457
+      NecoArc_Spelunky_v1_151: 2805029952310906589
+      NecoArc_Spelunky_v1_152: 8737346336407000101
+      NecoArc_Spelunky_v1_153: -980969561078721711
+      NecoArc_Spelunky_v1_154: -1045488237981903304
+      NecoArc_Spelunky_v1_155: 4852991494722513833
+      NecoArc_Spelunky_v1_156: -8723212105493557057
+      NecoArc_Spelunky_v1_157: 7409521209298131086
+      NecoArc_Spelunky_v1_158: -8319189375667616686
+      NecoArc_Spelunky_v1_159: 5673248005599380291
+      NecoArc_Spelunky_v1_16: -4571470839061172167
+      NecoArc_Spelunky_v1_160: -1312492153588821409
+      NecoArc_Spelunky_v1_161: 196729100788932177
+      NecoArc_Spelunky_v1_162: 5385003051771682587
+      NecoArc_Spelunky_v1_163: 4392141212326181107
+      NecoArc_Spelunky_v1_164: 2283096287760929650
+      NecoArc_Spelunky_v1_165: -8967776207918926021
+      NecoArc_Spelunky_v1_166: -2357164329968658431
+      NecoArc_Spelunky_v1_167: 6430110140242637017
+      NecoArc_Spelunky_v1_168: 5545711273686058940
+      NecoArc_Spelunky_v1_169: -5690988700094205973
+      NecoArc_Spelunky_v1_17: -5643225738655017240
+      NecoArc_Spelunky_v1_170: 4021479489149978821
+      NecoArc_Spelunky_v1_171: 3175333351921596912
+      NecoArc_Spelunky_v1_172: 6021049378183111303
+      NecoArc_Spelunky_v1_173: 89095609287079805
+      NecoArc_Spelunky_v1_174: 6258072361432023149
+      NecoArc_Spelunky_v1_175: 5872885387091086737
+      NecoArc_Spelunky_v1_176: -7128319709329550405
+      NecoArc_Spelunky_v1_177: -4929122642768111871
+      NecoArc_Spelunky_v1_178: -5711480838439351295
+      NecoArc_Spelunky_v1_179: 7233483013232001177
+      NecoArc_Spelunky_v1_18: 4792121916511681740
+      NecoArc_Spelunky_v1_180: 3096798382732005603
+      NecoArc_Spelunky_v1_181: -649807149540733775
+      NecoArc_Spelunky_v1_182: 3660891818193991362
+      NecoArc_Spelunky_v1_183: -592044465629884940
+      NecoArc_Spelunky_v1_184: -5895670766077742398
+      NecoArc_Spelunky_v1_185: -4075939085705640309
+      NecoArc_Spelunky_v1_186: -3414122290397770760
+      NecoArc_Spelunky_v1_187: -2632879858026840847
+      NecoArc_Spelunky_v1_188: 5101208773305860821
+      NecoArc_Spelunky_v1_189: -6903138525882169175
+      NecoArc_Spelunky_v1_19: -7620568975028632220
+      NecoArc_Spelunky_v1_190: 3365229455136921455
+      NecoArc_Spelunky_v1_191: 3926220187355347094
+      NecoArc_Spelunky_v1_192: 9091068191451233792
+      NecoArc_Spelunky_v1_193: -7755860622315897118
+      NecoArc_Spelunky_v1_194: -8497322056501348308
+      NecoArc_Spelunky_v1_195: -8126194490075058395
+      NecoArc_Spelunky_v1_196: -2643570315427991058
+      NecoArc_Spelunky_v1_197: 2315611295568698426
+      NecoArc_Spelunky_v1_198: 8194765638306664230
+      NecoArc_Spelunky_v1_199: 9056266916369061657
+      NecoArc_Spelunky_v1_2: -8355703971682471840
+      NecoArc_Spelunky_v1_20: 182368725888635311
+      NecoArc_Spelunky_v1_200: -4932831185621602803
+      NecoArc_Spelunky_v1_201: 872976829927471304
+      NecoArc_Spelunky_v1_202: -5095842979091271576
+      NecoArc_Spelunky_v1_203: 867741451392391801
+      NecoArc_Spelunky_v1_204: 2942936486205497310
+      NecoArc_Spelunky_v1_205: -627912967842465652
+      NecoArc_Spelunky_v1_206: 9186899173450191418
+      NecoArc_Spelunky_v1_207: -3054718675635515313
+      NecoArc_Spelunky_v1_208: 5566069135709596065
+      NecoArc_Spelunky_v1_209: -351657418889761107
+      NecoArc_Spelunky_v1_21: -4189540435808601089
+      NecoArc_Spelunky_v1_210: -2307720259592050443
+      NecoArc_Spelunky_v1_211: 8738544626576566090
+      NecoArc_Spelunky_v1_212: -3179288996337061241
+      NecoArc_Spelunky_v1_213: 8669960980733343077
+      NecoArc_Spelunky_v1_214: -8116032110188034500
+      NecoArc_Spelunky_v1_215: 1487985730080920148
+      NecoArc_Spelunky_v1_216: 6906622019224746002
+      NecoArc_Spelunky_v1_217: -5278086703920020411
+      NecoArc_Spelunky_v1_218: -8065933211865530855
+      NecoArc_Spelunky_v1_219: -6042057605251782542
+      NecoArc_Spelunky_v1_22: -6498736153243784174
+      NecoArc_Spelunky_v1_220: 7304652927353288304
+      NecoArc_Spelunky_v1_221: -8225585104815866066
+      NecoArc_Spelunky_v1_222: -4022795207982806780
+      NecoArc_Spelunky_v1_223: 5802316995402609641
+      NecoArc_Spelunky_v1_224: -5939525148032920832
+      NecoArc_Spelunky_v1_225: -1645049469515540320
+      NecoArc_Spelunky_v1_226: 5699736035409430129
+      NecoArc_Spelunky_v1_227: 9054571315186367836
+      NecoArc_Spelunky_v1_228: -1143915450160958998
+      NecoArc_Spelunky_v1_229: 8219804297575743296
+      NecoArc_Spelunky_v1_23: -8711621077369373487
+      NecoArc_Spelunky_v1_230: 3234058436610639137
+      NecoArc_Spelunky_v1_231: 8137548123839612248
+      NecoArc_Spelunky_v1_232: -8273358404191705574
+      NecoArc_Spelunky_v1_233: -6522517783774171184
+      NecoArc_Spelunky_v1_234: 261094653938963421
+      NecoArc_Spelunky_v1_235: -3664704302722046609
+      NecoArc_Spelunky_v1_236: 6577276579599758913
+      NecoArc_Spelunky_v1_237: -3492749337138782352
+      NecoArc_Spelunky_v1_238: -976059724770077884
+      NecoArc_Spelunky_v1_239: -5273773196091632899
+      NecoArc_Spelunky_v1_24: -7087028947780366496
+      NecoArc_Spelunky_v1_240: -394412928585229353
+      NecoArc_Spelunky_v1_241: -8677351412003628363
+      NecoArc_Spelunky_v1_242: 8829013536751038226
+      NecoArc_Spelunky_v1_243: 6298720339797526475
+      NecoArc_Spelunky_v1_244: -3078674172958469811
+      NecoArc_Spelunky_v1_245: 6913342649660250361
+      NecoArc_Spelunky_v1_246: -4149804043241546153
+      NecoArc_Spelunky_v1_247: 7651779558009936968
+      NecoArc_Spelunky_v1_248: -5153073186454289311
+      NecoArc_Spelunky_v1_249: -7910271624779411861
+      NecoArc_Spelunky_v1_25: 879836567685549686
+      NecoArc_Spelunky_v1_250: -391717613582060736
+      NecoArc_Spelunky_v1_251: -1443455982963791277
+      NecoArc_Spelunky_v1_252: -7403126058431115144
+      NecoArc_Spelunky_v1_253: -3952402372025916831
+      NecoArc_Spelunky_v1_254: -8159365285762254496
+      NecoArc_Spelunky_v1_255: -6745333648225350615
+      NecoArc_Spelunky_v1_256: 2999132308177626911
+      NecoArc_Spelunky_v1_257: 9183640413074661699
+      NecoArc_Spelunky_v1_258: 5413227081400705273
+      NecoArc_Spelunky_v1_259: 805523255821489492
+      NecoArc_Spelunky_v1_26: 2509752094267959888
+      NecoArc_Spelunky_v1_260: -380546382180385699
+      NecoArc_Spelunky_v1_261: -2572826484479945010
+      NecoArc_Spelunky_v1_262: -342145009371741760
+      NecoArc_Spelunky_v1_263: 2179930431166045321
+      NecoArc_Spelunky_v1_264: 7900420005188373730
+      NecoArc_Spelunky_v1_265: 2681203607076750790
+      NecoArc_Spelunky_v1_27: -3166625125319362595
+      NecoArc_Spelunky_v1_28: -1536400046095331489
+      NecoArc_Spelunky_v1_29: 5508440345511210262
+      NecoArc_Spelunky_v1_3: 7967333393370009492
+      NecoArc_Spelunky_v1_30: -5293789150875709800
+      NecoArc_Spelunky_v1_31: 2034135375425619954
+      NecoArc_Spelunky_v1_32: -3925964517403259974
+      NecoArc_Spelunky_v1_33: -3406162517351598323
+      NecoArc_Spelunky_v1_34: 6414043357748686127
+      NecoArc_Spelunky_v1_35: 5336804422959780273
+      NecoArc_Spelunky_v1_36: -8231709084690867410
+      NecoArc_Spelunky_v1_37: -4020028824437912660
+      NecoArc_Spelunky_v1_38: 1652506498322720283
+      NecoArc_Spelunky_v1_39: -3394249671910601427
+      NecoArc_Spelunky_v1_4: -4452988274891568074
+      NecoArc_Spelunky_v1_40: 6506293698670094663
+      NecoArc_Spelunky_v1_41: 4653048901077514179
+      NecoArc_Spelunky_v1_42: 4827959012211531302
+      NecoArc_Spelunky_v1_43: 8753053992771860704
+      NecoArc_Spelunky_v1_44: 5153707600997091219
+      NecoArc_Spelunky_v1_45: -7203604395102470682
+      NecoArc_Spelunky_v1_46: 116658498581582283
+      NecoArc_Spelunky_v1_47: -5032031901860267918
+      NecoArc_Spelunky_v1_48: 3663711916690660100
+      NecoArc_Spelunky_v1_49: 1094354786403757383
+      NecoArc_Spelunky_v1_5: -5798777243397377447
+      NecoArc_Spelunky_v1_50: -463835295611632977
+      NecoArc_Spelunky_v1_51: 5917671937121984923
+      NecoArc_Spelunky_v1_52: -7059384673214430686
+      NecoArc_Spelunky_v1_53: 107345457871630757
+      NecoArc_Spelunky_v1_54: -697066679961321068
+      NecoArc_Spelunky_v1_55: 8249281450442201115
+      NecoArc_Spelunky_v1_56: -8155632510965468269
+      NecoArc_Spelunky_v1_57: 7183533743745663653
+      NecoArc_Spelunky_v1_58: 8004191237413128267
+      NecoArc_Spelunky_v1_59: -2401980883253319439
+      NecoArc_Spelunky_v1_6: -9154378694358628891
+      NecoArc_Spelunky_v1_60: 6674081832452753744
+      NecoArc_Spelunky_v1_61: 7769507890797600122
+      NecoArc_Spelunky_v1_62: 7402780263613924234
+      NecoArc_Spelunky_v1_63: 5960364833157158480
+      NecoArc_Spelunky_v1_64: -4606601225363055069
+      NecoArc_Spelunky_v1_65: 2714281066786083852
+      NecoArc_Spelunky_v1_66: 491655909130161603
+      NecoArc_Spelunky_v1_67: 9168514043171753469
+      NecoArc_Spelunky_v1_68: 203386252328007171
+      NecoArc_Spelunky_v1_69: -8845435030902808906
+      NecoArc_Spelunky_v1_7: -1587312167302196694
+      NecoArc_Spelunky_v1_70: 8532186401083846172
+      NecoArc_Spelunky_v1_71: -8856580406615383141
+      NecoArc_Spelunky_v1_72: -8664003971075367363
+      NecoArc_Spelunky_v1_73: -7298610466871351548
+      NecoArc_Spelunky_v1_74: -6783275582899144562
+      NecoArc_Spelunky_v1_75: -3441204853135302180
+      NecoArc_Spelunky_v1_76: -8270503516664203177
+      NecoArc_Spelunky_v1_77: -4466653898502213969
+      NecoArc_Spelunky_v1_78: -9117168805615503385
+      NecoArc_Spelunky_v1_79: 957291878891419228
+      NecoArc_Spelunky_v1_8: -1636691123999385924
+      NecoArc_Spelunky_v1_80: -2441657323455977409
+      NecoArc_Spelunky_v1_81: -6623330557974928841
+      NecoArc_Spelunky_v1_82: -3181362513854251542
+      NecoArc_Spelunky_v1_83: -7687596404135861437
+      NecoArc_Spelunky_v1_84: -7124489431617796697
+      NecoArc_Spelunky_v1_85: -8751460423281946592
+      NecoArc_Spelunky_v1_86: -4356226134559160032
+      NecoArc_Spelunky_v1_87: 8741074662048816009
+      NecoArc_Spelunky_v1_88: -1988388836357258453
+      NecoArc_Spelunky_v1_89: -4113976073384473744
+      NecoArc_Spelunky_v1_9: -3562551645468743841
+      NecoArc_Spelunky_v1_90: 1685949479544327888
+      NecoArc_Spelunky_v1_91: -2248292429384810568
+      NecoArc_Spelunky_v1_92: 1084786347469610289
+      NecoArc_Spelunky_v1_93: 2483828636073111047
+      NecoArc_Spelunky_v1_94: -7878814885810621392
+      NecoArc_Spelunky_v1_95: -1455707727500168316
+      NecoArc_Spelunky_v1_96: -5834036883940641908
+      NecoArc_Spelunky_v1_97: -5302733782160080295
+      NecoArc_Spelunky_v1_98: -9188190227887343343
+      NecoArc_Spelunky_v1_99: 4360280904627649605
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

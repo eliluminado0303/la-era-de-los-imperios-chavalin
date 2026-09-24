@@ -78,7 +78,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 128
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -145,12 +145,12 @@ TextureImporter:
       name: gil_entrance_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 3
-        width: 22
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5
+        y: 4
+        width: 24
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -167,12 +167,12 @@ TextureImporter:
       name: gil_entrance_1
       rect:
         serializedVersion: 2
-        x: 35
-        y: 3
-        width: 22
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 39
+        y: 4
+        width: 24
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -189,12 +189,12 @@ TextureImporter:
       name: gil_entrance_2
       rect:
         serializedVersion: 2
-        x: 66
-        y: 3
-        width: 22
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 73
+        y: 4
+        width: 24
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -211,12 +211,12 @@ TextureImporter:
       name: gil_entrance_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 3
-        width: 25
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 106
+        y: 4
+        width: 26
+        height: 55
+      alignment: 9
+      pivot: {x: 0.57655394, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -233,12 +233,12 @@ TextureImporter:
       name: gil_entrance_4
       rect:
         serializedVersion: 2
-        x: 130
-        y: 3
-        width: 19
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 142
+        y: 4
+        width: 22
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -255,12 +255,12 @@ TextureImporter:
       name: gil_entrance_5
       rect:
         serializedVersion: 2
-        x: 160
-        y: 3
-        width: 21
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 176
+        y: 4
+        width: 22
+        height: 59
+      alignment: 9
+      pivot: {x: 0.572378, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -277,12 +277,12 @@ TextureImporter:
       name: gil_entrance_6
       rect:
         serializedVersion: 2
-        x: 190
-        y: 3
-        width: 22
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 209
+        y: 4
+        width: 23
+        height: 59
+      alignment: 9
+      pivot: {x: 0.58653986, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -299,12 +299,12 @@ TextureImporter:
       name: gil_entrance_7
       rect:
         serializedVersion: 2
-        x: 223
-        y: 3
-        width: 19
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 245
+        y: 4
+        width: 20
+        height: 59
+      alignment: 9
+      pivot: {x: 0.5199051, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -321,12 +321,12 @@ TextureImporter:
       name: gil_entrance_8
       rect:
         serializedVersion: 2
-        x: 253
-        y: 3
+        x: 279
+        y: 4
         width: 20
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 59
+      alignment: 9
+      pivot: {x: 0.51990664, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -343,12 +343,12 @@ TextureImporter:
       name: gil_entrance_9
       rect:
         serializedVersion: 2
-        x: 285
-        y: 3
-        width: 19
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 313
+        y: 4
+        width: 20
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -365,7 +365,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b9a026a85ba4ff0438b4487a9d9803f3
     internalID: 0
     vertices: []
     indices: 
@@ -373,7 +373,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       gil_entrance_0: -4036807356370554732
       gil_entrance_1: -4490304817884210088

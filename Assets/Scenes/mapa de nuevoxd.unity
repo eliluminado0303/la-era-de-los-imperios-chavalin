@@ -163,18 +163,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c49d549af893aca48881f494d2c83f9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  nombreJugadorHumano: Jugador1
-  spriteTierra: {fileID: -1634285397, guid: 337fc04cef51ec943b58226a629f616c, type: 3}
-  spriteRecursoOro: {fileID: 0}
-  spriteRecursoMadera: {fileID: 0}
-  spriteRecursoComida: {fileID: 0}
-  spriteEdificioPrincipal: {fileID: 0}
-  spriteEdificioEntrenamiento: {fileID: 0}
-  spriteUnidadGenerica: {fileID: 0}
-  "tama\xF1oCelda": 32
-  spriteBorde: {fileID: 1734184459, guid: 337fc04cef51ec943b58226a629f616c, type: 3}
-  spriteEsquina: {fileID: -806321623, guid: 337fc04cef51ec943b58226a629f616c, type: 3}
-  grosorBorde: 2
+  nombreJugadorHumano: Jugador
+  spriteTierra: {fileID: -702566416, guid: 2682a143fd4665b49bc16df1b2cbf164, type: 3}
+  spriteRecursoOro: {fileID: 7027390544002458173, guid: 58c3815ee63bada4d93de29e8bbc1a96, type: 3}
+  spriteRecursoMadera: {fileID: -3791318427878180659, guid: 6b3eaf619b557c04291eee2ab0e2154d, type: 3}
+  spriteRecursoComida: {fileID: -1003252732417706655, guid: 359e545bf821a424286ba3a2856cd4ee, type: 3}
+  spriteEdificioPrincipal: {fileID: 9080485990912184260, guid: d9f67800e658df84b80e13e67fb2bee7, type: 3}
+  spriteEdificioEntrenamiento: {fileID: 1765351576224072635, guid: 637a4bf91f8d0f346a21382a6a6245a5, type: 3}
+  spriteUnidadGenerica: {fileID: -4675935811743254547, guid: 7ce7f5cb375985c4e9106686b478dc30, type: 3}
+  "tama\xF1oCelda": 1
+  spriteBorde: {fileID: 4684625920699962428, guid: 2682a143fd4665b49bc16df1b2cbf164, type: 3}
+  spriteEsquina: {fileID: -2801873246907429078, guid: 2682a143fd4665b49bc16df1b2cbf164, type: 3}
+  grosorBorde: 1
 --- !u!1 &839908396
 GameObject:
   m_ObjectHideFlags: 0

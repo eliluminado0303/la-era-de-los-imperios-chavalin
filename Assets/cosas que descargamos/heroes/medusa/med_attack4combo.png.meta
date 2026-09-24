@@ -1,0 +1,732 @@
+fileFormatVersion: 2
+guid: 071e7dc8f10d72f49948d1d08220aee3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3137708682374737686
+    second: med_attack4combo_0
+  - first:
+      213: 4705237453716282700
+    second: med_attack4combo_1
+  - first:
+      213: 1613925317542883844
+    second: med_attack4combo_2
+  - first:
+      213: 5622375250859293471
+    second: med_attack4combo_3
+  - first:
+      213: -9010162428692584970
+    second: med_attack4combo_4
+  - first:
+      213: 7242994227250072046
+    second: med_attack4combo_5
+  - first:
+      213: 8416871186696447329
+    second: med_attack4combo_6
+  - first:
+      213: 5223516587465874762
+    second: med_attack4combo_7
+  - first:
+      213: 8410031045373622473
+    second: med_attack4combo_8
+  - first:
+      213: -3555685715216254550
+    second: med_attack4combo_9
+  - first:
+      213: -1407420661377351492
+    second: med_attack4combo_10
+  - first:
+      213: 6019768233920979780
+    second: med_attack4combo_11
+  - first:
+      213: -640339811889231020
+    second: med_attack4combo_12
+  - first:
+      213: 6177500709537573145
+    second: med_attack4combo_13
+  - first:
+      213: 4826928831115128291
+    second: med_attack4combo_14
+  - first:
+      213: -5057732873508796833
+    second: med_attack4combo_15
+  - first:
+      213: 6931456537960343466
+    second: med_attack4combo_16
+  - first:
+      213: -6807331451137437483
+    second: med_attack4combo_17
+  - first:
+      213: -8892073803753747995
+    second: med_attack4combo_18
+  - first:
+      213: 6707534011541717448
+    second: med_attack4combo_19
+  - first:
+      213: -3720414169845129680
+    second: med_attack4combo_20
+  - first:
+      213: 4355571470550114030
+    second: med_attack4combo_21
+  - first:
+      213: 6661398941773588491
+    second: med_attack4combo_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: med_attack4combo_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 4
+        width: 40
+        height: 49
+      alignment: 9
+      pivot: {x: 0.6711734, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61fea9d1c616b8b20800000000000000
+      internalID: 3137708682374737686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_attack4combo_1
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 4
+        width: 58
+        height: 48
+      alignment: 9
+      pivot: {x: 0.7081433, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4d5f94e88c5c4140800000000000000
+      internalID: 4705237453716282700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_attack4combo_2
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 4
+        width: 58
+        height: 48
+      alignment: 9
+      pivot: {x: 0.73610187, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 402372e7680d56610800000000000000
+      internalID: 1613925317542883844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_attack4combo_3
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 4
+        width: 40
+        height: 49
+      alignment: 9
+      pivot: {x: 0.67567825, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1b7a658080b60e40800000000000000
+      internalID: 5622375250859293471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_attack4combo_4
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 4
+        width: 39
+        height: 43
+      alignment: 9
+      pivot: {x: 0.71252364, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f5253d420975f280800000000000000
+      internalID: -9010162428692584970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_attack4combo_5
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 4
+        width: 55
+        height: 44
+      alignment: 9
+      pivot: {x: 0.63431895, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee90279efd8448460800000000000000
+      internalID: 7242994227250072046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_attack4combo_6
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 4
+        width: 71
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4644711, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1652343ffbbbec470800000000000000
+      internalID: 8416871186696447329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_attack4combo_7
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 4
+        width: 127
+        height: 46
+      alignment: 9
+      pivot: {x: 0.26448503, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4d934239a8ad7840800000000000000
+      internalID: 5223516587465874762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_attack4combo_8
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 4
+        width: 29
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c870817dae66b470800000000000000
+      internalID: 8410031045373622473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_attack4combo_9
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 4
+        width: 40
+        height: 47
+      alignment: 9
+      pivot: {x: 0.54054105, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa9ba9b4eaaa7aec0800000000000000
+      internalID: -3555685715216254550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_attack4combo_10
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 4
+        width: 64
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb0ce058d56d77ce0800000000000000
+      internalID: -1407420661377351492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_attack4combo_11
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 4
+        width: 32
+        height: 52
+      alignment: 9
+      pivot: {x: 0.6126156, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4436a0d80538a8350800000000000000
+      internalID: 6019768233920979780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_attack4combo_12
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 4
+        width: 37
+        height: 50
+      alignment: 9
+      pivot: {x: 0.6022669, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45b4dc0755e0d17f0800000000000000
+      internalID: -640339811889231020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_attack4combo_13
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 4
+        width: 30
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 919e5bf5a24eab550800000000000000
+      internalID: 6177500709537573145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_attack4combo_14
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 4
+        width: 42
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ed65be9232bcf240800000000000000
+      internalID: 4826928831115128291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_attack4combo_15
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 4
+        width: 48
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5641b1afb25fc9b0800000000000000
+      internalID: -5057732873508796833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_attack4combo_16
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 4
+        width: 48
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa76f213ffa713060800000000000000
+      internalID: 6931456537960343466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_attack4combo_17
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 4
+        width: 40
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5991028, y: -0.003465116}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d0db9aac108781a0800000000000000
+      internalID: -6807331451137437483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_attack4combo_18
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 4
+        width: 33
+        height: 51
+      alignment: 9
+      pivot: {x: 0.6092048, y: -0.003532924}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e983badcf1099480800000000000000
+      internalID: -8892073803753747995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_attack4combo_19
+      rect:
+        serializedVersion: 2
+        x: 1515
+        y: 4
+        width: 51
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c18bcc35a2f51d50800000000000000
+      internalID: 6707534011541717448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_attack4combo_20
+      rect:
+        serializedVersion: 2
+        x: 1598
+        y: 4
+        width: 42
+        height: 53
+      alignment: 9
+      pivot: {x: 0.4442313, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03e1d0d260f6e5cc0800000000000000
+      internalID: -3720414169845129680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_attack4combo_21
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 4
+        width: 31
+        height: 53
+      alignment: 9
+      pivot: {x: 0.5755615, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eee17f7fc29127c30800000000000000
+      internalID: 4355571470550114030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_attack4combo_22
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 4
+        width: 51
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b08e39f3b0b027c50800000000000000
+      internalID: 6661398941773588491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 800d6c53df6082748a9eec62dd4746ec
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      med_attack4combo_0: 3137708682374737686
+      med_attack4combo_1: 4705237453716282700
+      med_attack4combo_10: -1407420661377351492
+      med_attack4combo_11: 6019768233920979780
+      med_attack4combo_12: -640339811889231020
+      med_attack4combo_13: 6177500709537573145
+      med_attack4combo_14: 4826928831115128291
+      med_attack4combo_15: -5057732873508796833
+      med_attack4combo_16: 6931456537960343466
+      med_attack4combo_17: -6807331451137437483
+      med_attack4combo_18: -8892073803753747995
+      med_attack4combo_19: 6707534011541717448
+      med_attack4combo_2: 1613925317542883844
+      med_attack4combo_20: -3720414169845129680
+      med_attack4combo_21: 4355571470550114030
+      med_attack4combo_22: 6661398941773588491
+      med_attack4combo_3: 5622375250859293471
+      med_attack4combo_4: -9010162428692584970
+      med_attack4combo_5: 7242994227250072046
+      med_attack4combo_6: 8416871186696447329
+      med_attack4combo_7: 5223516587465874762
+      med_attack4combo_8: 8410031045373622473
+      med_attack4combo_9: -3555685715216254550
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

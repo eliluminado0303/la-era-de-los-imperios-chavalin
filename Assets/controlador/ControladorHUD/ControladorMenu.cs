@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
             Debug.Log("Creando partida como servidor....");
             SceneManager.LoadScene("PartidaOnline");            
         }
-        public void UnirsePartida(){
-            Debug.Log("Unirse a partida como cliente....");
-            SceneManager.LoadScene("PartidaOnline");            
+        public void CombateLibre(){
+            Debug.Log("Unirse a combate libre....");
+            SceneManager.LoadScene("CombateLibre");            
         }
         public void SalirJuego(){
             Debug.Log("Saliendo del juego....");

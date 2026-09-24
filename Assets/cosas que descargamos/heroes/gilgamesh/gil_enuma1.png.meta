@@ -1,0 +1,498 @@
+fileFormatVersion: 2
+guid: 92f68c631afed0b428233f3ff615df8d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9138805288810608752
+    second: gil_enuma1_0
+  - first:
+      213: 5380732917702997397
+    second: gil_enuma1_1
+  - first:
+      213: 8933070245285240954
+    second: gil_enuma1_2
+  - first:
+      213: -4563342878196434237
+    second: gil_enuma1_3
+  - first:
+      213: -6492305534357054062
+    second: gil_enuma1_4
+  - first:
+      213: 534646101016848144
+    second: gil_enuma1_5
+  - first:
+      213: -1012290896031251171
+    second: gil_enuma1_6
+  - first:
+      213: 1025529023996688177
+    second: gil_enuma1_7
+  - first:
+      213: -1401160393358088531
+    second: gil_enuma1_8
+  - first:
+      213: 4986686230856147218
+    second: gil_enuma1_9
+  - first:
+      213: -2599597823569243082
+    second: gil_enuma1_10
+  - first:
+      213: -1228158383214345420
+    second: gil_enuma1_11
+  - first:
+      213: -6598277378705301671
+    second: gil_enuma1_12
+  - first:
+      213: 8847439344818604701
+    second: gil_enuma1_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gil_enuma1_0
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 4
+        width: 24
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5604679, y: 0.00000006935813}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 078740f9dfe83de70800000000000000
+      internalID: 9138805288810608752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_enuma1_1
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 4
+        width: 26
+        height: 56
+      alignment: 9
+      pivot: {x: 0.56279224, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59530fe84143caa40800000000000000
+      internalID: 5380732917702997397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_enuma1_2
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 4
+        width: 23
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a70a6d30f04a8fb70800000000000000
+      internalID: 8933070245285240954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_enuma1_3
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 4
+        width: 24
+        height: 57
+      alignment: 9
+      pivot: {x: 0.5377922, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cafac474dfbba0c0800000000000000
+      internalID: -4563342878196434237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_enuma1_4
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 4
+        width: 29
+        height: 82
+      alignment: 9
+      pivot: {x: 0.61259615, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29d5853a382b6e5a0800000000000000
+      internalID: -6492305534357054062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_enuma1_5
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 4
+        width: 26
+        height: 82
+      alignment: 9
+      pivot: {x: 0.56279343, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01728a3dbc17b6700800000000000000
+      internalID: 534646101016848144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_enuma1_6
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 4
+        width: 26
+        height: 85
+      alignment: 9
+      pivot: {x: 0.5697702, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1502bc1bce93f1f0800000000000000
+      internalID: -1012290896031251171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_enuma1_7
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 4
+        width: 24
+        height: 85
+      alignment: 9
+      pivot: {x: 0.52267456, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 137fc2eb6396b3e00800000000000000
+      internalID: 1025529023996688177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_enuma1_8
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 4
+        width: 26
+        height: 85
+      alignment: 9
+      pivot: {x: 0.54883987, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da66b80cb041e8ce0800000000000000
+      internalID: -1401160393358088531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_enuma1_9
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 4
+        width: 41
+        height: 73
+      alignment: 9
+      pivot: {x: 0.3628391, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2112384d4b4443540800000000000000
+      internalID: 4986686230856147218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_enuma1_10
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 4
+        width: 93
+        height: 76
+      alignment: 9
+      pivot: {x: 0.40832126, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 634d64f7d8f5cebd0800000000000000
+      internalID: -2599597823569243082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_enuma1_11
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 4
+        width: 83
+        height: 54
+      alignment: 9
+      pivot: {x: 0.22898331, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43347902574b4fee0800000000000000
+      internalID: -1228158383214345420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_enuma1_12
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 4
+        width: 82
+        height: 47
+      alignment: 9
+      pivot: {x: 0.23895264, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95f56c8eea53e64a0800000000000000
+      internalID: -6598277378705301671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gil_enuma1_13
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 4
+        width: 83
+        height: 47
+      alignment: 9
+      pivot: {x: 0.24428329, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9a4ab7553b68ca70800000000000000
+      internalID: 8847439344818604701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 633516527afd6a141a4c0474d1fd8663
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      gil_enuma1_0: 9138805288810608752
+      gil_enuma1_1: 5380732917702997397
+      gil_enuma1_10: -2599597823569243082
+      gil_enuma1_11: -1228158383214345420
+      gil_enuma1_12: -6598277378705301671
+      gil_enuma1_13: 8847439344818604701
+      gil_enuma1_2: 8933070245285240954
+      gil_enuma1_3: -4563342878196434237
+      gil_enuma1_4: -6492305534357054062
+      gil_enuma1_5: 534646101016848144
+      gil_enuma1_6: -1012290896031251171
+      gil_enuma1_7: 1025529023996688177
+      gil_enuma1_8: -1401160393358088531
+      gil_enuma1_9: 4986686230856147218
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

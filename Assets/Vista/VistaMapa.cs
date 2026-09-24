@@ -7,11 +7,13 @@ using UnityEngine;
 public class VistaMapa : MonoBehaviour
 {
     [Header("Configuración de la partida")]
-    public string nombreJugadorHumano = "Jugador1";
+    public string nombreJugadorHumano = "Jugador";
+    public string CivilizacionHumano { get; private set; }
 
 
     [Header("Sprites (opcional — si los dejas vacíos, usa cuadrados de color)")]
     public Sprite spriteTierra;
+    
     public Sprite spriteRecursoOro;
     public Sprite spriteRecursoMadera;
     public Sprite spriteRecursoComida;
@@ -28,6 +30,11 @@ public class VistaMapa : MonoBehaviour
     public Sprite spriteBorde;
     public Sprite spriteEsquina;
     public int grosorBorde = 2;
+
+        void Start()
+    {
+        IniciarPartida("Sumerios"); // TEMPORAL: solo para probar sin el panel de botones todavía
+    }
 
     // Dibuja un marco alrededor del tablero jugable. Las 4 esquinas del
     // marco (donde fila Y columna están fuera del 15x15 al mismo tiempo)
@@ -74,6 +81,7 @@ public class VistaMapa : MonoBehaviour
     // recién ahí arranca la partida.
     public void IniciarPartida(string civilizacionElegida)
     {
+        CivilizacionHumano = civilizacionElegida;   // <-- nueva línea
         Partida = new ControladorPartida(nombreJugadorHumano, civilizacionElegida);
         ConstruirCuadricula();
         ConstruirBordeDecorativo();

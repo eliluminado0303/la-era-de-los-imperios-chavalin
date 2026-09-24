@@ -1,0 +1,431 @@
+fileFormatVersion: 2
+guid: f05a39bb8f553034b8ec24275fb7bcef
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7161853959559655718
+    second: med_bellerophon_0
+  - first:
+      213: 4131038293985709978
+    second: med_bellerophon_1
+  - first:
+      213: 8794675102738032216
+    second: med_bellerophon_2
+  - first:
+      213: -7270530497660111167
+    second: med_bellerophon_3
+  - first:
+      213: 6590020162524641690
+    second: med_bellerophon_4
+  - first:
+      213: 5478474892412358151
+    second: med_bellerophon_5
+  - first:
+      213: 4985257513232359938
+    second: med_bellerophon_6
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: med_bellerophon_0
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 4
+        width: 26
+        height: 50
+      alignment: 9
+      pivot: {x: 0.64797914, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62137c82b34046360800000000000000
+      internalID: 7161853959559655718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_bellerophon_1
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 4
+        width: 35
+        height: 34
+      alignment: 9
+      pivot: {x: 0.46702227, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9fcd82f075645930800000000000000
+      internalID: 4131038293985709978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_bellerophon_2
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 4
+        width: 40
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8562ca5e866fc0a70800000000000000
+      internalID: 8794675102738032216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_bellerophon_3
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 4
+        width: 44
+        height: 33
+      alignment: 9
+      pivot: {x: 0.45190775, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c633568803e91b90800000000000000
+      internalID: -7270530497660111167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_bellerophon_4
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 4
+        width: 42
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9971f12c64747b50800000000000000
+      internalID: 6590020162524641690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_bellerophon_5
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 4
+        width: 112
+        height: 113
+      alignment: 9
+      pivot: {x: 0.5929162, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70e822173e3770c40800000000000000
+      internalID: 5478474892412358151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_bellerophon_6
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 4
+        width: 106
+        height: 108
+      alignment: 9
+      pivot: {x: 0.57199556, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 202ef069b413f2540800000000000000
+      internalID: 4985257513232359938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_bellerophon_7
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 4
+        width: 106
+        height: 107
+      alignment: 9
+      pivot: {x: 0.58508533, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 548e299101dbf1145b0d515728408a7c
+      internalID: 922739530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_bellerophon_8
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 4
+        width: 99
+        height: 138
+      alignment: 9
+      pivot: {x: 0.5560636, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3abe875cd46f3194b9d256d831b69348
+      internalID: 1855622230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_bellerophon_9
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 4
+        width: 99
+        height: 138
+      alignment: 9
+      pivot: {x: 0.57007945, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71b5438d9f496b94c8edf646d5bb659e
+      internalID: -1650289869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_bellerophon_10
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 4
+        width: 129
+        height: 133
+      alignment: 9
+      pivot: {x: 0.62907374, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b656f3ba95cf3a1479a4aeaaa05cf7d9
+      internalID: 2036453663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: med_bellerophon_11
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 4
+        width: 129
+        height: 133
+      alignment: 9
+      pivot: {x: 0.60218424, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c3872e6f434c5a4a8afc214d3256aea
+      internalID: 873074508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a6a255ecbf1967a4697065a9351455c6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      med_bellerophon_0: 7161853959559655718
+      med_bellerophon_1: 4131038293985709978
+      med_bellerophon_10: 2036453663
+      med_bellerophon_11: 873074508
+      med_bellerophon_2: 8794675102738032216
+      med_bellerophon_3: -7270530497660111167
+      med_bellerophon_4: 6590020162524641690
+      med_bellerophon_5: 5478474892412358151
+      med_bellerophon_6: 4985257513232359938
+      med_bellerophon_7: 922739530
+      med_bellerophon_8: 1855622230
+      med_bellerophon_9: -1650289869
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

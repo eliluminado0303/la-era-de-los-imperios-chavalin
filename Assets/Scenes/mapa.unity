@@ -206,7 +206,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3074,7 +3074,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 8
+      m_TileSpriteIndex: 0
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3144,7 +3144,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 7
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 7
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3179,7 +3179,7 @@ Tilemap:
   m_TileSpriteArray:
   - serializedVersion: 2
     m_RefCount: 1
-    m_Data: {fileID: -1899680638, guid: 3efda8539c45908438f6d70ce39542e2, type: 3}
+    m_Data: {fileID: -730765252, guid: 3efda8539c45908438f6d70ce39542e2, type: 3}
   - serializedVersion: 2
     m_RefCount: 1
     m_Data: {fileID: 308235900, guid: 3efda8539c45908438f6d70ce39542e2, type: 3}
@@ -3199,14 +3199,11 @@ Tilemap:
     m_RefCount: 1
     m_Data: {fileID: -353055742, guid: 3efda8539c45908438f6d70ce39542e2, type: 3}
   - serializedVersion: 2
-    m_RefCount: 0
-    m_Data: {fileID: 0}
-  - serializedVersion: 2
     m_RefCount: 1
-    m_Data: {fileID: -730765252, guid: 3efda8539c45908438f6d70ce39542e2, type: 3}
+    m_Data: {fileID: -1899680638, guid: 3efda8539c45908438f6d70ce39542e2, type: 3}
   m_TileMatrixArray:
   - serializedVersion: 2
-    m_RefCount: 24
+    m_RefCount: 8
     m_Data:
       e00: 1
       e01: 0
@@ -3228,30 +3225,6 @@ Tilemap:
   - serializedVersion: 2
     m_RefCount: 8
     m_Data: {r: 1, g: 1, b: 1, a: 1}
-  - serializedVersion: 2
-    m_RefCount: 0
-    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
-  - serializedVersion: 2
-    m_RefCount: 0
-    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
-  - serializedVersion: 2
-    m_RefCount: 0
-    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
-  - serializedVersion: 2
-    m_RefCount: 0
-    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
-  - serializedVersion: 2
-    m_RefCount: 0
-    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
-  - serializedVersion: 2
-    m_RefCount: 0
-    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
-  - serializedVersion: 2
-    m_RefCount: 0
-    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
-  - serializedVersion: 2
-    m_RefCount: 0
-    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
