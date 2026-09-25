@@ -832,7 +832,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -846,7 +846,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -913,12 +913,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_0
       rect:
         serializedVersion: 2
-        x: 25
-        y: 1925
-        width: 72
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 26
+        y: 1926
+        width: 70
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -935,12 +935,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_1
       rect:
         serializedVersion: 2
-        x: 153
-        y: 1925
-        width: 75
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 154
+        y: 1926
+        width: 73
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -957,12 +957,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_2
       rect:
         serializedVersion: 2
-        x: 281
-        y: 1925
-        width: 75
-        height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 282
+        y: 1926
+        width: 73
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -979,12 +979,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_3
       rect:
         serializedVersion: 2
-        x: 409
-        y: 1925
-        width: 75
-        height: 115
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 410
+        y: 1926
+        width: 73
+        height: 113
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1001,12 +1001,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_4
       rect:
         serializedVersion: 2
-        x: 537
-        y: 1925
-        width: 72
-        height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 538
+        y: 1926
+        width: 70
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1023,12 +1023,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_5
       rect:
         serializedVersion: 2
-        x: 665
-        y: 1925
-        width: 75
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 666
+        y: 1926
+        width: 73
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1045,12 +1045,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_6
       rect:
         serializedVersion: 2
-        x: 793
-        y: 1925
-        width: 75
-        height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 794
+        y: 1926
+        width: 73
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1067,12 +1067,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_7
       rect:
         serializedVersion: 2
-        x: 921
-        y: 1925
-        width: 75
-        height: 115
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 922
+        y: 1926
+        width: 73
+        height: 113
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1089,12 +1089,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_8
       rect:
         serializedVersion: 2
-        x: 1049
-        y: 1925
-        width: 72
-        height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1050
+        y: 1926
+        width: 70
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1111,12 +1111,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_9
       rect:
         serializedVersion: 2
-        x: 1179
-        y: 1919
-        width: 83
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1180
+        y: 1920
+        width: 81
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1133,12 +1133,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_10
       rect:
         serializedVersion: 2
-        x: 1292
-        y: 1942
-        width: 100
-        height: 78
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1293
+        y: 1943
+        width: 98
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1155,12 +1155,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_11
       rect:
         serializedVersion: 2
-        x: 1324
-        y: 1939
-        width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1325
+        y: 1940
+        width: 9
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1177,12 +1177,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_12
       rect:
         serializedVersion: 2
-        x: 1334
-        y: 1937
-        width: 14
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1335
+        y: 1938
+        width: 12
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1199,12 +1199,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_13
       rect:
         serializedVersion: 2
-        x: 1349
-        y: 1937
-        width: 14
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1350
+        y: 1938
+        width: 12
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1221,12 +1221,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_14
       rect:
         serializedVersion: 2
-        x: 1420
-        y: 1937
-        width: 96
-        height: 83
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1421
+        y: 1938
+        width: 94
+        height: 81
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1243,12 +1243,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_15
       rect:
         serializedVersion: 2
-        x: 1470
-        y: 1935
-        width: 13
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1471
+        y: 1936
+        width: 11
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1265,12 +1265,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_16
       rect:
         serializedVersion: 2
-        x: 1485
-        y: 1937
-        width: 35
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1486
+        y: 1938
+        width: 33
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1287,12 +1287,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_17
       rect:
         serializedVersion: 2
-        x: 1548
-        y: 1942
-        width: 100
-        height: 78
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1549
+        y: 1943
+        width: 98
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1309,12 +1309,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_18
       rect:
         serializedVersion: 2
-        x: 1580
-        y: 1939
-        width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1581
+        y: 1940
+        width: 9
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1331,12 +1331,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_19
       rect:
         serializedVersion: 2
-        x: 1590
-        y: 1937
-        width: 14
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1591
+        y: 1938
+        width: 12
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1353,12 +1353,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_20
       rect:
         serializedVersion: 2
-        x: 1605
-        y: 1937
-        width: 14
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1606
+        y: 1938
+        width: 12
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1375,12 +1375,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_21
       rect:
         serializedVersion: 2
-        x: 1676
-        y: 1937
-        width: 96
-        height: 83
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1677
+        y: 1938
+        width: 94
+        height: 81
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1397,12 +1397,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_22
       rect:
         serializedVersion: 2
-        x: 1726
-        y: 1935
-        width: 13
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1727
+        y: 1936
+        width: 11
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1419,12 +1419,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_23
       rect:
         serializedVersion: 2
-        x: 1741
-        y: 1937
-        width: 35
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1742
+        y: 1938
+        width: 33
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1441,12 +1441,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_24
       rect:
         serializedVersion: 2
-        x: 1804
-        y: 1942
-        width: 100
-        height: 78
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1805
+        y: 1943
+        width: 98
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1463,12 +1463,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_25
       rect:
         serializedVersion: 2
-        x: 1836
-        y: 1939
-        width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1837
+        y: 1940
+        width: 9
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1485,12 +1485,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_26
       rect:
         serializedVersion: 2
-        x: 1846
-        y: 1937
-        width: 14
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1847
+        y: 1938
+        width: 12
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1507,12 +1507,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_27
       rect:
         serializedVersion: 2
-        x: 1861
-        y: 1937
-        width: 14
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1862
+        y: 1938
+        width: 12
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1529,12 +1529,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_28
       rect:
         serializedVersion: 2
-        x: 1932
-        y: 1937
-        width: 96
-        height: 83
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1933
+        y: 1938
+        width: 94
+        height: 81
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1551,12 +1551,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_29
       rect:
         serializedVersion: 2
-        x: 1982
-        y: 1935
-        width: 13
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1983
+        y: 1936
+        width: 11
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1573,12 +1573,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_30
       rect:
         serializedVersion: 2
-        x: 1997
-        y: 1937
-        width: 35
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1998
+        y: 1938
+        width: 33
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1595,12 +1595,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_31
       rect:
         serializedVersion: 2
-        x: 27
-        y: 1797
-        width: 83
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 28
+        y: 1798
+        width: 81
+        height: 73
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1617,12 +1617,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_32
       rect:
         serializedVersion: 2
-        x: 158
-        y: 1797
-        width: 82
-        height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 159
+        y: 1798
+        width: 80
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1639,12 +1639,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_33
       rect:
         serializedVersion: 2
-        x: 288
-        y: 1794
-        width: 88
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 289
+        y: 1795
+        width: 86
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1661,12 +1661,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_34
       rect:
         serializedVersion: 2
-        x: 414
-        y: 1797
-        width: 82
-        height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 415
+        y: 1798
+        width: 80
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1683,12 +1683,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_35
       rect:
         serializedVersion: 2
-        x: 539
-        y: 1797
-        width: 83
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 540
+        y: 1798
+        width: 81
+        height: 73
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1705,12 +1705,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_36
       rect:
         serializedVersion: 2
-        x: 641
-        y: 1801
-        width: 126
-        height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 642
+        y: 1802
+        width: 124
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1727,12 +1727,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_37
       rect:
         serializedVersion: 2
-        x: 769
-        y: 1801
-        width: 126
-        height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 770
+        y: 1802
+        width: 124
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1749,12 +1749,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_38
       rect:
         serializedVersion: 2
-        x: 897
-        y: 1799
-        width: 126
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 898
+        y: 1800
+        width: 124
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1771,12 +1771,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_39
       rect:
         serializedVersion: 2
-        x: 1025
-        y: 1799
-        width: 126
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1026
+        y: 1800
+        width: 124
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1793,12 +1793,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_40
       rect:
         serializedVersion: 2
-        x: 1153
-        y: 1799
-        width: 254
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1154
+        y: 1800
+        width: 252
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1815,12 +1815,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_41
       rect:
         serializedVersion: 2
-        x: 1407
-        y: 1804
-        width: 128
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1408
+        y: 1805
+        width: 126
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1837,12 +1837,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_42
       rect:
         serializedVersion: 2
-        x: 10
-        y: 1669
-        width: 95
-        height: 102
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 11
+        y: 1670
+        width: 93
+        height: 100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1859,12 +1859,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_43
       rect:
         serializedVersion: 2
-        x: 160
-        y: 1669
-        width: 73
-        height: 95
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 161
+        y: 1670
+        width: 71
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1881,12 +1881,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_44
       rect:
         serializedVersion: 2
-        x: 286
-        y: 1674
-        width: 82
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 287
+        y: 1675
+        width: 80
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1903,12 +1903,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_45
       rect:
         serializedVersion: 2
-        x: 404
-        y: 1675
-        width: 90
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 405
+        y: 1676
+        width: 88
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1925,12 +1925,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_46
       rect:
         serializedVersion: 2
-        x: 543
-        y: 1669
-        width: 72
-        height: 102
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 544
+        y: 1670
+        width: 70
+        height: 100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1947,12 +1947,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_47
       rect:
         serializedVersion: 2
-        x: 676
-        y: 1667
-        width: 72
-        height: 87
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 677
+        y: 1668
+        width: 70
+        height: 85
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1969,12 +1969,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_48
       rect:
         serializedVersion: 2
-        x: 789
-        y: 1663
-        width: 78
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 790
+        y: 1664
+        width: 76
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1991,12 +1991,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_49
       rect:
         serializedVersion: 2
-        x: 925
-        y: 1663
-        width: 65
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 926
+        y: 1664
+        width: 63
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2013,12 +2013,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_50
       rect:
         serializedVersion: 2
-        x: 1039
-        y: 1667
-        width: 90
-        height: 95
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1040
+        y: 1668
+        width: 88
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2035,12 +2035,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_51
       rect:
         serializedVersion: 2
-        x: 1162
-        y: 1698
-        width: 103
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1163
+        y: 1699
+        width: 101
+        height: 88
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2057,12 +2057,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_52
       rect:
         serializedVersion: 2
-        x: 1301
-        y: 1669
-        width: 85
-        height: 117
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1302
+        y: 1670
+        width: 83
+        height: 115
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2079,12 +2079,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_53
       rect:
         serializedVersion: 2
-        x: 1440
-        y: 1669
-        width: 75
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1441
+        y: 1670
+        width: 73
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2101,12 +2101,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_54
       rect:
         serializedVersion: 2
-        x: 1540
-        y: 1273
-        width: 476
-        height: 506
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1541
+        y: 1274
+        width: 474
+        height: 504
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2123,12 +2123,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_55
       rect:
         serializedVersion: 2
-        x: 42
-        y: 1538
-        width: 83
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 43
+        y: 1539
+        width: 81
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2145,12 +2145,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_56
       rect:
         serializedVersion: 2
-        x: 170
-        y: 1538
-        width: 80
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 171
+        y: 1539
+        width: 78
+        height: 106
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2167,12 +2167,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_57
       rect:
         serializedVersion: 2
-        x: 291
-        y: 1541
-        width: 72
-        height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 292
+        y: 1542
+        width: 70
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2189,12 +2189,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_58
       rect:
         serializedVersion: 2
-        x: 396
-        y: 1538
-        width: 85
-        height: 115
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 397
+        y: 1539
+        width: 83
+        height: 113
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2211,12 +2211,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_59
       rect:
         serializedVersion: 2
-        x: 519
-        y: 1538
-        width: 90
-        height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 520
+        y: 1539
+        width: 88
+        height: 111
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2233,12 +2233,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_60
       rect:
         serializedVersion: 2
-        x: 647
-        y: 1538
-        width: 90
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 648
+        y: 1539
+        width: 88
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2255,12 +2255,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_61
       rect:
         serializedVersion: 2
-        x: 798
-        y: 1538
-        width: 77
-        height: 115
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 799
+        y: 1539
+        width: 75
+        height: 113
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2277,12 +2277,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_62
       rect:
         serializedVersion: 2
-        x: 938
-        y: 1538
-        width: 80
-        height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 939
+        y: 1539
+        width: 78
+        height: 111
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2299,12 +2299,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_63
       rect:
         serializedVersion: 2
-        x: 1047
-        y: 1541
-        width: 85
-        height: 117
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1048
+        y: 1542
+        width: 83
+        height: 115
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2321,12 +2321,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_64
       rect:
         serializedVersion: 2
-        x: 1175
-        y: 1541
-        width: 85
-        height: 117
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1176
+        y: 1542
+        width: 83
+        height: 115
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2343,12 +2343,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_65
       rect:
         serializedVersion: 2
-        x: 1306
-        y: 1541
-        width: 85
-        height: 120
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1307
+        y: 1542
+        width: 83
+        height: 118
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2365,12 +2365,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_66
       rect:
         serializedVersion: 2
-        x: 1434
-        y: 1541
-        width: 85
-        height: 120
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1435
+        y: 1542
+        width: 83
+        height: 118
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2387,12 +2387,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_67
       rect:
         serializedVersion: 2
-        x: 32
-        y: 1413
-        width: 73
-        height: 102
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 33
+        y: 1414
+        width: 71
+        height: 100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2409,12 +2409,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_68
       rect:
         serializedVersion: 2
-        x: 160
-        y: 1413
-        width: 78
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 161
+        y: 1414
+        width: 76
+        height: 98
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2431,12 +2431,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_69
       rect:
         serializedVersion: 2
-        x: 288
-        y: 1413
-        width: 80
-        height: 97
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 289
+        y: 1414
+        width: 78
+        height: 95
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2453,12 +2453,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_70
       rect:
         serializedVersion: 2
-        x: 406
-        y: 1413
-        width: 75
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 407
+        y: 1414
+        width: 73
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2475,12 +2475,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_71
       rect:
         serializedVersion: 2
-        x: 532
-        y: 1413
-        width: 95
-        height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 533
+        y: 1414
+        width: 93
+        height: 103
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2497,12 +2497,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_72
       rect:
         serializedVersion: 2
-        x: 657
-        y: 1413
-        width: 95
-        height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 658
+        y: 1414
+        width: 93
+        height: 103
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2519,12 +2519,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_73
       rect:
         serializedVersion: 2
-        x: 800
-        y: 1413
-        width: 73
-        height: 102
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 801
+        y: 1414
+        width: 71
+        height: 100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2541,12 +2541,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_74
       rect:
         serializedVersion: 2
-        x: 928
-        y: 1413
-        width: 78
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 929
+        y: 1414
+        width: 76
+        height: 98
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2563,12 +2563,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_75
       rect:
         serializedVersion: 2
-        x: 1059
-        y: 1413
-        width: 87
-        height: 102
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1060
+        y: 1414
+        width: 85
+        height: 100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2585,12 +2585,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_76
       rect:
         serializedVersion: 2
-        x: 1182
-        y: 1415
-        width: 87
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1183
+        y: 1416
+        width: 85
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2607,12 +2607,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_77
       rect:
         serializedVersion: 2
-        x: 1307
-        y: 1410
-        width: 85
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1308
+        y: 1411
+        width: 83
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2629,12 +2629,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_78
       rect:
         serializedVersion: 2
-        x: 22
-        y: 1285
-        width: 70
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 23
+        y: 1286
+        width: 68
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2651,12 +2651,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_79
       rect:
         serializedVersion: 2
-        x: 136
-        y: 1285
-        width: 107
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 137
+        y: 1286
+        width: 105
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2673,12 +2673,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_80
       rect:
         serializedVersion: 2
-        x: 256
-        y: 1307
-        width: 128
-        height: 85
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 257
+        y: 1308
+        width: 126
+        height: 83
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2695,12 +2695,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_81
       rect:
         serializedVersion: 2
-        x: 320
-        y: 1302
-        width: 21
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 385
+        y: 1308
+        width: 126
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2717,12 +2717,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_82
       rect:
         serializedVersion: 2
-        x: 384
-        y: 1307
-        width: 128
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 525
+        y: 1298
+        width: 114
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2739,12 +2739,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_83
       rect:
         serializedVersion: 2
-        x: 408
-        y: 1302
-        width: 46
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 665
+        y: 1286
+        width: 76
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2761,12 +2761,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_84
       rect:
         serializedVersion: 2
-        x: 524
-        y: 1297
-        width: 116
-        height: 95
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 791
+        y: 1286
+        width: 68
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2783,12 +2783,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_85
       rect:
         serializedVersion: 2
-        x: 664
-        y: 1285
-        width: 78
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 905
+        y: 1286
+        width: 105
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2805,12 +2805,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_86
       rect:
         serializedVersion: 2
-        x: 790
-        y: 1285
-        width: 70
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1025
+        y: 1308
+        width: 126
+        height: 83
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2827,12 +2827,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_87
       rect:
         serializedVersion: 2
-        x: 904
-        y: 1285
-        width: 107
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1153
+        y: 1308
+        width: 126
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2849,12 +2849,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_88
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 1307
-        width: 128
-        height: 85
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1293
+        y: 1298
+        width: 114
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2871,12 +2871,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_89
       rect:
         serializedVersion: 2
-        x: 1088
-        y: 1302
-        width: 21
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1433
+        y: 1286
+        width: 76
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2893,12 +2893,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_90
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 1307
-        width: 128
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 321
+        y: 1303
+        width: 19
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2915,12 +2915,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_91
       rect:
         serializedVersion: 2
-        x: 1176
-        y: 1302
-        width: 46
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 409
+        y: 1303
+        width: 44
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2937,12 +2937,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_92
       rect:
         serializedVersion: 2
-        x: 1292
-        y: 1297
-        width: 116
-        height: 95
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1089
+        y: 1303
+        width: 19
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2959,12 +2959,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_93
       rect:
         serializedVersion: 2
-        x: 1432
-        y: 1285
-        width: 78
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1177
+        y: 1303
+        width: 44
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2981,12 +2981,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_94
       rect:
         serializedVersion: 2
-        x: 298
-        y: 1285
-        width: 71
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 299
+        y: 1286
+        width: 69
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3003,12 +3003,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_95
       rect:
         serializedVersion: 2
-        x: 403
-        y: 1285
-        width: 80
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 405
+        y: 1286
+        width: 77
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3025,12 +3025,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_96
       rect:
         serializedVersion: 2
-        x: 543
-        y: 1285
-        width: 24
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 544
+        y: 1286
+        width: 22
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3047,12 +3047,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_97
       rect:
         serializedVersion: 2
-        x: 566
-        y: 1285
-        width: 58
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 567
+        y: 1286
+        width: 56
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3069,12 +3069,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_98
       rect:
         serializedVersion: 2
-        x: 1066
-        y: 1285
-        width: 71
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1067
+        y: 1286
+        width: 69
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3091,12 +3091,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_99
       rect:
         serializedVersion: 2
-        x: 1171
-        y: 1285
-        width: 80
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1173
+        y: 1286
+        width: 77
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3113,12 +3113,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_100
       rect:
         serializedVersion: 2
-        x: 1311
-        y: 1285
-        width: 24
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1312
+        y: 1286
+        width: 22
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3135,12 +3135,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_101
       rect:
         serializedVersion: 2
-        x: 1334
-        y: 1285
-        width: 58
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1335
+        y: 1286
+        width: 56
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3157,12 +3157,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_102
       rect:
         serializedVersion: 2
-        x: 27
-        y: 1152
-        width: 73
-        height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 28
+        y: 1153
+        width: 71
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3179,12 +3179,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_103
       rect:
         serializedVersion: 2
-        x: 160
-        y: 1157
-        width: 75
-        height: 107
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 161
+        y: 1158
+        width: 73
+        height: 105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3201,12 +3201,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_104
       rect:
         serializedVersion: 2
-        x: 286
-        y: 1157
-        width: 80
-        height: 115
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 287
+        y: 1158
+        width: 78
+        height: 113
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3223,12 +3223,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_105
       rect:
         serializedVersion: 2
-        x: 404
-        y: 1157
-        width: 82
-        height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 405
+        y: 1158
+        width: 80
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3245,12 +3245,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_106
       rect:
         serializedVersion: 2
-        x: 534
-        y: 1157
-        width: 78
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 535
+        y: 1158
+        width: 76
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3267,12 +3267,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_107
       rect:
         serializedVersion: 2
-        x: 667
-        y: 1152
-        width: 73
-        height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 668
+        y: 1153
+        width: 71
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3289,12 +3289,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_108
       rect:
         serializedVersion: 2
-        x: 785
-        y: 1157
-        width: 63
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 786
+        y: 1158
+        width: 61
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3311,12 +3311,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_109
       rect:
         serializedVersion: 2
-        x: 795
-        y: 1169
-        width: 75
-        height: 83
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 796
+        y: 1170
+        width: 73
+        height: 81
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3333,12 +3333,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_110
       rect:
         serializedVersion: 2
-        x: 840
-        y: 1164
-        width: 26
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 841
+        y: 1165
+        width: 24
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3355,12 +3355,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_111
       rect:
         serializedVersion: 2
-        x: 913
-        y: 1157
-        width: 46
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 914
+        y: 1158
+        width: 44
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3377,12 +3377,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_112
       rect:
         serializedVersion: 2
-        x: 920
-        y: 1169
-        width: 81
-        height: 83
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 921
+        y: 1170
+        width: 79
+        height: 81
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3399,12 +3399,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_113
       rect:
         serializedVersion: 2
-        x: 955
-        y: 1159
-        width: 41
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 956
+        y: 1160
+        width: 39
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3421,12 +3421,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_114
       rect:
         serializedVersion: 2
-        x: 1039
-        y: 1157
-        width: 70
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1040
+        y: 1158
+        width: 68
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3443,12 +3443,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_115
       rect:
         serializedVersion: 2
-        x: 1051
-        y: 1167
-        width: 78
-        height: 85
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1052
+        y: 1168
+        width: 76
+        height: 83
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3465,12 +3465,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_116
       rect:
         serializedVersion: 2
-        x: 1169
-        y: 1157
-        width: 63
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1170
+        y: 1158
+        width: 61
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3487,12 +3487,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_117
       rect:
         serializedVersion: 2
-        x: 1179
-        y: 1169
-        width: 75
-        height: 83
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1180
+        y: 1170
+        width: 73
+        height: 81
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3509,12 +3509,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_118
       rect:
         serializedVersion: 2
-        x: 1224
-        y: 1164
-        width: 26
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1225
+        y: 1165
+        width: 24
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3531,12 +3531,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_119
       rect:
         serializedVersion: 2
-        x: 1297
-        y: 1157
-        width: 46
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1298
+        y: 1158
+        width: 44
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3553,12 +3553,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_120
       rect:
         serializedVersion: 2
-        x: 1304
-        y: 1169
-        width: 81
-        height: 83
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1305
+        y: 1170
+        width: 79
+        height: 81
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3575,12 +3575,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_121
       rect:
         serializedVersion: 2
-        x: 1339
-        y: 1159
-        width: 41
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1340
+        y: 1160
+        width: 39
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3597,12 +3597,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_122
       rect:
         serializedVersion: 2
-        x: 1423
-        y: 1157
-        width: 70
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1424
+        y: 1158
+        width: 68
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3619,12 +3619,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_123
       rect:
         serializedVersion: 2
-        x: 1435
-        y: 1167
-        width: 78
-        height: 85
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1436
+        y: 1168
+        width: 76
+        height: 83
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3641,12 +3641,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_124
       rect:
         serializedVersion: 2
-        x: 2002
-        y: 1168
-        width: 21
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2003
+        y: 1169
+        width: 19
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3663,12 +3663,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_125
       rect:
         serializedVersion: 2
-        x: 2023
-        y: 1168
-        width: 15
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2024
+        y: 1169
+        width: 13
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3685,12 +3685,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_126
       rect:
         serializedVersion: 2
-        x: 27
-        y: 1024
-        width: 73
-        height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 28
+        y: 1025
+        width: 71
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3707,12 +3707,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_127
       rect:
         serializedVersion: 2
-        x: 160
-        y: 1029
-        width: 75
-        height: 107
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 161
+        y: 1030
+        width: 73
+        height: 105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3729,12 +3729,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_128
       rect:
         serializedVersion: 2
-        x: 286
-        y: 1029
-        width: 80
-        height: 115
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 287
+        y: 1030
+        width: 78
+        height: 113
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3751,12 +3751,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_129
       rect:
         serializedVersion: 2
-        x: 404
-        y: 1029
-        width: 82
-        height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 405
+        y: 1030
+        width: 80
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3773,12 +3773,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_130
       rect:
         serializedVersion: 2
-        x: 534
-        y: 1029
-        width: 78
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 535
+        y: 1030
+        width: 76
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3795,12 +3795,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_131
       rect:
         serializedVersion: 2
-        x: 667
-        y: 1024
-        width: 73
-        height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 668
+        y: 1025
+        width: 71
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3817,12 +3817,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_132
       rect:
         serializedVersion: 2
-        x: 800
-        y: 1029
-        width: 75
-        height: 107
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 801
+        y: 1030
+        width: 73
+        height: 105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3839,12 +3839,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_133
       rect:
         serializedVersion: 2
-        x: 926
-        y: 1029
-        width: 80
-        height: 115
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 927
+        y: 1030
+        width: 78
+        height: 113
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3861,12 +3861,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_134
       rect:
         serializedVersion: 2
-        x: 1044
-        y: 1029
-        width: 82
-        height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1045
+        y: 1030
+        width: 80
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3883,12 +3883,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_135
       rect:
         serializedVersion: 2
-        x: 1174
-        y: 1029
-        width: 78
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1175
+        y: 1030
+        width: 76
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3905,12 +3905,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_136
       rect:
         serializedVersion: 2
-        x: 1307
-        y: 1029
-        width: 83
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1308
+        y: 1030
+        width: 81
+        height: 73
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3927,12 +3927,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_137
       rect:
         serializedVersion: 2
-        x: 1438
-        y: 1029
-        width: 82
-        height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1439
+        y: 1030
+        width: 80
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3949,12 +3949,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_138
       rect:
         serializedVersion: 2
-        x: 1568
-        y: 1026
-        width: 88
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1569
+        y: 1027
+        width: 86
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3971,12 +3971,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_139
       rect:
         serializedVersion: 2
-        x: 1694
-        y: 1029
-        width: 82
-        height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1695
+        y: 1030
+        width: 80
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3993,12 +3993,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_140
       rect:
         serializedVersion: 2
-        x: 1819
-        y: 1029
-        width: 83
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1820
+        y: 1030
+        width: 81
+        height: 73
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4015,12 +4015,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_141
       rect:
         serializedVersion: 2
-        x: 22
-        y: 901
-        width: 70
-        height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 23
+        y: 902
+        width: 68
+        height: 103
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4037,12 +4037,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_142
       rect:
         serializedVersion: 2
-        x: 138
-        y: 901
-        width: 90
-        height: 102
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 139
+        y: 902
+        width: 88
+        height: 100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4059,12 +4059,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_143
       rect:
         serializedVersion: 2
-        x: 263
-        y: 901
-        width: 93
-        height: 97
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 264
+        y: 902
+        width: 91
+        height: 95
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4081,12 +4081,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_144
       rect:
         serializedVersion: 2
-        x: 391
-        y: 901
-        width: 93
-        height: 97
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 392
+        y: 902
+        width: 91
+        height: 95
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4103,12 +4103,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_145
       rect:
         serializedVersion: 2
-        x: 519
-        y: 901
-        width: 93
-        height: 97
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 520
+        y: 902
+        width: 91
+        height: 95
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4125,12 +4125,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_146
       rect:
         serializedVersion: 2
-        x: 650
-        y: 901
-        width: 90
-        height: 102
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 651
+        y: 902
+        width: 88
+        height: 100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4147,12 +4147,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_147
       rect:
         serializedVersion: 2
-        x: 790
-        y: 901
-        width: 70
-        height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 791
+        y: 902
+        width: 68
+        height: 103
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4169,12 +4169,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_148
       rect:
         serializedVersion: 2
-        x: 923
-        y: 907
-        width: 83
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 924
+        y: 908
+        width: 81
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4191,12 +4191,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_149
       rect:
         serializedVersion: 2
-        x: 1051
-        y: 907
-        width: 83
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1052
+        y: 908
+        width: 81
+        height: 73
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4213,12 +4213,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_150
       rect:
         serializedVersion: 2
-        x: 1182
-        y: 907
-        width: 80
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1183
+        y: 908
+        width: 78
+        height: 73
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4235,12 +4235,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_151
       rect:
         serializedVersion: 2
-        x: 1310
-        y: 907
-        width: 82
-        height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1311
+        y: 908
+        width: 80
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4257,12 +4257,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_152
       rect:
         serializedVersion: 2
-        x: 1440
-        y: 904
-        width: 88
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1441
+        y: 905
+        width: 86
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4279,12 +4279,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_153
       rect:
         serializedVersion: 2
-        x: 1566
-        y: 902
-        width: 82
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1567
+        y: 903
+        width: 80
+        height: 73
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4301,12 +4301,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_154
       rect:
         serializedVersion: 2
-        x: 1694
-        y: 902
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1695
+        y: 903
+        width: 78
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4323,12 +4323,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_155
       rect:
         serializedVersion: 2
-        x: 1819
-        y: 902
-        width: 83
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1820
+        y: 903
+        width: 81
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4345,12 +4345,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_156
       rect:
         serializedVersion: 2
-        x: 30
-        y: 766
-        width: 70
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 31
+        y: 767
+        width: 68
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4367,12 +4367,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_157
       rect:
         serializedVersion: 2
-        x: 153
-        y: 766
-        width: 72
-        height: 107
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 154
+        y: 767
+        width: 70
+        height: 105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4389,12 +4389,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_158
       rect:
         serializedVersion: 2
-        x: 281
-        y: 766
-        width: 72
-        height: 119
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 282
+        y: 767
+        width: 70
+        height: 117
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4411,12 +4411,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_159
       rect:
         serializedVersion: 2
-        x: 409
-        y: 766
-        width: 72
-        height: 119
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 410
+        y: 767
+        width: 70
+        height: 117
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4433,12 +4433,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_160
       rect:
         serializedVersion: 2
-        x: 539
-        y: 765
-        width: 75
-        height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 540
+        y: 766
+        width: 73
+        height: 116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4455,12 +4455,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_161
       rect:
         serializedVersion: 2
-        x: 670
-        y: 780
-        width: 82
-        height: 95
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 671
+        y: 781
+        width: 80
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4477,12 +4477,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_162
       rect:
         serializedVersion: 2
-        x: 798
-        y: 780
-        width: 82
-        height: 95
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 799
+        y: 781
+        width: 80
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4499,12 +4499,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_163
       rect:
         serializedVersion: 2
-        x: 926
-        y: 780
-        width: 82
-        height: 95
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 927
+        y: 781
+        width: 80
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4521,12 +4521,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_164
       rect:
         serializedVersion: 2
-        x: 1051
-        y: 775
-        width: 75
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1052
+        y: 776
+        width: 73
+        height: 106
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4543,12 +4543,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_165
       rect:
         serializedVersion: 2
-        x: 1182
-        y: 780
-        width: 82
-        height: 95
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1183
+        y: 781
+        width: 80
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4565,12 +4565,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_166
       rect:
         serializedVersion: 2
-        x: 1310
-        y: 780
-        width: 82
-        height: 95
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1311
+        y: 781
+        width: 80
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4587,12 +4587,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_167
       rect:
         serializedVersion: 2
-        x: 1438
-        y: 780
-        width: 82
-        height: 95
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1439
+        y: 781
+        width: 80
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4609,12 +4609,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_168
       rect:
         serializedVersion: 2
-        x: 1562
-        y: 767
-        width: 83
-        height: 130
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1563
+        y: 768
+        width: 81
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4631,12 +4631,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_169
       rect:
         serializedVersion: 2
-        x: 1693
-        y: 767
-        width: 72
-        height: 130
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1694
+        y: 768
+        width: 70
+        height: 127
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4653,12 +4653,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_170
       rect:
         serializedVersion: 2
-        x: 1821
-        y: 771
-        width: 72
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1822
+        y: 773
+        width: 70
+        height: 122
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4675,12 +4675,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_171
       rect:
         serializedVersion: 2
-        x: 1949
-        y: 770
-        width: 72
-        height: 127
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1950
+        y: 771
+        width: 70
+        height: 124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4697,12 +4697,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_172
       rect:
         serializedVersion: 2
-        x: 12
-        y: 647
-        width: 109
-        height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 13
+        y: 648
+        width: 107
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4719,12 +4719,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_173
       rect:
         serializedVersion: 2
-        x: 140
-        y: 647
-        width: 109
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 141
+        y: 648
+        width: 107
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4741,12 +4741,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_174
       rect:
         serializedVersion: 2
-        x: 268
-        y: 647
-        width: 109
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 269
+        y: 648
+        width: 107
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4763,12 +4763,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_175
       rect:
         serializedVersion: 2
-        x: 396
-        y: 647
-        width: 109
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 397
+        y: 648
+        width: 107
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4785,12 +4785,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_176
       rect:
         serializedVersion: 2
-        x: 519
-        y: 647
-        width: 111
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 520
+        y: 648
+        width: 109
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4807,12 +4807,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_177
       rect:
         serializedVersion: 2
-        x: 647
-        y: 647
-        width: 111
-        height: 122
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 648
+        y: 648
+        width: 109
+        height: 120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4829,12 +4829,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_178
       rect:
         serializedVersion: 2
-        x: 775
-        y: 647
-        width: 111
-        height: 122
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 776
+        y: 648
+        width: 109
+        height: 120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4851,12 +4851,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_179
       rect:
         serializedVersion: 2
-        x: 903
-        y: 647
-        width: 111
-        height: 122
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 904
+        y: 648
+        width: 109
+        height: 120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4873,12 +4873,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_180
       rect:
         serializedVersion: 2
-        x: 1031
-        y: 647
-        width: 111
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1032
+        y: 648
+        width: 109
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4895,12 +4895,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_181
       rect:
         serializedVersion: 2
-        x: 1159
-        y: 647
-        width: 111
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1160
+        y: 648
+        width: 109
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4917,12 +4917,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_182
       rect:
         serializedVersion: 2
-        x: 1287
-        y: 647
-        width: 111
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1288
+        y: 648
+        width: 109
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4939,12 +4939,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_183
       rect:
         serializedVersion: 2
-        x: 1415
-        y: 647
-        width: 111
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1416
+        y: 648
+        width: 109
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4961,12 +4961,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_184
       rect:
         serializedVersion: 2
-        x: 1548
-        y: 647
-        width: 117
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1549
+        y: 648
+        width: 115
+        height: 106
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4983,12 +4983,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_185
       rect:
         serializedVersion: 2
-        x: 1676
-        y: 647
-        width: 117
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1677
+        y: 648
+        width: 115
+        height: 106
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5005,12 +5005,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_186
       rect:
         serializedVersion: 2
-        x: 1804
-        y: 647
-        width: 117
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1805
+        y: 648
+        width: 115
+        height: 106
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5027,12 +5027,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_187
       rect:
         serializedVersion: 2
-        x: 1932
-        y: 647
-        width: 116
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1933
+        y: 648
+        width: 115
+        height: 106
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5049,12 +5049,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_188
       rect:
         serializedVersion: 2
-        x: 25
-        y: 538
-        width: 72
-        height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 26
+        y: 539
+        width: 70
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5071,12 +5071,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_189
       rect:
         serializedVersion: 2
-        x: 142
-        y: 516
-        width: 99
-        height: 120
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 143
+        y: 517
+        width: 97
+        height: 118
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5093,12 +5093,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_190
       rect:
         serializedVersion: 2
-        x: 263
-        y: 517
-        width: 114
-        height: 121
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 264
+        y: 518
+        width: 112
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5115,12 +5115,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_191
       rect:
         serializedVersion: 2
-        x: 411
-        y: 525
-        width: 74
-        height: 103
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 412
+        y: 526
+        width: 72
+        height: 101
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5137,12 +5137,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_192
       rect:
         serializedVersion: 2
-        x: 550
-        y: 517
-        width: 77
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 551
+        y: 518
+        width: 75
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5159,12 +5159,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_193
       rect:
         serializedVersion: 2
-        x: 658
-        y: 514
-        width: 105
-        height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 659
+        y: 515
+        width: 103
+        height: 116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5181,12 +5181,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_194
       rect:
         serializedVersion: 2
-        x: 791
-        y: 512
-        width: 97
-        height: 120
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 792
+        y: 513
+        width: 95
+        height: 118
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5203,12 +5203,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_195
       rect:
         serializedVersion: 2
-        x: 931
-        y: 519
-        width: 88
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 932
+        y: 520
+        width: 86
+        height: 106
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5225,12 +5225,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_196
       rect:
         serializedVersion: 2
-        x: 1057
-        y: 514
-        width: 75
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1058
+        y: 515
+        width: 73
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5247,12 +5247,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_197
       rect:
         serializedVersion: 2
-        x: 1180
-        y: 524
-        width: 75
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1181
+        y: 525
+        width: 73
+        height: 96
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5269,12 +5269,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_198
       rect:
         serializedVersion: 2
-        x: 1279
-        y: 513
-        width: 130
-        height: 127
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1280
+        y: 514
+        width: 128
+        height: 125
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5291,12 +5291,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_199
       rect:
         serializedVersion: 2
-        x: 50
-        y: 383
-        width: 27
-        height: 130
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 51
+        y: 384
+        width: 25
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5313,12 +5313,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_200
       rect:
         serializedVersion: 2
-        x: 153
-        y: 431
-        width: 71
-        height: 82
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 155
+        y: 433
+        width: 67
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5335,12 +5335,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_201
       rect:
         serializedVersion: 2
-        x: 282
-        y: 415
-        width: 69
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 283
+        y: 417
+        width: 67
+        height: 97
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5357,12 +5357,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_202
       rect:
         serializedVersion: 2
-        x: 410
-        y: 399
-        width: 69
-        height: 114
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 411
+        y: 401
+        width: 67
+        height: 111
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5379,12 +5379,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_203
       rect:
         serializedVersion: 2
-        x: 538
-        y: 384
-        width: 69
-        height: 129
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 539
+        y: 385
+        width: 67
+        height: 127
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5401,12 +5401,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_204
       rect:
         serializedVersion: 2
-        x: 687
-        y: 387
-        width: 34
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 688
+        y: 388
+        width: 31
+        height: 124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5423,12 +5423,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_205
       rect:
         serializedVersion: 2
-        x: 817
-        y: 387
-        width: 30
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 819
+        y: 389
+        width: 26
+        height: 123
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5445,12 +5445,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_206
       rect:
         serializedVersion: 2
-        x: 945
-        y: 415
-        width: 30
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 947
+        y: 417
+        width: 26
+        height: 97
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5467,12 +5467,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_207
       rect:
         serializedVersion: 2
-        x: 1073
-        y: 443
-        width: 30
-        height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1075
+        y: 445
+        width: 26
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5489,12 +5489,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_208
       rect:
         serializedVersion: 2
-        x: 1201
-        y: 469
-        width: 30
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1203
+        y: 471
+        width: 26
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5511,12 +5511,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_209
       rect:
         serializedVersion: 2
-        x: 1280
-        y: 434
-        width: 71
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1281
+        y: 435
+        width: 69
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5533,12 +5533,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_210
       rect:
         serializedVersion: 2
-        x: 1407
-        y: 406
-        width: 98
-        height: 68
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1408
+        y: 407
+        width: 95
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5555,12 +5555,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_211
       rect:
         serializedVersion: 2
-        x: 1538
-        y: 406
-        width: 126
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1539
+        y: 407
+        width: 124
+        height: 70
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5577,12 +5577,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_212
       rect:
         serializedVersion: 2
-        x: 1667
-        y: 407
-        width: 253
-        height: 89
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1668
+        y: 410
+        width: 124
+        height: 83
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5599,12 +5599,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_213
       rect:
         serializedVersion: 2
-        x: 1920
+        x: 1792
         y: 409
-        width: 125
-        height: 79
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 127
+        height: 86
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5621,12 +5621,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_214
       rect:
         serializedVersion: 2
-        x: 31
-        y: 302
-        width: 32
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1921
+        y: 410
+        width: 123
+        height: 77
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5643,12 +5643,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_215
       rect:
         serializedVersion: 2
-        x: 66
-        y: 308
-        width: 32
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 303
+        width: 30
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5665,12 +5665,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_216
       rect:
         serializedVersion: 2
-        x: 155
-        y: 301
-        width: 26
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 67
+        y: 309
+        width: 30
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5687,12 +5687,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_217
       rect:
         serializedVersion: 2
-        x: 200
-        y: 311
-        width: 26
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 156
+        y: 302
+        width: 24
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5709,12 +5709,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_218
       rect:
         serializedVersion: 2
-        x: 276
-        y: 299
-        width: 26
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 201
+        y: 312
+        width: 24
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5731,12 +5731,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_219
       rect:
         serializedVersion: 2
-        x: 337
-        y: 312
-        width: 26
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 277
+        y: 300
+        width: 24
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5753,12 +5753,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_220
       rect:
         serializedVersion: 2
-        x: 408
-        y: 296
-        width: 26
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 338
+        y: 313
+        width: 24
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5775,12 +5775,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_221
       rect:
         serializedVersion: 2
-        x: 466
-        y: 313
-        width: 26
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 409
+        y: 297
+        width: 24
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5797,12 +5797,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_222
       rect:
         serializedVersion: 2
-        x: 540
-        y: 297
-        width: 32
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 467
+        y: 314
+        width: 24
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5819,12 +5819,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_223
       rect:
         serializedVersion: 2
-        x: 581
-        y: 312
-        width: 32
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 541
+        y: 298
+        width: 30
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5841,12 +5841,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_224
       rect:
         serializedVersion: 2
-        x: 687
-        y: 298
-        width: 38
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 582
+        y: 313
+        width: 30
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5863,12 +5863,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_225
       rect:
         serializedVersion: 2
-        x: 800
-        y: 307
-        width: 32
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 688
+        y: 299
+        width: 36
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5885,12 +5885,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_226
       rect:
         serializedVersion: 2
-        x: 832
-        y: 294
-        width: 32
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 801
+        y: 308
+        width: 30
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5907,12 +5907,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_227
       rect:
         serializedVersion: 2
-        x: 918
-        y: 307
-        width: 26
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 833
+        y: 295
+        width: 30
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5929,12 +5929,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_228
       rect:
         serializedVersion: 2
-        x: 965
-        y: 296
-        width: 26
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 919
+        y: 308
+        width: 24
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5951,12 +5951,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_229
       rect:
         serializedVersion: 2
-        x: 1040
-        y: 303
-        width: 26
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 966
+        y: 297
+        width: 24
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5973,12 +5973,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_230
       rect:
         serializedVersion: 2
-        x: 1101
-        y: 297
-        width: 26
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1041
+        y: 304
+        width: 24
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5995,12 +5995,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_231
       rect:
         serializedVersion: 2
-        x: 1170
-        y: 302
-        width: 34
-        height: 85
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1102
+        y: 298
+        width: 24
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6017,12 +6017,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_232
       rect:
         serializedVersion: 2
-        x: 1231
-        y: 298
-        width: 26
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1171
+        y: 303
+        width: 32
+        height: 83
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6039,12 +6039,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_233
       rect:
         serializedVersion: 2
-        x: 1303
-        y: 302
-        width: 32
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1232
+        y: 299
+        width: 24
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6061,12 +6061,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_234
       rect:
         serializedVersion: 2
-        x: 1346
-        y: 297
-        width: 32
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1304
+        y: 303
+        width: 30
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6083,12 +6083,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_235
       rect:
         serializedVersion: 2
-        x: 1456
-        y: 291
-        width: 32
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1347
+        y: 298
+        width: 30
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6105,12 +6105,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_236
       rect:
         serializedVersion: 2
-        x: 42
-        y: 130
-        width: 83
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1457
+        y: 292
+        width: 30
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6127,12 +6127,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_237
       rect:
         serializedVersion: 2
-        x: 170
-        y: 130
-        width: 80
+        x: 43
+        y: 131
+        width: 81
         height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6149,12 +6149,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_238
       rect:
         serializedVersion: 2
-        x: 291
-        y: 133
-        width: 72
-        height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 171
+        y: 131
+        width: 78
+        height: 106
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6171,12 +6171,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_239
       rect:
         serializedVersion: 2
-        x: 396
-        y: 130
-        width: 85
-        height: 115
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 292
+        y: 134
+        width: 70
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6193,12 +6193,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_240
       rect:
         serializedVersion: 2
-        x: 519
-        y: 130
-        width: 90
+        x: 397
+        y: 131
+        width: 83
         height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6215,12 +6215,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_241
       rect:
         serializedVersion: 2
-        x: 647
-        y: 130
-        width: 90
-        height: 110
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 520
+        y: 131
+        width: 88
+        height: 111
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6237,12 +6237,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_242
       rect:
         serializedVersion: 2
-        x: 798
-        y: 130
-        width: 77
-        height: 115
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 648
+        y: 131
+        width: 88
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6259,12 +6259,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_243
       rect:
         serializedVersion: 2
-        x: 938
-        y: 130
-        width: 80
+        x: 799
+        y: 131
+        width: 75
         height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6281,12 +6281,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_244
       rect:
         serializedVersion: 2
-        x: 1486
-        y: 18
-        width: 30
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 939
+        y: 131
+        width: 78
+        height: 111
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6303,12 +6303,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_245
       rect:
         serializedVersion: 2
-        x: 1518
-        y: 18
-        width: 27
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1487
+        y: 19
+        width: 28
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6325,12 +6325,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_246
       rect:
         serializedVersion: 2
-        x: 1545
-        y: 18
-        width: 26
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1611
+        y: 19
+        width: 32
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6347,12 +6347,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_247
       rect:
         serializedVersion: 2
-        x: 1571
-        y: 18
-        width: 27
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1728
+        y: 19
+        width: 17
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6369,12 +6369,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_248
       rect:
         serializedVersion: 2
-        x: 1610
-        y: 18
-        width: 34
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1794
+        y: 19
+        width: 29
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6391,12 +6391,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_249
       rect:
         serializedVersion: 2
-        x: 1643
-        y: 18
-        width: 19
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1849
+        y: 19
+        width: 18
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6413,12 +6413,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_250
       rect:
         serializedVersion: 2
-        x: 1661
-        y: 18
-        width: 26
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1894
+        y: 19
+        width: 31
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6435,12 +6435,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_251
       rect:
         serializedVersion: 2
-        x: 1699
-        y: 18
-        width: 28
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1954
+        y: 42
+        width: 9
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6457,12 +6457,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_252
       rect:
         serializedVersion: 2
-        x: 1727
-        y: 18
-        width: 19
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1994
+        y: 19
+        width: 22
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6479,12 +6479,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_253
       rect:
         serializedVersion: 2
-        x: 1793
-        y: 18
-        width: 31
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2019
+        y: 19
+        width: 16
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6501,12 +6501,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_254
       rect:
         serializedVersion: 2
-        x: 1823
-        y: 18
-        width: 27
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1519
+        y: 19
+        width: 25
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6523,12 +6523,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_255
       rect:
         serializedVersion: 2
-        x: 1848
-        y: 18
-        width: 20
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1546
+        y: 19
+        width: 24
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6545,12 +6545,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_256
       rect:
         serializedVersion: 2
-        x: 1865
-        y: 18
-        width: 27
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1572
+        y: 19
+        width: 25
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6567,12 +6567,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_257
       rect:
         serializedVersion: 2
-        x: 1893
-        y: 18
-        width: 33
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1598
+        y: 26
+        width: 13
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6589,12 +6589,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_258
       rect:
         serializedVersion: 2
-        x: 1926
-        y: 18
-        width: 25
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1644
+        y: 19
+        width: 17
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6611,12 +6611,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_259
       rect:
         serializedVersion: 2
-        x: 1953
-        y: 41
-        width: 11
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1662
+        y: 19
+        width: 24
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6633,12 +6633,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_260
       rect:
         serializedVersion: 2
-        x: 1953
-        y: 18
-        width: 11
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1700
+        y: 19
+        width: 26
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6655,12 +6655,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_261
       rect:
         serializedVersion: 2
-        x: 1965
-        y: 10
-        width: 25
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1766
+        y: 26
+        width: 12
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6677,12 +6677,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_262
       rect:
         serializedVersion: 2
-        x: 1993
-        y: 18
-        width: 24
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1824
+        y: 19
+        width: 25
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6699,12 +6699,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_263
       rect:
         serializedVersion: 2
-        x: 2018
-        y: 18
-        width: 18
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1866
+        y: 19
+        width: 25
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6721,12 +6721,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_264
       rect:
         serializedVersion: 2
-        x: 1597
-        y: 25
-        width: 15
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1927
+        y: 19
+        width: 23
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6743,12 +6743,12 @@ TextureImporter:
       name: NecoArc_Spelunky_v1_265
       rect:
         serializedVersion: 2
-        x: 1765
-        y: 25
-        width: 14
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1954
+        y: 19
+        width: 9
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6761,11 +6761,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: NecoArc_Spelunky_v1_266
+      rect:
+        serializedVersion: 2
+        x: 1966
+        y: 11
+        width: 23
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 214b6be67d9de024f9e71689732606f2
+      internalID: -1817071239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ac7bb79ea5d2e654889f40ef9248b9bb
     internalID: 0
     vertices: []
     indices: 
@@ -6773,7 +6795,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       NecoArc_Spelunky_v1_0: -8952305541594955671
       NecoArc_Spelunky_v1_1: 5603020293942264058
@@ -6961,6 +6985,7 @@ TextureImporter:
       NecoArc_Spelunky_v1_263: 2179930431166045321
       NecoArc_Spelunky_v1_264: 7900420005188373730
       NecoArc_Spelunky_v1_265: 2681203607076750790
+      NecoArc_Spelunky_v1_266: -1817071239
       NecoArc_Spelunky_v1_27: -3166625125319362595
       NecoArc_Spelunky_v1_28: -1536400046095331489
       NecoArc_Spelunky_v1_29: 5508440345511210262
