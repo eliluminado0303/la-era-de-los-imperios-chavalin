@@ -1,58 +1,52 @@
+using System;
 using System.Collections.Generic;
 
 // Punto de arranque del juego: crea el Mapa compartido, la Partida
 // compartida, los 4 jugadores (1 humano + 3 IA, una por civilización),
-// arma los controladores de cada jugador (ControladorMapa, ControladorCombate,
-// ControladorEntrenamiento, y ControladorIA para las 3 IA) — pero YA NO
-// coloca los Centros Urbanos ni los recursos aquí.
+// coloca los 4 Centros Urbanos EN LAS ESQUINAS (con margen respecto al
+// borde real del mapa, para que quede espacio para construir alrededor),
+// siembra los recursos de arranque de cada base, un botín central, y
+// además reparte clusters de recursos por TODO el resto del mapa (para
+// que explorar tenga sentido), y arma los controladores de cada jugador
+// (ControladorMapa, ControladorCombate, ControladorEntrenamiento, y
+// ControladorIA para las 3 IA).
 //
-// Eso ahora pasa en una fase de colocación explícita: la Vista debe llamar
-// a ColocarCentroUrbanoHumano(fila, columna) con el clic del jugador antes
-// de que la partida arranque de verdad. Ese método coloca el centro humano
-// donde el jugador eligió y ubica los 3 centros de la IA por simetría
-// rotacional alrededor del centro del mapa, así el punto de partida queda
-// razonablemente parejo sea cual sea el lugar elegido (y de paso resuelve
-// el viejo "todos en la esquina (0,0)").
-//
-// La Vista solo necesita: crear UNA instancia de esta clase al empezar la
-// partida, esperar a que ColocarCentroUrbanoHumano() devuelva true, y
-// recién ahí empezar a llamar a Actualizar() una vez por frame desde su
-// Update(). Actualizar() se protege solo: si todavía no se colocaron los
-// centros, no hace nada (ver nota de PartidaEnCurso más abajo).
+// Todo esto ya queda listo al terminar el constructor — no hay fase de
+// colocación manual: la Vista solo necesita crear UNA instancia de esta
+// clase y llamar a Actualizar() una vez por frame desde su Update().
 public class ControladorPartida
 {
     private static readonly string[] CIVILIZACIONES = { "Nipones", "Griegos", "Vikingos", "Sumerios" };
+    private static readonly Random aleatorio = new Random();
 
-    // Cuántas celdas de margen se dejan libres respecto al borde del mapa
-    // para cualquier Centro Urbano (humano o IA). Con esto alcanza para que
-    // ningún centro quede pegado al anillo de agua/montaña que dibuja la
-    // Vista fuera de la cuadrícula lógica, y de paso deja las bases "más
-    // centradas" por defecto, tal como se pidió.
-    private const int MARGEN_BORDE = 4;
+    // Cuántas celdas de margen se dejan libres respecto al borde real del
+    // mapa (0..FILAS-1 / 0..COLUMNAS-1) para CUALQUIER Centro Urbano. Se
+    // subió de 5 a 8 para que la base quede más lejos de la esquina real
+    // (no pegada al agua) y así el círculo de visión inicial (ver
+    // radioVisionEdificio en VistaMapa) deje un hueco de verdad para
+    // construir, en vez de quedar recortado contra el borde del mapa.
+    private const int MARGEN_BORDE = 8;
 
-    // Distancia mínima (en casillas, distancia Chebyshev) entre dos Centros
-    // Urbanos cualesquiera. Si la posición simétrica ideal de una IA cae
-    // demasiado cerca de otra base ya colocada, se busca la celda libre más
-    // cercana que sí la respete.
-    private const int DISTANCIA_MINIMA_ENTRE_CENTROS = 10;
+    // Radio (en casillas) que se deja SIN recursos alrededor de cada Centro
+    // Urbano — el "colchón" de espacio libre para construir cuartel, etc.
+    private const int RADIO_COLCHON_BASE = 6;
+
+    // Radio libre de recursos alrededor del botín central.
+    private const int RADIO_COLCHON_CENTRO = 5;
 
     public Mapa Mapa { get; }
     public Partida Partida { get; }
 
-    // true recién cuando los 4 Centros Urbanos ya quedaron colocados y la
-    // partida puede empezar a jugarse de verdad. Mientras sea false,
-    // Actualizar() no hace nada — esto evita, entre otras cosas, que
-    // VerificarFinDePartida() declare perdedor al humano por "no tener
-    // edificios" durante la fase de colocación (antes de colocar su Centro
-    // Urbano, la lista de edificios está vacía, y eso cuenta como derrota).
-    public bool PartidaEnCurso { get; private set; } = false;
+    // Posición (fila, columna) donde quedó el Centro Urbano del jugador
+    // humano. La Vista la usa para centrar la cámara ahí al arrancar — si
+    // no, la cámara se queda mirando el (0,0) del mundo, que es una esquina
+    // de agua/tierra sin nada, y da la sensación de que "la niebla tapa
+    // todo el mapa" cuando en realidad la base y su alrededor ya están
+    // revelados, solo que fuera de cámara.
+    public (int fila, int columna) PosicionBaseHumana { get; private set; }
 
-    // (jugador, civilización) en el mismo orden en que se resolvieron las
-    // civilizaciones: índice 0 = humano, 1..3 = las 3 IA.
-    private readonly List<(Jugador jugador, string civilizacion)> colocacionEnOrden = new List<(Jugador, string)>();
-
-    // Índice 0 = jugador humano; 1..3 = las 3 IA, en el mismo orden que
-    // colocacionEnOrden.
+    // Índice 0 = jugador humano; 1..3 = las 3 IA, en el mismo orden en que
+    // se resolvieron las civilizaciones.
     public List<ControladorMapa> ControladoresMapa { get; } = new List<ControladorMapa>();
     public List<ControladorCombate> ControladoresCombate { get; } = new List<ControladorCombate>();
     public List<ControladorEntrenamiento> ControladoresEntrenamiento { get; } = new List<ControladorEntrenamiento>();
@@ -61,8 +55,6 @@ public class ControladorPartida
     {
         Mapa = new Mapa();
 
-        // El humano ocupa una de las 4 civilizaciones; las otras 3 quedan
-        // para las IA, en el mismo orden de CIVILIZACIONES.
         var civilizacionesIA = new List<string>();
         foreach (var civilizacion in CIVILIZACIONES)
             if (civilizacion != civilizacionHumano) civilizacionesIA.Add(civilizacion);
@@ -74,22 +66,17 @@ public class ControladorPartida
 
         Partida = new Partida(jugadorHumano, jugadoresIA, Mapa);
 
-        colocacionEnOrden.Add((jugadorHumano, civilizacionHumano));
+        var colocacionEnOrden = new List<(Jugador jugador, string civilizacion)> { (jugadorHumano, civilizacionHumano) };
         for (int i = 0; i < jugadoresIA.Count; i++)
             colocacionEnOrden.Add((jugadoresIA[i], civilizacionesIA[i]));
 
-        // NOTA: ya no se colocan Centros Urbanos ni recursos iniciales aquí.
-        // Eso ocurre en ColocarCentroUrbanoHumano(), llamado por la Vista
-        // cuando el jugador (y a continuación las 3 IA) eligen dónde arrancar.
+        ColocarBasesYRecursos(colocacionEnOrden);
 
-        // Controlador del jugador humano (sin IA propia: sus decisiones
-        // vienen de la Vista, no de ControladorIA).
         var gestorEntrenamientoHumano = new GestorEntrenamiento();
         ControladoresMapa.Add(new ControladorMapa(jugadorHumano, Mapa, Partida));
         ControladoresCombate.Add(new ControladorCombate(jugadorHumano, Mapa, Partida));
         ControladoresEntrenamiento.Add(new ControladorEntrenamiento(jugadorHumano, gestorEntrenamientoHumano));
 
-        // Una IA por cada civilización restante.
         for (int i = 0; i < jugadoresIA.Count; i++)
         {
             var jugadorIA = jugadoresIA[i];
@@ -104,94 +91,50 @@ public class ControladorPartida
         }
     }
 
-    // Llamado por la Vista con la celda que el jugador humano eligió con el
-    // clic. Devuelve false si la celda no es válida (fuera de mapa, dentro
-    // del margen del borde, u ocupada) y no cambia nada — la Vista debe
-    // seguir esperando otro clic. Si devuelve true, la partida ya quedó
-    // lista: los 4 Centros Urbanos y los recursos iniciales están puestos,
-    // y PartidaEnCurso pasa a true.
-    //
-    // Todo esto corre de forma síncrona en el hilo principal de Unity (el
-    // mismo que procesa el clic) — nunca dispara un Task.Run ni toca la
-    // cola de resultados de ningún Gestor. Colocar el Centro Urbano inicial
-    // no es una "construcción" con tiempo de espera como las que arma
-    // GestorConstruccion; es el punto de partida, así que no compite por
-    // los mismos candados con nada que corra en segundo plano.
-    public bool ColocarCentroUrbanoHumano(int fila, int columna)
+    // ---------------------------------------------------------------
+    // Colocación de bases: 4 esquinas fijas, con margen respecto al borde.
+    // ---------------------------------------------------------------
+
+    private void ColocarBasesYRecursos(List<(Jugador jugador, string civilizacion)> colocacionEnOrden)
     {
-        if (PartidaEnCurso) return false;
-        if (!PosicionValidaParaCentro(fila, columna)) return false;
-
+        var esquinas = ObtenerEsquinas();
         var posicionesOcupadas = new List<(int fila, int columna)>();
-        ColocarCentroEn(fila, columna, colocacionEnOrden[0], posicionesOcupadas);
 
-        // Las 3 IA se ubican por simetría rotacional (90°, 180°, 270°)
-        // respecto al centro del mapa, tomando como referencia el punto que
-        // eligió el humano. Así, sea cual sea el lugar que el jugador
-        // escoja, las 4 bases quedan repartidas de forma pareja en vez de
-        // depender de esquinas fijas.
+        for (int i = 0; i < colocacionEnOrden.Count && i < esquinas.Length; i++)
+        {
+            var (fila, columna) = esquinas[i];
+            ColocarCentroEn(fila, columna, colocacionEnOrden[i], posicionesOcupadas);
+            if (i == 0) PosicionBaseHumana = (fila, columna); // índice 0 siempre es el humano
+        }
+
         int centroFila = global::Mapa.FILAS / 2;
         int centroColumna = global::Mapa.COLUMNAS / 2;
-        int offsetFila = fila - centroFila;
-        int offsetColumna = columna - centroColumna;
-
-        (int fila, int columna)[] candidatosIA =
-        {
-            (centroFila - offsetColumna, centroColumna + offsetFila), // 90°
-            (centroFila - offsetFila,    centroColumna - offsetColumna), // 180°
-            (centroFila + offsetColumna, centroColumna - offsetFila), // 270°
-        };
-
-        for (int i = 0; i < candidatosIA.Length; i++)
-        {
-            var (fFinal, cFinal) = BuscarCeldaLibreCerca(candidatosIA[i].fila, candidatosIA[i].columna, posicionesOcupadas);
-            ColocarCentroEn(fFinal, cFinal, colocacionEnOrden[i + 1], posicionesOcupadas);
-        }
 
         foreach (var (f, c) in posicionesOcupadas)
             GenerarRecursosCercaDe(f, c, centroFila, centroColumna);
 
-        // Un botín extra en el centro del mapa: vale la pena disputarlo
-        // porque queda a distancia pareja de las 4 bases, sea cual sea la
-        // orientación que haya tomado la colocación.
-        Mapa.ColocarRecurso(centroFila, centroColumna, new Recurso { Tipo = TipoRecurso.Oro, Cantidad = 400 });
-        Mapa.ColocarRecurso(centroFila - 1, centroColumna + 1, new Recurso { Tipo = TipoRecurso.Madera, Cantidad = 400 });
-        Mapa.ColocarRecurso(centroFila + 1, centroColumna - 1, new Recurso { Tipo = TipoRecurso.Comida, Cantidad = 400 });
-        Mapa.ColocarRecurso(centroFila + 1, centroColumna + 1, new Recurso { Tipo = TipoRecurso.Oro, Cantidad = 300 });
+        Mapa.ColocarRecurso(centroFila, centroColumna, new Recurso { Tipo = TipoRecurso.Oro, Cantidad = 500 });
+        Mapa.ColocarRecurso(centroFila - 1, centroColumna + 1, new Recurso { Tipo = TipoRecurso.Madera, Cantidad = 500 });
+        Mapa.ColocarRecurso(centroFila + 1, centroColumna - 1, new Recurso { Tipo = TipoRecurso.Comida, Cantidad = 300 });
+        Mapa.ColocarRecurso(centroFila + 1, centroColumna + 1, new Recurso { Tipo = TipoRecurso.Oro, Cantidad = 400 });
 
-        // El resto del mapa (fuera de las bases y del botín central) queda
-        // plagado de bosques, vetas de oro y rebaños de comida repartidos
-        // en clusters orgánicos. Se deja un colchón de celdas libres
-        // alrededor de cada Centro Urbano (RADIO_COLCHON_BASE) para que el
-        // jugador tenga lugar para construir sin que un bosque le tape la
-        // entrada.
-        var celdasReservadas = new HashSet<(int fila, int columna)>();
-        foreach (var (f, c) in posicionesOcupadas)
-            for (int deltaFila = -RADIO_COLCHON_BASE; deltaFila <= RADIO_COLCHON_BASE; deltaFila++)
-                for (int deltaColumna = -RADIO_COLCHON_BASE; deltaColumna <= RADIO_COLCHON_BASE; deltaColumna++)
-                    celdasReservadas.Add((f + deltaFila, c + deltaColumna));
-
-        Mapa.GenerarRecursosDispersos(celdasReservadas, MARGEN_BORDE);
-
-        PartidaEnCurso = true;
-        return true;
+        SembrarRecursosDispersos(posicionesOcupadas, centroFila, centroColumna);
     }
 
-    // Radio (en casillas) del colchón libre de bosques/minas alrededor de
-    // cada Centro Urbano recién colocado.
-    private const int RADIO_COLCHON_BASE = 6;
-
-    // Celda dentro del margen del borde y libre de recurso/edificio/unidad.
-    // No valida terreno (agua/montaña) porque esas franjas las dibuja la
-    // Vista FUERA del rango 0..FILAS-1 / 0..COLUMNAS-1 — la cuadrícula
-    // lógica del Mapa nunca las toca, así que el margen alcanza para
-    // garantizar que ningún centro quede pegado a ellas.
-    private bool PosicionValidaParaCentro(int fila, int columna)
+    private (int fila, int columna)[] ObtenerEsquinas()
     {
-        if (!Mapa.EsPosicionValida(fila, columna)) return false;
-        if (fila < MARGEN_BORDE || fila >= global::Mapa.FILAS - MARGEN_BORDE) return false;
-        if (columna < MARGEN_BORDE || columna >= global::Mapa.COLUMNAS - MARGEN_BORDE) return false;
-        return Mapa.CeldaLibre(fila, columna);
+        int filaCercana = MARGEN_BORDE;
+        int filaLejana = global::Mapa.FILAS - 1 - MARGEN_BORDE;
+        int columnaCercana = MARGEN_BORDE;
+        int columnaLejana = global::Mapa.COLUMNAS - 1 - MARGEN_BORDE;
+
+        return new (int, int)[]
+        {
+            (filaCercana, columnaCercana),
+            (filaCercana, columnaLejana),
+            (filaLejana, columnaCercana),
+            (filaLejana, columnaLejana),
+        };
     }
 
     private void ColocarCentroEn(int fila, int columna, (Jugador jugador, string civilizacion) datos, List<(int fila, int columna)> posicionesOcupadas)
@@ -203,52 +146,71 @@ public class ControladorPartida
         posicionesOcupadas.Add((fila, columna));
     }
 
-    // Si la posición simétrica "ideal" de una IA quedó fuera del margen,
-    // ocupada, o demasiado cerca de otra base ya puesta, busca en espiral
-    // (anillos de radio creciente) la celda libre más cercana que sí
-    // cumpla todo. En un mapa de 80x80 con solo 4 bases, siempre encuentra
-    // algo mucho antes de agotar el radio máximo.
-    private (int fila, int columna) BuscarCeldaLibreCerca(int filaDeseada, int columnaDeseada, List<(int fila, int columna)> posicionesOcupadas)
+    private void GenerarRecursosCercaDe(int filaBase, int columnaBase, int centroFila, int centroColumna)
     {
-        filaDeseada = Recortar(filaDeseada, MARGEN_BORDE, global::Mapa.FILAS - 1 - MARGEN_BORDE);
-        columnaDeseada = Recortar(columnaDeseada, MARGEN_BORDE, global::Mapa.COLUMNAS - 1 - MARGEN_BORDE);
+        int dirFila = filaBase <= centroFila ? 1 : -1;
+        int dirColumna = columnaBase <= centroColumna ? 1 : -1;
 
-        int radioMaximo = System.Math.Max(global::Mapa.FILAS, global::Mapa.COLUMNAS);
-        for (int radio = 0; radio <= radioMaximo; radio++)
+        Mapa.ColocarRecurso(filaBase + dirFila * 2, columnaBase + dirColumna * 1, new Recurso { Tipo = TipoRecurso.Oro, Cantidad = 250 });
+        Mapa.ColocarRecurso(filaBase + dirFila * 1, columnaBase + dirColumna * 3, new Recurso { Tipo = TipoRecurso.Madera, Cantidad = 300 });
+        Mapa.ColocarRecurso(filaBase + dirFila * 3, columnaBase + dirColumna * 1, new Recurso { Tipo = TipoRecurso.Comida, Cantidad = 180 });
+        Mapa.ColocarRecurso(filaBase + dirFila * 2, columnaBase + dirColumna * 4, new Recurso { Tipo = TipoRecurso.Oro, Cantidad = 200 });
+    }
+
+    // ---------------------------------------------------------------
+    // Recursos dispersos por el resto del mapa.
+    // ---------------------------------------------------------------
+
+    private void SembrarRecursosDispersos(List<(int fila, int columna)> centrosBase, int centroFila, int centroColumna)
+    {
+        const int ESPACIADO = 7;   // antes 11 — grilla más tupida = más clusters repartidos
+        const int JITTER = 3;
+
+        for (int filaBase = MARGEN_BORDE; filaBase < global::Mapa.FILAS - MARGEN_BORDE; filaBase += ESPACIADO)
         {
-            for (int deltaFila = -radio; deltaFila <= radio; deltaFila++)
+            for (int columnaBase = MARGEN_BORDE; columnaBase < global::Mapa.COLUMNAS - MARGEN_BORDE; columnaBase += ESPACIADO)
             {
-                for (int deltaColumna = -radio; deltaColumna <= radio; deltaColumna++)
-                {
-                    bool esBordeDelAnillo = System.Math.Max(System.Math.Abs(deltaFila), System.Math.Abs(deltaColumna)) == radio;
-                    if (!esBordeDelAnillo) continue;
+                int fila = Recortar(filaBase + aleatorio.Next(-JITTER, JITTER + 1), MARGEN_BORDE, global::Mapa.FILAS - 1 - MARGEN_BORDE);
+                int columna = Recortar(columnaBase + aleatorio.Next(-JITTER, JITTER + 1), MARGEN_BORDE, global::Mapa.COLUMNAS - 1 - MARGEN_BORDE);
 
-                    int fila = filaDeseada + deltaFila;
-                    int columna = columnaDeseada + deltaColumna;
-                    if (fila < MARGEN_BORDE || fila >= global::Mapa.FILAS - MARGEN_BORDE) continue;
-                    if (columna < MARGEN_BORDE || columna >= global::Mapa.COLUMNAS - MARGEN_BORDE) continue;
-                    if (!Mapa.CeldaLibre(fila, columna)) continue;
-                    if (DemasiadoCerca(fila, columna, posicionesOcupadas)) continue;
+                if (DemasiadoCerca(fila, columna, centrosBase, RADIO_COLCHON_BASE)) continue;
+                if (DistanciaChebyshev(fila, columna, centroFila, centroColumna) < RADIO_COLCHON_CENTRO) continue;
 
-                    return (fila, columna);
-                }
+                SembrarClusterEn(fila, columna);
             }
         }
-
-        // Caso extremo (no debería ocurrir en 80x80 con 4 bases): se usa la
-        // celda recortada tal cual, aunque no respete la distancia mínima.
-        return (filaDeseada, columnaDeseada);
     }
 
-    private bool DemasiadoCerca(int fila, int columna, List<(int fila, int columna)> posicionesOcupadas)
+    // Un cluster = 1 celda central + 5 vecinas del mismo tipo (antes eran
+    // solo 2 vecinas) — se siente más como una veta de oro real o un
+    // bosquecito, no un puñado de puntos sueltos.
+    private void SembrarClusterEn(int fila, int columna)
     {
-        foreach (var (f, c) in posicionesOcupadas)
+        TipoRecurso tipo = (TipoRecurso)aleatorio.Next(0, 3);
+        int cantidad = tipo == TipoRecurso.Oro ? 300 : tipo == TipoRecurso.Madera ? 350 : 220;
+
+        (int deltaFila, int deltaColumna)[] celdasDelCluster =
         {
-            int distancia = System.Math.Max(System.Math.Abs(f - fila), System.Math.Abs(c - columna));
-            if (distancia < DISTANCIA_MINIMA_ENTRE_CENTROS) return true;
+            (0, 0), (1, 0), (0, 1), (-1, 0), (0, -1), (1, 1),
+        };
+        foreach (var (deltaFila, deltaColumna) in celdasDelCluster)
+        {
+            int f = fila + deltaFila;
+            int c = columna + deltaColumna;
+            if (!Mapa.EsPosicionValida(f, c) || !Mapa.CeldaLibre(f, c)) continue;
+            Mapa.ColocarRecurso(f, c, new Recurso { Tipo = tipo, Cantidad = cantidad });
         }
+    }
+
+    private bool DemasiadoCerca(int fila, int columna, List<(int fila, int columna)> posiciones, int radioMinimo)
+    {
+        foreach (var (f, c) in posiciones)
+            if (DistanciaChebyshev(fila, columna, f, c) < radioMinimo) return true;
         return false;
     }
+
+    private static int DistanciaChebyshev(int f1, int c1, int f2, int c2)
+        => Math.Max(Math.Abs(f1 - f2), Math.Abs(c1 - c2));
 
     private static int Recortar(int valor, int minimo, int maximo)
     {
@@ -257,34 +219,11 @@ public class ControladorPartida
         return valor;
     }
 
-    // Mismo patrón que antes tenía Mapa.GenerarRecursosIniciales() (un poco
-    // de cada recurso cerca de la base, apuntando hacia el centro del mapa
-    // para no intentar colocar nada fuera de rango), pero ahora relativo a
-    // la posición REAL de cada Centro Urbano en vez de una esquina fija.
-    private void GenerarRecursosCercaDe(int filaBase, int columnaBase, int centroFila, int centroColumna)
-    {
-        int dirFila = filaBase <= centroFila ? 1 : -1;
-        int dirColumna = columnaBase <= centroColumna ? 1 : -1;
-
-        Mapa.ColocarRecurso(filaBase + dirFila * 2, columnaBase + dirColumna * 1, new Recurso { Tipo = TipoRecurso.Oro, Cantidad = 100 });
-        Mapa.ColocarRecurso(filaBase + dirFila * 1, columnaBase + dirColumna * 3, new Recurso { Tipo = TipoRecurso.Madera, Cantidad = 150 });
-        Mapa.ColocarRecurso(filaBase + dirFila * 3, columnaBase + dirColumna * 1, new Recurso { Tipo = TipoRecurso.Comida, Cantidad = 80 });
-    }
-
-    // Llamar UNA VEZ POR FRAME desde el Update() de Unity. Mientras la fase
-    // de colocación inicial no haya terminado (PartidaEnCurso == false), no
-    // hace nada: ni drena colas de resultados ni revisa fin de partida.
-    // Cuando ya está en curso, vacía las colas de los 4 jugadores
-    // (recolección/construcción/movimiento de cada ControladorMapa,
-    // entrenamiento de cada ControladorEntrenamiento) y revisa si la
-    // partida ya terminó. Devuelve true cuando termina.
     public bool Actualizar()
     {
-        if (!PartidaEnCurso) return false;
-
         foreach (var controladorMapa in ControladoresMapa) controladorMapa.ActualizarResultados();
         foreach (var controladorEntrenamiento in ControladoresEntrenamiento) controladorEntrenamiento.ActualizarResultados();
 
-        return ControladoresMapa[0].VerificarFinDePartida(); // cualquiera de los 4 sirve: comparten la misma Partida
+        return ControladoresMapa[0].VerificarFinDePartida();
     }
 }

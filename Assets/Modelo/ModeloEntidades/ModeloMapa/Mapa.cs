@@ -1,12 +1,11 @@
 using System.Collections.Generic;
 public class Mapa
 {
-    public const int FILAS = 80;
-    public const int COLUMNAS = 80;
+    public const int FILAS = 60;
+    public const int COLUMNAS = 60;
 
     private Celda[,] celdas;
 
-    
     private readonly object candado = new object();
 
     public Mapa()
@@ -15,23 +14,52 @@ public class Mapa
         InicializarMapa();
     }
 
+    // Grosor (en casillas) de la franja de agua que rodea la isla por los
+    // 4 lados. Debe coincidir con lo que dibuja VistaMapa: lo que se ve
+    // como "playa" también es agua a efectos de juego (ahí no se construye
+    // ni se mueve nadie).
+    public const int ANCHO_AGUA_PERIMETRAL = 6;
+
     private void InicializarMapa()
     {
+        // El mapa se GENERA (ya no depende del tilemap dibujado): una isla
+        // de tierra rodeada de agua perimetral. La lógica solo conoce las
+        // celdas 0..FILAS-1 / 0..COLUMNAS-1; el agua decorativa de afuera
+        // la dibuja VistaMapa con sus anillos, así que acá marcamos como
+        // Agua la franja interna de ANCHO_AGUA_PERIMETRAL casillas.
         for (int fila = 0; fila < FILAS; fila++)
         {
             for (int columna = 0; columna < COLUMNAS; columna++)
             {
+                bool esAgua = fila < ANCHO_AGUA_PERIMETRAL || fila >= FILAS - ANCHO_AGUA_PERIMETRAL
+                           || columna < ANCHO_AGUA_PERIMETRAL || columna >= COLUMNAS - ANCHO_AGUA_PERIMETRAL;
+
                 celdas[fila, columna] = new Celda
                 {
                     Fila = fila,
                     Columna = columna,
-                    Terreno = TipoTerreno.Tierra,
+                    Terreno = esAgua ? TipoTerreno.Agua : TipoTerreno.Tierra,
                     Recurso = null,
                     Edificio = null,
                     Unidad = null
                 };
             }
         }
+    }
+
+    // Consultas de terreno para movimiento/construcción: las celdas de agua
+    // NO son transitables ni construibles. Las unidades actuales son
+    // terrestres; si algún día hay barcos, se agrega un "EsNavegable".
+    public bool EsTierra(int fila, int columna)
+    {
+        if (!EsPosicionValida(fila, columna)) return false;
+        return celdas[fila, columna].Terreno == TipoTerreno.Tierra;
+    }
+
+    public bool EsAgua(int fila, int columna)
+    {
+        if (!EsPosicionValida(fila, columna)) return false;
+        return celdas[fila, columna].Terreno == TipoTerreno.Agua;
     }
 
     public Celda ObtenerCelda(int fila, int columna)
@@ -43,6 +71,9 @@ public class Mapa
     public bool CeldaLibre(int fila, int columna) {
         if (!EsPosicionValida(fila, columna)) return false;
         Celda celda = celdas[fila, columna];
+        // El agua nunca está "libre": no se puede construir ahí ni aparcar
+        // unidades. (MoverUnidad lo verifica aparte con EsTierra.)
+        if (celda.Terreno != TipoTerreno.Tierra) return false;
         return celda.Recurso == null && celda.Edificio == null && celda.Unidad == null;
     }
 
@@ -57,6 +88,7 @@ public class Mapa
         lock (candado)
         {
             Celda celda = celdas[fila, columna];
+            if (celda.Terreno != TipoTerreno.Tierra) return false; // nada crece en el agua
             if (celda.Recurso != null || celda.Edificio != null) return false;
             celda.Recurso = recurso;
             return true;
@@ -81,6 +113,7 @@ public class Mapa
         lock (candado)
         {
             Celda celda = celdas[fila, columna];
+            if (celda.Terreno != TipoTerreno.Tierra) return false; // no se construye sobre el agua
             if (celda.Recurso != null || celda.Edificio != null) return false;
             celda.Edificio = edificio;
             return true;
@@ -109,6 +142,8 @@ public class Mapa
             Celda destino = celdas[filaDestino, columnaDestino];
 
             if (origen.Unidad == null) return false;
+            // Las unidades terrestres no pueden entrar al agua.
+            if (destino.Terreno != TipoTerreno.Tierra) return false;
             if (destino.Unidad != null || destino.Edificio != null) return false;
 
             destino.Unidad = origen.Unidad;
@@ -146,8 +181,6 @@ public class Mapa
         return unidades;
     }
 
-    //  — lo que necesita ControladorIA.BuscarUnidadesEnemigasCerca().
-    
     public List<(int fila, int columna)> UnidadesEnRadio(int filaCentro, int columnaCentro, int radio) {
         List<(int, int)> encontrados = new List<(int, int)>();
 
@@ -167,41 +200,17 @@ public class Mapa
         return encontrados;
     }
 
-    public void GenerarRecursosIniciales() 
-    {
-        // Un poco de cada recurso cerca de cada esquina, para que cada
-        // civilización arranque su economía sin tener que pelear de entrada.
-        (int fila, int columna)[] esquinas = { (0, 0), (0, COLUMNAS - 1), (FILAS - 1, 0), (FILAS - 1, COLUMNAS - 1) };
-        foreach (var (fEsquina, cEsquina) in esquinas) {
-            int dirFila = fEsquina == 0 ? 1 : -1;
-            int dirColumna = cEsquina == 0 ? 1 : -1;
-            ColocarRecurso(fEsquina + dirFila * 2, cEsquina + dirColumna * 1, new Recurso { Tipo = TipoRecurso.Oro, Cantidad = 100 });
-            ColocarRecurso(fEsquina + dirFila * 1, cEsquina + dirColumna * 3, new Recurso { Tipo = TipoRecurso.Madera, Cantidad = 150 });
-            ColocarRecurso(fEsquina + dirFila * 3, cEsquina + dirColumna * 1, new Recurso { Tipo = TipoRecurso.Comida, Cantidad = 80 });
-        }
-
-        // El centro concentra los mejores recursos: más cantidad, y queda a
-        // la misma distancia de las 4 esquinas, así que vale la pena disputarlo.
-        int centro = FILAS / 2;
-        ColocarRecurso(centro, centro, new Recurso { Tipo = TipoRecurso.Oro, Cantidad = 400 });
-        ColocarRecurso(centro - 1, centro + 1, new Recurso { Tipo = TipoRecurso.Madera, Cantidad = 400 });
-        ColocarRecurso(centro + 1, centro - 1, new Recurso { Tipo = TipoRecurso.Comida, Cantidad = 400 });
-        ColocarRecurso(centro + 1, centro + 1, new Recurso { Tipo = TipoRecurso.Oro, Cantidad = 300 });
-    }
-
     // ---------------------------------------------------------------
     // Generación de recursos DISPERSOS por todo el mapa (bosques, vetas de
     // oro, rebaños de comida). Se llama una sola vez, justo después de
     // colocar los 4 Centros Urbanos y los recursos "de arranque" cerca de
     // cada base — así el resto del mapa no queda vacío y hay motivo para
-    // expandirse y pelear por territorio, en vez de depender solo de los
-    // pocos recursos iniciales de cada esquina.
+    // expandirse y pelear por territorio.
     //
-    // "celdasReservadas" es un colchón de celdas que se deja libre a
+    // "celdasReservadas" es el colchón de celdas que se deja libre a
     // propósito alrededor de cada base (para que el jugador tenga lugar
-    // para construir sin que un bosque le tape la entrada); no hace falta
-    // reservar las celdas que ya tienen recurso/edificio porque CeldaLibre
-    // ya las descarta solas.
+    // para construir sin que un bosque le tape la entrada).
+    // "margen" mantiene los clusters lejos de la franja de agua.
     public void GenerarRecursosDispersos(HashSet<(int fila, int columna)> celdasReservadas, int margen)
     {
         var rng = new System.Random();
@@ -275,21 +284,5 @@ public class Mapa
         }
 
         return resultado;
-    }
-
-   // Coloca hasta 4 Centros Urbanos, uno en cada esquina del mapa 30x30.
-    // Recibe (jugador, civilizacion) en vez de solo Jugador porque
-    // EdificioPrincipal necesita la CIVILIZACIÓN, no el nombre del jugador
-    // (antes se le pasaba jugador.Nombre por error).
-    public void ColocarCentrosUrbanosIniciales(List<(Jugador jugador, string civilizacion)> jugadoresEnOrden) {
-        (int fila, int columna)[] esquinas = { (0, 0), (0, COLUMNAS - 1), (FILAS - 1, 0), (FILAS - 1, COLUMNAS - 1) };
-
-        for (int i = 0; i < jugadoresEnOrden.Count && i < esquinas.Length; i++) {
-            var (fila, columna) = esquinas[i];
-            var (jugador, civilizacion) = jugadoresEnOrden[i];
-            var centro = new EdificioPrincipal(civilizacion, costoOro: 0, costoMadera: 0, costoComida: 0);
-            ColocarEdificio(fila, columna, centro);
-            jugador.AgregarEdificio(centro);
-        }
     }
 }

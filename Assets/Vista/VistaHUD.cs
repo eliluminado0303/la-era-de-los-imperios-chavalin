@@ -39,8 +39,6 @@ public class VistaHUD : MonoBehaviour
     // Botón "Entrenar Aldeano": usa el Centro Urbano propio del humano.
     public void EntrenarAldeano()
     {
-        if (!vistaMapa.Partida.PartidaEnCurso) { Debug.Log("Todavía no colocaste tu Centro Urbano."); return; }
-
         var controladorEntrenamiento = vistaMapa.Partida.ControladoresEntrenamiento[0];
         Jugador jugadorHumano = vistaMapa.Partida.ControladoresMapa[0].Jugador;
         var centroUrbano = jugadorHumano.Edificios.OfType<EdificioPrincipal>().FirstOrDefault();
@@ -57,8 +55,6 @@ public class VistaHUD : MonoBehaviour
     // él, probando un puñado de posiciones relativas típicas.
     public void ConstruirCuartel()
     {
-        if (!vistaMapa.Partida.PartidaEnCurso) { Debug.Log("Todavía no colocaste tu Centro Urbano."); return; }
-
         var controladorMapaHumano = vistaMapa.Partida.ControladoresMapa[0];
         Jugador jugadorHumano = controladorMapaHumano.Jugador;
         string civilizacion = vistaMapa.CivilizacionHumano;
@@ -130,7 +126,7 @@ public class VistaHUD : MonoBehaviour
                           : civilizacion == "Vikingos" ? "Berserker"
                           : "Caster"; // Sumerios
 
-        return new List<string> { exclusiva, "Defender", "Vanguard", "Ranger", "Healer" };
+        return new List<string> { exclusiva, "Defender", "Vanguard", "Ranger", "Healer", "NekoArc" };
     }
 
     public void VolverAlMenu()

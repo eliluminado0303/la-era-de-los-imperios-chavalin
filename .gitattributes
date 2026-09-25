@@ -62,6 +62,7 @@
 Assets/Plugins/**           linguist-generated
 Packages/packages-lock.json linguist-generated
 # Unity LFS
+Assets/Scenes/tt.unity lfs
 *.cubemap               lfs
 *.unitypackage          lfs
 # 3D models
@@ -149,3 +150,4 @@ Packages/packages-lock.json linguist-generated
 # Exceptions for .asset files such as lightning pre-baking
 LightingData.asset     binary
 Assets/Scenes/Partida.unity filter=lfs diff=lfs merge=lfs -text
+Assets/Scenes/tt.unity filter=lfs diff=lfs merge=lfs -text

@@ -1,16 +1,16 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
-// Crea la partida (Modelo + Controlador) al empezar, maneja la fase de
-// colocación inicial del Centro Urbano, dibuja el tablero como una
-// cuadrícula de sprites (con niebla de guerra encima), y llama a
-// ControladorPartida.Actualizar() una vez por frame — es el único lugar
-// donde este proyecto toca UnityEngine para "arrancar" el juego (el
-// Modelo sigue sin ninguna dependencia de Unity).
+// Crea la partida (Modelo + Controlador) al empezar — las 4 bases quedan
+// colocadas automáticamente en las esquinas dentro del constructor de
+// ControladorPartida, así que acá no hay fase de colocación manual — y
+// dibuja el tablero como una cuadrícula de sprites (con niebla de guerra
+// encima). Llama a ControladorPartida.Actualizar() una vez por frame — es
+// el único lugar donde este proyecto toca UnityEngine para "arrancar" el
+// juego (el Modelo sigue sin ninguna dependencia de Unity).
 //
 // Capas de dibujo, de abajo hacia arriba (sortingOrder):
-//   0 fondo (tierra)
+//   0 fondo (tierra / agua)
 //   1 decoración estética (arbustos/piedras sueltas, sin efecto en el juego)
 //   2 contenido real (unidad > edificio > recurso)
 //   3 niebla de guerra
@@ -20,8 +20,28 @@ public class VistaMapa : MonoBehaviour
     public string nombreJugadorHumano = "Jugador";
     public string CivilizacionHumano { get; private set; }
 
-    [Header("Sprites (opcional — si los dejás vacíos, usa cuadrados de color)")]
-    public Sprite spriteTierra;
+    // Clave de PlayerPrefs donde el menú guarda la civilización elegida
+    // antes de cargar la escena Partida (ver ControladorMenu).
+    public const string claveCivilizacion = "civilizacion";
+
+    [Header("Terreno (tileset de 9 piezas: 4 esquinas + 4 bordes + relleno)")]
+    // El relleno cubre casi todo el tablero; las otras 8 solo se usan en la
+    // fila/columna 0 y FILAS-1/COLUMNAS-1 — la fila y columna que quedan
+    // pegadas al agua — para que el pasto termine con un borde prolijo en
+    // vez de cortar de golpe contra el agua.
+    public Sprite spriteTierraRelleno;
+    public Sprite spriteTierraBordeNorte;
+    public Sprite spriteTierraBordeSur;
+    public Sprite spriteTierraBordeOeste;
+    public Sprite spriteTierraBordeEste;
+    public Sprite spriteTierraEsquinaNoroeste;
+    public Sprite spriteTierraEsquinaNoreste;
+    public Sprite spriteTierraEsquinaSuroeste;
+    public Sprite spriteTierraEsquinaSureste;
+
+    [Header("Agua (rodea el tablero jugable directamente)")]
+    public Sprite[] spritesAgua;
+    public int grosorAgua = 3;
 
     [Header("Recursos (variantes — poné 1 o varias por tipo, se elige una fija por celda)")]
     public Sprite[] spritesRecursoOro;      // ej: Gold Stones / Gold Resource
@@ -38,117 +58,68 @@ public class VistaMapa : MonoBehaviour
     public Sprite[] spritesDecoracion;
     [Range(0f, 0.3f)] public float densidadDecoracion = 0.04f;
 
-    public ControladorPartida Partida { get; private set; }
-
-    private SpriteRenderer[,] fondos;
-    private SpriteRenderer[,] decoraciones;
-    private SpriteRenderer[,] contenidos;
-    private SpriteRenderer[,] niebla;
-    private bool[,] explorado;
-
-    // Una costura por columna, ubicada exactamente sobre la fila del
-    // acantilado que toca el pasto (ver CrearCosturaAcantilado). Si
-    // spritesCosturaAcantilado está vacío, quedan creadas pero deshabilitadas.
-    private SpriteRenderer[] costuraAcantilado;
-
-    [Header("Agua (rodea el tablero directamente, sin anillos intermedios)")]
-    public Sprite[] spritesAgua;
-    // Grosor generoso a propósito: así, aunque la cámara se aleje bastante,
-    // siempre hay agua real dibujada y nunca se asoma el color de fondo de
-    // la cámara (que solo actúa como último respaldo, ver AplicarColorDeCamaraDeRespaldo).
-    public int grosorAgua = 4;
-
-    [Header("Acantilado sur (da la sensación de altura: el tablero \"flota\" sobre el agua, como en la imagen de referencia de Tiny Swords)")]
-    // Fila pegada al pasto: variantes con el borde/reborde visible (la fila
-    // "de arriba" del bloque de roca del tileset).
-    public Sprite[] spritesAcantiladoBorde;
-    // Filas siguientes hacia abajo: relleno de roca liso, se repite tantas
-    // veces como falte para completar alturaAcantilado.
-    public Sprite[] spritesAcantiladoRelleno;
-    // Opcional: sprite fijo para la esquina inferior-izquierda / inferior-derecha
-    // del acantilado (si el tileset trae una pieza de esquina especial). Si
-    // se deja vacío, esa columna elige una variante normal como cualquier otra.
-    public Sprite spriteAcantiladoEsquinaIzquierda;
-    public Sprite spriteAcantiladoEsquinaDerecha;
-    // Cuántas filas "cuelgan" del borde sur antes de que empiece el agua.
-    public int alturaAcantilado = 2;
-
-    [Header("Costa norte/oeste/este (borde de pasto justo antes del agua — el lado sur usa el Acantilado, no esto)")]
-    // Franja de transición pegada al pasto en los otros 3 lados del mapa
-    // (arriba, izquierda, derecha). Si se dejan vacíos, esos lados pasan
-    // directo a agua sin transición (como hasta ahora).
-    public Sprite[] spritesCostaNorte;
-    public Sprite[] spritesCostaOeste;
-    public Sprite[] spritesCostaEste;
-    // Grosor de esa franja (normalmente 1 alcanza).
-    public int grosorCosta = 1;
-
-    [Header("Esquinas del mapa (arriba-izquierda / arriba-derecha — las de abajo las resuelve el Acantilado)")]
-    public Sprite spriteEsquinaNoroeste;
-    public Sprite spriteEsquinaNoreste;
-
-    [Header("Costura acantilado-pasto (la línea donde el agua choca contra la roca, justo donde el acantilado se junta con el tablero). Poné 1 solo sprite si la querés fija, o varios en orden para que se animen en loop.")]
-    public Sprite[] spritesCosturaAcantilado;
-    public float fpsCosturaAcantilado = 8f;
-
     [Header("Niebla de guerra (solo afecta lo que VE el jugador humano)")]
     public Sprite spriteNiebla; // opcional — si lo dejás vacío usa un cuadrado de color
     public Color colorNieblaSinExplorar = Color.black;
     public Color colorNieblaExploradaSinVision = new Color(0f, 0f, 0f, 0.6f);
     public int radioVisionUnidad = 5;
-    public int radioVisionEdificio = 7;
+    public int radioVisionEdificio = 8; // un poco más grande que antes (7), para que el hueco inicial alrededor del Centro Urbano alcance para construir cómodo
 
-    [Header("Fase de colocación (opcional)")]
-    public TMPro.TextMeshProUGUI textoFaseColocacion; // podés dejarlo vacío, solo se usa si lo asignás
+    public ControladorPartida Partida { get; private set; }
+
+    private SpriteRenderer[,] fondos;
+    private Color[,] coloresBaseFondo; // color "de reposo" de cada fondo, antes del resaltado por selección
+    private SpriteRenderer[,] decoraciones;
+    private SpriteRenderer[,] contenidos;
+    private SpriteRenderer[,] niebla;
+    private bool[,] explorado;
 
     void Start()
     {
-        IniciarPartida("Sumerios"); // TEMPORAL: solo para probar sin el panel de botones todavía
+        // Si venimos del menú con una civilización elegida, usamos esa; si
+        // no (por ejemplo al probar la escena suelta), caemos en la
+        // predeterminada.
+        string civilizacion = PlayerPrefs.GetString(claveCivilizacion, "Sumerios");
+        IniciarPartida(civilizacion);
     }
 
-    // Ya no se ejecuta automáticamente al iniciar la escena. La pantalla de
-    // selección de civilización llama a esto cuando el jugador elige.
-    // A partir de acá el juego queda en "fase de colocación": todavía no
-    // hay Centro Urbano de nadie, y Partida.Actualizar() no hace nada hasta
-    // que el jugador haga clic en una celda válida (ver VistaInput /
-    // IntentarColocarCentroHumano).
+    // Arranca la partida con la civilización elegida entre las 4
+    // disponibles. Las 4 bases (la del humano y las 3 de la IA) quedan
+    // colocadas automáticamente en las esquinas del mapa apenas se crea
+    // ControladorPartida — no hace falta ningún paso manual acá.
     public void IniciarPartida(string civilizacionElegida)
     {
         CivilizacionHumano = civilizacionElegida;
         Partida = new ControladorPartida(nombreJugadorHumano, civilizacionElegida);
         ConstruirCuadricula();
-        ConstruirAnillosExteriores();
+        ConstruirAguaAlrededor();
         AplicarColorDeCamaraDeRespaldo();
+        CentrarCamaraEnBaseHumana();
         RedibujarTodo();
-
-        if (textoFaseColocacion != null)
-            textoFaseColocacion.text = "Elige dónde poner tu Centro Urbano (clic en el mapa)";
-        Debug.Log("Fase de colocación: hacé clic en una celda del tablero para ubicar tu Centro Urbano.");
+        Debug.Log($"Partida iniciada con {civilizacionElegida}. Tus enemigos: las 3 IA en las otras esquinas.");
     }
 
-    // Llamado por VistaInput cuando el jugador hace clic mientras todavía
-    // está en fase de colocación. Devuelve true si el clic fue válido (ahí
-    // ya arrancó la partida de verdad); false si hay que probar otra celda.
-    public bool IntentarColocarCentroHumano(int fila, int columna)
+    // Sin esto, la cámara se queda mirando el (0,0) del mundo (donde la
+    // pusiste en el editor), que normalmente NO es donde quedó tu Centro
+    // Urbano — así que aunque la niebla se despeje bien alrededor de tu
+    // base, la ves fuera de cámara y da la sensación de que "todo el mapa
+    // sigue tapado". Esto mueve la cámara (conservando su zoom/rotación,
+    // solo cambia X/Y) para que arranque centrada justo en tu base.
+    private void CentrarCamaraEnBaseHumana()
     {
-        if (!EnFaseDeColocacion) return false;
+        var camara = Camera.main;
+        if (camara == null) return;
 
-        bool colocado = Partida.ColocarCentroUrbanoHumano(fila, columna);
-        if (colocado)
-        {
-            if (textoFaseColocacion != null) textoFaseColocacion.gameObject.SetActive(false);
-            RedibujarTodo();
-        }
-        return colocado;
+        var (fila, columna) = Partida.PosicionBaseHumana;
+        Vector3 posicionBase = new Vector3(columna * tamañoCelda, -fila * tamañoCelda, 0);
+        camara.transform.position = new Vector3(posicionBase.x, posicionBase.y, camara.transform.position.z);
     }
-
-    public bool EnFaseDeColocacion => Partida != null && !Partida.PartidaEnCurso;
 
     void Update()
     {
         if (Partida == null) return; // todavía no se eligió civilización
 
-        bool termino = Partida.Actualizar(); // no hace nada mientras EnFaseDeColocacion sea true
+        bool termino = Partida.Actualizar();
         RedibujarTodo(); // simple a propósito: redibujar todo el tablero cada frame es
                           // barato comparado con el costo real del juego. Si en algún
                           // momento se siente lento, se optimiza a "solo redibujar lo
@@ -169,6 +140,7 @@ public class VistaMapa : MonoBehaviour
         int filas = Mapa.FILAS;
         int columnas = Mapa.COLUMNAS;
         fondos = new SpriteRenderer[filas, columnas];
+        coloresBaseFondo = new Color[filas, columnas];
         decoraciones = new SpriteRenderer[filas, columnas];
         contenidos = new SpriteRenderer[filas, columnas];
         niebla = new SpriteRenderer[filas, columnas];
@@ -185,6 +157,11 @@ public class VistaMapa : MonoBehaviour
                 fondoGO.transform.position = posicion;
                 var fondoSR = fondoGO.AddComponent<SpriteRenderer>();
                 fondoSR.sortingOrder = 0;
+                // El sprite de tierra es fijo por celda (no depende del
+                // estado del juego), así que se asigna UNA sola vez acá en
+                // vez de en cada RedibujarCelda.
+                AsignarSpriteConRespaldo(fondoSR, ElegirSpriteDeTierra(fila, columna), new Color(0.6f, 0.8f, 0.5f));
+                coloresBaseFondo[fila, columna] = fondoSR.color;
                 fondos[fila, columna] = fondoSR;
 
                 var decoracionGO = new GameObject($"Decoracion_{fila}_{columna}");
@@ -215,12 +192,35 @@ public class VistaMapa : MonoBehaviour
         }
     }
 
+    // Tileset de 9 piezas: las 4 esquinas y los 4 bordes solo se usan en la
+    // fila/columna que toca directamente el agua (fila 0, fila FILAS-1,
+    // columna 0, columna COLUMNAS-1); todo lo demás usa el relleno.
+    private Sprite ElegirSpriteDeTierra(int fila, int columna)
+    {
+        int filas = Mapa.FILAS;
+        int columnas = Mapa.COLUMNAS;
+        bool esNorte = fila == 0;
+        bool esSur = fila == filas - 1;
+        bool esOeste = columna == 0;
+        bool esEste = columna == columnas - 1;
+
+        if (esNorte && esOeste) return spriteTierraEsquinaNoroeste;
+        if (esNorte && esEste) return spriteTierraEsquinaNoreste;
+        if (esSur && esOeste) return spriteTierraEsquinaSuroeste;
+        if (esSur && esEste) return spriteTierraEsquinaSureste;
+        if (esNorte) return spriteTierraBordeNorte;
+        if (esSur) return spriteTierraBordeSur;
+        if (esOeste) return spriteTierraBordeOeste;
+        if (esEste) return spriteTierraBordeEste;
+        return spriteTierraRelleno;
+    }
+
     // Decoración puramente estética (arbustos, piedras sueltas): se decide
     // UNA sola vez acá (no en cada RedibujarCelda) porque no depende del
-    // estado del juego, solo de la posición. Como puede quedar "debajo" de
-    // un recurso/edificio/unidad real más adelante, no hace falta chequear
-    // si la celda está libre: el contenido real se dibuja en una capa por
-    // encima y la tapa sin problema.
+    // estado del juego, solo de la posición. Puede quedar "debajo" de un
+    // recurso/edificio/unidad real más adelante — no hace falta chequear
+    // si la celda está libre, porque el contenido real se dibuja en una
+    // capa por encima y la tapa sin problema.
     private void AsignarDecoracionSiCorresponde(SpriteRenderer sr, int fila, int columna)
     {
         if (spritesDecoracion == null || spritesDecoracion.Length == 0) return;
@@ -232,108 +232,32 @@ public class VistaMapa : MonoBehaviour
     }
 
     // ---------------------------------------------------------------
-    // Exterior del tablero: agua directamente alrededor de las 4 caras, sin
-    // anillos intermedios raros. En el lado sur, antes de que empiece el
-    // agua, se cuelgan "alturaAcantilado" filas de roca (el acantilado) para
-    // dar la sensación de que el tablero flota en alto, tal como se ve en la
-    // imagen de referencia de Tiny Swords. Todo esto queda fuera del rango
-    // 0..FILAS-1 / 0..COLUMNAS-1, así que nunca lo toca la lógica del juego
-    // (Mapa, ControladorPartida, etc.) — es puramente decorativo.
+    // Agua: rodea el tablero jugable directamente en las 4 caras. Todo esto
+    // queda fuera del rango 0..FILAS-1 / 0..COLUMNAS-1, así que nunca lo
+    // toca la lógica del juego (Mapa, ControladorPartida, etc.) — es
+    // puramente decorativo.
     // ---------------------------------------------------------------
 
-    private void ConstruirAnillosExteriores()
+    private void ConstruirAguaAlrededor()
     {
         int filas = Mapa.FILAS;
         int columnas = Mapa.COLUMNAS;
 
-        // El acantilado solo "cuelga" del lado sur; los otros 3 lados tienen
-        // su propia franja de costa (grosorCosta) antes de que empiece el
-        // agua profunda (grosorAgua).
-        int filaMinima = -(grosorCosta + grosorAgua);
-        int filaMaxima = filas + alturaAcantilado + grosorAgua;
-        int columnaMinima = -(grosorCosta + grosorAgua);
-        int columnaMaxima = columnas + grosorCosta + grosorAgua;
-
-        for (int fila = filaMinima; fila < filaMaxima; fila++)
+        for (int fila = -grosorAgua; fila < filas + grosorAgua; fila++)
         {
-            for (int columna = columnaMinima; columna < columnaMaxima; columna++)
+            for (int columna = -grosorAgua; columna < columnas + grosorAgua; columna++)
             {
                 bool dentroDelTablero = fila >= 0 && fila < filas && columna >= 0 && columna < columnas;
                 if (dentroDelTablero) continue;
 
                 Vector3 posicion = new Vector3(columna * tamañoCelda, -fila * tamañoCelda, 0);
-                var celdaGO = new GameObject($"Exterior_{fila}_{columna}");
+                var celdaGO = new GameObject($"Agua_{fila}_{columna}");
                 celdaGO.transform.SetParent(transform);
                 celdaGO.transform.position = posicion;
                 var sr = celdaGO.AddComponent<SpriteRenderer>();
                 sr.sortingOrder = 0;
-
-                bool esFilaDeAcantilado = fila >= filas && fila < filas + alturaAcantilado
-                                        && columna >= 0 && columna < columnas;
-                bool esFilaDeCostaNorte = fila >= -grosorCosta && fila < 0
-                                        && columna >= 0 && columna < columnas;
-                bool esColumnaDeCostaOeste = columna >= -grosorCosta && columna < 0
-                                        && fila >= 0 && fila < filas;
-                bool esColumnaDeCostaEste = columna >= columnas && columna < columnas + grosorCosta
-                                        && fila >= 0 && fila < filas;
-                bool esEsquinaNoroeste = fila >= -grosorCosta && fila < 0 && columna >= -grosorCosta && columna < 0;
-                bool esEsquinaNoreste = fila >= -grosorCosta && fila < 0 && columna >= columnas && columna < columnas + grosorCosta;
-
-                if (esFilaDeAcantilado)
-                {
-                    int profundidad = fila - filas; // 0 = pegado al pasto, 1, 2, ... hacia abajo
-                    AsignarSpriteDeAcantilado(sr, columna, columnas, profundidad);
-                }
-                else if (esEsquinaNoroeste)
-                {
-                    AsignarSpriteConRespaldo(sr, spriteEsquinaNoroeste, new Color(0.6f, 0.8f, 0.5f));
-                }
-                else if (esEsquinaNoreste)
-                {
-                    AsignarSpriteConRespaldo(sr, spriteEsquinaNoreste, new Color(0.6f, 0.8f, 0.5f));
-                }
-                else if (esFilaDeCostaNorte)
-                {
-                    AsignarSpriteConRespaldo(sr, ElegirVariante(spritesCostaNorte, fila, columna, salto: 8), new Color(0.6f, 0.8f, 0.5f));
-                }
-                else if (esColumnaDeCostaOeste)
-                {
-                    AsignarSpriteConRespaldo(sr, ElegirVariante(spritesCostaOeste, fila, columna, salto: 9), new Color(0.6f, 0.8f, 0.5f));
-                }
-                else if (esColumnaDeCostaEste)
-                {
-                    AsignarSpriteConRespaldo(sr, ElegirVariante(spritesCostaEste, fila, columna, salto: 10), new Color(0.6f, 0.8f, 0.5f));
-                }
-                else
-                {
-                    AsignarSpriteConRespaldo(sr, ElegirVariante(spritesAgua, fila, columna, salto: 3), new Color(0.20f, 0.45f, 0.75f));
-                }
+                AsignarSpriteConRespaldo(sr, ElegirVariante(spritesAgua, fila, columna, salto: 3), new Color(0.20f, 0.45f, 0.75f));
             }
-        }
-    }
-
-    private void AsignarSpriteDeAcantilado(SpriteRenderer sr, int columna, int columnas, int profundidad)
-    {
-        // Solo la primera fila (la que toca el pasto) usa las esquinas
-        // especiales, si se asignaron; el resto de las filas hacia abajo
-        // es relleno de roca liso.
-        if (profundidad == 0)
-        {
-            if (columna == 0 && spriteAcantiladoEsquinaIzquierda != null)
-            {
-                AsignarSpriteConRespaldo(sr, spriteAcantiladoEsquinaIzquierda, new Color(0.45f, 0.42f, 0.40f));
-                return;
-            }
-            if (columna == columnas - 1 && spriteAcantiladoEsquinaDerecha != null)
-            {
-                AsignarSpriteConRespaldo(sr, spriteAcantiladoEsquinaDerecha, new Color(0.45f, 0.42f, 0.40f));
-                return;
-            }
-            AsignarSpriteConRespaldo(sr, ElegirVariante(spritesAcantiladoBorde, 0, columna, salto: 6), new Color(0.45f, 0.42f, 0.40f));
-        }
-        else
-        {
-            AsignarSpriteConRespaldo(sr, ElegirVariante(spritesAcantiladoRelleno, profundidad, columna, salto: 7), new Color(0.40f, 0.38f, 0.36f));
         }
     }
 
@@ -368,11 +292,10 @@ public class VistaMapa : MonoBehaviour
         var fondoSR = fondos[fila, columna];
         var contenidoSR = contenidos[fila, columna];
 
-        // El fondo SIEMPRE es tierra — así nunca se asoma el color de fondo
-        // de la cámara cuando el sprite de un recurso/edificio aún no está
-        // asignado.
-        AsignarSpriteConRespaldo(fondoSR, spriteTierra, new Color(0.6f, 0.8f, 0.5f));
-
+        // El sprite del fondo ya quedó fijo desde ConstruirCuadricula; acá
+        // solo se restaura su color de reposo y, si corresponde, se aplica
+        // el resaltado de selección encima.
+        fondoSR.color = coloresBaseFondo[fila, columna];
         bool estaSeleccionada = FilaSeleccionada == fila && ColumnaSeleccionada == columna;
         if (estaSeleccionada) fondoSR.color = Color.Lerp(fondoSR.color, Color.white, 0.6f);
 
@@ -408,22 +331,14 @@ public class VistaMapa : MonoBehaviour
 
     // ---------------------------------------------------------------
     // Niebla de guerra (solo desde el punto de vista del jugador humano;
-    // las 3 IA siguen "viendo" todo el mapa internamente, esto es nada
-    // más una capa visual sobre lo que el humano tiene derecho a ver).
+    // las 3 IA siguen "viendo" todo el mapa internamente puertas adentro
+    // del Modelo — esto es nada más una capa visual sobre lo que el humano
+    // tiene derecho a ver). Se alinea con la misma fórmula de posición que
+    // fondo/contenido, así que siempre queda exactamente sobre su celda.
     // ---------------------------------------------------------------
 
     private void ActualizarNiebla(List<(int fila, int columna, int radio)> fuentesDeVision)
     {
-        // Durante la fase de colocación no hay niebla: el jugador necesita
-        // ver el tablero completo para elegir dónde ubicarse.
-        if (EnFaseDeColocacion)
-        {
-            for (int fila = 0; fila < Mapa.FILAS; fila++)
-                for (int columna = 0; columna < Mapa.COLUMNAS; columna++)
-                    niebla[fila, columna].enabled = false;
-            return;
-        }
-
         bool[,] visibleAhora = new bool[Mapa.FILAS, Mapa.COLUMNAS];
 
         foreach (var (filaFuente, columnaFuente, radio) in fuentesDeVision)
@@ -507,8 +422,8 @@ public class VistaMapa : MonoBehaviour
     // Elige una variante fija (determinística, no cambia entre frames) a
     // partir de la posición, para que el mismo tipo de recurso/decoración
     // no se vea repetido en bloque por todo el mapa. "salto" solo separa
-    // los distintos usos entre sí (agua, montaña, decoración, recursos)
-    // para que no elijan siempre el mismo índice en la misma celda.
+    // los distintos usos entre sí (agua, decoración, recursos) para que no
+    // elijan siempre el mismo índice en la misma celda.
     private Sprite ElegirVariante(Sprite[] variantes, int fila, int columna, int salto)
     {
         if (variantes == null || variantes.Length == 0) return null;
@@ -532,10 +447,10 @@ public class VistaMapa : MonoBehaviour
     }
 
     // Ajusta el color de fondo de la cámara (lo que se ve si en algún
-    // momento la vista queda por fuera de todos los anillos dibujados) a
-    // un tono de agua en vez del azul por defecto de Unity. Solo lo toca
-    // si la cámara usa un color sólido — si el proyecto ya usa un skybox
-    // u otra configuración, no se mete con eso.
+    // momento la vista queda por fuera de todo lo dibujado) a un tono de
+    // agua en vez del azul por defecto de Unity. Solo lo toca si la cámara
+    // usa un color sólido — si el proyecto ya usa un skybox u otra
+    // configuración, no se mete con eso.
     private void AplicarColorDeCamaraDeRespaldo()
     {
         var camara = Camera.main;
@@ -580,4 +495,11 @@ public class VistaMapa : MonoBehaviour
     // La celda que VistaInput tiene seleccionada ahora mismo (null si ninguna).
     public int? FilaSeleccionada { get; set; }
     public int? ColumnaSeleccionada { get; set; }
+
+    // El aldeano elegido desde la lista del HUD (VistaHUD), esperando a que
+    // el jugador haga click en una celda con recurso en el mapa. Los
+    // Aldeanos no viven en la cuadrícula (no son Unidad ni tienen
+    // fila/columna), así que esta selección se maneja aparte de
+    // FilaSeleccionada/ColumnaSeleccionada.
+    public Aldeano AldeanoSeleccionado { get; set; }
 }

@@ -187,6 +187,8 @@ public class Medusa : Heroe
             objetivo.AgregarEfecto(new ReduccionDefensa(5, 4f));
         }
     }
+}
+
 // nekodios llego a destruir el juego, su habilidad especial te mata a un familiar tambien
 // tambien te desinstala system32 y lo reemplaza por system1, hace un ataque DDOs al mossad
 // Te obliga a usar linux y te vuelve gay
@@ -221,4 +223,3 @@ public class Medusa : Heroe
             }
         }
     }
-}
