@@ -1,6 +1,8 @@
 using System;
 
+
 public class Aldeano
+
 {
     public string Nombre { get; set; }
     public string Civilizacion { get; set; }
@@ -11,6 +13,10 @@ public class Aldeano
     public int CostoOro { get; set; } = 25;
     public int CostoMadera { get; set; } = 0;
     public int CostoComida { get; set; } = 30;
+        // -1 significa "todavía no se colocó en el mapa" (por ejemplo, recién
+    // entrenado y la Vista aún no le buscó un lugar).
+    public int Fila { get; set; } = -1;
+    public int Columna { get; set; } = -1;
 
     public Aldeano(string nombre, string civilizacion, float velocidad, int velocidadRecoleccion)
     {

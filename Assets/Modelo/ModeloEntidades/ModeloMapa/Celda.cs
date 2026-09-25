@@ -5,5 +5,6 @@ public class Celda {
     public Recurso Recurso {get; set;}
     public Edificio Edificio {get;set;}
     public Unidad Unidad{get;set;}
+    public Aldeano Aldeano { get; set; }
     
 }

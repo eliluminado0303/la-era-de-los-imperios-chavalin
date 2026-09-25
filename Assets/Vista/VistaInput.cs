@@ -9,17 +9,12 @@ public class VistaInput : MonoBehaviour
 
     void Awake()
     {
-        // Red de seguridad: si te olvidaste de arrastrar la referencia en el
-        // Inspector (esto es lo que tiró el NullReferenceException en la
-        // línea 13), la busca sola en la escena. Igual conviene asignarla a
-        // mano en el Inspector — esto es solo para no romper el juego si
-        // falta.
         if (vistaMapa == null) vistaMapa = FindObjectOfType<VistaMapa>();
     }
 
     void Update()
     {
-        if (vistaMapa == null) return; // no hay ningún VistaMapa en la escena todavía
+        if (vistaMapa == null) return;
         if (!Input.GetMouseButtonDown(0)) return;
         if (vistaMapa.Partida == null) return;
 
@@ -31,6 +26,25 @@ public class VistaInput : MonoBehaviour
         var controladorCombateHumano = vistaMapa.Partida.ControladoresCombate[0];
         Jugador jugadorHumano = controladorMapaHumano.Jugador;
         Celda celda = vistaMapa.Partida.Mapa.ObtenerCelda(fila, columna);
+
+        // Si hay un aldeano elegido desde la lista del HUD, este click decide
+        // a qué recurso lo mandamos — corta acá y no sigue con la selección
+        // normal de unidades militares (los Aldeanos no son Unidad, no
+        // participan de esa lógica).
+        if (vistaMapa.AldeanoSeleccionado != null)
+        {
+            if (celda?.Recurso != null && !celda.Recurso.EstaAgotado())
+            {
+                vistaMapa.AsignarRecoleccionPermanente(vistaMapa.AldeanoSeleccionado, fila, columna);
+                Debug.Log($"{vistaMapa.AldeanoSeleccionado.Nombre} asignado a recolectar de forma continua.");
+                vistaMapa.AldeanoSeleccionado = null;
+            }
+            else
+            {
+                Debug.Log("Esa celda no tiene un recurso. Elige un árbol, una mina o un rebaño.");
+            }
+            return;
+        }
 
         if (vistaMapa.FilaSeleccionada == null)
         {

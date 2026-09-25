@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Linq;
 // Crea la partida (Modelo + Controlador) al empezar — las 4 bases quedan
 // colocadas automáticamente en las esquinas dentro del constructor de
 // ControladorPartida, así que acá no hay fase de colocación manual — y
@@ -52,6 +52,7 @@ public class VistaMapa : MonoBehaviour
     public Sprite spriteEdificioPrincipal;
     public Sprite spriteEdificioEntrenamiento;
     public Sprite spriteUnidadGenerica;
+    public Sprite spriteAldeano;
     public float tamañoCelda = 1f;
 
     [Header("Decoración estética (sin efecto en el juego — arbustos, piedras sueltas, etc.)")]
@@ -120,10 +121,9 @@ public class VistaMapa : MonoBehaviour
         if (Partida == null) return; // todavía no se eligió civilización
 
         bool termino = Partida.Actualizar();
-        RedibujarTodo(); // simple a propósito: redibujar todo el tablero cada frame es
-                          // barato comparado con el costo real del juego. Si en algún
-                          // momento se siente lento, se optimiza a "solo redibujar lo
-                          // que cambió" usando los eventos de Unidad.Muerte/Edificio.FueAtacado.
+        RedibujarTodo(); // simple a propósito: redibujar todo el tablero cada frame es  barato comparado con el costo real del juego.
+        ColocarAldeanosNuevos(); 
+        ActualizarOrdenesDeRecoleccion(); // <-- nueva línea
         if (termino)
         {
             Debug.Log($"Partida terminada. Ganador: {(Partida.Partida.Ganador != null ? Partida.Partida.Ganador.Nombre : "nadie")}");
@@ -308,6 +308,12 @@ public class VistaMapa : MonoBehaviour
             contenidoSR.sprite = spriteUnidadGenerica;
             contenidoSR.color = ColorDeCivilizacion(celda.Unidad.Civilizacion);
         }
+        else if (celda.Aldeano != null)
+        {
+            contenidoSR.enabled = true;
+            contenidoSR.sprite = spriteAldeano != null ? spriteAldeano : spriteUnidadGenerica;
+            contenidoSR.color = ColorDeCivilizacion(celda.Aldeano.Civilizacion);
+        }
         else if (celda.Edificio != null)
         {
             contenidoSR.enabled = true;
@@ -327,6 +333,44 @@ public class VistaMapa : MonoBehaviour
         {
             contenidoSR.enabled = false;
         }
+    }
+        // Cualquier aldeano recién entrenado llega con Fila=-1 (todavía no
+    // tiene posición) — lo busca y le asigna un lugar cerca de tu Centro
+    // Urbano, una sola vez.
+    private void ColocarAldeanosNuevos()
+    {
+        Jugador jugadorHumano = Partida.ControladoresMapa[0].Jugador;
+        var centroUrbano = jugadorHumano.Edificios.OfType<EdificioPrincipal>().FirstOrDefault();
+        if (centroUrbano == null) return;
+        if (!BuscarPosicionDeEdificio(centroUrbano, out int filaBase, out int columnaBase)) return;
+
+        foreach (var aldeano in jugadorHumano.Aldeanos)
+        {
+            if (aldeano.Fila >= 0) continue; // ya tiene posición
+            if (BuscarCeldaLibreCerca(filaBase, columnaBase, out int fila, out int columna))
+                Partida.Mapa.ColocarAldeano(fila, columna, aldeano);
+        }
+    }
+
+    private bool BuscarPosicionDeEdificio(Edificio edificio, out int fila, out int columna)
+    {
+        for (int f = 0; f < Mapa.FILAS; f++)
+            for (int c = 0; c < Mapa.COLUMNAS; c++)
+                if (Partida.Mapa.ObtenerCelda(f, c).Edificio == edificio) { fila = f; columna = c; return true; }
+        fila = columna = 0;
+        return false;
+    }
+
+    private bool BuscarCeldaLibreCerca(int filaBase, int columnaBase, out int fila, out int columna)
+    {
+        (int deltaFila, int deltaColumna)[] posiciones = { (1, 1), (1, -1), (-1, 1), (-1, -1), (0, 2), (2, 0), (0, -2), (-2, 0) };
+        foreach (var (deltaFila, deltaColumna) in posiciones)
+        {
+            int f = filaBase + deltaFila, c = columnaBase + deltaColumna;
+            if (Partida.Mapa.EsPosicionValida(f, c) && Partida.Mapa.CeldaLibre(f, c)) { fila = f; columna = c; return true; }
+        }
+        fila = columna = 0;
+        return false;
     }
 
     // ---------------------------------------------------------------
@@ -502,4 +546,47 @@ public class VistaMapa : MonoBehaviour
     // fila/columna), así que esta selección se maneja aparte de
     // FilaSeleccionada/ColumnaSeleccionada.
     public Aldeano AldeanoSeleccionado { get; set; }
+        // Órdenes permanentes de recolección: aldeano -> celda de recurso donde
+    // está trabajando. El Modelo solo hace UN ciclo de 2s por llamada (no
+    // se repite solo) — esto reemite la orden automáticamente mientras el
+    // recurso no se agote, para que se vea como una asignación continua.
+    private readonly Dictionary<Aldeano, (int fila, int columna)> ordenesRecoleccion = new Dictionary<Aldeano, (int, int)>();
+
+    public void AsignarRecoleccionPermanente(Aldeano aldeano, int fila, int columna)
+    {
+        ordenesRecoleccion[aldeano] = (fila, columna);
+    }
+
+    public void CancelarRecoleccionPermanente(Aldeano aldeano)
+    {
+        ordenesRecoleccion.Remove(aldeano);
+    }
+
+    private void ActualizarOrdenesDeRecoleccion()
+    {
+        if (ordenesRecoleccion.Count == 0) return;
+
+        var controladorMapaHumano = Partida.ControladoresMapa[0];
+        List<Aldeano> terminados = null;
+
+        foreach (var par in ordenesRecoleccion)
+        {
+            Aldeano aldeano = par.Key;
+            if (aldeano.Ocupado) continue; // sigue en su viaje actual, nada que hacer todavía
+
+            var (fila, columna) = par.Value;
+            Celda celda = Partida.Mapa.ObtenerCelda(fila, columna);
+            if (celda?.Recurso == null || celda.Recurso.EstaAgotado())
+            {
+                (terminados ??= new List<Aldeano>()).Add(aldeano); // se agotó: cancelar la orden
+                continue;
+            }
+
+            controladorMapaHumano.SolicitarRecoleccion(aldeano, fila, columna);
+            Partida.Mapa.ColocarAldeano(fila, columna, aldeano);
+        }
+
+        if (terminados != null)
+            foreach (var aldeano in terminados) ordenesRecoleccion.Remove(aldeano);
+    }
 }

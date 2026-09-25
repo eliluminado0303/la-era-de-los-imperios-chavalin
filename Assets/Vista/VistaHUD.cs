@@ -1,11 +1,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
-// HUD de la partida principal: muestra los recursos del jugador humano,
-// botones para entrenar/construir, y el mensaje de fin de partida.
-// Trabaja siempre sobre el jugador humano (índice 0 de ControladorPartida).
+// HUD de la partida principal. Siempre trabaja sobre el jugador humano
+// (índice 0 de ControladorPartida). Partes:
+//   - Barra de recursos (oro/madera/comida).
+//   - Lista de Aldeanos entrenados: se seleccionan ACÁ, en el HUD, y el
+//     siguiente click en el mapa (VistaInput) decide a qué recurso lo mandás.
+//   - Panel de la unidad militar seleccionada en el mapa (si hay una).
+//   - Botones de acción: Entrenar Aldeano / Construir Cuartel.
+//   - NecoArc: guía tutorial que va cambiando de mensaje según tu progreso.
+//   - Panel de fin de partida.
 public class VistaHUD : MonoBehaviour
 {
     public VistaMapa vistaMapa;
@@ -15,28 +22,216 @@ public class VistaHUD : MonoBehaviour
     public TextMeshProUGUI textoMadera;
     public TextMeshProUGUI textoComida;
 
+    [Header("Lista de Aldeanos (panel del HUD, no del mapa)")]
+    public Transform contenedorAldeanos;   // objeto vacío con un Vertical Layout Group
+    public GameObject prefabBotonAldeano;  // prefab: un Button con un TextMeshProUGUI hijo
+    private readonly List<(Aldeano aldeano, GameObject boton, TextMeshProUGUI texto)> botonesAldeanos = new List<(Aldeano, GameObject, TextMeshProUGUI)>();
+
+    [Header("Panel de unidad militar seleccionada (opcional)")]
+    public GameObject panelSeleccion;
+    public TextMeshProUGUI textoSeleccion;
+
+    [Header("NecoArc — guía tutorial")]
+    public GameObject panelNecoArc;
+    public TextMeshProUGUI textoNecoArc;
+    private int pasoTutorialActual = -1;
+    private bool tutorialCerrado = false;
+    private int? totalRecursosAlTenerPrimerAldeano = null;
+
+    private static readonly string[] MENSAJES_TUTORIAL =
+    {
+        "Soy NecoArc y sere tu guia.\nPara arrancar, toca \"Entrenar Aldeano\" para iniciar con tu civilizacion.",
+        "Muy bien. Ahora elige tu aldeano de la lista, y después haz click en un árbol, una mina o un rebaño del mapa para mandarlo a recolectar.",
+        "¡Eso es! Sigue juntando oro y madera. Cuando tengas suficiente, toca \"Construir Cuartel\" para poder entrenar soldados.",
+        "¡Buen trabajo! Desde tu Cuartel ya puedes entrenar soldados para defender tu base y salir a explorar. Con esto sabes deberias poder sobrevivir,buranya",
+    };
+
     [Header("Panel de fin de partida")]
     public GameObject panelFinDePartida;
     public TextMeshProUGUI textoResultado;
 
+    private bool avisoReferenciasMostrado;
+
+    void Awake()
+    {
+        if (vistaMapa == null)
+            vistaMapa = FindObjectOfType<VistaMapa>();
+
+        // Recupera referencias básicas si la escena fue guardada antes de que
+        // se añadieran estos campos al componente VistaHUD.
+        if (textoOro == null) textoOro = BuscarTexto("oro");
+        if (textoMadera == null) textoMadera = BuscarTexto("madera");
+        if (textoComida == null) textoComida = BuscarTexto("comida");
+        if (panelNecoArc == null) panelNecoArc = BuscarObjeto("panelnecoarc");
+        if (textoNecoArc == null) textoNecoArc = BuscarTexto("tutorial", "textonecoarc");
+    }
+
     void Update()
     {
-        if (vistaMapa.Partida == null) return; // todavía no arrancó la partida
+        if (vistaMapa == null)
+        {
+            if (!avisoReferenciasMostrado)
+            {
+                Debug.LogError("VistaHUD no encuentra un VistaMapa en la escena.");
+                avisoReferenciasMostrado = true;
+            }
+            return;
+        }
+
+        if (vistaMapa.Partida == null) return;
 
         Jugador jugadorHumano = vistaMapa.Partida.ControladoresMapa[0].Jugador;
-        textoOro.text = $"Oro: {jugadorHumano.Recursos[TipoRecurso.Oro]}";
-        textoMadera.text = $"Madera: {jugadorHumano.Recursos[TipoRecurso.Madera]}";
-        textoComida.text = $"Comida: {jugadorHumano.Recursos[TipoRecurso.Comida]}";
 
-        if (vistaMapa.Partida.Partida.Finalizada && !panelFinDePartida.activeSelf)
+        if (textoOro != null)
+            textoOro.text = $"Oro: {jugadorHumano.Recursos[TipoRecurso.Oro]}";
+        if (textoMadera != null)
+            textoMadera.text = $"Madera: {jugadorHumano.Recursos[TipoRecurso.Madera]}";
+        if (textoComida != null)
+            textoComida.text = $"Comida: {jugadorHumano.Recursos[TipoRecurso.Comida]}";
+
+        ActualizarListaDeAldeanos(jugadorHumano);
+        ActualizarPanelSeleccion(jugadorHumano);
+        if (!tutorialCerrado) ActualizarTutorial(jugadorHumano);
+
+        if (panelFinDePartida != null && vistaMapa.Partida.Partida.Finalizada && !panelFinDePartida.activeSelf)
         {
             Jugador ganador = vistaMapa.Partida.Partida.Ganador;
-            textoResultado.text = ganador == jugadorHumano ? "¡Ganaste!" : $"Perdiste. Ganó: {(ganador != null ? ganador.Nombre : "nadie")}";
+            if (textoResultado != null)
+                textoResultado.text = ganador == jugadorHumano ? "¡Ganaste!" : $"Perdiste. Ganó: {(ganador != null ? ganador.Nombre : "nadie")}";
             panelFinDePartida.SetActive(true);
         }
     }
 
-    // Botón "Entrenar Aldeano": usa el Centro Urbano propio del humano.
+    private GameObject BuscarObjeto(string nombreNormalizado)
+    {
+        foreach (Transform transformacion in FindObjectsOfType<Transform>(true))
+        {
+            if (NormalizarNombre(transformacion.name) == nombreNormalizado)
+                return transformacion.gameObject;
+        }
+
+        return null;
+    }
+
+    private TextMeshProUGUI BuscarTexto(params string[] nombresNormalizados)
+    {
+        foreach (TextMeshProUGUI texto in FindObjectsOfType<TextMeshProUGUI>(true))
+        {
+            string nombre = NormalizarNombre(texto.name);
+            if (nombresNormalizados.Any(candidato => nombre == candidato))
+                return texto;
+        }
+
+        return null;
+    }
+
+    private string NormalizarNombre(string nombre)
+    {
+        return nombre.ToLowerInvariant().Replace(" ", string.Empty).Replace("_", string.Empty);
+    }
+
+    private void ActualizarListaDeAldeanos(Jugador jugadorHumano)
+    {
+        if (contenedorAldeanos == null || prefabBotonAldeano == null) return;
+
+        while (botonesAldeanos.Count < jugadorHumano.Aldeanos.Count)
+        {
+            var aldeano = jugadorHumano.Aldeanos[botonesAldeanos.Count];
+            var botonGO = Instantiate(prefabBotonAldeano, contenedorAldeanos);
+            var texto = botonGO.GetComponentInChildren<TextMeshProUGUI>();
+            // GetComponentInChildren (no GetComponent): el Button real puede
+            // vivir en un hijo del objeto asignado en "Prefab Boton Aldeano"
+            // (por ejemplo si ese campo apunta al contenedor exterior y no
+            // al botón en sí) — antes esto se rompía con
+            // NullReferenceException apenas se entrenaba el primer aldeano,
+            // y como el aldeano nunca llegaba a agregarse a la lista, el
+            // while de arriba reintentaba la MISMA entrada en cada frame.
+            var boton = botonGO.GetComponentInChildren<Button>();
+            if (boton == null)
+            {
+                Debug.LogError("El prefab de \"Prefab Boton Aldeano\" no tiene un componente Button (ni en él ni en sus hijos). Revisá esa referencia en el Inspector de VistaHUD.");
+                botonesAldeanos.Add((aldeano, botonGO, texto)); // igual lo contamos: evita el reintento infinito por frame
+                continue;
+            }
+            boton.onClick.AddListener(() => SeleccionarAldeano(aldeano));
+            botonesAldeanos.Add((aldeano, botonGO, texto));
+        }
+
+        for (int i = 0; i < botonesAldeanos.Count; i++)
+        {
+            var (aldeano, _, texto) = botonesAldeanos[i];
+            if (texto == null) continue;
+            bool esElSeleccionado = vistaMapa.AldeanoSeleccionado == aldeano;
+            string estado = aldeano.Ocupado ? "Recolectando..." : "Libre";
+            texto.text = $"{(esElSeleccionado ? "➤ " : "")}{aldeano.Nombre} {i + 1} — {estado}";
+        }
+    }
+
+    private void SeleccionarAldeano(Aldeano aldeano)
+    {
+        if (aldeano.Ocupado)
+        {
+            Debug.Log($"{aldeano.Nombre} ya está ocupado recolectando.");
+            return;
+        }
+        vistaMapa.AldeanoSeleccionado = vistaMapa.AldeanoSeleccionado == aldeano ? null : aldeano;
+    }
+
+    private void ActualizarPanelSeleccion(Jugador jugadorHumano)
+    {
+        if (panelSeleccion == null) return;
+
+        if (vistaMapa.FilaSeleccionada == null)
+        {
+            panelSeleccion.SetActive(false);
+            return;
+        }
+
+        Celda celda = vistaMapa.Partida.Mapa.ObtenerCelda(vistaMapa.FilaSeleccionada.Value, vistaMapa.ColumnaSeleccionada.Value);
+        if (celda?.Unidad == null)
+        {
+            panelSeleccion.SetActive(false);
+            return;
+        }
+
+        panelSeleccion.SetActive(true);
+        if (textoSeleccion != null)
+            textoSeleccion.text = $"{celda.Unidad.Civilizacion}\nVida: {celda.Unidad.Vida}/{celda.Unidad.VidaMaxima}\nAtaque: {celda.Unidad.Ataque}";
+    }
+
+    private void ActualizarTutorial(Jugador jugadorHumano)
+    {
+        int pasoNuevo = CalcularPasoTutorial(jugadorHumano);
+        if (pasoNuevo == pasoTutorialActual) return;
+
+        pasoTutorialActual = pasoNuevo;
+        if (panelNecoArc != null) panelNecoArc.SetActive(true);
+        if (textoNecoArc != null) textoNecoArc.text = MENSAJES_TUTORIAL[pasoTutorialActual];
+    }
+
+    private int CalcularPasoTutorial(Jugador jugadorHumano)
+    {
+        bool tieneCuartel = jugadorHumano.Edificios.OfType<EdificioEntrenamiento>().Any();
+        if (tieneCuartel) return 3;
+
+        if (jugadorHumano.Aldeanos.Count == 0) return 0;
+
+        if (totalRecursosAlTenerPrimerAldeano == null)
+            totalRecursosAlTenerPrimerAldeano = TotalRecursos(jugadorHumano);
+
+        bool yaRecolecto = TotalRecursos(jugadorHumano) > totalRecursosAlTenerPrimerAldeano.Value;
+        return yaRecolecto ? 2 : 1;
+    }
+
+    private int TotalRecursos(Jugador jugadorHumano) =>
+        jugadorHumano.Recursos[TipoRecurso.Oro] + jugadorHumano.Recursos[TipoRecurso.Madera] + jugadorHumano.Recursos[TipoRecurso.Comida];
+
+    public void CerrarTutorial()
+    {
+        tutorialCerrado = true;
+        if (panelNecoArc != null) panelNecoArc.SetActive(false);
+    }
+
     public void EntrenarAldeano()
     {
         var controladorEntrenamiento = vistaMapa.Partida.ControladoresEntrenamiento[0];
@@ -48,11 +243,6 @@ public class VistaHUD : MonoBehaviour
             Debug.Log("No se pudo entrenar aldeano (¿recursos insuficientes?)");
     }
 
-    // Botón "Construir Cuartel": ahora el Centro Urbano del humano puede
-    // estar en cualquier lado (se eligió en la fase de colocación), así que
-    // ya no se puede asumir la esquina (0,0). Se ubica el Centro Urbano en
-    // el Mapa y se construye el cuartel en la primera celda libre cerca de
-    // él, probando un puñado de posiciones relativas típicas.
     public void ConstruirCuartel()
     {
         var controladorMapaHumano = vistaMapa.Partida.ControladoresMapa[0];
@@ -79,10 +269,6 @@ public class VistaHUD : MonoBehaviour
             Debug.Log("No se pudo construir (¿recursos insuficientes o celda ocupada?)");
     }
 
-    // El Mapa no guarda la posición dentro del propio Edificio, así que
-    // para encontrarla hay que buscar la celda que lo contiene. Solo se usa
-    // al apretar el botón (no por frame), así que un recorrido de la
-    // cuadrícula no tiene costo real.
     private bool BuscarPosicionDelEdificio(Edificio edificio, out int fila, out int columna)
     {
         var mapa = vistaMapa.Partida.Mapa;
@@ -116,17 +302,14 @@ public class VistaHUD : MonoBehaviour
         return false;
     }
 
-    // El cuartel entrena la unidad exclusiva de tu civilización más las 4
-    // genéricas (Defender, Vanguard, Ranger, Healer), que puede entrenar
-    // cualquier civilización.
     private List<string> UnidadesDeCivilizacion(string civilizacion)
     {
         string exclusiva = civilizacion == "Nipones" ? "Assassin"
                           : civilizacion == "Griegos" ? "Avenger"
                           : civilizacion == "Vikingos" ? "Berserker"
-                          : "Caster"; // Sumerios
+                          : "Caster";
 
-        return new List<string> { exclusiva, "Defender", "Vanguard", "Ranger", "Healer", "NekoArc" };
+        return new List<string> { exclusiva, "Defender", "Vanguard", "Ranger", "Healer", "NecoArc" };
     }
 
     public void VolverAlMenu()

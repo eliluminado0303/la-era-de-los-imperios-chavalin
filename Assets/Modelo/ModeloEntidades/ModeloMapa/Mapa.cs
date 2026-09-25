@@ -94,6 +94,23 @@ public class Mapa
             return true;
         }
     }
+        // Coloca (o reubica) un aldeano en una celda. A propósito NO compite
+    // por espacio con otros aldeanos (varios pueden compartir el mismo
+    // recurso, como en un RTS real) ni con Unidad/Edificio — es solo una
+    // posición visual, no bloquea nada.
+    public void ColocarAldeano(int fila, int columna, Aldeano aldeano)
+    {
+        if (!EsPosicionValida(fila, columna)) return;
+        lock (candado)
+        {
+            if (aldeano.Fila >= 0 && aldeano.Columna >= 0 && EsPosicionValida(aldeano.Fila, aldeano.Columna))
+                celdas[aldeano.Fila, aldeano.Columna].Aldeano = null;
+
+            celdas[fila, columna].Aldeano = aldeano;
+            aldeano.Fila = fila;
+            aldeano.Columna = columna;
+        }
+    }
 
     public bool RetirarRecurso(int fila, int columna)
     {

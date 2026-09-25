@@ -38,7 +38,7 @@ public class ControladorEntrenamiento
         {
             if (resultado.Resultado is Aldeano aldeano)
             {
-                miJugador.Aldeanos.Add(aldeano);
+               miJugador.AgregarAldeano(aldeano);
             }
             else if (resultado.Resultado is Unidad unidad)
             {

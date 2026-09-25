@@ -1,0 +1,1460 @@
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Construccion
+Resultado: Entrenamiento construido en (10,10)
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Construccion
+Resultado: Entrenamiento construido en (10,10)
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Construccion
+Resultado: Entrenamiento construido en (10,10)
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Construccion
+Resultado: Entrenamiento construido en (10,10)
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Construccion
+Resultado: Entrenamiento construido en (10,10)
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Construccion
+Resultado: Entrenamiento construido en (10,10)
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Oro
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Madera
+
+Turno: Jugador
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+

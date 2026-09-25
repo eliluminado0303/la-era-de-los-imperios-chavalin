@@ -63,8 +63,8 @@ public static class FabricaUnidades
                     throw new InvalidOperationException("Medusa es exclusiva de Griegos.");
                 return new Medusa();
 
-            case "NekoArc":
-                return new NekoArc(civilizacion);
+            case "NecoArc":
+                return new NecoArc(civilizacion);
 
             default:
                 throw new ArgumentException($"Tipo de unidad desconocido: {tipoUnidad}");

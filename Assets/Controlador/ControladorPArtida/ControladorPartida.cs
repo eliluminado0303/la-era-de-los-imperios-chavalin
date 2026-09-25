@@ -137,13 +137,37 @@ public class ControladorPartida
         };
     }
 
+    // Reserva inicial que se le da a CADA jugador (humano y las 3 IA por
+    // igual) apenas se coloca su Centro Urbano. Sin esto el juego no tiene
+    // forma de arrancar: los recursos del mapa son solo vetas/bosques que
+    // hace falta un aldeano para recolectar, pero el primer aldeano cuesta
+    // 25 oro + 30 comida y arrancabas con 0 de todo — nadie podía pagar ni
+    // el primer aldeano. Esto alcanza para varios aldeanos de arranque y
+    // deja algo de colchón para el primer Cuartel (150 oro / 100 madera)
+    // mientras juntás más del mapa.
+    private const int ORO_INICIAL = 150;
+    private const int MADERA_INICIAL = 150;
+    private const int COMIDA_INICIAL = 150;
+
     private void ColocarCentroEn(int fila, int columna, (Jugador jugador, string civilizacion) datos, List<(int fila, int columna)> posicionesOcupadas)
     {
         var (jugador, civilizacion) = datos;
         var centro = new EdificioPrincipal(civilizacion, costoOro: 0, costoMadera: 0, costoComida: 0);
+        // Los edificios nacen "en construcción" (EstaConstruido = false) y
+        // ProducirAldeano() se niega a producir nada hasta que eso cambie —
+        // normalmente lo hace GestorDeConstruccion cuando termina de
+        // construirse un edificio a mitad de partida. El Centro Urbano
+        // inicial nunca pasa por ese camino, así que sin esta línea quedaba
+        // "construyéndose" para siempre y jamás podía entrenar un aldeano,
+        // por más oro que tuvieras.
+        centro.AvanzarConstruccion(100);
         Mapa.ColocarEdificio(fila, columna, centro);
         jugador.AgregarEdificio(centro);
         posicionesOcupadas.Add((fila, columna));
+
+        jugador.AgregarRecurso(TipoRecurso.Oro, ORO_INICIAL);
+        jugador.AgregarRecurso(TipoRecurso.Madera, MADERA_INICIAL);
+        jugador.AgregarRecurso(TipoRecurso.Comida, COMIDA_INICIAL);
     }
 
     private void GenerarRecursosCercaDe(int filaBase, int columnaBase, int centroFila, int centroColumna)

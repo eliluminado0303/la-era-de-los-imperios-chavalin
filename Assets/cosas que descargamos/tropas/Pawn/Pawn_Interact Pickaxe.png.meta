@@ -58,7 +58,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -72,7 +72,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,12 +139,12 @@ TextureImporter:
       name: Pawn_Interact Pickaxe_0
       rect:
         serializedVersion: 2
-        x: 59
-        y: 56
-        width: 60
-        height: 76
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 60
+        y: 57
+        width: 58
+        height: 74
+      alignment: 9
+      pivot: {x: 0.6725053, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -161,12 +161,12 @@ TextureImporter:
       name: Pawn_Interact Pickaxe_1
       rect:
         serializedVersion: 2
-        x: 243
-        y: 56
-        width: 66
-        height: 77
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 244
+        y: 57
+        width: 64
+        height: 75
+      alignment: 9
+      pivot: {x: 0.7479763, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -183,12 +183,12 @@ TextureImporter:
       name: Pawn_Interact Pickaxe_2
       rect:
         serializedVersion: 2
-        x: 445
-        y: 56
-        width: 93
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 446
+        y: 57
+        width: 91
+        height: 70
+      alignment: 9
+      pivot: {x: 0.44313, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -205,12 +205,12 @@ TextureImporter:
       name: Pawn_Interact Pickaxe_3
       rect:
         serializedVersion: 2
-        x: 642
-        y: 97
-        width: 14
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 643
+        y: 98
+        width: 12
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -227,12 +227,12 @@ TextureImporter:
       name: Pawn_Interact Pickaxe_4
       rect:
         serializedVersion: 2
-        x: 654
-        y: 56
-        width: 62
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 642
+        y: 57
+        width: 85
+        height: 67
+      alignment: 9
+      pivot: {x: 0.4147619, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -249,12 +249,12 @@ TextureImporter:
       name: Pawn_Interact Pickaxe_5
       rect:
         serializedVersion: 2
-        x: 700
-        y: 59
-        width: 29
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 844
+        y: 57
+        width: 67
+        height: 71
+      alignment: 9
+      pivot: {x: 0.3712641, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -271,12 +271,12 @@ TextureImporter:
       name: Pawn_Interact Pickaxe_6
       rect:
         serializedVersion: 2
-        x: 843
-        y: 56
-        width: 69
-        height: 73
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1031
+        y: 57
+        width: 51
+        height: 72
+      alignment: 9
+      pivot: {x: 0.58117914, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -293,12 +293,12 @@ TextureImporter:
       name: Pawn_Interact Pickaxe_7
       rect:
         serializedVersion: 2
-        x: 1030
-        y: 56
-        width: 53
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 701
+        y: 60
+        width: 27
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -315,7 +315,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 05f67a70a0931d54cb383828ef694207
     internalID: 0
     vertices: []
     indices: 
@@ -323,7 +323,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Pawn_Interact Pickaxe_0: 3610887024250832725
       Pawn_Interact Pickaxe_1: 3041927701802748533

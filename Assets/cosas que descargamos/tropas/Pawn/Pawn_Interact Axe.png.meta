@@ -55,7 +55,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +69,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -136,12 +136,12 @@ TextureImporter:
       name: Pawn_Interact Axe_0
       rect:
         serializedVersion: 2
-        x: 55
-        y: 56
-        width: 64
-        height: 76
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 56
+        y: 57
+        width: 62
+        height: 74
+      alignment: 9
+      pivot: {x: 0.6919639, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -158,12 +158,12 @@ TextureImporter:
       name: Pawn_Interact Axe_1
       rect:
         serializedVersion: 2
-        x: 247
-        y: 56
-        width: 62
-        height: 77
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 248
+        y: 57
+        width: 60
+        height: 75
+      alignment: 9
+      pivot: {x: 0.72315776, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -180,12 +180,12 @@ TextureImporter:
       name: Pawn_Interact Axe_2
       rect:
         serializedVersion: 2
-        x: 442
-        y: 78
-        width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 443
+        y: 79
+        width: 9
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -202,12 +202,12 @@ TextureImporter:
       name: Pawn_Interact Axe_3
       rect:
         serializedVersion: 2
-        x: 451
-        y: 56
-        width: 88
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 434
+        y: 57
+        width: 104
+        height: 70
+      alignment: 9
+      pivot: {x: 0.49201673, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -224,12 +224,12 @@ TextureImporter:
       name: Pawn_Interact Axe_4
       rect:
         serializedVersion: 2
-        x: 654
-        y: 56
-        width: 77
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 655
+        y: 57
+        width: 75
+        height: 67
+      alignment: 9
+      pivot: {x: 0.3016382, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -246,12 +246,12 @@ TextureImporter:
       name: Pawn_Interact Axe_5
       rect:
         serializedVersion: 2
-        x: 843
-        y: 56
-        width: 63
-        height: 73
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 844
+        y: 57
+        width: 61
+        height: 71
+      alignment: 9
+      pivot: {x: 0.42073634, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -268,12 +268,12 @@ TextureImporter:
       name: Pawn_Interact Axe_6
       rect:
         serializedVersion: 2
-        x: 1025
-        y: 56
-        width: 58
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1026
+        y: 57
+        width: 56
+        height: 72
+      alignment: 9
+      pivot: {x: 0.6195504, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -290,7 +290,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c40e718d44622d84da71ee27a7859af6
     internalID: 0
     vertices: []
     indices: 
@@ -298,7 +298,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Pawn_Interact Axe_0: 4690516624981630074
       Pawn_Interact Axe_1: 4820607410664315775
