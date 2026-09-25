@@ -38,6 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: agua
+    uniqueID: 4092099425
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

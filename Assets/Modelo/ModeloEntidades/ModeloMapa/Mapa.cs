@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 public class Mapa
 {
-    public const int FILAS = 15;
-    public const int COLUMNAS = 15;
+    public const int FILAS = 80;
+    public const int COLUMNAS = 80;
 
     private Celda[,] celdas;
 
@@ -189,7 +189,95 @@ public class Mapa
         ColocarRecurso(centro + 1, centro + 1, new Recurso { Tipo = TipoRecurso.Oro, Cantidad = 300 });
     }
 
-   // Coloca hasta 4 Centros Urbanos, uno en cada esquina del mapa 15x15.
+    // ---------------------------------------------------------------
+    // Generación de recursos DISPERSOS por todo el mapa (bosques, vetas de
+    // oro, rebaños de comida). Se llama una sola vez, justo después de
+    // colocar los 4 Centros Urbanos y los recursos "de arranque" cerca de
+    // cada base — así el resto del mapa no queda vacío y hay motivo para
+    // expandirse y pelear por territorio, en vez de depender solo de los
+    // pocos recursos iniciales de cada esquina.
+    //
+    // "celdasReservadas" es un colchón de celdas que se deja libre a
+    // propósito alrededor de cada base (para que el jugador tenga lugar
+    // para construir sin que un bosque le tape la entrada); no hace falta
+    // reservar las celdas que ya tienen recurso/edificio porque CeldaLibre
+    // ya las descarta solas.
+    public void GenerarRecursosDispersos(HashSet<(int fila, int columna)> celdasReservadas, int margen)
+    {
+        var rng = new System.Random();
+
+        // Bosques de madera: clusters grandes e irregulares, son los que
+        // más "llenan" visualmente el mapa (como un bosque real).
+        GenerarClusters(rng, TipoRecurso.Madera, cantidadClusters: 55, tamañoMin: 4, tamañoMax: 10, cantidadPorCelda: 120, celdasReservadas, margen);
+
+        // Vetas de oro: clusters chicos y más escasos, para que valga la
+        // pena disputarlos.
+        GenerarClusters(rng, TipoRecurso.Oro, cantidadClusters: 24, tamañoMin: 2, tamañoMax: 4, cantidadPorCelda: 250, celdasReservadas, margen);
+
+        // Rebaños de comida: clusters chicos repartidos entre los bosques.
+        GenerarClusters(rng, TipoRecurso.Comida, cantidadClusters: 28, tamañoMin: 2, tamañoMax: 5, cantidadPorCelda: 100, celdasReservadas, margen);
+    }
+
+    private void GenerarClusters(System.Random rng, TipoRecurso tipo, int cantidadClusters, int tamañoMin, int tamañoMax, int cantidadPorCelda, HashSet<(int fila, int columna)> celdasReservadas, int margen)
+    {
+        int intentosMaximos = cantidadClusters * 25; // por si muchas semillas caen en celdas ocupadas/reservadas
+        int clustersColocados = 0;
+        int intentos = 0;
+
+        while (clustersColocados < cantidadClusters && intentos < intentosMaximos)
+        {
+            intentos++;
+
+            int filaSemilla = rng.Next(margen, FILAS - margen);
+            int columnaSemilla = rng.Next(margen, COLUMNAS - margen);
+
+            if (!CeldaLibre(filaSemilla, columnaSemilla)) continue;
+            if (celdasReservadas.Contains((filaSemilla, columnaSemilla))) continue;
+
+            int tamañoCluster = rng.Next(tamañoMin, tamañoMax + 1);
+            var celdasCluster = CrecerCluster(rng, filaSemilla, columnaSemilla, tamañoCluster, celdasReservadas);
+            if (celdasCluster.Count == 0) continue;
+
+            foreach (var (f, c) in celdasCluster)
+                ColocarRecurso(f, c, new Recurso { Tipo = tipo, Cantidad = cantidadPorCelda });
+
+            clustersColocados++;
+        }
+    }
+
+    // Crece un cluster orgánico (no un cuadrado perfecto) a partir de una
+    // celda semilla: expande hacia vecinos ortogonales elegidos al azar
+    // hasta llegar al tamaño pedido o quedarse sin frontera disponible.
+    private List<(int fila, int columna)> CrecerCluster(System.Random rng, int filaInicio, int columnaInicio, int tamaño, HashSet<(int fila, int columna)> celdasReservadas)
+    {
+        var resultado = new List<(int, int)>();
+        var frontera = new List<(int, int)> { (filaInicio, columnaInicio) };
+        var visitadas = new HashSet<(int, int)> { (filaInicio, columnaInicio) };
+
+        while (resultado.Count < tamaño && frontera.Count > 0)
+        {
+            int indice = rng.Next(frontera.Count);
+            var (fila, columna) = frontera[indice];
+            frontera.RemoveAt(indice);
+
+            if (!CeldaLibre(fila, columna) || celdasReservadas.Contains((fila, columna))) continue;
+            resultado.Add((fila, columna));
+
+            (int, int)[] vecinos = { (fila - 1, columna), (fila + 1, columna), (fila, columna - 1), (fila, columna + 1) };
+            foreach (var (filaVecina, columnaVecina) in vecinos)
+            {
+                if (EsPosicionValida(filaVecina, columnaVecina) && !visitadas.Contains((filaVecina, columnaVecina)))
+                {
+                    visitadas.Add((filaVecina, columnaVecina));
+                    frontera.Add((filaVecina, columnaVecina));
+                }
+            }
+        }
+
+        return resultado;
+    }
+
+   // Coloca hasta 4 Centros Urbanos, uno en cada esquina del mapa 30x30.
     // Recibe (jugador, civilizacion) en vez de solo Jugador porque
     // EdificioPrincipal necesita la CIVILIZACIÓN, no el nombre del jugador
     // (antes se le pasaba jugador.Nombre por error).

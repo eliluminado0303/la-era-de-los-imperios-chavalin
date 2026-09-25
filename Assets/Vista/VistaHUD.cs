@@ -39,6 +39,8 @@ public class VistaHUD : MonoBehaviour
     // Botón "Entrenar Aldeano": usa el Centro Urbano propio del humano.
     public void EntrenarAldeano()
     {
+        if (!vistaMapa.Partida.PartidaEnCurso) { Debug.Log("Todavía no colocaste tu Centro Urbano."); return; }
+
         var controladorEntrenamiento = vistaMapa.Partida.ControladoresEntrenamiento[0];
         Jugador jugadorHumano = vistaMapa.Partida.ControladoresMapa[0].Jugador;
         var centroUrbano = jugadorHumano.Edificios.OfType<EdificioPrincipal>().FirstOrDefault();
@@ -48,20 +50,74 @@ public class VistaHUD : MonoBehaviour
             Debug.Log("No se pudo entrenar aldeano (¿recursos insuficientes?)");
     }
 
-    // Botón "Construir Cuartel": el humano siempre arranca en la esquina
-    // (0,0), así que se construye a un par de celdas de ahí. Cuando quieras
-    // elegir la celda con el mouse en vez de un punto fijo, esto se
-    // reemplaza por una selección con clic como la de VistaInput.
+    // Botón "Construir Cuartel": ahora el Centro Urbano del humano puede
+    // estar en cualquier lado (se eligió en la fase de colocación), así que
+    // ya no se puede asumir la esquina (0,0). Se ubica el Centro Urbano en
+    // el Mapa y se construye el cuartel en la primera celda libre cerca de
+    // él, probando un puñado de posiciones relativas típicas.
     public void ConstruirCuartel()
     {
+        if (!vistaMapa.Partida.PartidaEnCurso) { Debug.Log("Todavía no colocaste tu Centro Urbano."); return; }
+
         var controladorMapaHumano = vistaMapa.Partida.ControladoresMapa[0];
+        Jugador jugadorHumano = controladorMapaHumano.Jugador;
         string civilizacion = vistaMapa.CivilizacionHumano;
+
+        var centroUrbano = jugadorHumano.Edificios.OfType<EdificioPrincipal>().FirstOrDefault();
+        if (centroUrbano == null || !BuscarPosicionDelEdificio(centroUrbano, out int filaBase, out int columnaBase))
+        {
+            Debug.Log("No se encontró tu Centro Urbano.");
+            return;
+        }
+
+        if (!BuscarCeldaLibreCerca(filaBase, columnaBase, out int fila, out int columna))
+        {
+            Debug.Log("No hay espacio libre cerca de tu Centro Urbano para el cuartel.");
+            return;
+        }
 
         var unidadesDisponibles = UnidadesDeCivilizacion(civilizacion);
         var edificio = new EdificioEntrenamiento(civilizacion, costoOro: 150, costoMadera: 100, costoComida: 0, unidadesDisponibles);
 
-        if (!controladorMapaHumano.SolicitarConstruccion(2, 2, edificio))
+        if (!controladorMapaHumano.SolicitarConstruccion(fila, columna, edificio))
             Debug.Log("No se pudo construir (¿recursos insuficientes o celda ocupada?)");
+    }
+
+    // El Mapa no guarda la posición dentro del propio Edificio, así que
+    // para encontrarla hay que buscar la celda que lo contiene. Solo se usa
+    // al apretar el botón (no por frame), así que un recorrido de la
+    // cuadrícula no tiene costo real.
+    private bool BuscarPosicionDelEdificio(Edificio edificio, out int fila, out int columna)
+    {
+        var mapa = vistaMapa.Partida.Mapa;
+        for (int f = 0; f < Mapa.FILAS; f++)
+        {
+            for (int c = 0; c < Mapa.COLUMNAS; c++)
+            {
+                if (mapa.ObtenerCelda(f, c).Edificio == edificio) { fila = f; columna = c; return true; }
+            }
+        }
+        fila = columna = 0;
+        return false;
+    }
+
+    private bool BuscarCeldaLibreCerca(int filaBase, int columnaBase, out int fila, out int columna)
+    {
+        var mapa = vistaMapa.Partida.Mapa;
+        (int deltaFila, int deltaColumna)[] posicionesRelativas =
+        {
+            (2, 2), (2, -2), (-2, 2), (-2, -2), (0, 3), (3, 0), (0, -3), (-3, 0)
+        };
+
+        foreach (var (deltaFila, deltaColumna) in posicionesRelativas)
+        {
+            int f = filaBase + deltaFila;
+            int c = columnaBase + deltaColumna;
+            if (mapa.EsPosicionValida(f, c) && mapa.CeldaLibre(f, c)) { fila = f; columna = c; return true; }
+        }
+
+        fila = columna = 0;
+        return false;
     }
 
     // El cuartel entrena la unidad exclusiva de tu civilización más las 4
