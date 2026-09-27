@@ -1,3 +1,4 @@
+using System.Linq;
 // Recibe las solicitudes de entrenamiento (aldeanos y unidades militares),
 // valida que el edificio pertenezca al jugador, y delega al propio Edificio
 // (que ya conoce su Civilizacion y llama a GestorEntrenamiento).
@@ -5,14 +6,17 @@
 // entrenada nunca llega a jugador.Unidades.
 public class ControladorEntrenamiento
 {
+    private readonly Mapa mapa; // <-- nuevo campo
     private readonly Jugador miJugador;
     private readonly GestorEntrenamiento gestorEntrenamiento;
     private readonly ControladorIA controladorIA; // null si este jugador es el humano
+    
 
-    public ControladorEntrenamiento(Jugador miJugador, GestorEntrenamiento gestorEntrenamiento, ControladorIA controladorIA = null)
+    public ControladorEntrenamiento(Jugador miJugador, GestorEntrenamiento gestorEntrenamiento, Mapa mapa, ControladorIA controladorIA = null)
     {
         this.miJugador = miJugador;
         this.gestorEntrenamiento = gestorEntrenamiento;
+        this.mapa = mapa;
         this.controladorIA = controladorIA;
     }
 
@@ -38,15 +42,32 @@ public class ControladorEntrenamiento
         {
             if (resultado.Resultado is Aldeano aldeano)
             {
-               miJugador.AgregarAldeano(aldeano);
+                miJugador.AgregarAldeano(aldeano);
             }
             else if (resultado.Resultado is Unidad unidad)
             {
                 miJugador.Unidades.Add(unidad);
+                ColocarUnidadCercaDelCuartel(unidad);
                 controladorIA?.ObservarUnidad(unidad);
             }
         }
 
         controladorIA?.EvaluarEconomia();
+    }
+        private void ColocarUnidadCercaDelCuartel(Unidad unidad)
+    {
+        var cuartel = miJugador.Edificios.OfType<EdificioEntrenamiento>().FirstOrDefault();
+        if (cuartel == null) return;
+
+        (int deltaFila, int deltaColumna)[] posiciones = { (1, 1), (1, -1), (-1, 1), (-1, -1), (0, 2), (2, 0), (0, -2), (-2, 0) };
+        foreach (var (deltaFila, deltaColumna) in posiciones)
+        {
+            int f = cuartel.Fila + deltaFila, c = cuartel.Columna + deltaColumna;
+            if (mapa.EsPosicionValida(f, c) && mapa.CeldaLibre(f, c))
+            {
+                mapa.ColocarUnidad(f, c, unidad);
+                return;
+            }
+        }
     }
 }

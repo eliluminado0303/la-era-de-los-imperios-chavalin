@@ -21,7 +21,7 @@ public class GestorEntrenamiento
         // Solo puede haber un héroe vivo en batalla por jugador a la vez.
         if (unidad is Heroe && jugador.Unidades.Exists(u => u is Heroe && u.Vida > 0))
             return false;
-
+        if (jugador.PoblacionActual >= jugador.LimitePoblacion) return false; // sin espacio: construye una Casa
         if (!CobrarCosto(jugador, unidad.CostoOro, unidad.CostoMadera, unidad.CostoComida)) return false;
 
         _ = EntrenarAsync(unidad, 3000, cancelacion.Token);
@@ -32,7 +32,9 @@ public class GestorEntrenamiento
     public bool EntrenarAldeano(Jugador jugador, string civilizacion)
     {
         if (jugador == null) throw new ArgumentNullException(nameof(jugador));
+        if (jugador.PoblacionActual >= jugador.LimitePoblacion) return false;
         var aldeano = new Aldeano("Aldeano", civilizacion, velocidad: 4, velocidadRecoleccion: 5);
+        if (jugador.PoblacionActual >= jugador.LimitePoblacion) return false; // sin espacio: construye una Casa
         if (!CobrarCosto(jugador, aldeano.CostoOro, aldeano.CostoMadera, aldeano.CostoComida)) return false;
 
         _ = EntrenarAsync(aldeano, 2000, cancelacion.Token);
@@ -48,6 +50,7 @@ public class GestorEntrenamiento
     // El jugador valida y descuenta los tres recursos como una sola operación.
    private bool CobrarCosto(Jugador jugador, int oro, int madera, int comida)
     {
+        
         return jugador.GastarRecursos(oro, madera, comida);
     }
 

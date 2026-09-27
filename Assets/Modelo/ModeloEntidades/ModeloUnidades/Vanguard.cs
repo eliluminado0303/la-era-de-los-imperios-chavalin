@@ -14,6 +14,7 @@ public class Vanguard: Unidad
         ProbabilidadEsquivar = 0.10f;
         ProbabilidadCritico = 0.25f;
         multiplicadorCritico = 1.5f;
+        TicksAtaqueBasico = 2; 
         CostoOro = 100;
         CostoMadera = 50;
         CostoComida = 25;

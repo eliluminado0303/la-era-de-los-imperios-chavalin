@@ -20,17 +20,26 @@ public class ControladorIA
     private readonly Mapa mapa;
     private readonly Partida partida;
     private readonly GestorEntrenamiento gestorEntrenamiento;
+    private readonly (int fila, int columna) posicionBase;
+
+    // Se asigna despues de construir este ControladorIA (ver ControladorPartida),
+    // porque el ControladorMapa de este mismo jugador se crea un paso despues.
+    // Es lo que permite que la IA use las mismas dos operaciones que usa el
+    // jugador humano desde la Vista: SolicitarRecoleccion y SolicitarConstruccion.
+    public ControladorMapa MiControladorMapa { get; set; }
 
    private const int RADIO_DETECCION = 3;
     private const int UMBRAL_ENEMIGOS_PARA_HABILIDAD = 3; // desde cuántos objetivos agrupados conviene gastar la recarga
     private const int ALDEANOS_OBJETIVO = 5; // suficientes para mantener el flujo de recursos sin exagerar
+    private const int ALDEANOS_MINIMOS_ANTES_DE_CUARTEL = 2; // no gastar en Cuartel antes de tener con qué recolectar
 
-    public ControladorIA(Jugador miJugador, string civilizacion, Mapa mapa, Partida partida, GestorEntrenamiento gestorEntrenamiento)
+    public ControladorIA(Jugador miJugador, string civilizacion, Mapa mapa, Partida partida, GestorEntrenamiento gestorEntrenamiento, (int fila, int columna) posicionBase)
     {
         this.miJugador = miJugador;
         this.civilizacion = civilizacion;
         this.mapa = mapa;
         this.partida = partida;
+        this.posicionBase = posicionBase;
         this.gestorEntrenamiento = gestorEntrenamiento;
     }
 
@@ -137,6 +146,12 @@ public class ControladorIA
     // recursos de golpe en una sola evaluación.
     public void EvaluarEconomia()
     {
+        // Antes de decidir qué entrenar o construir, siempre se revisa si
+        // quedó algún Aldeano sin trabajo (recién entrenado, o porque se le
+        // agotó el recurso que estaba juntando) — si no, se entrenaban
+        // aldeanos "fantasma" que nunca recolectan nada.
+        AsignarTrabajoAldeanosLibres();
+
         var centroUrbano = miJugador.Edificios.OfType<EdificioPrincipal>().FirstOrDefault(e => e.EstaConstruido);
         var cuartel = miJugador.Edificios.OfType<EdificioEntrenamiento>().FirstOrDefault(e => e.EstaConstruido);
 
@@ -149,10 +164,97 @@ public class ControladorIA
             return;
         }
 
+        // Nadie construía el Cuartel de la IA: sin esto EvaluarEconomia
+        // nunca podía entrenar una sola unidad militar, sin importar cuántos
+        // recursos juntara.
+        if (cuartel == null && aldeanosVivos >= ALDEANOS_MINIMOS_ANTES_DE_CUARTEL)
+        {
+            ConstruirCuartel();
+            return;
+        }
+
         if (cuartel != null && cuartel.UnidadesDisponibles.Count > 0 && unidadesVivas < aldeanosVivos)
         {
             string tipo = cuartel.UnidadesDisponibles[Aleatorio.Entero(0, cuartel.UnidadesDisponibles.Count)];
             cuartel.ProducirUnidad(miJugador, gestorEntrenamiento, tipo);
         }
+    }
+
+    // Manda a recolectar a todo Aldeano que no esté ya ocupado (recién
+    // salido de entrenamiento, o libre porque el recurso que tenía
+    // asignado se agotó). Cada vez elige de nuevo el tipo de recurso más
+    // bajo entre los tres, así la economía de la IA no se desbalancea.
+    private void AsignarTrabajoAldeanosLibres()
+    {
+        if (MiControladorMapa == null) return; // todavía no se terminó de armar este jugador
+
+        foreach (var aldeano in miJugador.Aldeanos)
+        {
+            if (aldeano.Ocupado) continue;
+
+            if (BuscarRecursoParaRecolectar(out int fila, out int columna))
+                MiControladorMapa.SolicitarRecoleccion(aldeano, fila, columna);
+        }
+    }
+
+    // Prioriza el tipo de recurso del que menos stock tiene el jugador; si
+    // ya no queda ninguno de ese tipo en el mapa, junta cualquier otro para
+    // no dejar al Aldeano sin hacer nada.
+    private bool BuscarRecursoParaRecolectar(out int fila, out int columna)
+    {
+        TipoRecurso tipoPreferido = miJugador.Recursos
+            .OrderBy(kvp => kvp.Value)
+            .First().Key;
+
+        var disponibles = mapa.BuscarRecursosDisponibles();
+        if (disponibles.Count == 0) { fila = columna = 0; return false; }
+
+        var elegido = disponibles
+            .Select(pos => (pos.fila, pos.columna, tipo: mapa.ObtenerCelda(pos.fila, pos.columna).Recurso.Tipo))
+            .OrderByDescending(r => r.tipo == tipoPreferido) // el tipo preferido primero, sin descartar el resto
+            .ThenBy(r => DistanciaChebyshev(r.fila, r.columna, posicionBase.fila, posicionBase.columna))
+            .FirstOrDefault();
+
+        fila = elegido.fila;
+        columna = elegido.columna;
+        return true;
+    }
+
+    // Construye el Cuartel (EdificioEntrenamiento) de esta civilización en
+    // una celda libre cerca del Centro Urbano. Mismo costo y misma lista de
+    // unidades que usa el jugador humano desde VistaHUD.ConstruirCuartel.
+    private void ConstruirCuartel()
+    {
+        if (!BuscarCeldaLibreCerca(posicionBase.fila, posicionBase.columna, out int fila, out int columna)) return;
+
+        var unidadesDisponibles = UnidadesDeCivilizacion(civilizacion);
+        var cuartel = new EdificioEntrenamiento(civilizacion, costoOro: 150, costoMadera: 100, costoComida: 0, unidadesDisponibles);
+        MiControladorMapa.SolicitarConstruccion(fila, columna, cuartel);
+    }
+
+    private bool BuscarCeldaLibreCerca(int filaBase, int columnaBase, out int fila, out int columna)
+    {
+        (int deltaFila, int deltaColumna)[] posicionesRelativas =
+        {
+            (2, 2), (2, -2), (-2, 2), (-2, -2), (0, 3), (3, 0), (0, -3), (-3, 0)
+        };
+
+        foreach (var (deltaFila, deltaColumna) in posicionesRelativas)
+        {
+            int f = filaBase + deltaFila;
+            int c = columnaBase + deltaColumna;
+            if (mapa.EsPosicionValida(f, c) && mapa.CeldaLibre(f, c)) { fila = f; columna = c; return true; }
+        }
+
+        fila = columna = 0;
+        return false;
+    }
+
+    private static int DistanciaChebyshev(int f1, int c1, int f2, int c2)
+        => System.Math.Max(System.Math.Abs(f1 - f2), System.Math.Abs(c1 - c2));
+
+    private List<string> UnidadesDeCivilizacion(string civilizacion)
+    {
+        return FabricaUnidades.ObtenerTiposDisponibles(civilizacion, incluirHeroe: false);
     }
 }

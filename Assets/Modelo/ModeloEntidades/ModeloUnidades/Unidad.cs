@@ -17,6 +17,8 @@ public class Unidad
     protected float ProbabilidadEsquivar;
     protected float ProbabilidadCritico;
     protected float multiplicadorCritico;
+    public int Fila { get; set; } = -1;
+    public int Columna { get; set; } = -1;
     // En Unidad, junto a los demás campos:
     // Costes necesarios para producir esta unidad.
     public int CostoOro { get; protected set; }
@@ -32,6 +34,31 @@ public class Unidad
     protected virtual bool EsCritico() => Aleatorio.Valor() < ProbabilidadCritico;
 
     public void ModificarProbabilidadCritico(float delta) => ProbabilidadCritico += delta;
+        // Cantidad de "golpes" visuales que debería mostrar la animación de
+    // ataque básico — la mayoría de las unidades solo necesita 1, pero
+    // algunas tienen combos de varios golpes en su sprite sheet (Gilgamesh,
+    // Medusa, Assassin, Vanguard). El daño total sigue siendo el mismo
+    // (Ataque); esto es solo metadata para que la Vista sepa cuántas veces
+    // reproducir el "impacto" durante la animación.
+    public int TicksAtaqueBasico { get; protected set; } = 1;
+
+    // Igual, pero para la habilidad especial (Gilgamesh, Medusa, Godzilla
+    // tienen distinto número de golpes en su combo especial).
+    public int TicksHabilidadEspecial { get; protected set; } = 1;
+
+    // Se dispara cuando la unidad completa un ataque básico (yo, cuántos
+    // ticks debe mostrar la animación) — la Vista lo usa para saber cuándo
+    // y con cuántos "impactos" reproducir la animación de ataque.
+    public event Action<Unidad, int> RealizoAtaque;
+
+    // Igual que RealizoAtaque, pero para la habilidad especial.
+    public event Action<Unidad, int> RealizoHabilidadEspecial;
+
+    // Público a propósito (como NotificarAtaqueRecibido): quien ejecuta el
+    // ataque/habilidad (Partida) avisa cuando ya terminó, para que la Vista
+    // dispare la animación correspondiente.
+    public void NotificarAtaqueRealizado() => RealizoAtaque?.Invoke(this, TicksAtaqueBasico);
+    public void NotificarHabilidadEspecialRealizada() => RealizoHabilidadEspecial?.Invoke(this, TicksHabilidadEspecial);
 
     // Calcula si la unidad esquiva y aplica el daño recibido.
     protected virtual void RecibirDaño(float daño, bool ignorarDefensa = false)
@@ -76,6 +103,7 @@ public class Unidad
         objetivo.NotificarAtaqueRecibido(this);
         objetivo.RecibirDaño(daño);
         AplicarEfectoAlGolpear(objetivo);
+        NotificarAtaqueRealizado();   
     }
 
     // Ejecuta el ataque básico contra todos los objetivos recibidos.
@@ -101,6 +129,7 @@ public class Unidad
         float daño = Ataque;
         if (EsCritico()) daño *= multiplicadorCritico;
         objetivo.RecibirDaño(daño);
+        NotificarAtaqueRealizado();  
     }
 
     protected virtual void AplicarEfectoAlGolpear(Unidad objetivo) { }

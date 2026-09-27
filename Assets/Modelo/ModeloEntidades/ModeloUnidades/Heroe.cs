@@ -33,10 +33,12 @@ public class Gilgamesh : Heroe
         ProbabilidadEsquivar = 0f; 
         ProbabilidadCritico = 0.35f; 
         multiplicadorCritico = 2f;
+        TicksAtaqueBasico = 5;
+        TicksHabilidadEspecial = 2;
         CostoOro = 100;
         CostoMadera = 50;
         CostoComida = 25;
-        AreaHabilidad = new AreaEfecto(FormaArea.Circulo, rangoLanzamiento: 3f, tamaño: 3.5f);
+        AreaHabilidad = new AreaEfecto(FormaArea.Linea, rangoLanzamiento: 0f, tamaño: 8f, ancho: 1.5f);
     }
 
     // Enuma Elish: área que IGNORA defensa
@@ -63,6 +65,7 @@ public class Godzilla : Heroe
         ProbabilidadEsquivar = 0.30f; 
         ProbabilidadCritico = 0.30f; 
         multiplicadorCritico = 2.5f;
+        TicksHabilidadEspecial = 3;
         CostoOro = 100;
         CostoMadera = 50;
         CostoComida = 25;

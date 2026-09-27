@@ -45,11 +45,19 @@ public class ControladorPartida
     // revelados, solo que fuera de cámara.
     public (int fila, int columna) PosicionBaseHumana { get; private set; }
 
+    // Misma posición que arriba pero para las 4 civilizaciones, en el mismo
+    // orden que colocacionEnOrden (índice 0 = humano). La usa el bucle de
+    // más abajo para decirle a cada ControladorIA dónde está su propio
+    // Centro Urbano (así puede elegir recursos cercanos y un lugar para el
+    // Cuartel sin tener que barrer todo el mapa buscándose a sí misma).
+    private List<(int fila, int columna)> esquinasColocadas;
+
     // Índice 0 = jugador humano; 1..3 = las 3 IA, en el mismo orden en que
     // se resolvieron las civilizaciones.
     public List<ControladorMapa> ControladoresMapa { get; } = new List<ControladorMapa>();
     public List<ControladorCombate> ControladoresCombate { get; } = new List<ControladorCombate>();
     public List<ControladorEntrenamiento> ControladoresEntrenamiento { get; } = new List<ControladorEntrenamiento>();
+    public List<ControladorEdificiosEspeciales> ControladoresEdificiosEspeciales { get; } = new List<ControladorEdificiosEspeciales>();
 
     public ControladorPartida(string nombreJugadorHumano, string civilizacionHumano)
     {
@@ -75,7 +83,8 @@ public class ControladorPartida
         var gestorEntrenamientoHumano = new GestorEntrenamiento();
         ControladoresMapa.Add(new ControladorMapa(jugadorHumano, Mapa, Partida));
         ControladoresCombate.Add(new ControladorCombate(jugadorHumano, Mapa, Partida));
-        ControladoresEntrenamiento.Add(new ControladorEntrenamiento(jugadorHumano, gestorEntrenamientoHumano));
+        ControladoresEntrenamiento.Add(new ControladorEntrenamiento(jugadorHumano, gestorEntrenamientoHumano,Mapa));
+        ControladoresEdificiosEspeciales.Add(new ControladorEdificiosEspeciales(jugadorHumano, Mapa));
 
         for (int i = 0; i < jugadoresIA.Count; i++)
         {
@@ -83,11 +92,19 @@ public class ControladorPartida
             var civilizacionIA = civilizacionesIA[i];
             var gestorEntrenamientoIA = new GestorEntrenamiento();
 
-            var controladorIA = new ControladorIA(jugadorIA, civilizacionIA, Mapa, Partida, gestorEntrenamientoIA);
+            // esquinas[i + 1] porque esquinas[0] ya se usó para el humano
+            // (ver ColocarBasesYRecursos) — el mismo orden en que se colocó
+            // cada Centro Urbano es el orden de colocacionEnOrden.
+            var posicionBaseIA = esquinasColocadas[i + 1];
+            var controladorIA = new ControladorIA(jugadorIA, civilizacionIA, Mapa, Partida, gestorEntrenamientoIA, posicionBaseIA);
 
-            ControladoresMapa.Add(new ControladorMapa(jugadorIA, Mapa, Partida, controladorIA));
+            var controladorMapaIA = new ControladorMapa(jugadorIA, Mapa, Partida, controladorIA);
+            controladorIA.MiControladorMapa = controladorMapaIA; // recién ahora existe: se lo damos a la IA para que pueda recolectar/construir
+
+            ControladoresMapa.Add(controladorMapaIA);
             ControladoresCombate.Add(new ControladorCombate(jugadorIA, Mapa, Partida));
-            ControladoresEntrenamiento.Add(new ControladorEntrenamiento(jugadorIA, gestorEntrenamientoIA, controladorIA));
+            ControladoresEntrenamiento.Add(new ControladorEntrenamiento(jugadorIA, gestorEntrenamientoIA,Mapa, controladorIA));
+            ControladoresEdificiosEspeciales.Add(new ControladorEdificiosEspeciales(jugadorIA, Mapa));
         }
     }
 
@@ -99,11 +116,13 @@ public class ControladorPartida
     {
         var esquinas = ObtenerEsquinas();
         var posicionesOcupadas = new List<(int fila, int columna)>();
+        esquinasColocadas = new List<(int fila, int columna)>();
 
         for (int i = 0; i < colocacionEnOrden.Count && i < esquinas.Length; i++)
         {
             var (fila, columna) = esquinas[i];
             ColocarCentroEn(fila, columna, colocacionEnOrden[i], posicionesOcupadas);
+            esquinasColocadas.Add((fila, columna));
             if (i == 0) PosicionBaseHumana = (fila, columna); // índice 0 siempre es el humano
         }
 
@@ -137,37 +156,20 @@ public class ControladorPartida
         };
     }
 
-    // Reserva inicial que se le da a CADA jugador (humano y las 3 IA por
-    // igual) apenas se coloca su Centro Urbano. Sin esto el juego no tiene
-    // forma de arrancar: los recursos del mapa son solo vetas/bosques que
-    // hace falta un aldeano para recolectar, pero el primer aldeano cuesta
-    // 25 oro + 30 comida y arrancabas con 0 de todo — nadie podía pagar ni
-    // el primer aldeano. Esto alcanza para varios aldeanos de arranque y
-    // deja algo de colchón para el primer Cuartel (150 oro / 100 madera)
-    // mientras juntás más del mapa.
-    private const int ORO_INICIAL = 150;
-    private const int MADERA_INICIAL = 150;
-    private const int COMIDA_INICIAL = 150;
-
     private void ColocarCentroEn(int fila, int columna, (Jugador jugador, string civilizacion) datos, List<(int fila, int columna)> posicionesOcupadas)
     {
         var (jugador, civilizacion) = datos;
         var centro = new EdificioPrincipal(civilizacion, costoOro: 0, costoMadera: 0, costoComida: 0);
-        // Los edificios nacen "en construcción" (EstaConstruido = false) y
-        // ProducirAldeano() se niega a producir nada hasta que eso cambie —
-        // normalmente lo hace GestorDeConstruccion cuando termina de
-        // construirse un edificio a mitad de partida. El Centro Urbano
-        // inicial nunca pasa por ese camino, así que sin esta línea quedaba
-        // "construyéndose" para siempre y jamás podía entrenar un aldeano,
-        // por más oro que tuvieras.
+        // Este Centro Urbano es el de arranque, no uno construido por un
+        // Aldeano durante la partida: si se deja con ProgresoConstruccion
+        // en 0, EstaConstruido nunca llega a true y ProducirAldeano() falla
+        // siempre (no hay forma de completar la construccion sin un
+        // Aldeano, y no hay forma de obtener un Aldeano sin el Centro ya
+        // construido). Por eso se marca completo de una vez.
         centro.AvanzarConstruccion(100);
         Mapa.ColocarEdificio(fila, columna, centro);
         jugador.AgregarEdificio(centro);
         posicionesOcupadas.Add((fila, columna));
-
-        jugador.AgregarRecurso(TipoRecurso.Oro, ORO_INICIAL);
-        jugador.AgregarRecurso(TipoRecurso.Madera, MADERA_INICIAL);
-        jugador.AgregarRecurso(TipoRecurso.Comida, COMIDA_INICIAL);
     }
 
     private void GenerarRecursosCercaDe(int filaBase, int columnaBase, int centroFila, int centroColumna)
@@ -243,10 +245,13 @@ public class ControladorPartida
         return valor;
     }
 
-    public bool Actualizar()
+    // Llamar una vez por frame con Time.deltaTime (lo necesita
+    // ControladorEdificiosEspeciales para el cooldown de la Torre/Granja).
+    public bool Actualizar(float deltaTime)
     {
         foreach (var controladorMapa in ControladoresMapa) controladorMapa.ActualizarResultados();
         foreach (var controladorEntrenamiento in ControladoresEntrenamiento) controladorEntrenamiento.ActualizarResultados();
+        foreach (var controladorEspecial in ControladoresEdificiosEspeciales) controladorEspecial.Actualizar(deltaTime);
 
         return ControladoresMapa[0].VerificarFinDePartida();
     }

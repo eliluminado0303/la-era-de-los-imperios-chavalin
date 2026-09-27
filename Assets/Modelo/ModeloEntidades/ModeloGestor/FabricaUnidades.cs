@@ -1,8 +1,45 @@
 using System;
+using System.Collections.Generic;
 
 // Crea unidades a partir de su tipo y civilización.
 public static class FabricaUnidades
 {
+    public static List<string> ObtenerTiposDisponibles(string civilizacion, bool incluirHeroe = true)
+    {
+        string exclusiva;
+        string heroe;
+
+        switch (civilizacion)
+        {
+            case "Nipones":
+                exclusiva = "Assassin";
+                heroe = "Godzilla";
+                break;
+            case "Griegos":
+                exclusiva = "Avenger";
+                heroe = "Medusa";
+                break;
+            case "Vikingos":
+                exclusiva = "Berserker";
+                heroe = "Jormungandr";
+                break;
+            case "Sumerios":
+                exclusiva = "Caster";
+                heroe = "Gilgamesh";
+                break;
+            default:
+                throw new ArgumentException($"Civilización desconocida: {civilizacion}");
+        }
+
+        var tipos = new List<string> { exclusiva };
+        if (incluirHeroe) tipos.Add(heroe);
+        tipos.Add("Defender");
+        tipos.Add("Vanguard");
+        tipos.Add("Ranger");
+        tipos.Add("Healer");
+        return tipos;
+    }
+
     // Crea una unidad válida para la civilización indicada.
     // Lanza una excepción si el tipo no existe o no pertenece a la civilización.
     public static Unidad Crear(string tipoUnidad, string civilizacion)

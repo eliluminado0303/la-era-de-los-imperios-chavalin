@@ -15,8 +15,37 @@ public class VistaInput : MonoBehaviour
     void Update()
     {
         if (vistaMapa == null) return;
-        if (!Input.GetMouseButtonDown(0)) return;
         if (vistaMapa.Partida == null) return;
+
+        // Click derecho: cancela una construcción pendiente sin gastar el
+        // click en otra cosa (mover unidad, atacar, etc.).
+        if (Input.GetMouseButtonDown(1) && vistaMapa.EdificioPendienteDeColocar != null)
+        {
+            vistaMapa.EdificioPendienteDeColocar = null;
+            Debug.Log("Construcción cancelada.");
+            return;
+        }
+        // Tecla E: si tienes un héroe seleccionado y su habilidad está
+        // lista, entra en "modo puntería" — el próximo clic decide el
+        // punto donde se lanza la habilidad, en vez de mover/atacar normal.
+        if (Input.GetKeyDown(KeyCode.E) && vistaMapa.FilaSeleccionada != null)
+        {
+            Celda celdaSeleccionada = vistaMapa.Partida.Mapa.ObtenerCelda(vistaMapa.FilaSeleccionada.Value, vistaMapa.ColumnaSeleccionada.Value);
+            if (celdaSeleccionada?.Unidad is Heroe heroeSeleccionado)
+            {
+                if (heroeSeleccionado.PuedeUsarHabilidad())
+                {
+                    vistaMapa.ModoHabilidadEspecial = true;
+                    Debug.Log("Modo habilidad especial: hacé click en el punto donde quieres lanzarla.");
+                }
+                else
+                {
+                    Debug.Log($"Habilidad en recarga: faltan {heroeSeleccionado.TiempoRestanteRecarga():0.0}s.");
+                }
+            }
+        }
+
+        if (!Input.GetMouseButtonDown(0)) return;
 
         Vector3 mundo = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mundo.z = 0;
@@ -27,6 +56,57 @@ public class VistaInput : MonoBehaviour
         Jugador jugadorHumano = controladorMapaHumano.Jugador;
         Celda celda = vistaMapa.Partida.Mapa.ObtenerCelda(fila, columna);
 
+        // Si hay un edificio esperando ubicación (el jugador clickeó
+        // "Construir Cuartel" u otro botón similar en el HUD), este click
+        // decide DÓNDE se coloca. Corta acá: no participa de la selección
+        // de unidades ni de aldeanos mientras haya una construcción pendiente.
+        if (vistaMapa.EdificioPendienteDeColocar != null)
+        {
+            var edificio = vistaMapa.EdificioPendienteDeColocar;
+
+            if (!vistaMapa.EstaExplorada(fila, columna))
+            {
+                Debug.Log("No se puede construir en una zona todavía no explorada.");
+                return;
+            }
+
+            bool colocado = controladorMapaHumano.SolicitarConstruccion(fila, columna, edificio);
+            Debug.Log(colocado
+                ? $"{edificio.Nombre} en construcción en ({fila},{columna})."
+                : "No se pudo construir ahí (celda ocupada, agua, o recursos insuficientes).");
+            if (colocado) vistaMapa.EdificioPendienteDeColocar = null;
+            return;
+        }
+                // Si estás en modo habilidad especial, este click decide el punto
+        // de lanzamiento — corta acá, no sigue con selección normal.
+        if (vistaMapa.ModoHabilidadEspecial && vistaMapa.FilaSeleccionada != null)
+        {
+            int filaHeroe = vistaMapa.FilaSeleccionada.Value;
+            int columnaHeroe = vistaMapa.ColumnaSeleccionada.Value;
+            bool lanzado = controladorCombateHumano.SolicitarHabilidadEspecial(filaHeroe, columnaHeroe, fila, columna);
+
+            if (lanzado)
+            {
+                Celda celdaHeroe = vistaMapa.Partida.Mapa.ObtenerCelda(filaHeroe, columnaHeroe);
+                if (celdaHeroe?.Unidad is Heroe heroeQueLanzo && heroeQueLanzo.AreaHabilidad.Forma == FormaArea.Linea)
+                {
+                    Vector3 origen = new Vector3(columnaHeroe * vistaMapa.tamañoCelda, -filaHeroe * vistaMapa.tamañoCelda, 0);
+                    Vector3 destino = new Vector3(columna * vistaMapa.tamañoCelda, -fila * vistaMapa.tamañoCelda, 0);
+                    EfectoRayo.Crear(origen, (destino - origen).normalized, heroeQueLanzo.AreaHabilidad.Tamaño, heroeQueLanzo.AreaHabilidad.Ancho, new Color(1f, 0.85f, 0.2f));
+                }
+                Debug.Log("¡Habilidad especial lanzada!");
+            }
+            else
+            {
+                Debug.Log("No se pudo lanzar (fuera de rango, o sin objetivos válidos ahí).");
+            }
+
+            vistaMapa.ModoHabilidadEspecial = false;
+            vistaMapa.FilaSeleccionada = null;
+            vistaMapa.ColumnaSeleccionada = null;
+            return;
+        }
+
         // Si hay un aldeano elegido desde la lista del HUD, este click decide
         // a qué recurso lo mandamos — corta acá y no sigue con la selección
         // normal de unidades militares (los Aldeanos no son Unidad, no
@@ -35,9 +115,9 @@ public class VistaInput : MonoBehaviour
         {
             if (celda?.Recurso != null && !celda.Recurso.EstaAgotado())
             {
-                vistaMapa.AsignarRecoleccionPermanente(vistaMapa.AldeanoSeleccionado, fila, columna);
-                Debug.Log($"{vistaMapa.AldeanoSeleccionado.Nombre} asignado a recolectar de forma continua.");
-                vistaMapa.AldeanoSeleccionado = null;
+                bool enviado = controladorMapaHumano.SolicitarRecoleccion(vistaMapa.AldeanoSeleccionado, fila, columna);
+                Debug.Log(enviado ? $"{vistaMapa.AldeanoSeleccionado.Nombre} va a recolectar." : "No se pudo enviar al aldeano (¿ya está ocupado?).");
+                if (enviado) vistaMapa.AldeanoSeleccionado = null;
             }
             else
             {
@@ -67,10 +147,37 @@ public class VistaInput : MonoBehaviour
             return;
         }
 
+               Celda celdaOrigen = vistaMapa.Partida.Mapa.ObtenerCelda(fOrigen, cOrigen);
+        Unidad unidadOrigen = celdaOrigen?.Unidad;
+
         bool accionValida;
-        if (celda?.Unidad != null || celda?.Edificio != null)
+
+        // Healer + clic en un aliado propio = curar, no atacar.
+        if (unidadOrigen is Healer && celda?.Unidad != null && jugadorHumano.Unidades.Contains(celda.Unidad))
+        {
+            accionValida = controladorCombateHumano.SolicitarCuracion(fOrigen, cOrigen, fila, columna, buff: false);
+            if (accionValida)
+            {
+                Vector3 posicionDestino = new Vector3(columna * vistaMapa.tamañoCelda, -fila * vistaMapa.tamañoCelda, 0);
+                EfectoCuracion.Crear(posicionDestino, new Color(0.3f, 1f, 0.4f)); // verde
+            }
+            else
+            {
+                Debug.Log("No se pudo curar (¿fuera de rango del Healer?).");
+            }
+        }
+        else if (celda?.Unidad != null || celda?.Edificio != null)
         {
             accionValida = controladorCombateHumano.SolicitarAtaque(fOrigen, cOrigen, fila, columna);
+
+            // Si quien atacó es un Ranger (Rango > 1, cualquier unidad a
+            // distancia en general), dispara la flecha visual.
+            if (accionValida && unidadOrigen != null && unidadOrigen.Rango > 1)
+            {
+                Vector3 posicionOrigen = new Vector3(cOrigen * vistaMapa.tamañoCelda, -fOrigen * vistaMapa.tamañoCelda, 0);
+                Vector3 posicionDestino = new Vector3(columna * vistaMapa.tamañoCelda, -fila * vistaMapa.tamañoCelda, 0);
+                Proyectil.Disparar(posicionOrigen, posicionDestino, vistaMapa.spriteFlecha);
+            }
         }
         else
         {
@@ -78,6 +185,12 @@ public class VistaInput : MonoBehaviour
             accionValida = true;
         }
 
+        // SIN ESTO, FilaSeleccionada/ColumnaSeleccionada se quedan apuntando
+        // para siempre a la celda de ORIGEN de la última orden: el próximo
+        // click ya no entra en "elegir unidad" (más abajo), sino que asume
+        // que sigue habiendo una selección activa y trata cualquier click
+        // futuro como si fuera el destino de esa selección vieja. Por eso
+        // una unidad "solo se podía seleccionar una vez".
         if (!accionValida) Debug.Log("Acción no válida (fuera de rango, objetivo aliado, celda vacía sin nada que atacar, etc.)");
 
         vistaMapa.FilaSeleccionada = null;

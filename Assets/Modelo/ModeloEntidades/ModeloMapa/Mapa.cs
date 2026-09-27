@@ -131,8 +131,10 @@ public class Mapa
         {
             Celda celda = celdas[fila, columna];
             if (celda.Terreno != TipoTerreno.Tierra) return false; // no se construye sobre el agua
-            if (celda.Recurso != null || celda.Edificio != null) return false;
+            if ((celda.Recurso != null && !celda.Recurso.EstaAgotado()) || celda.Edificio != null) return false;
             celda.Edificio = edificio;
+            edificio.Fila = fila;
+            edificio.Columna = columna;
             return true;
         }
     }
@@ -145,6 +147,19 @@ public class Mapa
             Celda celda = celdas[fila, columna];
             if (celda.Edificio == null) return false;
             celda.Edificio = null;
+            return true;
+        }
+    }
+        public bool ColocarUnidad(int fila, int columna, Unidad unidad)
+    {
+        if (!EsPosicionValida(fila, columna)) return false;
+        lock (candado)
+        {
+            Celda celda = celdas[fila, columna];
+            if (celda.Unidad != null || celda.Edificio != null) return false;
+            celda.Unidad = unidad;
+            unidad.Fila = fila;
+            unidad.Columna = columna;
             return true;
         }
     }

@@ -18,6 +18,7 @@ public class Assassin : Unidad
         ProbabilidadEsquivar = 0.30f; 
         ProbabilidadCritico = 0.20f; 
         multiplicadorCritico = 2.2f;
+        TicksAtaqueBasico = 2;
         CostoOro = 100;
         CostoMadera = 50;
         CostoComida = 25;

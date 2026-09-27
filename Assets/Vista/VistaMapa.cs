@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
+
 // Crea la partida (Modelo + Controlador) al empezar — las 4 bases quedan
 // colocadas automáticamente en las esquinas dentro del constructor de
 // ControladorPartida, así que acá no hay fase de colocación manual — y
@@ -48,15 +48,58 @@ public class VistaMapa : MonoBehaviour
     public Sprite[] spritesRecursoMadera;   // ej: Trees (varias variantes)
     public Sprite[] spritesRecursoComida;   // ej: Meat Resource / Sheep
 
-    [Header("Edificios y unidades")]
-    public Sprite spriteEdificioPrincipal;
-    public Sprite spriteEdificioEntrenamiento;
-    public Sprite spriteUnidadGenerica;
-    public Sprite spriteAldeano;
+    [System.Serializable]
+    public class VisualEdificio
+    {
+        [Tooltip("Nombre exacto de la clase del edificio: EdificioPrincipal, EdificioEntrenamiento, TorreDefensa, Casa, Granja o Muro.")]
+        public string tipoEdificio;
+        public Sprite sprite;
+    }
+
+    [Header("Sprites de edificios")]
+    public VisualEdificio[] edificios = new VisualEdificio[0];
+
+    [Header("Unidades")]
     public float tamañoCelda = 1f;
+
+    [System.Serializable]
+    public class AnimacionAdicional
+    {
+        [Tooltip("Nombre para identificar esta animación adicional, por ejemplo Especial, Herida o Ataque 2.")]
+        public string nombre;
+        public RuntimeAnimatorController animator;
+    }
+
+    [System.Serializable]
+    public class ConjuntoAnimacion
+    {
+        [Tooltip("Nombre exacto de la clase C#: Aldeano, Assassin, Avenger, Berserker, Caster, Defender, Gilgamesh, Godzilla, Healer, Jormungandr, Medusa, NecoArc, Ranger o Vanguard.")]
+        public string tipoUnidad;
+        [Tooltip("Sprite propio de esta unidad; se usa si no tiene un Animator asignado.")]
+        public Sprite sprite;
+        public RuntimeAnimatorController idle;
+        public RuntimeAnimatorController caminar;
+        public RuntimeAnimatorController atacar;
+        public RuntimeAnimatorController habilidadEspecial;
+        public RuntimeAnimatorController morir;
+        [Tooltip("Asigna aquí otras animaciones/controller del personaje, como habilidades, ataques alternativos o caminar en otras direcciones.")]
+        public AnimacionAdicional[] animacionesAdicionales;
+    }
+
+    [Header("Animator por unidad (usa los controllers de New Folder)")]
+    public ConjuntoAnimacion[] conjuntosDeAnimacion;
+    [Tooltip("Cuánto se mantiene la animación de Caminar después de detectar que la unidad cambió de celda.")]
+    public float duracionCaminar = 0.35f;
+    [Tooltip("Cuánto dura la animación de Atacar antes de volver a Idle.")]
+    public float duracionAtacar = 0.5f;
+    [Tooltip("Cuánto dura la animación del Animator asignada a la habilidad especial.")]
+    public float duracionHabilidadEspecial = 0.8f;
+    [Tooltip("Velocidad del apagado gradual al morir.")]
+    public float velocidadFadeMuerte = 2f;
 
     [Header("Decoración estética (sin efecto en el juego — arbustos, piedras sueltas, etc.)")]
     public Sprite[] spritesDecoracion;
+    public Sprite spriteFlecha;
     [Range(0f, 0.3f)] public float densidadDecoracion = 0.04f;
 
     [Header("Niebla de guerra (solo afecta lo que VE el jugador humano)")]
@@ -74,6 +117,25 @@ public class VistaMapa : MonoBehaviour
     private SpriteRenderer[,] contenidos;
     private SpriteRenderer[,] niebla;
     private bool[,] explorado;
+
+    // Estado de animación por unidad (no por celda: cuando una unidad se
+    // mueve de celda A a B, sigue siendo la MISMA unidad, y acá es donde
+    // vive su "recuerdo" de en qué animación está — la grilla de
+    // SpriteRenderers se reutiliza por posición, así que el estado no puede
+    // vivir ahí).
+    private class EstadoAnimacionUnidad
+    {
+        public int filaAnterior = int.MinValue, columnaAnterior = int.MinValue;
+        public float tiempoRestanteCaminar;
+        public float tiempoRestanteAtacar;
+        public float tiempoRestanteHabilidadEspecial;
+        public float alphaMuerte = 1f;
+        public bool ataquePendiente;
+        public bool habilidadEspecialPendiente;
+    }
+    private readonly Dictionary<Unidad, EstadoAnimacionUnidad> estadosDeAnimacion = new Dictionary<Unidad, EstadoAnimacionUnidad>();
+    private readonly Dictionary<SpriteRenderer, Animator> animadoresPorContenido = new Dictionary<SpriteRenderer, Animator>();
+    private readonly HashSet<string> advertenciasVisualesFaltantes = new HashSet<string>();
 
     void Start()
     {
@@ -108,22 +170,24 @@ public class VistaMapa : MonoBehaviour
     // solo cambia X/Y) para que arranque centrada justo en tu base.
     private void CentrarCamaraEnBaseHumana()
     {
-        var camara = Camera.main;
-        if (camara == null) return;
+    var camara = Camera.main;
+    if (camara == null) return;
 
-        var (fila, columna) = Partida.PosicionBaseHumana;
-        Vector3 posicionBase = new Vector3(columna * tamañoCelda, -fila * tamañoCelda, 0);
-        camara.transform.position = new Vector3(posicionBase.x, posicionBase.y, camara.transform.position.z);
+    var (fila, columna) = Partida.PosicionBaseHumana;
+    Vector3 posicionBase = new Vector3(columna * tamañoCelda, -fila * tamañoCelda, 0);
+    camara.transform.position = new Vector3(posicionBase.x, posicionBase.y, camara.transform.position.z);
+    camara.orthographicSize = 9f; // ajustá a gusto — VistaCamara ya deja hacer zoom in/out desde acá con la rueda
     }
 
     void Update()
     {
         if (Partida == null) return; // todavía no se eligió civilización
 
-        bool termino = Partida.Actualizar();
-        RedibujarTodo(); // simple a propósito: redibujar todo el tablero cada frame es  barato comparado con el costo real del juego.
-        ColocarAldeanosNuevos(); 
-        ActualizarOrdenesDeRecoleccion(); // <-- nueva línea
+        bool termino = Partida.Actualizar(Time.deltaTime);
+        RedibujarTodo(); // simple a propósito: redibujar todo el tablero cada frame es
+                          // barato comparado con el costo real del juego. Si en algún
+                          // momento se siente lento, se optimiza a "solo redibujar lo
+                          // que cambió" usando los eventos de Unidad.Muerte/Edificio.FueAtacado.
         if (termino)
         {
             Debug.Log($"Partida terminada. Ganador: {(Partida.Partida.Ganador != null ? Partida.Partida.Ganador.Nombre : "nadie")}");
@@ -291,6 +355,8 @@ public class VistaMapa : MonoBehaviour
     {
         var fondoSR = fondos[fila, columna];
         var contenidoSR = contenidos[fila, columna];
+        if (celda.Unidad == null)
+            DesactivarAnimador(contenidoSR);
 
         // El sprite del fondo ya quedó fijo desde ConstruirCuadricula; acá
         // solo se restaura su color de reposo y, si corresponde, se aplica
@@ -305,19 +371,12 @@ public class VistaMapa : MonoBehaviour
         if (celda.Unidad != null)
         {
             contenidoSR.enabled = true;
-            contenidoSR.sprite = spriteUnidadGenerica;
-            contenidoSR.color = ColorDeCivilizacion(celda.Unidad.Civilizacion);
-        }
-        else if (celda.Aldeano != null)
-        {
-            contenidoSR.enabled = true;
-            contenidoSR.sprite = spriteAldeano != null ? spriteAldeano : spriteUnidadGenerica;
-            contenidoSR.color = ColorDeCivilizacion(celda.Aldeano.Civilizacion);
+            DibujarUnidadAnimada(contenidoSR, celda.Unidad, fila, columna);
         }
         else if (celda.Edificio != null)
         {
-            contenidoSR.enabled = true;
-            contenidoSR.sprite = celda.Edificio is EdificioPrincipal ? spriteEdificioPrincipal : spriteEdificioEntrenamiento;
+            contenidoSR.sprite = ObtenerSpriteEdificio(celda.Edificio);
+            contenidoSR.enabled = contenidoSR.sprite != null;
             contenidoSR.color = ColorDeCivilizacion(celda.Edificio.Civilizacion);
         }
         else if (celda.Recurso != null && !celda.Recurso.EstaAgotado())
@@ -333,44 +392,6 @@ public class VistaMapa : MonoBehaviour
         {
             contenidoSR.enabled = false;
         }
-    }
-        // Cualquier aldeano recién entrenado llega con Fila=-1 (todavía no
-    // tiene posición) — lo busca y le asigna un lugar cerca de tu Centro
-    // Urbano, una sola vez.
-    private void ColocarAldeanosNuevos()
-    {
-        Jugador jugadorHumano = Partida.ControladoresMapa[0].Jugador;
-        var centroUrbano = jugadorHumano.Edificios.OfType<EdificioPrincipal>().FirstOrDefault();
-        if (centroUrbano == null) return;
-        if (!BuscarPosicionDeEdificio(centroUrbano, out int filaBase, out int columnaBase)) return;
-
-        foreach (var aldeano in jugadorHumano.Aldeanos)
-        {
-            if (aldeano.Fila >= 0) continue; // ya tiene posición
-            if (BuscarCeldaLibreCerca(filaBase, columnaBase, out int fila, out int columna))
-                Partida.Mapa.ColocarAldeano(fila, columna, aldeano);
-        }
-    }
-
-    private bool BuscarPosicionDeEdificio(Edificio edificio, out int fila, out int columna)
-    {
-        for (int f = 0; f < Mapa.FILAS; f++)
-            for (int c = 0; c < Mapa.COLUMNAS; c++)
-                if (Partida.Mapa.ObtenerCelda(f, c).Edificio == edificio) { fila = f; columna = c; return true; }
-        fila = columna = 0;
-        return false;
-    }
-
-    private bool BuscarCeldaLibreCerca(int filaBase, int columnaBase, out int fila, out int columna)
-    {
-        (int deltaFila, int deltaColumna)[] posiciones = { (1, 1), (1, -1), (-1, 1), (-1, -1), (0, 2), (2, 0), (0, -2), (-2, 0) };
-        foreach (var (deltaFila, deltaColumna) in posiciones)
-        {
-            int f = filaBase + deltaFila, c = columnaBase + deltaColumna;
-            if (Partida.Mapa.EsPosicionValida(f, c) && Partida.Mapa.CeldaLibre(f, c)) { fila = f; columna = c; return true; }
-        }
-        fila = columna = 0;
-        return false;
     }
 
     // ---------------------------------------------------------------
@@ -506,6 +527,172 @@ public class VistaMapa : MonoBehaviour
         }
     }
 
+    // ---------------------------------------------------------------
+    // Los controladores tienen una animación cada uno; la vista cambia el
+    // controller del Animator según el movimiento o ataque de la unidad.
+    // ---------------------------------------------------------------
+
+    private void DibujarUnidadAnimada(SpriteRenderer contenidoSR, Unidad unidad, int fila, int columna)
+    {
+        if (!estadosDeAnimacion.TryGetValue(unidad, out var estado))
+        {
+            estado = new EstadoAnimacionUnidad { filaAnterior = fila, columnaAnterior = columna };
+            estadosDeAnimacion[unidad] = estado;
+            unidad.RealizoAtaque += AlRealizarAtaque;
+            unidad.RealizoHabilidadEspecial += AlRealizarHabilidadEspecial;
+        }
+
+        // ¿Cambió de celda desde el frame anterior? Dispara Caminar.
+        if (estado.filaAnterior != fila || estado.columnaAnterior != columna)
+        {
+            estado.tiempoRestanteCaminar = duracionCaminar;
+            estado.filaAnterior = fila;
+            estado.columnaAnterior = columna;
+        }
+
+        // El Modelo notifica el ataque mediante el evento RealizoAtaque.
+        // La vista solo consume la notificación para iniciar su animación.
+        if (estado.ataquePendiente)
+        {
+            estado.tiempoRestanteAtacar = duracionAtacar;
+            estado.ataquePendiente = false;
+        }
+        if (estado.habilidadEspecialPendiente)
+        {
+            estado.tiempoRestanteHabilidadEspecial = duracionHabilidadEspecial;
+            estado.habilidadEspecialPendiente = false;
+        }
+
+        string estadoActual = estado.tiempoRestanteHabilidadEspecial > 0 ? "HabilidadEspecial"
+                             : estado.tiempoRestanteAtacar > 0 ? "Atacar"
+                             : estado.tiempoRestanteCaminar > 0 ? "Caminar"
+                             : "Idle";
+
+        estado.tiempoRestanteCaminar = Mathf.Max(0, estado.tiempoRestanteCaminar - Time.deltaTime);
+        estado.tiempoRestanteAtacar = Mathf.Max(0, estado.tiempoRestanteAtacar - Time.deltaTime);
+        estado.tiempoRestanteHabilidadEspecial = Mathf.Max(0, estado.tiempoRestanteHabilidadEspecial - Time.deltaTime);
+
+        string tipoUnidad = unidad.GetType().Name;
+        var conjunto = ObtenerConjuntoDeAnimacion(tipoUnidad);
+        RuntimeAnimatorController controlador = null;
+        if (conjunto != null)
+        {
+            if (unidad.Vida <= 0) controlador = conjunto.morir;
+            if (controlador == null && estadoActual == "HabilidadEspecial") controlador = conjunto.habilidadEspecial;
+            if (controlador == null && estadoActual == "Atacar") controlador = conjunto.atacar;
+            if (controlador == null && estadoActual == "Caminar") controlador = conjunto.caminar;
+            if (controlador == null) controlador = conjunto.idle;
+        }
+
+        if (controlador != null)
+        {
+            contenidoSR.enabled = true;
+            ActivarAnimador(contenidoSR, controlador);
+        }
+        else
+        {
+            DesactivarAnimador(contenidoSR);
+            contenidoSR.sprite = conjunto != null ? conjunto.sprite : null;
+            contenidoSR.enabled = contenidoSR.sprite != null;
+            if (contenidoSR.sprite == null)
+                AvisarVisualFaltante($"unidad:{tipoUnidad}",
+                    conjunto == null
+                        ? $"VistaMapa no tiene una configuración de animación para la unidad {tipoUnidad}."
+                        : $"La unidad {tipoUnidad} no tiene Animator ni sprite propio asignado en VistaMapa.");
+        }
+
+        
+
+        Color color = DebeColorearse(unidad) ? ColorDeCivilizacion(unidad.Civilizacion) : Color.white;
+        if (unidad.Vida <= 0)
+        {
+            // Fade-out simple en vez de una animación de muerte real.
+            estado.alphaMuerte = Mathf.Max(0, estado.alphaMuerte - Time.deltaTime * velocidadFadeMuerte);
+            color.a = estado.alphaMuerte;
+        }
+        contenidoSR.color = color;
+    }
+
+        // Héroes y unidades exclusivas de civilización ya tienen su propio
+    // sprite distintivo — teñirlos washaría su arte. Solo se colorea lo
+    // "genérico" (Defender, Vanguard, Ranger, Healer).
+    private bool DebeColorearse(Unidad unidad)
+        => !(unidad is Heroe) && !(unidad is Assassin) && !(unidad is Avenger) && !(unidad is Berserker) && !(unidad is Caster);
+
+    private void AlRealizarAtaque(Unidad unidad, int cantidadDeGolpes)
+    {
+        if (estadosDeAnimacion.TryGetValue(unidad, out var estado))
+            estado.ataquePendiente = true;
+    }
+
+    private void AlRealizarHabilidadEspecial(Unidad unidad, int cantidadDeGolpes)
+    {
+        if (estadosDeAnimacion.TryGetValue(unidad, out var estado))
+            estado.habilidadEspecialPendiente = true;
+    }
+
+    private void OnDestroy()
+    {
+        foreach (var unidad in estadosDeAnimacion.Keys)
+        {
+            unidad.RealizoAtaque -= AlRealizarAtaque;
+            unidad.RealizoHabilidadEspecial -= AlRealizarHabilidadEspecial;
+        }
+    }
+
+    // Busca solo la configuración del tipo exacto; una unidad nunca hereda
+    // la animación de otra.
+    private ConjuntoAnimacion ObtenerConjuntoDeAnimacion(string tipoUnidad)
+    {
+        if (conjuntosDeAnimacion == null) return null;
+
+        foreach (var conjunto in conjuntosDeAnimacion)
+            if (conjunto != null && conjunto.tipoUnidad == tipoUnidad) return conjunto;
+        return null;
+    }
+
+    private Sprite ObtenerSpriteEdificio(Edificio edificio)
+    {
+        if (edificios != null)
+        {
+            string tipoEdificio = edificio.GetType().Name;
+            foreach (var visual in edificios)
+                if (visual != null && visual.tipoEdificio == tipoEdificio && visual.sprite != null)
+                    return visual.sprite;
+        }
+
+        string tipo = edificio.GetType().Name;
+        AvisarVisualFaltante($"edificio:{tipo}",
+            $"El edificio {tipo} no tiene un sprite propio asignado en VistaMapa.");
+        return null;
+    }
+
+    private void AvisarVisualFaltante(string clave, string mensaje)
+    {
+        if (advertenciasVisualesFaltantes.Add(clave))
+            Debug.LogWarning(mensaje, this);
+    }
+
+    private void ActivarAnimador(SpriteRenderer renderer, RuntimeAnimatorController controlador)
+    {
+        if (!animadoresPorContenido.TryGetValue(renderer, out var animator))
+        {
+            animator = renderer.gameObject.AddComponent<Animator>();
+            animator.applyRootMotion = false;
+            animadoresPorContenido[renderer] = animator;
+        }
+
+        animator.enabled = true;
+        if (animator.runtimeAnimatorController != controlador)
+            animator.runtimeAnimatorController = controlador;
+    }
+
+    private void DesactivarAnimador(SpriteRenderer renderer)
+    {
+        if (animadoresPorContenido.TryGetValue(renderer, out var animator))
+            animator.enabled = false;
+    }
+
     private Color ColorDeCivilizacion(string civilizacion)
     {
         return ColoresPorCivilizacion.TryGetValue(civilizacion, out Color color) ? color : Color.gray;
@@ -546,47 +733,22 @@ public class VistaMapa : MonoBehaviour
     // fila/columna), así que esta selección se maneja aparte de
     // FilaSeleccionada/ColumnaSeleccionada.
     public Aldeano AldeanoSeleccionado { get; set; }
-        // Órdenes permanentes de recolección: aldeano -> celda de recurso donde
-    // está trabajando. El Modelo solo hace UN ciclo de 2s por llamada (no
-    // se repite solo) — esto reemite la orden automáticamente mientras el
-    // recurso no se agote, para que se vea como una asignación continua.
-    private readonly Dictionary<Aldeano, (int fila, int columna)> ordenesRecoleccion = new Dictionary<Aldeano, (int, int)>();
+    public bool ModoHabilidadEspecial { get; set; }
 
-    public void AsignarRecoleccionPermanente(Aldeano aldeano, int fila, int columna)
+    // El edificio que el jugador acaba de "comprar" desde el HUD (Cuartel,
+    // etc.) y que está esperando a que se elija dónde colocarlo con un
+    // click en el mapa. El Centro Urbano NO pasa por acá: ese se coloca
+    // automáticamente al arrancar la partida (ver ControladorPartida).
+    public Edificio EdificioPendienteDeColocar { get; set; }
+
+    // Zona de construcción: además de que la celda esté libre y sea Tierra
+    // (eso ya lo valida el Modelo), el jugador humano solo puede construir
+    // en una celda que ya haya explorado — no tiene sentido plantar un
+    // edificio en medio de la niebla que todavía no vio.
+    public bool EstaExplorada(int fila, int columna)
     {
-        ordenesRecoleccion[aldeano] = (fila, columna);
-    }
-
-    public void CancelarRecoleccionPermanente(Aldeano aldeano)
-    {
-        ordenesRecoleccion.Remove(aldeano);
-    }
-
-    private void ActualizarOrdenesDeRecoleccion()
-    {
-        if (ordenesRecoleccion.Count == 0) return;
-
-        var controladorMapaHumano = Partida.ControladoresMapa[0];
-        List<Aldeano> terminados = null;
-
-        foreach (var par in ordenesRecoleccion)
-        {
-            Aldeano aldeano = par.Key;
-            if (aldeano.Ocupado) continue; // sigue en su viaje actual, nada que hacer todavía
-
-            var (fila, columna) = par.Value;
-            Celda celda = Partida.Mapa.ObtenerCelda(fila, columna);
-            if (celda?.Recurso == null || celda.Recurso.EstaAgotado())
-            {
-                (terminados ??= new List<Aldeano>()).Add(aldeano); // se agotó: cancelar la orden
-                continue;
-            }
-
-            controladorMapaHumano.SolicitarRecoleccion(aldeano, fila, columna);
-            Partida.Mapa.ColocarAldeano(fila, columna, aldeano);
-        }
-
-        if (terminados != null)
-            foreach (var aldeano in terminados) ordenesRecoleccion.Remove(aldeano);
+        if (explorado == null) return false;
+        if (fila < 0 || fila >= explorado.GetLength(0) || columna < 0 || columna >= explorado.GetLength(1)) return false;
+        return explorado[fila, columna];
     }
 }

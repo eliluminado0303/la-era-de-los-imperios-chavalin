@@ -8,15 +8,25 @@ public class Jugador
     public List<Unidad> Unidades { get; set; }
     public List<Aldeano> Aldeanos { get; set; }
 
+    // Tope de unidades + aldeanos que podés tener a la vez. Sube 5 por cada
+    // Casa que termines de construir (ver ControladorMapa.ActualizarResultados).
+    public int LimitePoblacion { get; set; } = 10;
+    public int PoblacionActual => Unidades.Count + Aldeanos.Count;
+
     private readonly object candado = new object();
 
     public Jugador(string nombre) 
     {
         Nombre = nombre;
+        // Sin esto, el Centro Urbano inicial se quedaba sin forma de pagar
+        // el primer Aldeano (25 Oro + 30 Comida): hacia falta un Aldeano
+        // para recolectar, pero hacia falta un recurso ya recolectado para
+        // pagar al primer Aldeano. Este monto alcanza para varios Aldeanos
+        // mientras se llega a los recursos del mapa.
         Recursos = new Dictionary<TipoRecurso, int> {
-            { TipoRecurso.Oro, 0 },
-            { TipoRecurso.Madera, 0 },
-            { TipoRecurso.Comida, 0 }
+            { TipoRecurso.Oro, 200 },
+            { TipoRecurso.Madera, 100 },
+            { TipoRecurso.Comida, 150 }
         };
         Edificios = new List<Edificio>();
         Unidades = new List<Unidad>();
