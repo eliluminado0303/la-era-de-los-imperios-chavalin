@@ -19,51 +19,20 @@ public class ControladorPartida
 {
     private static readonly string[] CIVILIZACIONES = { "Nipones", "Griegos", "Vikingos", "Sumerios" };
     private static readonly Random aleatorio = new Random();
-
-    // Cuántas celdas de margen se dejan libres respecto al borde real del
-    // mapa (0..FILAS-1 / 0..COLUMNAS-1) para CUALQUIER Centro Urbano. Se
-    // subió de 5 a 8 para que la base quede más lejos de la esquina real
-    // (no pegada al agua) y así el círculo de visión inicial (ver
-    // radioVisionEdificio en VistaMapa) deje un hueco de verdad para
-    // construir, en vez de quedar recortado contra el borde del mapa.
     private const int MARGEN_BORDE = 8;
-
-    // Radio (en casillas) que se deja SIN recursos alrededor de cada Centro
-    // Urbano — el "colchón" de espacio libre para construir cuartel, etc.
     private const int RADIO_COLCHON_BASE = 6;
-
-    // Radio libre de recursos alrededor del botín central.
     private const int RADIO_COLCHON_CENTRO = 5;
 
     public Mapa Mapa { get; }
     public Partida Partida { get; }
-
-    // Posición (fila, columna) donde quedó el Centro Urbano del jugador
-    // humano. La Vista la usa para centrar la cámara ahí al arrancar — si
-    // no, la cámara se queda mirando el (0,0) del mundo, que es una esquina
-    // de agua/tierra sin nada, y da la sensación de que "la niebla tapa
-    // todo el mapa" cuando en realidad la base y su alrededor ya están
-    // revelados, solo que fuera de cámara.
     public (int fila, int columna) PosicionBaseHumana { get; private set; }
-
-    // Misma posición que arriba pero para las 4 civilizaciones, en el mismo
-    // orden que colocacionEnOrden (índice 0 = humano). La usa el bucle de
-    // más abajo para decirle a cada ControladorIA dónde está su propio
-    // Centro Urbano (así puede elegir recursos cercanos y un lugar para el
-    // Cuartel sin tener que barrer todo el mapa buscándose a sí misma).
     private List<(int fila, int columna)> esquinasColocadas;
 
-    // Índice 0 = jugador humano; 1..3 = las 3 IA, en el mismo orden en que
-    // se resolvieron las civilizaciones.
     public List<ControladorMapa> ControladoresMapa { get; } = new List<ControladorMapa>();
     public List<ControladorCombate> ControladoresCombate { get; } = new List<ControladorCombate>();
     public List<ControladorEntrenamiento> ControladoresEntrenamiento { get; } = new List<ControladorEntrenamiento>();
     public List<ControladorEdificiosEspeciales> ControladoresEdificiosEspeciales { get; } = new List<ControladorEdificiosEspeciales>();
     public List<ControladorDeambulacion> ControladoresDeambulacion { get; } = new List<ControladorDeambulacion>();
-
-    // Solo las 3 IA (el humano no tiene). Se guardan para llamar a
-    // ControladorIA.ActualizarCombate() cada frame: esa búsqueda activa de
-    // enemigos (unidades y aldeanos) existía pero nadie la invocaba.
     public List<ControladorIA> ControladoresIA { get; } = new List<ControladorIA>();
 
     public ControladorPartida(string nombreJugadorHumano, string civilizacionHumano)
@@ -90,12 +59,12 @@ public class ControladorPartida
         var gestorEntrenamientoHumano = new GestorEntrenamiento();
         var controladorMapaHumano = new ControladorMapa(jugadorHumano, Mapa, Partida);
         ControladoresMapa.Add(controladorMapaHumano);
-        var controladorCombateHumano = new ControladorCombate(jugadorHumano, Mapa, Partida, controladorMapaHumano); // con ControladorMapa: para acercarse al objetivo
+        var controladorCombateHumano = new ControladorCombate(jugadorHumano, Mapa, Partida, controladorMapaHumano);
         ControladoresCombate.Add(controladorCombateHumano);
         ControladoresEntrenamiento.Add(new ControladorEntrenamiento(jugadorHumano, gestorEntrenamientoHumano, Mapa));
         ControladoresEdificiosEspeciales.Add(new ControladorEdificiosEspeciales(jugadorHumano, Mapa));
         var deambulacionHumano = new ControladorDeambulacion(jugadorHumano, Mapa, controladorMapaHumano);
-        deambulacionHumano.UnidadOcupada = controladorCombateHumano.TienePersecucion; // una unidad que va a atacar no debe deambular
+        deambulacionHumano.UnidadOcupada = controladorCombateHumano.TienePersecucion;
         ControladoresDeambulacion.Add(deambulacionHumano);
 
         for (int i = 0; i < jugadoresIA.Count; i++)
@@ -104,21 +73,21 @@ public class ControladorPartida
             var civilizacionIA = civilizacionesIA[i];
             var gestorEntrenamientoIA = new GestorEntrenamiento();
 
-            // esquinas[i + 1] porque esquinas[0] ya se usó para el humano
-            // (ver ColocarBasesYRecursos) — el mismo orden en que se colocó
-            // cada Centro Urbano es el orden de colocacionEnOrden.
             var posicionBaseIA = esquinasColocadas[i + 1];
             var controladorIA = new ControladorIA(jugadorIA, civilizacionIA, Mapa, Partida, gestorEntrenamientoIA, posicionBaseIA);
 
             var controladorMapaIA = new ControladorMapa(jugadorIA, Mapa, Partida, controladorIA);
-            controladorIA.MiControladorMapa = controladorMapaIA; // recién ahora existe: se lo damos a la IA para que pueda recolectar/construir
+            controladorIA.MiControladorMapa = controladorMapaIA;
 
             ControladoresIA.Add(controladorIA);
             ControladoresMapa.Add(controladorMapaIA);
             ControladoresCombate.Add(new ControladorCombate(jugadorIA, Mapa, Partida));
             ControladoresEntrenamiento.Add(new ControladorEntrenamiento(jugadorIA, gestorEntrenamientoIA, Mapa, controladorIA));
             ControladoresEdificiosEspeciales.Add(new ControladorEdificiosEspeciales(jugadorIA, Mapa));
-            ControladoresDeambulacion.Add(new ControladorDeambulacion(jugadorIA, Mapa, controladorMapaIA));
+
+            var deambulacionIA = new ControladorDeambulacion(jugadorIA, Mapa, controladorMapaIA);
+            deambulacionIA.UnidadOcupada = (unidad) => controladorIA.EnModoAtaque;
+            ControladoresDeambulacion.Add(deambulacionIA);
         }
     }
 
@@ -259,30 +228,19 @@ public class ControladorPartida
         return valor;
     }
 
-    // Llamar una vez por frame con Time.deltaTime (lo necesitan
-    // ControladorEdificiosEspeciales para el cooldown de la Torre/Granja, y
-    // ControladorDeambulacion para el suyo). "unidadSeleccionadaHumano" es
-    // la unidad que el jugador humano tiene seleccionada ahora mismo en la
-    // Vista (o null): se excluye del deambular para que no se te vaya
-    // caminando justo cuando estás por darle una orden.
     public bool Actualizar(float deltaTime, Unidad unidadSeleccionadaHumano = null, Aldeano aldeanoSeleccionadoHumano = null)
     {
         foreach (var controladorMapa in ControladoresMapa) controladorMapa.ActualizarResultados();
-        foreach (var controladorEntrenamiento in ControladoresEntrenamiento) controladorEntrenamiento.ActualizarResultados();
+        foreach (var controladorEntrenamiento in ControladoresEntrenamiento) controladorEntrenamiento.ActualizarResultados(deltaTime);
         foreach (var controladorEspecial in ControladoresEdificiosEspeciales) controladorEspecial.Actualizar(deltaTime);
         foreach (var controladorCombate in ControladoresCombate) controladorCombate.Actualizar(deltaTime);
 
-        // Hace correr los efectos de estado (Sangrado, Veneno, Quemadura,
-        // Aturdimiento, Ralentizado, buffs...) y la recarga del escudo del
-        // Defender. Sin esta llamada nadie llamaba a Unidad.ActualizarEfectos
-        // y ningún efecto hacía daño ni expiraba.
         var todasLasUnidades = new List<Unidad>(Partida.JugadorHumano.Unidades);
         foreach (var oponente in Partida.Oponentes) todasLasUnidades.AddRange(oponente.Unidades);
         Partida.ActualizarCombate(deltaTime, todasLasUnidades);
-        foreach (var controladorIA in ControladoresIA) controladorIA.ActualizarCombate(); // tiene su propio throttle de 1.5s
 
         for (int i = 0; i < ControladoresDeambulacion.Count; i++)
-            ControladoresDeambulacion[i].Actualizar(deltaTime, i == 0 ? unidadSeleccionadaHumano : null, i == 0 ? aldeanoSeleccionadoHumano : null); // índice 0 = humano
+            ControladoresDeambulacion[i].Actualizar(deltaTime, i == 0 ? unidadSeleccionadaHumano : null, i == 0 ? aldeanoSeleccionadoHumano : null);
 
         return ControladoresMapa[0].VerificarFinDePartida();
     }

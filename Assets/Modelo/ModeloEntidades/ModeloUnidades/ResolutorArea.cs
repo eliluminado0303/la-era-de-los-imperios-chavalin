@@ -18,6 +18,12 @@ public static class ResolutorArea
                 Celda celda = mapa.ObtenerCelda(f, c);
                 if (celda != null) celdas.Add(celda);
             }
+            // UnidadesEnRadio excluye la celda central a propósito (sirve
+            // para detección de enemigos). Acá NO: si el objetivo está justo
+            // en el centro (curar a ese aliado, lanzar sobre ese enemigo),
+            // tiene que entrar al área.
+            Celda centro = mapa.ObtenerCelda(filaObjetivo, columnaObjetivo);
+            if (centro != null && centro.Unidad != null && !celdas.Contains(centro)) celdas.Add(centro);
             return celdas;
         }
 

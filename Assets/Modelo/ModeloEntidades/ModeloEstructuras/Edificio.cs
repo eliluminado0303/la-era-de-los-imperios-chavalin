@@ -40,12 +40,22 @@ public class Edificio
         CostoComida = costoComida;
     }
 
+    // Antes: Vida -= max(0, daño - Defensa). Como casi todas las unidades
+    // pegan entre 8 y 25 y los edificios tienen Defensa de 5 a 40 (Principal
+    // 30, Muro 40, Torre 20, Entrenamiento 10), la mayoría de los golpes
+    // hacían 0 de daño y el edificio era indestructible. Ahora la Defensa
+    // REDUCE el daño en porcentaje (nunca lo anula) y siempre entra al menos
+    // 1 de daño. Para que los edificios aguanten más o menos, cambia
+    // FACTOR_DEFENSA_EDIFICIO (más alto = más frágiles).
+    private const float FACTOR_DEFENSA_EDIFICIO = 50f;
+
     public void RecibirDaño(float daño)
     {
         FueAtacado?.Invoke(this, daño);
         lock (sync)
         {
-            Vida -= Math.Max(0, daño - Defensa);
+            float dañoReal = Math.Max(1f, daño * FACTOR_DEFENSA_EDIFICIO / (FACTOR_DEFENSA_EDIFICIO + Defensa));
+            Vida -= dañoReal;
             if (Vida <= 0) { Vida = 0; Console.WriteLine($"{Nombre} fue destruido."); }
         }
     }

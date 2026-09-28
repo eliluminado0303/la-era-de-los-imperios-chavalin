@@ -36,7 +36,7 @@ public class ControladorEntrenamiento
     // jugador, humano o IA). El hilo secundario solo avisa que terminó; quien
     // aplica el resultado al Modelo es siempre el hilo principal aquí, para
     // no tocar las listas del Jugador desde dos hilos a la vez.
-    public void ActualizarResultados()
+    public void ActualizarResultados(float deltaTime = 0f)
     {
         while (gestorEntrenamiento.ResultadosPendientes.TryDequeue(out ResultadoEntrenamiento resultado))
         {
@@ -53,7 +53,11 @@ public class ControladorEntrenamiento
             }
         }
 
-        controladorIA?.EvaluarEconomia();
+        controladorIA?.EvaluarEconomia(deltaTime);
+        // Decide (con cooldown propio en segundos reales) si manda una
+        // oleada de unidades libres a atacar la base enemiga más cercana,
+        // en vez de dejarlas paradas o solo deambulando cerca de casa.
+        controladorIA?.EvaluarMilitar(deltaTime);
     }
         private void ColocarUnidadCercaDelCuartel(Unidad unidad)
     {

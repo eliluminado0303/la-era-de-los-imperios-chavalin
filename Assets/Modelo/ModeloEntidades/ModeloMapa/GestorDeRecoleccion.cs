@@ -3,115 +3,98 @@ using System.Collections.Concurrent;
 using System.Threading;
 using System.Threading.Tasks;
 
+public static class TiempoDeViaje
+{
+    public static float Calcular(int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino, float velocidad)
+    {
+        if (filaOrigen < 0 || columnaOrigen < 0) return 0f;
+        int distancia = Math.Max(Math.Abs(filaDestino - filaOrigen), Math.Abs(columnaDestino - columnaOrigen));
+        if (distancia == 0) return 0f;
+        if (velocidad <= 0) velocidad = 1f;
+        return distancia / velocidad;
+    }
+}
+
 public class GestorRecoleccion {
     public ConcurrentQueue<ResultadoRecoleccion> ResultadosPendientes { get; private set; }
-
     private readonly object candadoRecursos = new object();
     private readonly GestorArchivos gestorArchivos = new GestorArchivos();
-
-    // Un aldeano solo puede tener un ciclo de recolección corriendo a la
-    // vez. Si se le da una nueva orden mientras el anterior sigue en
-    // curso, se cancela el anterior (no llega a entregar ese ciclo) y
-    // arranca el nuevo enseguida — así una orden nueva SIEMPRE interrumpe
-    // a la anterior en vez de tener que esperar a que termine sola.
     private readonly ConcurrentDictionary<Aldeano, CancellationTokenSource> tareasEnCurso = new ConcurrentDictionary<Aldeano, CancellationTokenSource>();
 
-    public GestorRecoleccion() {
-        ResultadosPendientes = new ConcurrentQueue<ResultadoRecoleccion>();
-    }
+    public GestorRecoleccion() { ResultadosPendientes = new ConcurrentQueue<ResultadoRecoleccion>(); }
 
     public bool IniciarRecoleccion(Aldeano aldeano, Recurso recurso, Jugador jugador) {
-        // Límite real: si el recurso ya está agotado, no tiene sentido
-        // arrancar un ciclo de 2 segundos para terminar recolectando 0.
-        if (recurso.EstaAgotado()) {
-            return false;
-        }
+        if (recurso.EstaAgotado()) return false;
+        if (!aldeano.EstaVivo) return false; // del repo: seguridad de muerte
 
-        // Un aldeano muerto no puede recibir órdenes.
-        if (!aldeano.EstaVivo) {
-            return false;
-        }
-
-        if (tareasEnCurso.TryRemove(aldeano, out var anterior)) {
-            anterior.Cancel();
-        }
+        if (tareasEnCurso.TryRemove(aldeano, out var anterior)) anterior.Cancel();
 
         var cts = new CancellationTokenSource();
         tareasEnCurso[aldeano] = cts;
         aldeano.Ocupado = true;
-
-        Task.Run(() => {
-            RecolectarEnSegundoPlano(aldeano, recurso, jugador, cts.Token);
-        });
+        Task.Run(() => RecolectarEnSegundoPlano(aldeano, recurso, jugador, cts.Token));
         return true;
     }
 
-       // Antes esto hacía UN solo viaje (2s, sacaba un puñado, y quedaba
-       // "Libre" de nuevo) — ahora el aldeano se queda trabajando la MISMA
-       // veta en bucle, cada 2s, hasta que se agota o le mandan una orden
-       // nueva (eso sigue cancelando este bucle vía el token, igual que
-       // antes). Ocupado se mantiene en true durante TODO el bucle, no
-       // solo durante un viaje — así el HUD muestra "Recolectando..." de
-       // forma consistente mientras dure.
-       private void RecolectarEnSegundoPlano(Aldeano aldeano, Recurso recurso, Jugador jugador, CancellationToken token) {
+    private void RecolectarEnSegundoPlano(Aldeano aldeano, Recurso recurso, Jugador jugador, CancellationToken token) {
         while (!token.IsCancellationRequested && !recurso.EstaAgotado() && aldeano.EstaVivo) {
-            try {
-                Task.Delay(2000, token).Wait();
-            } catch (AggregateException) {
-                return; // se canceló: le dieron una orden nueva antes de que terminara este ciclo
-            }
+            try { Task.Delay(2000, token).Wait(); }
+            catch (AggregateException) { return; }
 
-            // Cancelado por una orden nueva: esa orden ya registró su propio
-            // token en tareasEnCurso, así que acá NO se toca el diccionario.
             if (token.IsCancellationRequested) return;
-
-            // Si lo mataron durante la espera, no entrega ese ciclo: sale y
-            // limpia su registro (Ocupado ya quedó en false al morir).
-            if (!aldeano.EstaVivo) {
-                tareasEnCurso.TryRemove(aldeano, out _);
-                return;
-            }
+            if (!aldeano.EstaVivo) { tareasEnCurso.TryRemove(aldeano, out _); return; }
 
             int cantidadObtenida;
-            lock (candadoRecursos) {
-                cantidadObtenida = recurso.Recolectar(aldeano.VelocidadRecoleccion);
-            }
+            lock (candadoRecursos) { cantidadObtenida = recurso.Recolectar(aldeano.VelocidadRecoleccion); }
 
             jugador.AgregarRecurso(recurso.Tipo, cantidadObtenida);
-
-            gestorArchivos.RegistrarEvento(
-                jugador.Nombre,
-                "Recoleccion",
-                $"{aldeano.Nombre} recolecto {cantidadObtenida} de {recurso.Tipo}");
-
-            ResultadosPendientes.Enqueue(new ResultadoRecoleccion {
-                NombreAldeano = aldeano.Nombre,
-                TipoRecurso = recurso.Tipo,
-                Cantidad = cantidadObtenida
-            });
+            gestorArchivos.RegistrarEvento(jugador.Nombre, "Recoleccion", $"{aldeano.Nombre} recolecto {cantidadObtenida} de {recurso.Tipo}");
+            ResultadosPendientes.Enqueue(new ResultadoRecoleccion { NombreAldeano = aldeano.Nombre, TipoRecurso = recurso.Tipo, Cantidad = cantidadObtenida });
         }
 
+        if (!token.IsCancellationRequested) aldeano.RecolectandoTipo = null;
         aldeano.Ocupado = false;
         tareasEnCurso.TryRemove(aldeano, out _);
     }
-    // agregar dentro de GestorRecoleccion
 
-public bool IniciarRecoleccionDesdeMapa(Aldeano aldeano, Mapa mapa, int fila, int columna, Jugador jugador) {
-    Celda celda = mapa.ObtenerCelda(fila, columna);
+    public bool IniciarRecoleccionDesdeMapa(Aldeano aldeano, Mapa mapa, int fila, int columna, Jugador jugador) {
+        if (!aldeano.EstaVivo) return false; // del repo: mismo criterio, aplicado también acá
+        Celda celda = mapa.ObtenerCelda(fila, columna);
+        if (celda == null || celda.Recurso == null || celda.Recurso.EstaAgotado()) return false;
 
-    if (celda == null || celda.Recurso == null) {
-        return false;
+        if (tareasEnCurso.TryRemove(aldeano, out var anterior)) anterior.Cancel();
+
+        var cts = new CancellationTokenSource();
+        tareasEnCurso[aldeano] = cts;
+        aldeano.Ocupado = true;
+        aldeano.RecolectandoTipo = null;
+
+        int filaOrigen = aldeano.Fila, columnaOrigen = aldeano.Columna;
+        Task.Run(() => CaminarYRecolectar(aldeano, mapa, filaOrigen, columnaOrigen, fila, columna, jugador, cts.Token));
+        return true;
     }
 
-    // Antes esto no se chequeaba acá: se podía mandar a un aldeano a una
-    // celda ya vacía y arrancaba igual un ciclo completo de 2 segundos
-    // para conseguir 0 de recurso.
-    if (celda.Recurso.EstaAgotado()) {
-        return false;
-    }
+    private void CaminarYRecolectar(Aldeano aldeano, Mapa mapa, int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino, Jugador jugador, CancellationToken token) {
+        float duracionCaminata = TiempoDeViaje.Calcular(filaOrigen, columnaOrigen, filaDestino, columnaDestino, aldeano.Velocidad);
 
-    return IniciarRecoleccion(aldeano, celda.Recurso, jugador);
-}
+        if (duracionCaminata > 0f) {
+            try { Task.Delay((int)(duracionCaminata * 1000), token).Wait(); }
+            catch (AggregateException) { aldeano.Ocupado = false; tareasEnCurso.TryRemove(aldeano, out _); return; }
+
+            if (token.IsCancellationRequested || !aldeano.EstaVivo) { // EstaVivo agregado: pudo morir mientras caminaba
+                aldeano.Ocupado = false; tareasEnCurso.TryRemove(aldeano, out _); return;
+            }
+        }
+
+        mapa.ColocarAldeano(filaDestino, columnaDestino, aldeano);
+        Celda celdaDestino = mapa.ObtenerCelda(filaDestino, columnaDestino);
+        if (celdaDestino?.Recurso == null || celdaDestino.Recurso.EstaAgotado()) {
+            aldeano.RecolectandoTipo = null; aldeano.Ocupado = false; tareasEnCurso.TryRemove(aldeano, out _); return;
+        }
+
+        aldeano.RecolectandoTipo = celdaDestino.Recurso.Tipo;
+        RecolectarEnSegundoPlano(aldeano, celdaDestino.Recurso, jugador, token);
+    }
 }
 
 public class ResultadoRecoleccion {

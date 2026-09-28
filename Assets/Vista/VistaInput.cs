@@ -162,22 +162,35 @@ public class VistaInput : MonoBehaviour
         // Healer + clic en un aliado propio = curar, no atacar.
         if (unidadOrigen is Healer && celda?.Unidad != null && jugadorHumano.Unidades.Contains(celda.Unidad))
         {
-            accionValida = controladorCombateHumano.SolicitarCuracion(fOrigen, cOrigen, fila, columna, buff: false);
+            // Clic = curar (verde). Shift + clic = bendición/buff (dorado): antes
+            // el buff no tenía ninguna forma de activarse desde la interfaz.
+            bool buff = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+            accionValida = controladorCombateHumano.SolicitarCuracion(fOrigen, cOrigen, fila, columna, buff);
             if (accionValida)
             {
                 Vector3 posicionDestino = new Vector3(columna * vistaMapa.tamañoCelda, -fila * vistaMapa.tamañoCelda, 0);
-                EfectoCuracion.Crear(posicionDestino, new Color(0.3f, 1f, 0.4f)); // verde
+                EfectoCuracion.Crear(posicionDestino, buff ? new Color(1f, 0.85f, 0.2f) : new Color(0.3f, 1f, 0.4f), duracion: 0.7f);
             }
             else
             {
-                Debug.Log("No se pudo curar (¿fuera de rango del Healer?).");
+                Debug.Log("No se pudo curar/buffear (¿fuera de rango del Healer?).");
             }
         }
         else if (celda?.Unidad != null || celda?.Edificio != null || (celda?.Aldeano != null && !jugadorHumano.Aldeanos.Contains(celda.Aldeano)))
         {
             // Si el objetivo está fuera de alcance, la unidad camina hacia él y
             // ataca al llegar (ver ControladorCombate.SolicitarAtaqueOAcercarse).
-            var resultadoAtaque = controladorCombateHumano.SolicitarAtaqueOAcercarse(fOrigen, cOrigen, fila, columna);
+            // Godzilla y Jormungandr tienen ataque básico en área: si el objetivo
+            // es una unidad enemiga y está en rango se usa el ataque de área; si
+            // no (fuera de alcance, o no es una unidad) se sigue con el ataque
+            // normal / acercarse.
+            bool enemigoUnidad = celda?.Unidad != null && !jugadorHumano.Unidades.Contains(celda.Unidad);
+            bool ataqueEnAreaRealizado = unidadOrigen != null && unidadOrigen.AreaAtaqueBasico != null && enemigoUnidad
+                && controladorCombateHumano.SolicitarAtaqueEnArea(fOrigen, cOrigen, fila, columna);
+
+            var resultadoAtaque = ataqueEnAreaRealizado
+                ? ResultadoOrdenAtaque.Atacando
+                : controladorCombateHumano.SolicitarAtaqueOAcercarse(fOrigen, cOrigen, fila, columna);
             accionValida = resultadoAtaque != ResultadoOrdenAtaque.Invalida;
             if (resultadoAtaque == ResultadoOrdenAtaque.Acercandose) Debug.Log("La unidad se acerca al objetivo para atacar.");
 

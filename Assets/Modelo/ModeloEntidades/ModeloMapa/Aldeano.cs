@@ -24,6 +24,10 @@ public class Aldeano
     public const int VIDA_MAXIMA_INICIAL = 30;
     public int VidaMaxima { get; private set; } = VIDA_MAXIMA_INICIAL;
     public int Defensa { get; set; } = 0;
+    // Qué tipo de recurso está trabajando AHORA MISMO (ya llegó y está
+// recolectando). null mientras camina o está libre. La Vista lo usa
+// para elegir la animación (hacha / pico / cuchillo).
+    public TipoRecurso? RecolectandoTipo { get; set; }
 
     // La vida se lee desde tareas en segundo plano (GestorRecoleccion
     // revisa EstaVivo en cada ciclo) y se escribe desde el hilo principal

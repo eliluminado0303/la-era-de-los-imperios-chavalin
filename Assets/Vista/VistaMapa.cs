@@ -744,6 +744,15 @@ public class VistaMapa : MonoBehaviour
         if (conjunto != null)
         {
             if (caminando) controlador = conjunto.caminar;
+
+            // Ya llegó y está trabajando: usa la animación propia del
+            // recurso (hacha = Madera, pico = Oro, cuchillo = Comida).
+            // Se busca en "Animaciones Adicionales" del conjunto Aldeano
+            // por nombre: "Recolectar Madera", "Recolectar Oro" y
+            // "Recolectar Comida". Si falta alguna, cae en Idle.
+            if (controlador == null && aldeano.Ocupado && aldeano.RecolectandoTipo.HasValue)
+                controlador = BuscarAnimacionAdicional(conjunto, $"Recolectar {aldeano.RecolectandoTipo.Value}");
+
             if (controlador == null) controlador = conjunto.idle;
         }
 
@@ -767,7 +776,19 @@ public class VistaMapa : MonoBehaviour
         sr.color = ColorDeCivilizacion(aldeano.Civilizacion);
     }
 
-        // Héroes y unidades exclusivas de civilización ya tienen su propio
+        private RuntimeAnimatorController BuscarAnimacionAdicional(ConjuntoAnimacion conjunto, string nombre)
+    {
+        if (conjunto.animacionesAdicionales == null) return null;
+        foreach (var extra in conjunto.animacionesAdicionales)
+            if (extra != null && string.Equals(extra.nombre, nombre, System.StringComparison.OrdinalIgnoreCase))
+                return extra.animator;
+
+        AvisarVisualFaltante($"aldeano-anim:{nombre}",
+            $"Al conjunto 'Aldeano' le falta una Animación Adicional llamada \"{nombre}\".");
+        return null;
+    }
+
+    // Héroes y unidades exclusivas de civilización ya tienen su propio
     // sprite distintivo — teñirlos washaría su arte. Solo se colorea lo
     // "genérico" (Defender, Vanguard, Ranger, Healer).
     private bool DebeColorearse(Unidad unidad)
@@ -783,6 +804,30 @@ public class VistaMapa : MonoBehaviour
         // cuerpo a cuerpo.
         if (unidad is Caster && objetivos != null && objetivos.Count > 0)
             LanzarProyectilCaster(unidad, objetivos[0]);
+
+        // Ataque básico en ÁREA (Godzilla, Jormungandr): dibuja el círculo
+        // con el radio real del área, centrado en el objetivo golpeado.
+        if (unidad.AreaAtaqueBasico != null && unidad.AreaAtaqueBasico.Forma == FormaArea.Circulo)
+            DibujarCirculoDeAtaque(unidad, objetivos);
+    }
+
+    private readonly Dictionary<Unidad, float> ultimoCirculoPorUnidad = new Dictionary<Unidad, float>();
+
+    private void DibujarCirculoDeAtaque(Unidad unidad, List<Unidad> objetivos)
+    {
+        // El Modelo avisa UNA vez por objetivo golpeado: sin este filtro
+        // saldrían varios círculos superpuestos por cada ataque.
+        if (ultimoCirculoPorUnidad.TryGetValue(unidad, out float ultimo) && Time.time - ultimo < 0.15f) return;
+        ultimoCirculoPorUnidad[unidad] = Time.time;
+
+        Vector3 centro = PosicionMundoDeUnidad(unidad);
+        if (objetivos != null && objetivos.Count > 0 && objetivos[0] != null && objetivos[0].Fila >= 0)
+            centro = PosicionMundoDeUnidad(objetivos[0]);
+
+        // El Modelo cuenta celdas enteras: radio (int)Tamaño, y +0.5 para cubrir la celda del borde.
+        float radioCeldas = (int)unidad.AreaAtaqueBasico.Tamaño + 0.5f;
+        Color color = unidad is Godzilla ? new Color(0.35f, 0.85f, 1f) : new Color(0.5f, 1f, 0.35f);
+        EfectoCirculo.Crear(centro, radioCeldas * tamañoCelda, color);
     }
 
     private void AlRealizarHabilidadEspecial(Unidad unidad, int cantidadDeGolpes, List<Unidad> objetivos)

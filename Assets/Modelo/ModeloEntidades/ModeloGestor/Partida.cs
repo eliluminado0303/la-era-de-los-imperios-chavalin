@@ -69,6 +69,17 @@ public partial class Partida
         VerificarGanador();
     }
 
+    // Versión sin argumentos: junta las unidades de todos los jugadores,
+    // actualiza sus efectos y limpia a las que murieron por daño con el
+    // tiempo (veneno, sangrado...). Llamar UNA vez por frame.
+    public void ActualizarCombate(float deltaTime)
+    {
+        var todas = new List<Unidad>();
+        if (JugadorHumano != null) todas.AddRange(JugadorHumano.Unidades);
+        if (Oponentes != null) foreach (var o in Oponentes) todas.AddRange(o.Unidades);
+        ActualizarCombate(deltaTime, todas);
+    }
+
     public void ActualizarCombate(float deltaTime, List<Unidad> todasLasUnidades)
     {
         foreach (var unidad in todasLasUnidades)
