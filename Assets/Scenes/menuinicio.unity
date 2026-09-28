@@ -178,8 +178,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Iniciar Partida
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: eabe68fa2a243b14e84f5a597f13dfac, type: 2}
-  m_sharedMaterial: {fileID: -8549584904971142190, guid: eabe68fa2a243b14e84f5a597f13dfac, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -820,8 +820,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Griegos
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: eabe68fa2a243b14e84f5a597f13dfac, type: 2}
-  m_sharedMaterial: {fileID: -8549584904971142190, guid: eabe68fa2a243b14e84f5a597f13dfac, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1249,8 +1249,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Vikingos
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: eabe68fa2a243b14e84f5a597f13dfac, type: 2}
-  m_sharedMaterial: {fileID: -8549584904971142190, guid: eabe68fa2a243b14e84f5a597f13dfac, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1386,8 +1386,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Era de los imperios chaval
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: eabe68fa2a243b14e84f5a597f13dfac, type: 2}
-  m_sharedMaterial: {fileID: -8549584904971142190, guid: eabe68fa2a243b14e84f5a597f13dfac, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1411,7 +1411,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 47.15
+  m_fontSize: 43.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2431,8 +2431,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: eabe68fa2a243b14e84f5a597f13dfac, type: 2}
-  m_sharedMaterial: {fileID: -8549584904971142190, guid: eabe68fa2a243b14e84f5a597f13dfac, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2567,7 +2567,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3008028286390136460, guid: 46d9282907e2e524d9c58283e7af1c16, type: 3}
+  m_Sprite: {fileID: 3008028286390136460, guid: 4abb7e80db043514fa9786b9d414ebfe, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2657,8 +2657,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Nipones
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: eabe68fa2a243b14e84f5a597f13dfac, type: 2}
-  m_sharedMaterial: {fileID: -8549584904971142190, guid: eabe68fa2a243b14e84f5a597f13dfac, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2794,8 +2794,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Elija su civilizacion
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1f0f71864c8812a4398e984c693e8c18, type: 2}
-  m_sharedMaterial: {fileID: -8549584904971142190, guid: 1f0f71864c8812a4398e984c693e8c18, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3047,8 +3047,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Salir
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: eabe68fa2a243b14e84f5a597f13dfac, type: 2}
-  m_sharedMaterial: {fileID: -8549584904971142190, guid: eabe68fa2a243b14e84f5a597f13dfac, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

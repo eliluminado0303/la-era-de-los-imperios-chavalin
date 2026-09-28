@@ -30,7 +30,7 @@ public override void Curar(Unidad objetivo)
     {
         float curacionEfectiva = objetivo.TieneCuracionReducida ? cantidadCuracion * 0.5f : cantidadCuracion;
         objetivo.RecibirCuracion(curacionEfectiva);
-        Curo?.Invoke(this, objetivo);   // <-- nueva línea
+        Curo?.Invoke(this, objetivo);   
     }
 
     public AreaEfecto AreaBuff { get; private set; } = new AreaEfecto(FormaArea.Circulo, rangoLanzamiento: 4f, tamaño: 2.5f);
@@ -38,6 +38,6 @@ public override void Curar(Unidad objetivo)
     public void Buffear(Unidad objetivo)
     {
         objetivo.AgregarEfecto(new Bendicion(deltaAtaque: 5, deltaDefensa: 8, duracion: 8f));
-        Buffeo?.Invoke(this, objetivo);   // <-- nueva línea
+        Buffeo?.Invoke(this, objetivo);   
     }
 }

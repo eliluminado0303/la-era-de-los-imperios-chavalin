@@ -22,7 +22,11 @@ public class Assassin : Unidad
         CostoOro = 100;
         CostoMadera = 50;
         CostoComida = 25;
+        AreaHabilidad = new AreaEfecto(FormaArea.Circulo, rangoLanzamiento: 0f, tamaño: 2f);
     }
+
+    public override bool TieneHabilidadActiva => true;
+    public override bool HabilidadEsSobreSiMismo => true;
 
     protected override void AplicarEfectoAlGolpear(Unidad objetivo)
     {

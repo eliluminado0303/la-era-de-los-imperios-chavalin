@@ -45,16 +45,17 @@ public class Edificio
     // 30, Muro 40, Torre 20, Entrenamiento 10), la mayoría de los golpes
     // hacían 0 de daño y el edificio era indestructible. Ahora la Defensa
     // REDUCE el daño en porcentaje (nunca lo anula) y siempre entra al menos
-    // 1 de daño. Para que los edificios aguanten más o menos, cambia
-    // FACTOR_DEFENSA_EDIFICIO (más alto = más frágiles).
+    // 1 de daño. Las unidades hacen daño doble a edificios para destruirlos
+    // en un tiempo razonable, incluso al atacar estructuras con mucha vida.
     private const float FACTOR_DEFENSA_EDIFICIO = 50f;
+    private const float MULTIPLICADOR_DAÑO_A_EDIFICIOS = 2f;
 
     public void RecibirDaño(float daño)
     {
         FueAtacado?.Invoke(this, daño);
         lock (sync)
         {
-            float dañoReal = Math.Max(1f, daño * FACTOR_DEFENSA_EDIFICIO / (FACTOR_DEFENSA_EDIFICIO + Defensa));
+            float dañoReal = Math.Max(1f, daño * MULTIPLICADOR_DAÑO_A_EDIFICIOS * FACTOR_DEFENSA_EDIFICIO / (FACTOR_DEFENSA_EDIFICIO + Defensa));
             Vida -= dañoReal;
             if (Vida <= 0) { Vida = 0; Console.WriteLine($"{Nombre} fue destruido."); }
         }
