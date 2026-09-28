@@ -89,6 +89,14 @@ public class ControladorPartida
             deambulacionIA.UnidadOcupada = (unidad) => controladorIA.EnModoAtaque;
             ControladoresDeambulacion.Add(deambulacionIA);
         }
+
+        // Las tropas que suelta un Avenger al morir no pasan por el
+        // entrenamiento: se avisa a la IA correspondiente para que las "escuche".
+        Partida.UnidadLiberada += (jugador, unidad) =>
+        {
+            int indice = Partida.Oponentes.IndexOf(jugador);
+            if (indice >= 0 && indice < ControladoresIA.Count) ControladoresIA[indice].ObservarUnidad(unidad);
+        };
     }
 
     // ---------------------------------------------------------------

@@ -480,7 +480,16 @@ public class VistaHUD : MonoBehaviour
 
         panelSeleccion.SetActive(true);
         if (textoSeleccion != null)
-            textoSeleccion.text = $"{celda.Unidad.Civilizacion}\nVida: {celda.Unidad.Vida}/{celda.Unidad.VidaMaxima}\nAtaque: {celda.Unidad.Ataque}";
+        {
+            var u = celda.Unidad;
+            string habilidad = "";
+            if (u.TieneHabilidadActiva)
+                habilidad = u.PuedeUsarHabilidad() ? "\nHabilidad (E): lista" : $"\nHabilidad (E): {u.TiempoRestanteRecarga():0}s";
+            else if (u is Healer healer)
+                habilidad = healer.PuedeUsarHabilidad() ? "\nBendición (Shift+clic): lista" : $"\nBendición (Shift+clic): {healer.TiempoRestanteRecarga():0}s";
+
+            textoSeleccion.text = $"{u.Civilizacion}\nVida: {u.Vida}/{u.VidaMaxima}\nAtaque: {u.Ataque}  Defensa: {u.Defensa}{habilidad}";
+        }
     }
 
     // ---------------------------------------------------------------

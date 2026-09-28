@@ -35,6 +35,32 @@ public class Unidad
     protected virtual bool EsCritico() => Aleatorio.Valor() < ProbabilidadCritico;
 
     public void ModificarProbabilidadCritico(float delta) => ProbabilidadCritico += delta;
+
+    // ---------------------------------------------------------------
+    // Habilidad ACTIVA (con recarga). Antes solo los Héroes la tenían; ahora
+    // cualquier unidad puede declararla sobreescribiendo TieneHabilidadActiva.
+    // Quien la ejecuta (Partida.EjecutarHabilidadEspecial) chequea
+    // PuedeUsarHabilidad() antes de llamar a HabilidadEspecial().
+    // ---------------------------------------------------------------
+    public virtual bool TieneHabilidadActiva => false;
+
+    // Zona donde actúa la habilidad (null si no tiene).
+    public AreaEfecto AreaHabilidad { get; protected set; }
+
+    // true = beneficia a aliados (Defender); false = daña a enemigos.
+    public virtual bool HabilidadAfectaAliados => false;
+
+    // true = se lanza centrada en la propia unidad, sin apuntar (basta con
+    // apretar E); false = hay que elegir un punto con un clic.
+    public virtual bool HabilidadEsSobreSiMismo => false;
+
+    protected virtual float RecargaHabilidadSegundos => 15f;
+    private DateTime ultimoUsoHabilidad = DateTime.MinValue;
+
+    public bool PuedeUsarHabilidad() => (DateTime.UtcNow - ultimoUsoHabilidad).TotalSeconds >= RecargaHabilidadSegundos;
+    public float TiempoRestanteRecarga()
+        => Math.Max(0f, RecargaHabilidadSegundos - (float)(DateTime.UtcNow - ultimoUsoHabilidad).TotalSeconds);
+    public void RegistrarUsoHabilidad() => ultimoUsoHabilidad = DateTime.UtcNow;
         // Cantidad de "golpes" visuales que debería mostrar la animación de
     // ataque básico — la mayoría de las unidades solo necesita 1, pero
     // algunas tienen combos de varios golpes en su sprite sheet (Gilgamesh,
@@ -73,8 +99,13 @@ public class Unidad
             Registro.Escribir($"{Civilizacion}: esquivó el ataque :o");
             return;
         }
+        // La Defensa REDUCE el daño en porcentaje (Defensa 25 = -20%, 50 = -33%),
+        // en vez de restarse plana: con la resta plana, cualquier unidad con
+        // Defensa >= al Ataque del rival era inmune (un Defender con 22 no
+        // recibía daño de casi nadie). Siempre entra al menos 1 de daño.
         float defensaEfectiva = ignorarDefensa ? 0 : Defensa;
-        Vida -= Math.Max(0, (int)(daño - defensaEfectiva));
+        int dañoReal = Math.Max(1, (int)Math.Round(daño * 100f / (100f + defensaEfectiva)));
+        Vida -= dañoReal;
         if (Vida <= 0) { Vida = 0; AlMorir(); }
     }
 

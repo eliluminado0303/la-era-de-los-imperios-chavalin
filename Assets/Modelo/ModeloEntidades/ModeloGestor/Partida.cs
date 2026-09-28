@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 // Operaciones de combate que se ejecutan dentro de una partida.
@@ -35,15 +36,17 @@ public partial class Partida
         VerificarGanador();
     }
 
-    public void EjecutarHabilidadEspecial(Jugador jugadorAtacante, Heroe heroe, List<Unidad> objetivos)
+    // Sirve para cualquier unidad con habilidad activa (héroes, Assassin,
+    // Defender...). "objetivos" son enemigos o aliados según la habilidad.
+    public void EjecutarHabilidadEspecial(Jugador jugadorAtacante, Unidad unidad, List<Unidad> objetivos)
     {
-        
-        if (!jugadorAtacante.Unidades.Contains(heroe)) return;
-        if (!heroe.PuedeUsarHabilidad()) return;
+        if (!jugadorAtacante.Unidades.Contains(unidad)) return;
+        if (!unidad.TieneHabilidadActiva) return;
+        if (!unidad.PuedeUsarHabilidad()) return;
 
-        heroe.HabilidadEspecial(objetivos);
-        heroe.RegistrarUsoHabilidad();
-        heroe.NotificarHabilidadEspecialRealizada(objetivos);
+        unidad.HabilidadEspecial(objetivos);
+        unidad.RegistrarUsoHabilidad();
+        unidad.NotificarHabilidadEspecialRealizada(objetivos);
         LimpiarUnidadesMuertas();
         VerificarGanador();
     }
@@ -123,9 +126,39 @@ public partial class Partida
     private void LimpiarUnidadesMuertasDe(Jugador jugador)
     {
         if (jugador == null) return;
-        foreach (var unidad in jugador.Unidades.FindAll(u => u.Vida <= 0))
+        var muertas = jugador.Unidades.FindAll(u => u.Vida <= 0);
+        foreach (var unidad in muertas)
             Mapa?.RetirarUnidad(unidad);
         jugador.Unidades.RemoveAll(u => u.Vida <= 0);
+
+        // Ya fuera de la lista (así no se procesa dos veces): el caballo de
+        // Troya suelta sus tropas donde cayó.
+        foreach (var unidad in muertas)
+            if (unidad is Avenger caballo) LiberarTropasDelCaballo(jugador, caballo);
+    }
+
+    // Se dispara cuando una unidad aparece en combate (no por entrenamiento),
+    // para que quien controla a ese jugador (la IA) pueda "escucharla".
+    public event Action<Jugador, Unidad> UnidadLiberada;
+
+    // Habilidad pasiva del Avenger: al morir libera TropasALiberar Vanguards
+    // en las celdas libres más cercanas. No cuentan contra el límite de
+    // población (salieron "gratis" de dentro del caballo).
+    private void LiberarTropasDelCaballo(Jugador jugador, Avenger caballo)
+    {
+        if (Mapa == null || caballo.Fila < 0) return;
+
+        for (int i = 0; i < caballo.TropasALiberar; i++)
+        {
+            if (!Mapa.BuscarCeldaLibreEnRango(caballo.Fila, caballo.Columna, 3, caballo.Fila, caballo.Columna, out int fila, out int columna))
+                break; // no hay lugar
+
+            Unidad soldado = FabricaUnidades.Crear("Vanguard", caballo.Civilizacion);
+            if (!Mapa.ColocarUnidad(fila, columna, soldado)) continue;
+
+            jugador.AgregarUnidad(soldado);
+            UnidadLiberada?.Invoke(jugador, soldado);
+        }
     }
 
     // Los edificios destruidos (Vida 0) salen de la lista del jugador Y de

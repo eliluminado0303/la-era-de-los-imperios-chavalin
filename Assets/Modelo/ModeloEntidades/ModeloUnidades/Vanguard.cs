@@ -4,10 +4,10 @@ public class Vanguard: Unidad
     // Inicializa una vanguardia para la civilización indicada.
     public Vanguard(string civilizacion)
     {
-        Vida = 100;
+        Vida = 110;
         VidaMaxima = Vida;
-        Ataque = 10;
-        Defensa = 10;
+        Ataque = 12;
+        Defensa = 15;
         Velocidad = 5;
         Rango = 1;
         Civilizacion = civilizacion;
@@ -15,9 +15,9 @@ public class Vanguard: Unidad
         ProbabilidadCritico = 0.25f;
         multiplicadorCritico = 1.5f;
         TicksAtaqueBasico = 2; 
-        CostoOro = 100;
-        CostoMadera = 50;
-        CostoComida = 25;
+        CostoOro = 30;
+        CostoMadera = 15;
+        CostoComida = 40;
     }
 
 }

@@ -838,10 +838,20 @@ public class VistaMapa : MonoBehaviour
         if (unidad is Gilgamesh) LanzarEfectoGilgamesh(unidad, objetivos);
         else if (unidad is Medusa) LanzarEfectoMedusa(unidad, objetivos);
         else if (unidad is Jormungandr) LanzarEfectoJormungandr(unidad, objetivos);
+        else if (unidad is Assassin || unidad is Defender) LanzarAroHabilidadSobreSiMismo(unidad);
         // Godzilla y NecoArc quedan afuera por ahora — no los pediste esta
         // vez. EfectoRayo ya está pensado para poder reusarse en el
         // aliento de Godzilla el día que quieras sumarlo (mismo patrón que
         // Gilgamesh, cambiando el sprite y el color).
+    }
+
+    // Assassin (rojo) y Defender (azul): un aro sobre la propia unidad con el
+    // tamaño real del área. Sirve también para la IA, que no pasa por VistaInput.
+    private void LanzarAroHabilidadSobreSiMismo(Unidad unidad)
+    {
+        if (unidad.Fila < 0 || unidad.AreaHabilidad == null) return;
+        Color color = unidad.HabilidadAfectaAliados ? new Color(0.35f, 0.6f, 1f) : new Color(1f, 0.3f, 0.3f);
+        EfectoCirculo.Crear(PosicionMundoDeUnidad(unidad), ((int)unidad.AreaHabilidad.Tamaño + 0.5f) * tamañoCelda, color, 0.6f);
     }
 
     // ---------------------------------------------------------------

@@ -252,29 +252,47 @@ public class ControladorCombate
         return true;
     }
 
+    // Habilidad activa de cualquier unidad (héroe, Assassin, Defender...).
+    // Las que se lanzan "sobre sí mismas" ignoran el punto clicado y se
+    // centran en la propia unidad. Los parámetros conservan el nombre viejo
+    // "heroe" por compatibilidad con quien ya lo llama.
     public bool SolicitarHabilidadEspecial(int filaHeroe, int columnaHeroe, int filaObjetivo, int columnaObjetivo)
     {
         Celda origen = mapa.ObtenerCelda(filaHeroe, columnaHeroe);
-        if (!(origen?.Unidad is Heroe heroe) || !miJugador.Unidades.Contains(heroe)) return false;
-        if (!heroe.PuedeUsarHabilidad()) return false; // en recarga: la Vista puede usar esto para deshabilitar el botón
+        Unidad unidad = origen?.Unidad;
+        if (unidad == null || !miJugador.Unidades.Contains(unidad)) return false;
+        if (!unidad.TieneHabilidadActiva || unidad.AreaHabilidad == null) return false;
+        if (!unidad.PuedeUsarHabilidad()) return false; // en recarga: la Vista puede usar esto para deshabilitar el botón
+
+        if (unidad.HabilidadEsSobreSiMismo)
+        {
+            filaObjetivo = filaHeroe;
+            columnaObjetivo = columnaHeroe;
+        }
 
         int distanciaLanzamiento = ResolutorArea.Distancia(filaHeroe, columnaHeroe, filaObjetivo, columnaObjetivo);
 
         // Para habilidades en Línea (Gilgamesh, Godzilla) RangoLanzamiento es 0
         // (la línea sale del propio héroe): el alcance real es el LARGO de la
         // línea (Tamaño). Antes solo se podían lanzar clickeando al propio héroe.
-        float alcance = heroe.AreaHabilidad.Forma == FormaArea.Linea
-            ? heroe.AreaHabilidad.Tamaño
-            : heroe.AreaHabilidad.RangoLanzamiento;
+        float alcance = unidad.AreaHabilidad.Forma == FormaArea.Linea
+            ? unidad.AreaHabilidad.Tamaño
+            : unidad.AreaHabilidad.RangoLanzamiento;
         if (distanciaLanzamiento > alcance) return false;
 
-        var objetivos = ResolutorArea.ObtenerCeldasEnArea(mapa, heroe.AreaHabilidad, filaHeroe, columnaHeroe, filaObjetivo, columnaObjetivo)
-            .Where(celda => celda.Unidad != null && !miJugador.Unidades.Contains(celda.Unidad))
+        bool aliados = unidad.HabilidadAfectaAliados;
+        var objetivos = ResolutorArea.ObtenerCeldasEnArea(mapa, unidad.AreaHabilidad, filaHeroe, columnaHeroe, filaObjetivo, columnaObjetivo)
+            .Where(celda => celda.Unidad != null && celda.Unidad != unidad && celda.Unidad.Vida > 0
+                            && (aliados ? miJugador.Unidades.Contains(celda.Unidad) : !miJugador.Unidades.Contains(celda.Unidad)))
             .Select(celda => celda.Unidad)
             .ToList();
-        if (objetivos.Count == 0) return false;
 
-        partida.EjecutarHabilidadEspecial(miJugador, heroe, objetivos);
+        // Una habilidad de apoyo sobre sí mismo (Defender) sirve aunque esté solo;
+        // las ofensivas necesitan al menos un enemigo en el área.
+        bool sirveSinObjetivos = aliados && unidad.HabilidadEsSobreSiMismo;
+        if (objetivos.Count == 0 && !sirveSinObjetivos) return false;
+
+        partida.EjecutarHabilidadEspecial(miJugador, unidad, objetivos);
         return true;
     }
 
@@ -285,6 +303,7 @@ public class ControladorCombate
 
         int distanciaLanzamiento = ResolutorArea.Distancia(filaHealer, columnaHealer, filaObjetivo, columnaObjetivo);
         if (distanciaLanzamiento > healer.AreaBuff.RangoLanzamiento) return false;
+        if (buff && !healer.PuedeUsarHabilidad()) return false; // la bendición tiene recarga; curar no
 
         var aliados = ResolutorArea.ObtenerCeldasEnArea(mapa, healer.AreaBuff, filaHealer, columnaHealer, filaObjetivo, columnaObjetivo)
             .Where(celda => celda.Unidad != null && miJugador.Unidades.Contains(celda.Unidad))
@@ -297,6 +316,7 @@ public class ControladorCombate
             if (buff) healer.Buffear(aliado);
             else healer.Curar(aliado);
         }
+        if (buff) healer.RegistrarUsoHabilidad();
         return true;
     }
 }

@@ -13,7 +13,7 @@ using System.Linq;
 //
 // NOTA: depende de Mapa.UnidadesEnRadio(fila, columna, radio), que es el
 // método pendiente de agregar (Opción A que hablamos con tu compañera).
-public class ControladorIA
+public partial class ControladorIA // partial: la caza de aldeanos vive en ControladorIA.Aldeanos.cs
 {
     private readonly Jugador miJugador;
     private readonly string civilizacion;
@@ -46,7 +46,7 @@ public class ControladorIA
     private const int MINIMO_EJERCITO_PARA_ATACAR = 3;
     private const float INTERVALO_ECONOMIA = 1f;  // antes corría CADA frame: barría el mapa entero 60 veces por segundo por IA
     private const float INTERVALO_MILITAR = 1.5f;
-
+  private const int RADIO_BUSQUEDA_ALDEANOS = 10;
     private bool enModoAtaque = false;
     public bool EnModoAtaque => enModoAtaque; // ControladorDeambulacion lo consulta para no mover al azar a las tropas que atacan
     private float tiempoHastaProximaEconomia = 0f;
@@ -75,6 +75,54 @@ public class ControladorIA
     public void ObservarEdificio(Edificio edificio)
     {
         edificio.FueAtacado += AlSerAtacadoEdificio;
+    }
+
+
+// Parte de ControladorIA dedicada a los aldeanos enemigos: hasta ahora la IA
+// solo atacaba unidades y edificios, así que los aldeanos del rival podían
+// recolectar tranquilos aunque hubiera tropas de la IA al lado.
+//
+// Se engancha desde ControladorIA.ActuarEnCombate (paso 1b): cuando una
+// unidad no tiene unidades enemigas cerca, antes de marchar contra un
+// edificio revisa si hay un aldeano enemigo al alcance de su vista.
+
+    // Hasta dónde "ve" una unidad de la IA a los aldeanos enemigos (en casillas).
+  
+
+    // Devuelve true si la unidad hizo algo (atacó o salió a acercarse), para
+    // que quien llama no siga con el resto de sus decisiones en este turno.
+    private bool AtacarAldeanoCercano(Unidad unidad, int fila, int columna)
+    {
+        if (unidad.Ataque <= 0) return false; // p. ej. el Avenger: no puede dañar a nadie
+
+        Aldeano objetivo = null;
+        int mejorDistancia = int.MaxValue;
+
+        foreach (var aldeano in mapa.AldeanosEnRadio(fila, columna, RADIO_BUSQUEDA_ALDEANOS))
+        {
+            if (miJugador.Aldeanos.Contains(aldeano)) continue; // es de los míos
+            if (aldeano.Fila < 0) continue;
+
+            int distancia = ResolutorArea.Distancia(fila, columna, aldeano.Fila, aldeano.Columna);
+            if (distancia < mejorDistancia) { mejorDistancia = distancia; objetivo = aldeano; }
+        }
+        if (objetivo == null) return false;
+
+        // En rango: golpe directo. Si no, se mueve a una celda libre desde la
+        // que pueda pegarle (cuerpo a cuerpo: pegada al aldeano; a distancia:
+        // en el borde de su alcance) y lo ataca en el siguiente turno.
+        if (mejorDistancia <= unidad.Rango)
+        {
+            partida.EjecutarAtaqueAAldeano(miJugador, unidad, objetivo);
+            return true;
+        }
+
+        if (mapa.BuscarCeldaLibreEnRango(objetivo.Fila, objetivo.Columna, unidad.Rango, fila, columna, out int filaDestino, out int columnaDestino))
+        {
+            MiControladorMapa.SolicitarMovimiento(fila, columna, filaDestino, columnaDestino);
+            return true;
+        }
+        return false; // no hay dónde pararse: que siga con otra cosa
     }
 
     // Lo llama el Controlador de movimiento de la IA cada vez que ella
@@ -311,6 +359,10 @@ public class ControladorIA
             if (objetivo != null && BuscarPosicionEnMapa(objetivo, fila, columna, out int fo, out int co))
             {
                 int distancia = ResolutorArea.Distancia(fila, columna, fo, co);
+                // Habilidades sobre sí mismo de las unidades que no son héroes (Assassin, Defender).
+                if (!(unidad is Heroe) && unidad.TieneHabilidadActiva && unidad.HabilidadEsSobreSiMismo
+                    && IntentarHabilidadSobreSiMismo(unidad, fila, columna)) return;
+
                 if (unidad is Heroe heroe && heroe.PuedeUsarHabilidad() && IntentarHabilidad(heroe, fila, columna, fo, co)) return;
 
                 if (distancia <= unidad.Rango) { AtacarUnidad(unidad, objetivo, fo, co); return; }
@@ -318,6 +370,10 @@ public class ControladorIA
                 return;
             }
         }
+
+        // 1b) Sin unidades enemigas cerca: ir por los aldeanos enemigos a la vista
+        // (ver ControladorIA.Aldeanos.cs), antes de marchar contra los edificios.
+        if (AtacarAldeanoCercano(unidad, fila, columna)) return;
 
         // 2) Sin enemigos cerca: marchar al edificio enemigo más cercano y golpearlo.
         var edificio = BuscarEdificioEnemigoMasCercano(fila, columna);
@@ -341,6 +397,30 @@ public class ControladorIA
             if (objetivos.Count > 0) { partida.EjecutarAtaqueEnArea(miJugador, unidad, objetivos); return; }
         }
         partida.EjecutarAtaque(miJugador, unidad, objetivo);
+    }
+
+    // Assassin (daña a los enemigos pegados) y Defender (protege a los aliados
+    // cercanos): se usan solo si hay al menos un enemigo dentro del área de la
+    // habilidad, para no gastar la recarga en vano.
+    private bool IntentarHabilidadSobreSiMismo(Unidad unidad, int fila, int columna)
+    {
+        if (!unidad.PuedeUsarHabilidad() || unidad.AreaHabilidad == null) return false;
+
+        var enElArea = ResolutorArea
+            .ObtenerCeldasEnArea(mapa, unidad.AreaHabilidad, fila, columna, fila, columna)
+            .Where(celda => celda.Unidad != null && celda.Unidad != unidad && celda.Unidad.Vida > 0)
+            .Select(celda => celda.Unidad)
+            .ToList();
+
+        var enemigos = enElArea.Where(u => !miJugador.Unidades.Contains(u)).ToList();
+        if (enemigos.Count == 0) return false;
+
+        var objetivos = unidad.HabilidadAfectaAliados
+            ? enElArea.Where(u => miJugador.Unidades.Contains(u)).ToList()
+            : enemigos;
+
+        partida.EjecutarHabilidadEspecial(miJugador, unidad, objetivos);
+        return true;
     }
 
     private bool IntentarHabilidad(Heroe heroe, int fila, int columna, int filaObjetivo, int columnaObjetivo)

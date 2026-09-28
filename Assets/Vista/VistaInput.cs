@@ -25,22 +25,38 @@ public class VistaInput : MonoBehaviour
             Debug.Log("Construcción cancelada.");
             return;
         }
-        // Tecla E: si tienes un héroe seleccionado y su habilidad está
-        // lista, entra en "modo puntería" — el próximo clic decide el
-        // punto donde se lanza la habilidad, en vez de mover/atacar normal.
+        // Tecla E: si tienes seleccionada una unidad con habilidad activa
+        // (héroes, Assassin, Defender...) y está lista, la usa. Las que se
+        // lanzan sobre sí mismas (Assassin, Defender) salen al instante; las
+        // demás entran en "modo puntería": el próximo clic decide el punto.
         if (Input.GetKeyDown(KeyCode.E) && vistaMapa.FilaSeleccionada != null)
         {
-            Celda celdaSeleccionada = vistaMapa.Partida.Mapa.ObtenerCelda(vistaMapa.FilaSeleccionada.Value, vistaMapa.ColumnaSeleccionada.Value);
-            if (celdaSeleccionada?.Unidad is Heroe heroeSeleccionado)
+            int filaSel = vistaMapa.FilaSeleccionada.Value;
+            int columnaSel = vistaMapa.ColumnaSeleccionada.Value;
+            Unidad unidadSeleccionada = vistaMapa.Partida.Mapa.ObtenerCelda(filaSel, columnaSel)?.Unidad;
+
+            if (unidadSeleccionada != null && unidadSeleccionada.TieneHabilidadActiva)
             {
-                if (heroeSeleccionado.PuedeUsarHabilidad())
+                if (!unidadSeleccionada.PuedeUsarHabilidad())
                 {
-                    vistaMapa.ModoHabilidadEspecial = true;
-                    Debug.Log("Modo habilidad especial: hacé click en el punto donde quieres lanzarla.");
+                    Debug.Log($"Habilidad en recarga: faltan {unidadSeleccionada.TiempoRestanteRecarga():0.0}s.");
+                }
+                else if (unidadSeleccionada.HabilidadEsSobreSiMismo)
+                {
+                    bool lanzada = vistaMapa.Partida.ControladoresCombate[0].SolicitarHabilidadEspecial(filaSel, columnaSel, filaSel, columnaSel);
+                    if (lanzada)
+                    {
+                        Debug.Log("¡Habilidad especial lanzada!");
+                    }
+                    else Debug.Log("No se pudo lanzar (no hay enemigos al alcance de la habilidad).");
+                    vistaMapa.FilaSeleccionada = null;
+                    vistaMapa.ColumnaSeleccionada = null;
+                    return;
                 }
                 else
                 {
-                    Debug.Log($"Habilidad en recarga: faltan {heroeSeleccionado.TiempoRestanteRecarga():0.0}s.");
+                    vistaMapa.ModoHabilidadEspecial = true;
+                    Debug.Log("Modo habilidad especial: hacé click en el punto donde quieres lanzarla.");
                 }
             }
         }
@@ -88,7 +104,7 @@ public class VistaInput : MonoBehaviour
             if (lanzado)
             {
                 Celda celdaHeroe = vistaMapa.Partida.Mapa.ObtenerCelda(filaHeroe, columnaHeroe);
-                if (celdaHeroe?.Unidad is Heroe heroeQueLanzo && heroeQueLanzo.AreaHabilidad.Forma == FormaArea.Linea)
+                if (celdaHeroe?.Unidad is Unidad heroeQueLanzo && heroeQueLanzo.AreaHabilidad != null && heroeQueLanzo.AreaHabilidad.Forma == FormaArea.Linea)
                 {
                     Vector3 origen = new Vector3(columnaHeroe * vistaMapa.tamañoCelda, -filaHeroe * vistaMapa.tamañoCelda, 0);
                     Vector3 destino = new Vector3(columna * vistaMapa.tamañoCelda, -fila * vistaMapa.tamañoCelda, 0);
