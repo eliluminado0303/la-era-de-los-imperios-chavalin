@@ -43,6 +43,7 @@ public class ControladorEntrenamiento
             if (resultado.Resultado is Aldeano aldeano)
             {
                 miJugador.AgregarAldeano(aldeano);
+                ColocarAldeanoCercaDelCentroUrbano(aldeano);
             }
             else if (resultado.Resultado is Unidad unidad)
             {
@@ -66,6 +67,22 @@ public class ControladorEntrenamiento
             if (mapa.EsPosicionValida(f, c) && mapa.CeldaLibre(f, c))
             {
                 mapa.ColocarUnidad(f, c, unidad);
+                return;
+            }
+        }
+    }
+        private void ColocarAldeanoCercaDelCentroUrbano(Aldeano aldeano)
+    {
+        var centroUrbano = miJugador.Edificios.OfType<EdificioPrincipal>().FirstOrDefault();
+        if (centroUrbano == null) return;
+
+        (int deltaFila, int deltaColumna)[] posiciones = { (1, 1), (1, -1), (-1, 1), (-1, -1), (0, 2), (2, 0), (0, -2), (-2, 0) };
+        foreach (var (deltaFila, deltaColumna) in posiciones)
+        {
+            int f = centroUrbano.Fila + deltaFila, c = centroUrbano.Columna + deltaColumna;
+            if (mapa.EsPosicionValida(f, c) && mapa.CeldaLibre(f, c))
+            {
+                mapa.ColocarAldeano(f, c, aldeano);
                 return;
             }
         }

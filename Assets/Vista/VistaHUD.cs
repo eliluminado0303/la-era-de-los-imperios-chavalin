@@ -10,6 +10,8 @@ using TMPro;
 //   - Barra de recursos (oro/madera/comida/población).
 //   - Lista de Aldeanos entrenados: se seleccionan ACÁ, en el HUD, y el
 //     siguiente click en el mapa (VistaInput) decide a qué recurso lo mandás.
+//   - Lista de Unidades militares: mismo patrón que la de Aldeanos, para
+//     seleccionar desde el HUD en vez de clickear el mapa.
 //   - Lista DESPLEGABLE de Construcción: un botón "Construir" que abre un
 //     panel con una fila por cada estructura disponible, con su costo y un
 //     botón. Al tocar una fila, NO se construye todavía: se deja el
@@ -42,6 +44,25 @@ public class VistaHUD : MonoBehaviour
                 return entrada.sprite;
         return null;
     }
+        [Header("Botones desplegables (Aldeano / Unidad)")]
+    public GameObject panelAldeanos;  // el contenedor con la lista de aldeanos / entrenar aldeano
+    public GameObject panelUnidades;  // el contenedor con la lista de entrenar unidades
+
+    // Cada botón abre su panel y cierra el otro — así solo uno está
+    // desplegado a la vez, en vez de tener todo visible siempre.
+    public void AlternarPanelAldeanos()
+    {
+        bool nuevoEstado = !panelAldeanos.activeSelf;
+        panelAldeanos.SetActive(nuevoEstado);
+        if (nuevoEstado) panelUnidades.SetActive(false);
+    }
+
+    public void AlternarPanelUnidades()
+    {
+        bool nuevoEstado = !panelUnidades.activeSelf;
+        panelUnidades.SetActive(nuevoEstado);
+        if (nuevoEstado) panelAldeanos.SetActive(false);
+    }
 
     [Header("Textos de recursos")]
     public TextMeshProUGUI textoOro;
@@ -53,6 +74,101 @@ public class VistaHUD : MonoBehaviour
     public Transform contenedorAldeanos;   // objeto vacío con un Vertical Layout Group
     public GameObject prefabBotonAldeano;  // prefab: un Button con un TextMeshProUGUI hijo
     private readonly List<(Aldeano aldeano, GameObject boton, TextMeshProUGUI texto)> botonesAldeanos = new List<(Aldeano, GameObject, TextMeshProUGUI)>();
+
+    // ---------------------------------------------------------------
+    // Lista de Unidades militares (alternativa a clickear el mapa)
+    // ---------------------------------------------------------------
+
+    [Header("Lista de Unidades militares (alternativa a clickear el mapa)")]
+    public Transform contenedorUnidades;   // objeto vacío con un Vertical Layout Group
+    public GameObject prefabBotonUnidad;   // podés usar el MISMO prefab que prefabBotonAldeano
+    private readonly List<(Unidad unidad, GameObject boton, TextMeshProUGUI texto)> botonesUnidades = new List<(Unidad, GameObject, TextMeshProUGUI)>();
+
+    private void ActualizarListaDeUnidades(Jugador jugadorHumano)
+    {
+        if (contenedorUnidades == null || prefabBotonUnidad == null) return;
+
+        // A diferencia de los Aldeanos, acá el conteo SÍ puede bajar (mueren
+        // en combate) — por eso se reconstruye entera cuando cambia, en vez
+        // de solo "agregar los que falten" (como hace ActualizarListaDeAldeanos).
+        var unidadesVivas = jugadorHumano.Unidades.Where(u => u.Vida > 0).ToList();
+        if (botonesUnidades.Count != unidadesVivas.Count)
+            ReconstruirListaDeUnidades(unidadesVivas);
+
+        for (int i = 0; i < botonesUnidades.Count; i++)
+        {
+            var (unidad, _, texto) = botonesUnidades[i];
+            if (texto == null) continue;
+            bool esLaSeleccionada = EsLaUnidadSeleccionada(unidad);
+            texto.text = $"{(esLaSeleccionada ? "➤ " : "")}{unidad.GetType().Name} {i + 1} — Vida {unidad.Vida:0}/{unidad.VidaMaxima:0}";
+        }
+    }
+    void Awake()
+    {
+        if (panelAldeanos != null) panelAldeanos.SetActive(false);
+        if (panelUnidades != null) panelUnidades.SetActive(false);
+    }
+    private void ReconstruirListaDeUnidades(List<Unidad> unidadesVivas)
+    {
+        foreach (var (_, boton, _) in botonesUnidades) Destroy(boton);
+        botonesUnidades.Clear();
+
+        foreach (var unidad in unidadesVivas)
+        {
+            var botonGO = Instantiate(prefabBotonUnidad, contenedorUnidades);
+            var texto = botonGO.GetComponentInChildren<TextMeshProUGUI>();
+            var boton = botonGO.GetComponentInChildren<Button>();
+            if (boton == null)
+            {
+                Debug.LogError("El prefab \"Prefab Boton Unidad\" no tiene un Button (ni en él ni en sus hijos).");
+                botonesUnidades.Add((unidad, botonGO, texto));
+                continue;
+            }
+
+            // Mismo truco que CrearFilaOpcion: si el prefab tiene un hijo
+            // "Icono"/"icono" con Image, le busca el sprite por nombre de tipo.
+            var imagenIcono = (botonGO.transform.Find("Icono") ?? botonGO.transform.Find("icono"))?.GetComponent<Image>();
+            if (imagenIcono != null)
+            {
+                imagenIcono.sprite = ObtenerIcono(unidad.GetType().Name);
+                imagenIcono.enabled = imagenIcono.sprite != null;
+            }
+
+            boton.onClick.AddListener(() => SeleccionarUnidad(unidad));
+            botonesUnidades.Add((unidad, botonGO, texto));
+        }
+    }
+
+    // Seleccionar desde la lista hace EXACTAMENTE lo mismo que clickear la
+    // unidad en el mapa (llena FilaSeleccionada/ColumnaSeleccionada) — así
+    // que el siguiente click en el mapa para moverla/atacar ya funciona
+    // solo, sin tocar VistaInput.
+    private void SeleccionarUnidad(Unidad unidad)
+    {
+        if (unidad.Vida <= 0) return;
+        if (!BuscarPosicionDeUnidad(unidad, out int fila, out int columna)) return;
+
+        bool yaEstaSeleccionada = vistaMapa.FilaSeleccionada == fila && vistaMapa.ColumnaSeleccionada == columna;
+        vistaMapa.FilaSeleccionada = yaEstaSeleccionada ? (int?)null : fila;
+        vistaMapa.ColumnaSeleccionada = yaEstaSeleccionada ? (int?)null : columna;
+    }
+
+    private bool EsLaUnidadSeleccionada(Unidad unidad)
+    {
+        if (vistaMapa.FilaSeleccionada == null) return false;
+        var celda = vistaMapa.Partida.Mapa.ObtenerCelda(vistaMapa.FilaSeleccionada.Value, vistaMapa.ColumnaSeleccionada.Value);
+        return celda?.Unidad == unidad;
+    }
+
+    private bool BuscarPosicionDeUnidad(Unidad unidad, out int fila, out int columna)
+    {
+        var mapa = vistaMapa.Partida.Mapa;
+        for (int f = 0; f < Mapa.FILAS; f++)
+            for (int c = 0; c < Mapa.COLUMNAS; c++)
+                if (mapa.ObtenerCelda(f, c).Unidad == unidad) { fila = f; columna = c; return true; }
+        fila = columna = 0;
+        return false;
+    }
 
     // ---------------------------------------------------------------
     // Listas desplegables de Construcción / Entrenamiento
@@ -126,6 +242,7 @@ public class VistaHUD : MonoBehaviour
         if (textoPoblacion != null) textoPoblacion.text = $"Población: {jugadorHumano.PoblacionActual}/{jugadorHumano.LimitePoblacion}";
 
         ActualizarListaDeAldeanos(jugadorHumano);
+        ActualizarListaDeUnidades(jugadorHumano);
 
         // Las listas de Construcción/Entrenamiento solo se arman la primera
         // vez que se abren (ver AlternarPanelConstruccion/Entrenamiento), y
@@ -427,11 +544,20 @@ public class VistaHUD : MonoBehaviour
         Debug.Log($"Elegí una celda ya explorada para construir {edificio.Nombre}.");
     }
 
+    // Cada civilización tiene 1 héroe + 1 unidad exclusiva propia, más las 4
+    // genéricas (cualquier civilización) y NecoArc (el meme, también genérica).
     private List<string> UnidadesDeCivilizacion(string civilizacion)
     {
-        var unidades = FabricaUnidades.ObtenerTiposDisponibles(civilizacion);
-        unidades.Add("NecoArc");
-        return unidades;
+        string heroe, exclusiva;
+        switch (civilizacion)
+        {
+            case "Sumerios": heroe = "Gilgamesh";    exclusiva = "Caster";    break;
+            case "Nipones":  heroe = "Godzilla";     exclusiva = "Assassin";  break;
+            case "Griegos":  heroe = "Medusa";       exclusiva = "Avenger";   break;
+            default:         heroe = "Jormungandr";  exclusiva = "Berserker"; break; // Vikingos
+        }
+
+        return new List<string> { heroe, exclusiva, "Defender", "Vanguard", "Ranger", "Healer", "NecoArc" };
     }
 
     public void VolverAlMenu()

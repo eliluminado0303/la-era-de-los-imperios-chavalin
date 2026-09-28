@@ -4,11 +4,13 @@ using UnityEngine;
 // 'duracion' segundos. Sirve para curación (verde), un buff (dorado), etc.
 public class EfectoCuracion : MonoBehaviour
 {
-    public static void Crear(Vector3 posicion, Color color, float duracion = 0.5f)
+    // sprite: opcional, mismo criterio que en EfectoRayo — si es null,
+    // sigue mostrando el círculo de color liso de siempre.
+    public static void Crear(Vector3 posicion, Color color, float duracion = 0.5f, Sprite sprite = null)
     {
         var go = new GameObject("EfectoCuracion");
         var sr = go.AddComponent<SpriteRenderer>();
-        sr.sprite = ObtenerSpriteBlanco();
+        sr.sprite = sprite != null ? sprite : ObtenerSpriteBlanco();
         sr.color = color;
         sr.sortingOrder = 10;
         go.transform.position = posicion;

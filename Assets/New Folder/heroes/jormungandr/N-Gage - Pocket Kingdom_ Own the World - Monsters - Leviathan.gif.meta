@@ -226,7 +226,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -240,7 +240,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -308,11 +308,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1199
-        width: 74
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 1200
+        width: 73
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -329,12 +329,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_1
       rect:
         serializedVersion: 2
-        x: 101
-        y: 1189
-        width: 61
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 102
+        y: 1190
+        width: 59
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -351,12 +351,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_2
       rect:
         serializedVersion: 2
-        x: 166
-        y: 1203
-        width: 88
-        height: 53
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 167
+        y: 1204
+        width: 86
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -373,12 +373,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1143
-        width: 75
-        height: 56
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1
+        y: 1144
+        width: 73
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -395,12 +395,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_4
       rect:
         serializedVersion: 2
-        x: 165
-        y: 1147
-        width: 91
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 166
+        y: 1148
+        width: 89
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -417,12 +417,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_5
       rect:
         serializedVersion: 2
-        x: 2
-        y: 1075
-        width: 99
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3
+        y: 1076
+        width: 97
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -439,12 +439,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_6
       rect:
         serializedVersion: 2
-        x: 155
-        y: 1041
-        width: 100
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 156
+        y: 1042
+        width: 98
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -461,12 +461,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_7
       rect:
         serializedVersion: 2
-        x: 168
-        y: 1091
-        width: 82
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 169
+        y: 1092
+        width: 80
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -483,12 +483,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_8
       rect:
         serializedVersion: 2
-        x: 9
-        y: 1043
-        width: 9
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 10
+        y: 1044
+        width: 7
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -505,12 +505,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_9
       rect:
         serializedVersion: 2
-        x: 18
-        y: 1038
-        width: 12
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 19
+        y: 1039
+        width: 10
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -527,12 +527,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_10
       rect:
         serializedVersion: 2
-        x: 22
-        y: 986
-        width: 107
-        height: 86
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 23
+        y: 987
+        width: 105
+        height: 84
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -549,12 +549,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_11
       rect:
         serializedVersion: 2
-        x: 5
-        y: 1029
-        width: 17
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6
+        y: 1030
+        width: 15
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -571,12 +571,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_12
       rect:
         serializedVersion: 2
-        x: 7
-        y: 997
-        width: 17
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 992
+        width: 128
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -593,12 +593,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_13
       rect:
         serializedVersion: 2
-        x: 127
-        y: 991
-        width: 129
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8
+        y: 998
+        width: 15
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -615,12 +615,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_14
       rect:
         serializedVersion: 2
-        x: 21
-        y: 995
-        width: 8
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 22
+        y: 996
+        width: 6
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -637,12 +637,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_15
       rect:
         serializedVersion: 2
-        x: 15
-        y: 966
-        width: 7
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 16
+        y: 967
+        width: 5
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -659,12 +659,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_16
       rect:
         serializedVersion: 2
-        x: 27
-        y: 893
-        width: 102
-        height: 87
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 28
+        y: 894
+        width: 100
+        height: 85
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -681,12 +681,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_17
       rect:
         serializedVersion: 2
-        x: 158
-        y: 938
-        width: 98
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 159
+        y: 939
+        width: 97
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -703,12 +703,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_18
       rect:
         serializedVersion: 2
-        x: 0
-        y: 937
-        width: 13
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1
+        y: 938
+        width: 11
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -725,12 +725,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_19
       rect:
         serializedVersion: 2
-        x: 8
-        y: 954
-        width: 8
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 9
+        y: 955
+        width: 6
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -747,12 +747,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_20
       rect:
         serializedVersion: 2
-        x: 22
-        y: 942
-        width: 12
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 23
+        y: 943
+        width: 10
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -769,12 +769,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_21
       rect:
         serializedVersion: 2
-        x: 3
-        y: 917
-        width: 11
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4
+        y: 918
+        width: 9
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -791,12 +791,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_22
       rect:
         serializedVersion: 2
-        x: 21
-        y: 916
-        width: 12
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 22
+        y: 917
+        width: 10
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -813,12 +813,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_23
       rect:
         serializedVersion: 2
-        x: 169
-        y: 849
-        width: 87
-        height: 87
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 170
+        y: 850
+        width: 85
+        height: 85
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -835,12 +835,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_24
       rect:
         serializedVersion: 2
-        x: 13
-        y: 896
-        width: 11
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 14
+        y: 897
+        width: 9
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -857,12 +857,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_25
       rect:
         serializedVersion: 2
-        x: 28
-        y: 805
-        width: 101
-        height: 87
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 29
+        y: 806
+        width: 99
+        height: 85
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -879,12 +879,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_26
       rect:
         serializedVersion: 2
-        x: 182
-        y: 763
-        width: 74
-        height: 83
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 183
+        y: 764
+        width: 73
+        height: 81
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -901,12 +901,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_27
       rect:
         serializedVersion: 2
-        x: 1
-        y: 716
-        width: 81
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2
+        y: 717
+        width: 79
+        height: 63
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -923,12 +923,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_28
       rect:
         serializedVersion: 2
-        x: 64
-        y: 652
-        width: 82
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 93
+        y: 718
+        width: 85
+        height: 85
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -945,12 +945,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_29
       rect:
         serializedVersion: 2
-        x: 92
-        y: 717
-        width: 87
-        height: 87
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 65
+        y: 653
+        width: 80
+        height: 63
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -967,12 +967,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_30
       rect:
         serializedVersion: 2
-        x: 152
-        y: 653
-        width: 102
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 153
+        y: 654
+        width: 100
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -989,12 +989,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_31
       rect:
         serializedVersion: 2
-        x: 2
-        y: 599
-        width: 88
-        height: 53
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3
+        y: 600
+        width: 86
+        height: 51
+      alignment: 9
+      pivot: {x: 0.638931, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1011,12 +1011,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_32
       rect:
         serializedVersion: 2
-        x: 94
-        y: 585
-        width: 61
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 95
+        y: 586
+        width: 59
+        height: 62
+      alignment: 9
+      pivot: {x: 0.66072214, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1033,12 +1033,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_33
       rect:
         serializedVersion: 2
-        x: 182
-        y: 595
-        width: 74
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 183
+        y: 596
+        width: 73
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1055,12 +1055,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_34
       rect:
         serializedVersion: 2
-        x: 0
-        y: 543
-        width: 91
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1
+        y: 544
+        width: 89
+        height: 50
+      alignment: 9
+      pivot: {x: 0.6726046, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1077,12 +1077,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_35
       rect:
         serializedVersion: 2
-        x: 181
-        y: 539
-        width: 75
-        height: 56
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 182
+        y: 540
+        width: 73
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1099,12 +1099,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_36
       rect:
         serializedVersion: 2
-        x: 1
-        y: 437
-        width: 100
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2
+        y: 438
+        width: 98
+        height: 50
+      alignment: 9
+      pivot: {x: 0.46903646, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1121,12 +1121,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_37
       rect:
         serializedVersion: 2
-        x: 6
-        y: 487
-        width: 82
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 7
+        y: 488
+        width: 80
+        height: 53
+      alignment: 9
+      pivot: {x: 0.6540922, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1143,12 +1143,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_38
       rect:
         serializedVersion: 2
-        x: 155
-        y: 471
-        width: 99
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 156
+        y: 472
+        width: 97
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5860276, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1165,12 +1165,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_39
       rect:
         serializedVersion: 2
-        x: 127
-        y: 382
-        width: 107
-        height: 86
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 383
+        width: 121
+        height: 84
+      alignment: 9
+      pivot: {x: 0.40752506, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1187,12 +1187,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_40
       rect:
         serializedVersion: 2
-        x: 226
-        y: 434
-        width: 12
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 227
+        y: 435
+        width: 10
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1209,12 +1209,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_41
       rect:
         serializedVersion: 2
-        x: 238
-        y: 439
-        width: 9
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 239
+        y: 440
+        width: 7
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1232,11 +1232,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 387
-        width: 129
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 388
+        width: 128
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1253,12 +1253,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_43
       rect:
         serializedVersion: 2
-        x: 232
-        y: 393
-        width: 17
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 235
+        y: 426
+        width: 15
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1275,12 +1275,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_44
       rect:
         serializedVersion: 2
-        x: 234
-        y: 425
-        width: 17
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 228
+        y: 392
+        width: 6
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1297,12 +1297,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_45
       rect:
         serializedVersion: 2
-        x: 227
-        y: 391
-        width: 8
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 233
+        y: 394
+        width: 15
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1320,11 +1320,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 334
-        width: 98
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 335
+        width: 97
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5938485, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1341,12 +1341,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_47
       rect:
         serializedVersion: 2
-        x: 127
-        y: 289
-        width: 102
-        height: 87
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 290
+        width: 127
+        height: 85
+      alignment: 9
+      pivot: {x: 0.407414, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1363,12 +1363,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_48
       rect:
         serializedVersion: 2
-        x: 234
-        y: 362
-        width: 7
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 235
+        y: 363
+        width: 5
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1385,12 +1385,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_49
       rect:
         serializedVersion: 2
-        x: 222
-        y: 338
-        width: 12
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 223
+        y: 339
+        width: 10
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1407,12 +1407,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_50
       rect:
         serializedVersion: 2
-        x: 240
-        y: 350
-        width: 8
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 241
+        y: 351
+        width: 6
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1429,12 +1429,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_51
       rect:
         serializedVersion: 2
-        x: 243
-        y: 333
-        width: 13
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 244
+        y: 334
+        width: 11
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1451,12 +1451,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_52
       rect:
         serializedVersion: 2
-        x: 0
-        y: 245
-        width: 87
-        height: 87
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1
+        y: 246
+        width: 85
+        height: 85
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1473,12 +1473,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_53
       rect:
         serializedVersion: 2
-        x: 223
-        y: 312
-        width: 12
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 224
+        y: 313
+        width: 10
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1495,12 +1495,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_54
       rect:
         serializedVersion: 2
-        x: 242
-        y: 313
-        width: 11
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 243
+        y: 314
+        width: 9
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1517,12 +1517,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_55
       rect:
         serializedVersion: 2
-        x: 232
-        y: 292
-        width: 11
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 233
+        y: 293
+        width: 9
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1540,11 +1540,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 159
-        width: 74
-        height: 83
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 160
+        width: 73
+        height: 81
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1561,12 +1561,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_57
       rect:
         serializedVersion: 2
-        x: 127
-        y: 201
-        width: 101
-        height: 87
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 202
+        width: 99
+        height: 85
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1583,12 +1583,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_58
       rect:
         serializedVersion: 2
-        x: 77
-        y: 113
-        width: 87
-        height: 87
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 78
+        y: 114
+        width: 85
+        height: 85
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1605,12 +1605,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_59
       rect:
         serializedVersion: 2
-        x: 110
-        y: 48
-        width: 82
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 175
+        y: 113
+        width: 79
+        height: 63
+      alignment: 9
+      pivot: {x: 0.41357654, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1627,12 +1627,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_60
       rect:
         serializedVersion: 2
-        x: 174
-        y: 112
-        width: 81
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3
+        y: 50
+        width: 100
+        height: 60
+      alignment: 9
+      pivot: {x: 0.38241565, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1649,12 +1649,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_61
       rect:
         serializedVersion: 2
-        x: 2
+        x: 111
         y: 49
-        width: 102
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 80
+        height: 63
+      alignment: 9
+      pivot: {x: 0.43125135, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1671,12 +1671,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_62
       rect:
         serializedVersion: 2
-        x: 62
-        y: 14
-        width: 49
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 63
+        y: 15
+        width: 47
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1693,12 +1693,12 @@ TextureImporter:
       name: N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_63
       rect:
         serializedVersion: 2
-        x: 104
-        y: 12
-        width: 73
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 105
+        y: 13
+        width: 71
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1715,7 +1715,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 83a4e23dfea90f24d9e954b16117ab82
     internalID: 0
     vertices: []
     indices: 
@@ -1723,7 +1723,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_0: -4484739219171580594
       N-Gage - Pocket Kingdom_ Own the World - Monsters - Leviathan_1: 1572759618143958052

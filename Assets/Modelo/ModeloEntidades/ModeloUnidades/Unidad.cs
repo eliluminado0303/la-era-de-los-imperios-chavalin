@@ -49,16 +49,20 @@ public class Unidad
     // Se dispara cuando la unidad completa un ataque básico (yo, cuántos
     // ticks debe mostrar la animación) — la Vista lo usa para saber cuándo
     // y con cuántos "impactos" reproducir la animación de ataque.
-    public event Action<Unidad, int> RealizoAtaque;
+    // El tercer parámetro son los objetivos golpeados — la Vista lo
+    // necesita para saber hacia dónde apuntar el efecto visual (proyectil,
+    // rayo, embestida...). Puede venir null (ataques contra un Edificio,
+    // por ejemplo, no tienen una lista de Unidad).
+    public event Action<Unidad, int, List<Unidad>> RealizoAtaque;
 
     // Igual que RealizoAtaque, pero para la habilidad especial.
-    public event Action<Unidad, int> RealizoHabilidadEspecial;
+    public event Action<Unidad, int, List<Unidad>> RealizoHabilidadEspecial;
 
     // Público a propósito (como NotificarAtaqueRecibido): quien ejecuta el
     // ataque/habilidad (Partida) avisa cuando ya terminó, para que la Vista
     // dispare la animación correspondiente.
-    public void NotificarAtaqueRealizado() => RealizoAtaque?.Invoke(this, TicksAtaqueBasico);
-    public void NotificarHabilidadEspecialRealizada() => RealizoHabilidadEspecial?.Invoke(this, TicksHabilidadEspecial);
+    public void NotificarAtaqueRealizado(List<Unidad> objetivos = null) => RealizoAtaque?.Invoke(this, TicksAtaqueBasico, objetivos);
+    public void NotificarHabilidadEspecialRealizada(List<Unidad> objetivos = null) => RealizoHabilidadEspecial?.Invoke(this, TicksHabilidadEspecial, objetivos);
 
     // Calcula si la unidad esquiva y aplica el daño recibido.
     protected virtual void RecibirDaño(float daño, bool ignorarDefensa = false)
@@ -103,7 +107,7 @@ public class Unidad
         objetivo.NotificarAtaqueRecibido(this);
         objetivo.RecibirDaño(daño);
         AplicarEfectoAlGolpear(objetivo);
-        NotificarAtaqueRealizado();   
+        NotificarAtaqueRealizado(new List<Unidad> { objetivo });
     }
 
     // Ejecuta el ataque básico contra todos los objetivos recibidos.

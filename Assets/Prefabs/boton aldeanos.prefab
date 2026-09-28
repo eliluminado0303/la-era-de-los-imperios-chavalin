@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 7131124072951422730}
   - component: {fileID: 7410819369401560239}
   m_Layer: 5
-  m_Name: Aldeano
+  m_Name: Icono
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -224,8 +224,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Aldeano
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 44b22ca1bdeba3b41b09ef861ad88897, type: 2}
+  m_sharedMaterial: {fileID: 9132187093096698194, guid: 44b22ca1bdeba3b41b09ef861ad88897, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

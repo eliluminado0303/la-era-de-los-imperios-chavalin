@@ -252,9 +252,17 @@ public class ControladorIA
 
     private static int DistanciaChebyshev(int f1, int c1, int f2, int c2)
         => System.Math.Max(System.Math.Abs(f1 - f2), System.Math.Abs(c1 - c2));
-
     private List<string> UnidadesDeCivilizacion(string civilizacion)
     {
-        return FabricaUnidades.ObtenerTiposDisponibles(civilizacion, incluirHeroe: false);
+        string heroe, exclusiva;
+        switch (civilizacion)
+        {
+            case "Sumerios": heroe = "Gilgamesh";    exclusiva = "Caster";    break;
+            case "Nipones":  heroe = "Godzilla";     exclusiva = "Assassin";  break;
+            case "Griegos":  heroe = "Medusa";       exclusiva = "Avenger";   break;
+            default:         heroe = "Jormungandr";  exclusiva = "Berserker"; break; // Vikingos
+        }
+
+        return new List<string> { heroe, exclusiva, "Defender", "Vanguard", "Ranger", "Healer", "NecoArc" };
     }
 }

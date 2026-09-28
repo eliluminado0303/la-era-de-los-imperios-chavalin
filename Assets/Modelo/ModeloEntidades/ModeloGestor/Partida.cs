@@ -43,7 +43,7 @@ public partial class Partida
 
         heroe.HabilidadEspecial(objetivos);
         heroe.RegistrarUsoHabilidad();
-        heroe.NotificarHabilidadEspecialRealizada();
+        heroe.NotificarHabilidadEspecialRealizada(objetivos);
         LimpiarUnidadesMuertas();
         VerificarGanador();
     }

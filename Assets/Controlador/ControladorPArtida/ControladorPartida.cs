@@ -8,8 +8,9 @@ using System.Collections.Generic;
 // siembra los recursos de arranque de cada base, un botín central, y
 // además reparte clusters de recursos por TODO el resto del mapa (para
 // que explorar tenga sentido), y arma los controladores de cada jugador
-// (ControladorMapa, ControladorCombate, ControladorEntrenamiento, y
-// ControladorIA para las 3 IA).
+// (ControladorMapa, ControladorCombate, ControladorEntrenamiento,
+// ControladorEdificiosEspeciales, ControladorDeambulacion, y ControladorIA
+// para las 3 IA).
 //
 // Todo esto ya queda listo al terminar el constructor — no hay fase de
 // colocación manual: la Vista solo necesita crear UNA instancia de esta
@@ -58,6 +59,7 @@ public class ControladorPartida
     public List<ControladorCombate> ControladoresCombate { get; } = new List<ControladorCombate>();
     public List<ControladorEntrenamiento> ControladoresEntrenamiento { get; } = new List<ControladorEntrenamiento>();
     public List<ControladorEdificiosEspeciales> ControladoresEdificiosEspeciales { get; } = new List<ControladorEdificiosEspeciales>();
+    public List<ControladorDeambulacion> ControladoresDeambulacion { get; } = new List<ControladorDeambulacion>();
 
     public ControladorPartida(string nombreJugadorHumano, string civilizacionHumano)
     {
@@ -81,10 +83,12 @@ public class ControladorPartida
         ColocarBasesYRecursos(colocacionEnOrden);
 
         var gestorEntrenamientoHumano = new GestorEntrenamiento();
-        ControladoresMapa.Add(new ControladorMapa(jugadorHumano, Mapa, Partida));
+        var controladorMapaHumano = new ControladorMapa(jugadorHumano, Mapa, Partida);
+        ControladoresMapa.Add(controladorMapaHumano);
         ControladoresCombate.Add(new ControladorCombate(jugadorHumano, Mapa, Partida));
-        ControladoresEntrenamiento.Add(new ControladorEntrenamiento(jugadorHumano, gestorEntrenamientoHumano,Mapa));
+        ControladoresEntrenamiento.Add(new ControladorEntrenamiento(jugadorHumano, gestorEntrenamientoHumano, Mapa));
         ControladoresEdificiosEspeciales.Add(new ControladorEdificiosEspeciales(jugadorHumano, Mapa));
+        ControladoresDeambulacion.Add(new ControladorDeambulacion(jugadorHumano, Mapa, controladorMapaHumano));
 
         for (int i = 0; i < jugadoresIA.Count; i++)
         {
@@ -103,8 +107,9 @@ public class ControladorPartida
 
             ControladoresMapa.Add(controladorMapaIA);
             ControladoresCombate.Add(new ControladorCombate(jugadorIA, Mapa, Partida));
-            ControladoresEntrenamiento.Add(new ControladorEntrenamiento(jugadorIA, gestorEntrenamientoIA,Mapa, controladorIA));
+            ControladoresEntrenamiento.Add(new ControladorEntrenamiento(jugadorIA, gestorEntrenamientoIA, Mapa, controladorIA));
             ControladoresEdificiosEspeciales.Add(new ControladorEdificiosEspeciales(jugadorIA, Mapa));
+            ControladoresDeambulacion.Add(new ControladorDeambulacion(jugadorIA, Mapa, controladorMapaIA));
         }
     }
 
@@ -245,13 +250,20 @@ public class ControladorPartida
         return valor;
     }
 
-    // Llamar una vez por frame con Time.deltaTime (lo necesita
-    // ControladorEdificiosEspeciales para el cooldown de la Torre/Granja).
-    public bool Actualizar(float deltaTime)
+    // Llamar una vez por frame con Time.deltaTime (lo necesitan
+    // ControladorEdificiosEspeciales para el cooldown de la Torre/Granja, y
+    // ControladorDeambulacion para el suyo). "unidadSeleccionadaHumano" es
+    // la unidad que el jugador humano tiene seleccionada ahora mismo en la
+    // Vista (o null): se excluye del deambular para que no se te vaya
+    // caminando justo cuando estás por darle una orden.
+    public bool Actualizar(float deltaTime, Unidad unidadSeleccionadaHumano = null)
     {
         foreach (var controladorMapa in ControladoresMapa) controladorMapa.ActualizarResultados();
         foreach (var controladorEntrenamiento in ControladoresEntrenamiento) controladorEntrenamiento.ActualizarResultados();
         foreach (var controladorEspecial in ControladoresEdificiosEspeciales) controladorEspecial.Actualizar(deltaTime);
+
+        for (int i = 0; i < ControladoresDeambulacion.Count; i++)
+            ControladoresDeambulacion[i].Actualizar(deltaTime, i == 0 ? unidadSeleccionadaHumano : null); // índice 0 = humano
 
         return ControladoresMapa[0].VerificarFinDePartida();
     }

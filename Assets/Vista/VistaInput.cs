@@ -182,6 +182,7 @@ public class VistaInput : MonoBehaviour
         else
         {
             controladorMapaHumano.SolicitarMovimiento(fOrigen, cOrigen, fila, columna);
+            vistaMapa.IniciarMovimientoVisual(unidadOrigen, fOrigen, cOrigen, fila, columna);
             accionValida = true;
         }
 

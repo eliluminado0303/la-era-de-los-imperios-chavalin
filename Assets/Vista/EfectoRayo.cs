@@ -5,11 +5,14 @@ using UnityEngine;
 // Se autodestruye solo después de un tiempo corto.
 public class EfectoRayo : MonoBehaviour
 {
-    public static void Crear(Vector3 origen, Vector3 direccionNormalizada, float longitud, float ancho, Color color, float duracion = 0.4f)
+    // sprite: opcional — si le pasás el rayo/aliento real (por ejemplo el
+    // que ya tenés para Gilgamesh), lo usa; si lo dejás null, sigue
+    // funcionando como antes (un rectángulo de color liso).
+    public static void Crear(Vector3 origen, Vector3 direccionNormalizada, float longitud, float ancho, Color color, float duracion = 0.4f, Sprite sprite = null)
     {
         var go = new GameObject("EfectoRayo");
         var sr = go.AddComponent<SpriteRenderer>();
-        sr.sprite = ObtenerSpriteBlanco();
+        sr.sprite = sprite != null ? sprite : ObtenerSpriteBlanco();
         sr.color = color;
         sr.sortingOrder = 10;
 
