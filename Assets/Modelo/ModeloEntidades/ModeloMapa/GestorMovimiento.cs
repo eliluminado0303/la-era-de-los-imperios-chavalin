@@ -30,12 +30,30 @@ public class GestorMovimiento
 
     private void MoverEnSegundoPlano(Mapa mapa, int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino, string nombreJugador) 
     {
+        
         Task.Delay(1000).Wait();
 
-        Celda celdaOrigen = mapa.ObtenerCelda(filaOrigen, columnaOrigen);
+               Celda celdaOrigen = mapa.ObtenerCelda(filaOrigen, columnaOrigen);
+        Celda celdaDestino = mapa.ObtenerCelda(filaDestino, columnaDestino);
         Unidad unidadAMover = celdaOrigen?.Unidad;
 
+        // Se calcula ANTES de mover, solo para poder explicar un fallo.
+        string motivo = celdaOrigen?.Unidad == null ? "origen vacío (la unidad no está en esa celda)"
+                      : celdaDestino == null ? "destino fuera del mapa"
+                      : celdaDestino.Terreno != TipoTerreno.Tierra ? "destino es agua"
+                      : celdaDestino.Unidad != null ? "destino ocupado por otra unidad"
+                      : celdaDestino.Edificio != null ? "destino ocupado por un edificio"
+                      : "desconocido";
+
         bool movido = mapa.MoverUnidad(filaOrigen, columnaOrigen, filaDestino, columnaDestino);
+
+        gestorArchivos.RegistrarEvento(
+            nombreJugador,
+            "Movimiento",
+            movido ? $"Unidad movida a ({filaDestino},{columnaDestino})"
+                   : $"Movimiento fallido ({filaOrigen},{columnaOrigen}) -> ({filaDestino},{columnaDestino}): {motivo}"
+        );
+    
 
         gestorArchivos.RegistrarEvento(
             nombreJugador,
@@ -48,6 +66,9 @@ public class GestorMovimiento
             Fila = filaDestino,
             Columna = columnaDestino,
             Unidad = movido ? unidadAMover : null
-        });
+            
+        }
+        );
     }
+    
 }

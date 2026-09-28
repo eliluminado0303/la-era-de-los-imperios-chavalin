@@ -178,8 +178,11 @@ public class Mapa
             if (destino.Terreno != TipoTerreno.Tierra) return false;
             if (destino.Unidad != null || destino.Edificio != null) return false;
 
-            destino.Unidad = origen.Unidad;
+            var unidad = origen.Unidad;
+            destino.Unidad = unidad;
             origen.Unidad = null;
+            unidad.Fila = filaDestino;       // <-- nuevo
+            unidad.Columna = columnaDestino; // <-- nuevo
             return true;
         }
     }

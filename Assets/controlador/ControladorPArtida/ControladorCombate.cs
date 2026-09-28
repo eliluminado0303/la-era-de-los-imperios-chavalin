@@ -75,7 +75,10 @@ public class ControladorCombate
         if (!heroe.PuedeUsarHabilidad()) return false; // en recarga: la Vista puede usar esto para deshabilitar el botón
 
         int distanciaLanzamiento = ResolutorArea.Distancia(filaHeroe, columnaHeroe, filaObjetivo, columnaObjetivo);
-        if (distanciaLanzamiento > heroe.AreaHabilidad.RangoLanzamiento) return false;
+          float alcance = heroe.AreaHabilidad.Forma == FormaArea.Linea
+            ? heroe.AreaHabilidad.Tamaño
+            : heroe.AreaHabilidad.RangoLanzamiento;
+        if (distanciaLanzamiento > alcance) return false;
 
         var objetivos = ResolutorArea.ObtenerCeldasEnArea(mapa, heroe.AreaHabilidad, filaHeroe, columnaHeroe, filaObjetivo, columnaObjetivo)
             .Where(celda => celda.Unidad != null && !miJugador.Unidades.Contains(celda.Unidad))
