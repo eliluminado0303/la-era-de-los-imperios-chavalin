@@ -74,6 +74,7 @@ public class Mapa
         // El agua nunca está "libre": no se puede construir ahí ni aparcar
         // unidades. (MoverUnidad lo verifica aparte con EsTierra.)
         if (celda.Terreno != TipoTerreno.Tierra) return false;
+        lock (candado) { if (reservadas.Contains((fila, columna))) return false; }
         return celda.Recurso == null && celda.Edificio == null && celda.Unidad == null;
     }
 
@@ -94,21 +95,111 @@ public class Mapa
             return true;
         }
     }
-        // Coloca (o reubica) un aldeano en una celda. A propósito NO compite
-    // por espacio con otros aldeanos (varios pueden compartir el mismo
-    // recurso, como en un RTS real) ni con Unidad/Edificio — es solo una
-    // posición visual, no bloquea nada.
+    // Cada celda dibuja (y cuenta para la niebla y para los ataques) a UN
+    // solo aldeano, así que dos aldeanos vivos no comparten celda. Un
+    // aldeano sí puede estar encima de un recurso o un edificio (es solo
+    // una posición visual, no bloquea nada), pero no encima de otro aldeano.
+
+    private bool HayOtroAldeanoVivo(int fila, int columna, Aldeano excluir)
+    {
+        Aldeano otro = celdas[fila, columna].Aldeano;
+        return otro != null && otro != excluir && otro.EstaVivo;
+    }
+
+    // Busca la celda de tierra más cercana al centro (por anillos, de
+    // minRadio a maxRadio) donde no haya otro aldeano vivo. Dentro del mismo
+    // anillo prefiere las celdas realmente libres (sin recurso, edificio ni
+    // unidad) y, a igualdad, la más cercana a (filaRef, columnaRef).
+    public bool BuscarCeldaParaAldeano(int filaCentro, int columnaCentro, Aldeano excluir, int minRadio, int maxRadio, int filaRef, int columnaRef, out int fila, out int columna)
+    {
+        fila = columna = 0;
+        for (int radio = minRadio; radio <= maxRadio; radio++)
+        {
+            int mejorPuntaje = int.MaxValue;
+            bool encontrada = false;
+
+            for (int df = -radio; df <= radio; df++)
+            {
+                for (int dc = -radio; dc <= radio; dc++)
+                {
+                    if (System.Math.Max(System.Math.Abs(df), System.Math.Abs(dc)) != radio) continue; // solo el borde del anillo
+
+                    int f = filaCentro + df;
+                    int c = columnaCentro + dc;
+                    if (!EsTierra(f, c) || HayOtroAldeanoVivo(f, c, excluir)) continue;
+
+                    int puntaje = (CeldaLibre(f, c) ? 0 : 1000)
+                                + System.Math.Max(System.Math.Abs(f - filaRef), System.Math.Abs(c - columnaRef));
+                    if (puntaje < mejorPuntaje) { mejorPuntaje = puntaje; fila = f; columna = c; encontrada = true; }
+                }
+            }
+            if (encontrada) return true;
+        }
+        return false;
+    }
+
+    // Coloca (o reubica) un aldeano en una celda. Si ya hay otro aldeano
+    // ahí, lo deja en la celda libre más cercana en vez de apilarlos.
     public void ColocarAldeano(int fila, int columna, Aldeano aldeano)
     {
         if (!EsPosicionValida(fila, columna)) return;
         lock (candado)
         {
-            if (aldeano.Fila >= 0 && aldeano.Columna >= 0 && EsPosicionValida(aldeano.Fila, aldeano.Columna))
+            if (HayOtroAldeanoVivo(fila, columna, aldeano) &&
+                BuscarCeldaParaAldeano(fila, columna, aldeano, 1, 4, fila, columna, out int filaLibre, out int columnaLibre))
+            {
+                fila = filaLibre;
+                columna = columnaLibre;
+            }
+
+            if (aldeano.Fila >= 0 && aldeano.Columna >= 0 && EsPosicionValida(aldeano.Fila, aldeano.Columna) &&
+                celdas[aldeano.Fila, aldeano.Columna].Aldeano == aldeano)
                 celdas[aldeano.Fila, aldeano.Columna].Aldeano = null;
 
             celdas[fila, columna].Aldeano = aldeano;
             aldeano.Fila = fila;
             aldeano.Columna = columna;
+        }
+    }
+
+    // Desplaza a un aldeano vivo hasta otra celda. A diferencia de
+    // ColocarAldeano (que se usa al aparecer), acá se exige que el destino
+    // sea tierra (un aldeano no camina sobre el agua) y que no lo ocupe otro
+    // aldeano: si otro llegó primero, el desplazamiento falla y quien lo
+    // pidió puede elegir otra celda.
+    public bool MoverAldeano(Aldeano aldeano, int filaDestino, int columnaDestino)
+    {
+        if (aldeano == null || !aldeano.EstaVivo) return false;
+        if (!EsPosicionValida(filaDestino, columnaDestino)) return false;
+        lock (candado)
+        {
+            if (celdas[filaDestino, columnaDestino].Terreno != TipoTerreno.Tierra) return false;
+            if (aldeano.Fila < 0 || aldeano.Columna < 0) return false; // todavía no está en el mapa
+            if (HayOtroAldeanoVivo(filaDestino, columnaDestino, aldeano)) return false;
+
+            celdas[filaDestino, columnaDestino].Aldeano = aldeano;
+            if (EsPosicionValida(aldeano.Fila, aldeano.Columna) &&
+                celdas[aldeano.Fila, aldeano.Columna].Aldeano == aldeano &&
+                (aldeano.Fila != filaDestino || aldeano.Columna != columnaDestino))
+                celdas[aldeano.Fila, aldeano.Columna].Aldeano = null;
+
+            aldeano.Fila = filaDestino;
+            aldeano.Columna = columnaDestino;
+            return true;
+        }
+    }
+
+    // Saca al aldeano de su celda (cuando muere). Solo borra la celda si
+    // el que está ahí es ese mismo aldeano.
+    public bool RetirarAldeano(Aldeano aldeano)
+    {
+        if (aldeano == null || !EsPosicionValida(aldeano.Fila, aldeano.Columna)) return false;
+        lock (candado)
+        {
+            Celda celda = celdas[aldeano.Fila, aldeano.Columna];
+            if (celda.Aldeano != aldeano) return false;
+            celda.Aldeano = null;
+            return true;
         }
     }
 
@@ -150,6 +241,20 @@ public class Mapa
             return true;
         }
     }
+    // Saca a ese edificio concreto de su celda (cuando lo destruyen). Solo
+    // borra la celda si el que está ahí es ese mismo edificio.
+    public bool RetirarEdificio(Edificio edificio)
+    {
+        if (edificio == null || !EsPosicionValida(edificio.Fila, edificio.Columna)) return false;
+        lock (candado)
+        {
+            Celda celda = celdas[edificio.Fila, edificio.Columna];
+            if (celda.Edificio != edificio) return false;
+            celda.Edificio = null;
+            return true;
+        }
+    }
+
         public bool ColocarUnidad(int fila, int columna, Unidad unidad)
     {
         if (!EsPosicionValida(fila, columna)) return false;
@@ -162,6 +267,71 @@ public class Mapa
             unidad.Columna = columna;
             return true;
         }
+    }
+
+    // Saca a una unidad de su celda (cuando muere). Solo borra la celda si
+    // el que está ahí es esa misma unidad, para no pisar a otra.
+    public bool RetirarUnidad(Unidad unidad)
+    {
+        if (unidad == null || !EsPosicionValida(unidad.Fila, unidad.Columna)) return false;
+        lock (candado)
+        {
+            Celda celda = celdas[unidad.Fila, unidad.Columna];
+            if (celda.Unidad != unidad) return false;
+            celda.Unidad = null;
+            return true;
+        }
+    }
+
+    // Busca la celda libre más cercana a (filaDesde, columnaDesde) que esté
+    // a distancia <= rango del objetivo. Es donde una unidad se para para
+    // poder atacar (cuerpo a cuerpo: una celda pegada al objetivo; a
+    // distancia: el borde de su alcance).
+    public bool BuscarCeldaLibreEnRango(int filaObjetivo, int columnaObjetivo, int rango, int filaDesde, int columnaDesde, out int fila, out int columna)
+    {
+        rango = System.Math.Max(1, rango);
+        int mejorDistancia = int.MaxValue;
+        fila = columna = 0;
+        bool encontrada = false;
+
+        for (int df = -rango; df <= rango; df++)
+        {
+            for (int dc = -rango; dc <= rango; dc++)
+            {
+                int f = filaObjetivo + df;
+                int c = columnaObjetivo + dc;
+                if (!CeldaLibre(f, c)) continue;
+
+                int distancia = System.Math.Max(System.Math.Abs(f - filaDesde), System.Math.Abs(c - columnaDesde));
+                if (distancia < mejorDistancia)
+                {
+                    mejorDistancia = distancia;
+                    fila = f;
+                    columna = c;
+                    encontrada = true;
+                }
+            }
+        }
+        return encontrada;
+    }
+
+    // Aldeanos vivos dentro del radio (distancia de tablero). Lo usa la IA
+    // para encontrar aldeanos enemigos a los que atacar.
+    public List<Aldeano> AldeanosEnRadio(int filaCentro, int columnaCentro, int radio)
+    {
+        var encontrados = new List<Aldeano>();
+        int filaMin = System.Math.Max(0, filaCentro - radio);
+        int filaMax = System.Math.Min(FILAS - 1, filaCentro + radio);
+        int columnaMin = System.Math.Max(0, columnaCentro - radio);
+        int columnaMax = System.Math.Min(COLUMNAS - 1, columnaCentro + radio);
+
+        for (int fila = filaMin; fila <= filaMax; fila++)
+            for (int columna = columnaMin; columna <= columnaMax; columna++)
+            {
+                Aldeano aldeano = celdas[fila, columna].Aldeano;
+                if (aldeano != null && aldeano.EstaVivo) encontrados.Add(aldeano);
+            }
+        return encontrados;
     }
 
     public bool MoverUnidad(int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino) {
@@ -178,11 +348,12 @@ public class Mapa
             if (destino.Terreno != TipoTerreno.Tierra) return false;
             if (destino.Unidad != null || destino.Edificio != null) return false;
 
-            var unidad = origen.Unidad;
-            destino.Unidad = unidad;
+            destino.Unidad = origen.Unidad;
             origen.Unidad = null;
-            unidad.Fila = filaDestino;       // <-- nuevo
-            unidad.Columna = columnaDestino; // <-- nuevo
+            // Mantiene la posición guardada en la propia unidad al día
+            // (ColocarUnidad ya lo hacía; al mover se quedaba desactualizada).
+            destino.Unidad.Fila = filaDestino;
+            destino.Unidad.Columna = columnaDestino;
             return true;
         }
     }
@@ -319,5 +490,21 @@ public class Mapa
         }
 
         return resultado;
+    }
+    private readonly HashSet<(int, int)> reservadas = new HashSet<(int, int)>();
+
+    public bool ReservarDestino(int fila, int columna)
+    {
+    lock (candado)
+    {
+        if (!CeldaLibre(fila, columna)) return false;
+        reservadas.Add((fila, columna));
+        return true;
+    }
+    }
+
+    public void LiberarReserva(int fila, int columna)
+    {
+    lock (candado) { reservadas.Remove((fila, columna)); }
     }
 }

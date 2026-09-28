@@ -168,9 +168,14 @@ public class ControladorIA
         foreach (var unidad in miJugador.Unidades.ToList())
         {
             if (unidad.Vida <= 0 || unidad.Fila < 0) continue;
+            if (unidad.EnMovimiento) continue; // ya viaja: no darle otra orden encima
 
             var enemigosCercanos = BuscarUnidadesEnemigasCerca(unidad.Fila, unidad.Columna, RADIO_BUSQUEDA_ATAQUE);
-            if (enemigosCercanos.Count == 0) continue;
+         if (enemigosCercanos.Count == 0)
+        {
+            AtacarAldeanoCercano(unidad); // sin unidades enemigas cerca, va por los aldeanos
+            continue;
+        }
 
             if (IntentarUsarHabilidad(unidad, unidad.Fila, unidad.Columna, enemigosCercanos)) continue;
 
@@ -188,7 +193,26 @@ public class ControladorIA
             }
         }
     }
+// Sin unidades enemigas a la vista, busca el aldeano enemigo más cercano:
+// si está en rango lo ataca, y si no, se mueve a una celda desde la que pueda.
+private void AtacarAldeanoCercano(Unidad unidad)
+{
+    Aldeano objetivo = null;
+    int mejor = int.MaxValue;
 
+    foreach (var aldeano in mapa.AldeanosEnRadio(unidad.Fila, unidad.Columna, RADIO_BUSQUEDA_ATAQUE))
+    {
+        if (miJugador.Aldeanos.Contains(aldeano)) continue; // es de los míos
+        int distancia = DistanciaChebyshev(unidad.Fila, unidad.Columna, aldeano.Fila, aldeano.Columna);
+        if (distancia < mejor) { mejor = distancia; objetivo = aldeano; }
+    }
+    if (objetivo == null) return;
+
+    if (mejor <= unidad.Rango)
+        partida.EjecutarAtaqueAAldeano(miJugador, unidad, objetivo);
+    else if (mapa.BuscarCeldaLibreEnRango(objetivo.Fila, objetivo.Columna, unidad.Rango, unidad.Fila, unidad.Columna, out int fila, out int columna))
+        MiControladorMapa.SolicitarMovimiento(unidad.Fila, unidad.Columna, fila, columna);
+}
     // Si "unidad" es un Héroe con la habilidad lista y algún enemigo
     // cercano cae dentro de su alcance, la usa y devuelve true. Devuelve
     // false si no aplica (no es héroe, está en recarga, o nada al
@@ -433,4 +457,5 @@ public class ControladorIA
 
         return new List<string> { heroe, exclusiva, "Defender", "Vanguard", "Ranger", "Healer", "NecoArc" };
     }
+    
 }

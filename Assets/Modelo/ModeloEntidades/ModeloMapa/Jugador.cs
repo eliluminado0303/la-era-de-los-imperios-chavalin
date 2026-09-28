@@ -10,7 +10,8 @@ public class Jugador
 
     // Tope de unidades + aldeanos que podés tener a la vez. Sube 5 por cada
     // Casa que termines de construir (ver ControladorMapa.ActualizarResultados).
-    public int LimitePoblacion { get; set; } = 10;
+    public const int LIMITE_POBLACION_BASE = 10;
+    public int LimitePoblacion { get; set; } = LIMITE_POBLACION_BASE;
     public int PoblacionActual => Unidades.Count + Aldeanos.Count;
 
     private readonly object candado = new object();
@@ -79,6 +80,24 @@ public class Jugador
         }
     }
 
+    // Saca de la lista los edificios que ya llegaron a 0 de vida y los
+    // devuelve (para que quien llama también los saque del Mapa). Si uno
+    // era una Casa, el tope de población baja lo que ella había subido.
+    public List<Edificio> RetirarEdificiosDestruidos()
+    {
+        lock (candado)
+        {
+            var destruidos = Edificios.FindAll(e => e.Vida <= 0);
+            foreach (var edificio in destruidos)
+            {
+                Edificios.Remove(edificio);
+                if (edificio is Casa casa && edificio.EstaConstruido)
+                    LimitePoblacion = System.Math.Max(LIMITE_POBLACION_BASE, LimitePoblacion - casa.PoblacionQueOtorga);
+            }
+            return destruidos;
+        }
+    }
+
     public bool RetirarEdificio(Edificio edificio) 
     {
         if (edificio == null) return false;
@@ -103,6 +122,15 @@ public class Jugador
         lock (candado) 
         {
             Aldeanos.Add(aldeano);
+        }
+    }
+
+    public bool RetirarAldeano(Aldeano aldeano)
+    {
+        if (aldeano == null) return false;
+        lock (candado)
+        {
+            return Aldeanos.Remove(aldeano);
         }
     }
 

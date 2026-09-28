@@ -17,6 +17,7 @@ public class Unidad
     protected float ProbabilidadEsquivar;
     protected float ProbabilidadCritico;
     protected float multiplicadorCritico;
+    public volatile bool EnMovimiento;
     public int Fila { get; set; } = -1;
     public int Columna { get; set; } = -1;
     // En Unidad, junto a los demás campos:
@@ -134,6 +135,19 @@ public class Unidad
         if (EsCritico()) daño *= multiplicadorCritico;
         objetivo.RecibirDaño(daño);
         NotificarAtaqueRealizado();  
+    }
+
+    // Variante de ataque contra un aldeano enemigo (no tiene esquiva ni
+    // efectos de estado, solo recibe el daño y puede morir).
+    public virtual void Atacar(Aldeano objetivo)
+    {
+        if (objetivo == null) throw new ArgumentNullException(nameof(objetivo));
+        if (EstaAturdido) return;
+
+        float daño = Ataque;
+        if (EsCritico()) daño *= multiplicadorCritico;
+        objetivo.RecibirDaño(daño, this);
+        NotificarAtaqueRealizado();
     }
 
     protected virtual void AplicarEfectoAlGolpear(Unidad objetivo) { }

@@ -18,6 +18,7 @@ using UnityEngine;
 public class VistaMapa : MonoBehaviour
 {
     private readonly HashSet<Unidad> unidadesEnTransito = new HashSet<Unidad>();
+    private readonly HashSet<Aldeano> aldeanosEnTransito = new HashSet<Aldeano>();
     [Header("Configuración de la partida")]
     public string nombreJugadorHumano = "Jugador";
     public string CivilizacionHumano { get; private set; }
@@ -94,6 +95,8 @@ public class VistaMapa : MonoBehaviour
     public float duracionCaminar = 0.35f;
     [Tooltip("Cuánto dura la animación de Atacar antes de volver a Idle.")]
     public float duracionAtacar = 0.5f;
+    [Tooltip("Velocidad global de todas las animaciones (1 = normal, 2 = el doble de rápido).")]
+    public float velocidadAnimaciones = 1f;
     [Tooltip("Cuánto dura la animación del Animator asignada a la habilidad especial.")]
     public float duracionHabilidadEspecial = 0.8f;
     [Tooltip("Velocidad del apagado gradual al morir.")]
@@ -141,6 +144,7 @@ public class VistaMapa : MonoBehaviour
         public float alphaMuerte = 1f;
         public bool ataquePendiente;
         public bool habilidadEspecialPendiente;
+        public bool reiniciarAnimacion; // true cuando empieza un ataque/habilidad nuevo: hay que volver al primer frame
     }
     private readonly Dictionary<Unidad, EstadoAnimacionUnidad> estadosDeAnimacion = new Dictionary<Unidad, EstadoAnimacionUnidad>();
     private readonly Dictionary<SpriteRenderer, Animator> animadoresPorContenido = new Dictionary<SpriteRenderer, Animator>();
@@ -173,6 +177,17 @@ public class VistaMapa : MonoBehaviour
     {
         CivilizacionHumano = civilizacionElegida;
         Partida = new ControladorPartida(nombreJugadorHumano, civilizacionElegida);
+        // Cada vez que un aldeano (de cualquier civilización) empieza a
+        // desplazarse, se dibuja un doble que se desliza hasta el destino.
+        foreach (var controladorMapa in Partida.ControladoresMapa)
+            controladorMapa.AldeanoEmpezoAMoverse += IniciarMovimientoVisualAldeano;
+
+        // Cuando una unidad del humano camina hacia un enemigo para atacarlo,
+        // se dibuja deslizándose igual que cuando la mueves a mano; y si es
+        // a distancia, el proyectil sale al ejecutarse el ataque.
+        var combateHumano = Partida.ControladoresCombate[0];
+        combateHumano.UnidadSeAcerca += (unidad, fo, co, fd, cd) => IniciarMovimientoVisual(unidad, fo, co, fd, cd);
+        combateHumano.AtaqueDiferidoRealizado += AlAtaqueDiferido;
         ConstruirCuadricula();
         ConstruirAguaAlrededor();
         AplicarColorDeCamaraDeRespaldo();
@@ -209,7 +224,11 @@ public class VistaMapa : MonoBehaviour
         if (FilaSeleccionada != null)
             unidadSeleccionada = Partida.Mapa.ObtenerCelda(FilaSeleccionada.Value, ColumnaSeleccionada.Value)?.Unidad;
 
-        bool termino = Partida.Actualizar(Time.deltaTime, unidadSeleccionada);
+        // Si el aldeano elegido en el HUD murió, se suelta la selección.
+        if (AldeanoSeleccionado != null && !AldeanoSeleccionado.EstaVivo)
+            AldeanoSeleccionado = null;
+
+        bool termino = Partida.Actualizar(Time.deltaTime, unidadSeleccionada, AldeanoSeleccionado);
         RedibujarTodo(); // simple a propósito: redibujar todo el tablero cada frame es
                           // barato comparado con el costo real del juego. Si en algún
                           // momento se siente lento, se optimiza a "solo redibujar lo
@@ -410,7 +429,14 @@ public class VistaMapa : MonoBehaviour
         // según Mapa.ColocarAldeano, un Aldeano puede compartir la celda con
         // un recurso o un edificio sin bloquear nada, así que necesita
         // poder dibujarse ENCIMA de cualquiera de los dos casos de abajo.
-        if (celda.Aldeano != null)
+        if (celda.Aldeano != null && aldeanosEnTransito.Contains(celda.Aldeano))
+        {
+            // Sigue en su celda de origen en el Modelo mientras dura el
+            // desplazamiento: se oculta y lo representa el doble deslizante.
+            aldeanoSR.enabled = false;
+            DesactivarAnimador(aldeanoSR);
+        }
+        else if (celda.Aldeano != null)
         {
             aldeanoSR.enabled = true;
             DibujarAldeanoAnimado(aldeanoSR, celda.Aldeano, fila, columna);
@@ -617,12 +643,15 @@ public class VistaMapa : MonoBehaviour
         // La vista solo consume la notificación para iniciar su animación.
         if (estado.ataquePendiente)
         {
-            estado.tiempoRestanteAtacar = duracionAtacar;
+            // La duración sale del clip real (antes era un 0.5s fijo que cortaba los combos de varios golpes).
+            estado.tiempoRestanteAtacar = DuracionDe(ObtenerConjuntoDeAnimacion(unidad.GetType().Name)?.atacar, duracionAtacar);
+            estado.reiniciarAnimacion = true;
             estado.ataquePendiente = false;
         }
         if (estado.habilidadEspecialPendiente)
         {
-            estado.tiempoRestanteHabilidadEspecial = duracionHabilidadEspecial;
+            estado.tiempoRestanteHabilidadEspecial = DuracionDe(ObtenerConjuntoDeAnimacion(unidad.GetType().Name)?.habilidadEspecial, duracionHabilidadEspecial);
+            estado.reiniciarAnimacion = true;
             estado.habilidadEspecialPendiente = false;
         }
 
@@ -651,6 +680,18 @@ public class VistaMapa : MonoBehaviour
         {
             contenidoSR.enabled = true;
             ActivarAnimador(contenidoSR, controlador);
+
+            // Un ataque nuevo mientras ya se estaba en "Atacar" no cambia el controller, así que
+            // el Animator seguiría donde iba: se lo devuelve al primer frame.
+            if (estado.reiniciarAnimacion)
+            {
+                estado.reiniciarAnimacion = false;
+                if (animadoresPorContenido.TryGetValue(contenidoSR, out var animadorAReiniciar))
+                {
+                    animadorAReiniciar.Rebind();
+                    animadorAReiniciar.Update(0f);
+                }
+            }
         }
         else
         {
@@ -806,8 +847,9 @@ public class VistaMapa : MonoBehaviour
     // Llamado desde VistaInput cuando se pide un movimiento: oculta la
     // unidad real en su celda de origen (sigue ahí en el Modelo durante 1s)
     // y crea el doble que viaja visualmente hasta el destino.
-    public void IniciarMovimientoVisual(Unidad unidad, int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino, float duracion = 1f)
+    public void IniciarMovimientoVisual(Unidad unidad, int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino, float duracion = -1f)
     {
+        if (duracion <= 0f) duracion = GestorMovimiento.DuracionSegundos(unidad); // mismo tiempo que el Modelo
         unidadesEnTransito.Add(unidad);
 
         Vector3 origen = new Vector3(columnaOrigen * tamañoCelda, -filaOrigen * tamañoCelda, 0);
@@ -818,6 +860,37 @@ public class VistaMapa : MonoBehaviour
 
         UnidadEnTransito.Crear(origen, destino, conjunto?.caminar, conjunto?.sprite, color, duracion);
         StartCoroutine(QuitarDeTransitoLuegoDe(unidad, duracion));
+    }
+
+    // Igual que IniciarMovimientoVisual pero para un Aldeano. Lo dispara
+    // ControladorMapa.AldeanoEmpezoAMoverse, así que funciona tanto para
+    // una orden del jugador como para cuando el aldeano deambula solo.
+    public void IniciarMovimientoVisualAldeano(Aldeano aldeano, int filaOrigen, int columnaOrigen, int filaDestino, int columnaDestino, float duracion)
+    {
+        // duracion = lo que tarda GestorMovimiento en aplicar el desplazamiento
+        aldeanosEnTransito.Add(aldeano);
+
+        Vector3 origen = new Vector3(columnaOrigen * tamañoCelda, -filaOrigen * tamañoCelda, 0);
+        Vector3 destino = new Vector3(columnaDestino * tamañoCelda, -filaDestino * tamañoCelda, 0);
+
+        var conjunto = ObtenerConjuntoDeAnimacion("Aldeano");
+        UnidadEnTransito.Crear(origen, destino, conjunto?.caminar, conjunto?.sprite, ColorDeCivilizacion(aldeano.Civilizacion), duracion + 0.1f, 3); // termina justo cuando el aldeano real reaparece
+        StartCoroutine(QuitarAldeanoDeTransitoLuegoDe(aldeano, duracion));
+    }
+
+    private void AlAtaqueDiferido(Unidad atacante, int filaObjetivo, int columnaObjetivo)
+    {
+        if (atacante == null || atacante.Rango <= 1 || spriteFlecha == null) return;
+        Proyectil.Disparar(PosicionMundoDeUnidad(atacante), new Vector3(columnaObjetivo * tamañoCelda, -filaObjetivo * tamañoCelda, 0), spriteFlecha);
+    }
+
+    private IEnumerator QuitarAldeanoDeTransitoLuegoDe(Aldeano aldeano, float duracion)
+    {
+        // Un poco más que la duración del deslizamiento: el Modelo aplica
+        // el movimiento justo al cumplirse el segundo, y así el aldeano
+        // real no reaparece un frame en la celda vieja.
+        yield return new WaitForSeconds(duracion + 0.1f);
+        aldeanosEnTransito.Remove(aldeano);
     }
 
     private IEnumerator QuitarDeTransitoLuegoDe(Unidad unidad, float duracion)
@@ -916,6 +989,16 @@ public class VistaMapa : MonoBehaviour
             Debug.LogWarning(mensaje, this);
     }
 
+    // Duración real del clip más largo del controller (ajustada por velocidadAnimaciones).
+    private float DuracionDe(RuntimeAnimatorController controlador, float respaldo)
+    {
+        if (controlador == null) return respaldo;
+        float max = 0f;
+        foreach (var clip in controlador.animationClips) max = Mathf.Max(max, clip.length);
+        if (max <= 0f) return respaldo;
+        return max / Mathf.Max(0.01f, velocidadAnimaciones);
+    }
+
     private void ActivarAnimador(SpriteRenderer renderer, RuntimeAnimatorController controlador)
     {
         if (!animadoresPorContenido.TryGetValue(renderer, out var animator))
@@ -926,6 +1009,7 @@ public class VistaMapa : MonoBehaviour
         }
 
         animator.enabled = true;
+        animator.speed = velocidadAnimaciones;
         if (animator.runtimeAnimatorController != controlador)
             animator.runtimeAnimatorController = controlador;
     }

@@ -59,13 +59,29 @@ public partial class Partida
         VerificarGanador();
     }
 
+    public void EjecutarAtaqueAAldeano(Jugador jugadorAtacante, Unidad atacante, Aldeano objetivo)
+    {
+        if (!jugadorAtacante.Unidades.Contains(atacante)) return;
+        if (jugadorAtacante.Aldeanos.Contains(objetivo)) return;
+
+        atacante.Atacar(objetivo);
+        LimpiarUnidadesMuertas();
+        VerificarGanador();
+    }
+
     public void ActualizarCombate(float deltaTime, List<Unidad> todasLasUnidades)
     {
         foreach (var unidad in todasLasUnidades)
         {
+            if (unidad.Vida <= 0) continue; // ya muerta: no seguir aplicándole efectos
             unidad.ActualizarEfectos(deltaTime);
             if (unidad is Defender defensor) defensor.ActualizarEscudo(deltaTime);
         }
+
+        // Una unidad puede morir por un efecto (Sangrado, Veneno, Quemadura)
+        // sin que nadie haya hecho una acción de combate: hay que sacarla de
+        // las listas y de su celda igual que en los ataques normales.
+        LimpiarUnidadesMuertas();
     }
 
     // Saca de las listas de cada jugador (humano y cada oponente) las
@@ -75,11 +91,53 @@ public partial class Partida
     // propia lista por separado.
     private void LimpiarUnidadesMuertas()
     {
-        JugadorHumano?.Unidades.RemoveAll(u => u.Vida <= 0);
+        LimpiarUnidadesMuertasDe(JugadorHumano);
+        LimpiarAldeanosMuertos(JugadorHumano);
+        LimpiarEdificiosDestruidos(JugadorHumano);
         if (Oponentes != null)
         {
             foreach (var oponente in Oponentes)
-                oponente.Unidades.RemoveAll(u => u.Vida <= 0);
+            {
+                LimpiarUnidadesMuertasDe(oponente);
+                LimpiarAldeanosMuertos(oponente);
+                LimpiarEdificiosDestruidos(oponente);
+            }
+        }
+    }
+
+    // Las unidades muertas salen de la lista del jugador Y de su celda en
+    // el Mapa: antes solo salían de la lista, y la celda seguía con
+    // Celda.Unidad apuntando a una unidad muerta (bloqueaba el paso, y
+    // seguía siendo "objetivo" de ataques).
+    private void LimpiarUnidadesMuertasDe(Jugador jugador)
+    {
+        if (jugador == null) return;
+        foreach (var unidad in jugador.Unidades.FindAll(u => u.Vida <= 0))
+            Mapa?.RetirarUnidad(unidad);
+        jugador.Unidades.RemoveAll(u => u.Vida <= 0);
+    }
+
+    // Los edificios destruidos (Vida 0) salen de la lista del jugador Y de
+    // su celda. Antes se quedaban para siempre en ambos lados: la celda
+    // seguía bloqueada, y como VerificarGanador pide "0 edificios" para
+    // eliminar a un jugador, la partida nunca podía terminar.
+    private void LimpiarEdificiosDestruidos(Jugador jugador)
+    {
+        if (jugador == null) return;
+        foreach (var edificio in jugador.RetirarEdificiosDestruidos())
+            Mapa?.RetirarEdificio(edificio);
+    }
+
+    // Los aldeanos muertos salen de la lista del jugador Y de su celda en
+    // el Mapa (así no queda un aldeano fantasma dibujado ni contado en la
+    // población, y el HUD/IA dejan de verlo).
+    private void LimpiarAldeanosMuertos(Jugador jugador)
+    {
+        if (jugador == null) return;
+        foreach (var aldeano in jugador.Aldeanos.FindAll(a => !a.EstaVivo))
+        {
+            Mapa?.RetirarAldeano(aldeano);
+            jugador.RetirarAldeano(aldeano);
         }
     }
 }

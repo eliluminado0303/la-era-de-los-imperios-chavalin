@@ -61,6 +61,11 @@ public class ControladorPartida
     public List<ControladorEdificiosEspeciales> ControladoresEdificiosEspeciales { get; } = new List<ControladorEdificiosEspeciales>();
     public List<ControladorDeambulacion> ControladoresDeambulacion { get; } = new List<ControladorDeambulacion>();
 
+    // Solo las 3 IA (el humano no tiene). Se guardan para llamar a
+    // ControladorIA.ActualizarCombate() cada frame: esa búsqueda activa de
+    // enemigos (unidades y aldeanos) existía pero nadie la invocaba.
+    public List<ControladorIA> ControladoresIA { get; } = new List<ControladorIA>();
+
     public ControladorPartida(string nombreJugadorHumano, string civilizacionHumano)
     {
         Mapa = new Mapa();
@@ -85,10 +90,13 @@ public class ControladorPartida
         var gestorEntrenamientoHumano = new GestorEntrenamiento();
         var controladorMapaHumano = new ControladorMapa(jugadorHumano, Mapa, Partida);
         ControladoresMapa.Add(controladorMapaHumano);
-        ControladoresCombate.Add(new ControladorCombate(jugadorHumano, Mapa, Partida));
+        var controladorCombateHumano = new ControladorCombate(jugadorHumano, Mapa, Partida, controladorMapaHumano); // con ControladorMapa: para acercarse al objetivo
+        ControladoresCombate.Add(controladorCombateHumano);
         ControladoresEntrenamiento.Add(new ControladorEntrenamiento(jugadorHumano, gestorEntrenamientoHumano, Mapa));
         ControladoresEdificiosEspeciales.Add(new ControladorEdificiosEspeciales(jugadorHumano, Mapa));
-        ControladoresDeambulacion.Add(new ControladorDeambulacion(jugadorHumano, Mapa, controladorMapaHumano));
+        var deambulacionHumano = new ControladorDeambulacion(jugadorHumano, Mapa, controladorMapaHumano);
+        deambulacionHumano.UnidadOcupada = controladorCombateHumano.TienePersecucion; // una unidad que va a atacar no debe deambular
+        ControladoresDeambulacion.Add(deambulacionHumano);
 
         for (int i = 0; i < jugadoresIA.Count; i++)
         {
@@ -105,6 +113,7 @@ public class ControladorPartida
             var controladorMapaIA = new ControladorMapa(jugadorIA, Mapa, Partida, controladorIA);
             controladorIA.MiControladorMapa = controladorMapaIA; // recién ahora existe: se lo damos a la IA para que pueda recolectar/construir
 
+            ControladoresIA.Add(controladorIA);
             ControladoresMapa.Add(controladorMapaIA);
             ControladoresCombate.Add(new ControladorCombate(jugadorIA, Mapa, Partida));
             ControladoresEntrenamiento.Add(new ControladorEntrenamiento(jugadorIA, gestorEntrenamientoIA, Mapa, controladorIA));
@@ -256,14 +265,24 @@ public class ControladorPartida
     // la unidad que el jugador humano tiene seleccionada ahora mismo en la
     // Vista (o null): se excluye del deambular para que no se te vaya
     // caminando justo cuando estás por darle una orden.
-    public bool Actualizar(float deltaTime, Unidad unidadSeleccionadaHumano = null)
+    public bool Actualizar(float deltaTime, Unidad unidadSeleccionadaHumano = null, Aldeano aldeanoSeleccionadoHumano = null)
     {
         foreach (var controladorMapa in ControladoresMapa) controladorMapa.ActualizarResultados();
         foreach (var controladorEntrenamiento in ControladoresEntrenamiento) controladorEntrenamiento.ActualizarResultados();
         foreach (var controladorEspecial in ControladoresEdificiosEspeciales) controladorEspecial.Actualizar(deltaTime);
+        foreach (var controladorCombate in ControladoresCombate) controladorCombate.Actualizar(deltaTime);
+
+        // Hace correr los efectos de estado (Sangrado, Veneno, Quemadura,
+        // Aturdimiento, Ralentizado, buffs...) y la recarga del escudo del
+        // Defender. Sin esta llamada nadie llamaba a Unidad.ActualizarEfectos
+        // y ningún efecto hacía daño ni expiraba.
+        var todasLasUnidades = new List<Unidad>(Partida.JugadorHumano.Unidades);
+        foreach (var oponente in Partida.Oponentes) todasLasUnidades.AddRange(oponente.Unidades);
+        Partida.ActualizarCombate(deltaTime, todasLasUnidades);
+        foreach (var controladorIA in ControladoresIA) controladorIA.ActualizarCombate(); // tiene su propio throttle de 1.5s
 
         for (int i = 0; i < ControladoresDeambulacion.Count; i++)
-            ControladoresDeambulacion[i].Actualizar(deltaTime, i == 0 ? unidadSeleccionadaHumano : null); // índice 0 = humano
+            ControladoresDeambulacion[i].Actualizar(deltaTime, i == 0 ? unidadSeleccionadaHumano : null, i == 0 ? aldeanoSeleccionadoHumano : null); // índice 0 = humano
 
         return ControladoresMapa[0].VerificarFinDePartida();
     }

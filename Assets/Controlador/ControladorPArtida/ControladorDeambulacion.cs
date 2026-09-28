@@ -1,12 +1,13 @@
 using System.Collections.Generic;
 using System.Linq;
 
-// Hace que las unidades "libres" (sin nada mejor que hacer) caminen solas
+// Hace que las unidades y los aldeanos "libres" (sin nada mejor que hacer) caminen solos
 // cerca de donde están, en vez de quedarse paradas para siempre — aplica
 // tanto al jugador humano como a cada IA (una instancia por jugador, igual
 // que ControladorEdificiosEspeciales). Es deambular, no patrullar: no sigue
 // una ruta fija, cada tanto elige un destino al azar cerca de su posición
-// actual.
+// actual. Un aldeano solo deambula si no está recolectando; una unidad
+// militar, si no tiene un enemigo cerca.
 //
 // Reutiliza el MISMO camino que un movimiento pedido por el jugador
 // (ControladorMapa.SolicitarMovimiento -> GestorMovimiento), así que de
@@ -30,6 +31,11 @@ public class ControladorDeambulacion
     // ni se les dispare un movimiento nuevo antes de que termine el anterior
     // (GestorMovimiento tarda ~1s en aplicar cada movimiento).
     private readonly Dictionary<Unidad, float> tiempoHastaProximoDeambular = new Dictionary<Unidad, float>();
+    private readonly Dictionary<Aldeano, float> tiempoHastaProximoDeambularAldeano = new Dictionary<Aldeano, float>();
+
+    // Opcional: si devuelve true para una unidad, no se la hace deambular
+    // (por ejemplo, porque va caminando hacia un enemigo para atacarlo).
+    public System.Func<Unidad, bool> UnidadOcupada { get; set; }
 
     public ControladorDeambulacion(Jugador miJugador, Mapa mapa, ControladorMapa controladorMapa)
     {
@@ -42,11 +48,15 @@ public class ControladorDeambulacion
     // mismo en la Vista (si la hay) — no tiene sentido que se te vaya
     // caminando justo cuando estás por darle una orden. Las IA siempre
     // pasan null acá (no tienen concepto de "seleccionada").
-    public void Actualizar(float deltaTime, Unidad unidadExcluida = null)
+    // "aldeanoExcluido": igual, pero para el aldeano elegido en la lista del HUD.
+    public void Actualizar(float deltaTime, Unidad unidadExcluida = null, Aldeano aldeanoExcluido = null)
     {
+        DeambularAldeanos(deltaTime, aldeanoExcluido);
+
         foreach (var unidad in miJugador.Unidades.ToList())
         {
             if (unidad.Vida <= 0 || unidad == unidadExcluida) continue;
+            if (UnidadOcupada != null && UnidadOcupada(unidad)) continue;
 
             if (!tiempoHastaProximoDeambular.TryGetValue(unidad, out float restante))
                 restante = SiguienteIntervalo();
@@ -61,6 +71,38 @@ public class ControladorDeambulacion
 
             if (ElegirDestinoLibre(filaActual, columnaActual, out int filaDestino, out int columnaDestino))
                 controladorMapa.SolicitarMovimiento(filaActual, columnaActual, filaDestino, columnaDestino);
+        }
+    }
+
+    // Los aldeanos que no están recolectando caminan cerca de donde están.
+    // A diferencia de las unidades, el Aldeano SÍ guarda su propia
+    // Fila/Columna (Mapa.ColocarAldeano/MoverAldeano las mantienen), así
+    // que no hace falta buscarlo en la cuadrícula.
+    private void DeambularAldeanos(float deltaTime, Aldeano aldeanoExcluido)
+    {
+        foreach (var aldeano in miJugador.Aldeanos.ToList())
+        {
+            if (!aldeano.EstaVivo || aldeano.Ocupado || aldeano == aldeanoExcluido) continue;
+            if (aldeano.Fila < 0 || aldeano.Columna < 0) continue; // todavía sin colocar
+
+            if (!tiempoHastaProximoDeambularAldeano.TryGetValue(aldeano, out float restante))
+                restante = SiguienteIntervalo();
+
+            restante -= deltaTime;
+            if (restante > 0) { tiempoHastaProximoDeambularAldeano[aldeano] = restante; continue; }
+
+            tiempoHastaProximoDeambularAldeano[aldeano] = SiguienteIntervalo();
+
+            if (ElegirDestinoLibre(aldeano.Fila, aldeano.Columna, out int filaDestino, out int columnaDestino))
+                controladorMapa.SolicitarMovimientoAldeano(aldeano, filaDestino, columnaDestino);
+        }
+
+        // Limpia a los que ya no existen para que el diccionario no crezca.
+        if (tiempoHastaProximoDeambularAldeano.Count > miJugador.Aldeanos.Count + 8)
+        {
+            var vivos = new HashSet<Aldeano>(miJugador.Aldeanos);
+            foreach (var muerto in tiempoHastaProximoDeambularAldeano.Keys.Where(a => !vivos.Contains(a)).ToList())
+                tiempoHastaProximoDeambularAldeano.Remove(muerto);
         }
     }
 

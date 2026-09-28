@@ -119,9 +119,16 @@ public class VistaInput : MonoBehaviour
                 Debug.Log(enviado ? $"{vistaMapa.AldeanoSeleccionado.Nombre} va a recolectar." : "No se pudo enviar al aldeano (¿ya está ocupado?).");
                 if (enviado) vistaMapa.AldeanoSeleccionado = null;
             }
+            else if (vistaMapa.Partida.Mapa.CeldaLibre(fila, columna) && vistaMapa.EstaExplorada(fila, columna))
+            {
+                // Celda vacía de tierra: el aldeano simplemente se desplaza hasta ahí.
+                bool movido = controladorMapaHumano.SolicitarMovimientoAldeano(vistaMapa.AldeanoSeleccionado, fila, columna);
+                Debug.Log(movido ? $"{vistaMapa.AldeanoSeleccionado.Nombre} se desplaza a ({fila},{columna})." : "No se pudo mover al aldeano.");
+                if (movido) vistaMapa.AldeanoSeleccionado = null;
+            }
             else
             {
-                Debug.Log("Esa celda no tiene un recurso. Elige un árbol, una mina o un rebaño.");
+                Debug.Log("Elige un árbol, una mina o un rebaño para recolectar, o una celda libre para moverlo.");
             }
             return;
         }
@@ -166,13 +173,19 @@ public class VistaInput : MonoBehaviour
                 Debug.Log("No se pudo curar (¿fuera de rango del Healer?).");
             }
         }
-        else if (celda?.Unidad != null || celda?.Edificio != null)
+        else if (celda?.Unidad != null || celda?.Edificio != null || (celda?.Aldeano != null && !jugadorHumano.Aldeanos.Contains(celda.Aldeano)))
         {
-            accionValida = controladorCombateHumano.SolicitarAtaque(fOrigen, cOrigen, fila, columna);
+            // Si el objetivo está fuera de alcance, la unidad camina hacia él y
+            // ataca al llegar (ver ControladorCombate.SolicitarAtaqueOAcercarse).
+            var resultadoAtaque = controladorCombateHumano.SolicitarAtaqueOAcercarse(fOrigen, cOrigen, fila, columna);
+            accionValida = resultadoAtaque != ResultadoOrdenAtaque.Invalida;
+            if (resultadoAtaque == ResultadoOrdenAtaque.Acercandose) Debug.Log("La unidad se acerca al objetivo para atacar.");
 
             // Si quien atacó es un Ranger (Rango > 1, cualquier unidad a
-            // distancia en general), dispara la flecha visual.
-            if (accionValida && unidadOrigen != null && unidadOrigen.Rango > 1)
+            // distancia en general), dispara la flecha visual. (Cuando la
+            // unidad todavía se está acercando, la flecha sale después, al
+            // ejecutarse el ataque: ver VistaMapa.AlAtaqueDiferido.)
+            if (resultadoAtaque == ResultadoOrdenAtaque.Atacando && unidadOrigen != null && unidadOrigen.Rango > 1)
             {
                 Vector3 posicionOrigen = new Vector3(cOrigen * vistaMapa.tamañoCelda, -fOrigen * vistaMapa.tamañoCelda, 0);
                 Vector3 posicionDestino = new Vector3(columna * vistaMapa.tamañoCelda, -fila * vistaMapa.tamañoCelda, 0);
@@ -181,9 +194,10 @@ public class VistaInput : MonoBehaviour
         }
         else
         {
-            controladorMapaHumano.SolicitarMovimiento(fOrigen, cOrigen, fila, columna);
-            vistaMapa.IniciarMovimientoVisual(unidadOrigen, fOrigen, cOrigen, fila, columna);
-            accionValida = true;
+            controladorCombateHumano.CancelarPersecucion(unidadOrigen); // una orden de mover anula un acercamiento en curso
+            accionValida = controladorMapaHumano.SolicitarMovimiento(fOrigen, cOrigen, fila, columna);
+            // Solo se dibuja el "doble" deslizante si la orden fue aceptada.
+            if (accionValida) vistaMapa.IniciarMovimientoVisual(unidadOrigen, fOrigen, cOrigen, fila, columna);
         }
 
         // SIN ESTO, FilaSeleccionada/ColumnaSeleccionada se quedan apuntando

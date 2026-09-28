@@ -7,12 +7,12 @@ using System.Collections;
 // existe, para que se vea consistente con el resto de sus animaciones.
 public class UnidadEnTransito : MonoBehaviour
 {
-    public static void Crear(Vector3 origen, Vector3 destino, RuntimeAnimatorController animatorCaminar, Sprite spriteRespaldo, Color color, float duracion)
+    public static void Crear(Vector3 origen, Vector3 destino, RuntimeAnimatorController animatorCaminar, Sprite spriteRespaldo, Color color, float duracion, int ordenDibujo = 4)
     {
         var go = new GameObject("UnidadEnTransito");
         var sr = go.AddComponent<SpriteRenderer>();
         sr.color = color;
-        sr.sortingOrder = 4; // por encima del contenido normal, igual que una unidad real
+        sr.sortingOrder = ordenDibujo; // 4 = como una unidad real; los aldeanos pasan 3 (van por debajo de la niebla, que usa 4)
         go.transform.position = origen;
 
         if (animatorCaminar != null)

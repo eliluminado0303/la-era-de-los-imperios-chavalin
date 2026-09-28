@@ -271,9 +271,32 @@ public class VistaHUD : MonoBehaviour
     {
         if (contenedorAldeanos == null || prefabBotonAldeano == null) return;
 
-        while (botonesAldeanos.Count < jugadorHumano.Aldeanos.Count)
+        // Los aldeanos pueden morir, así que el conteo puede bajar: si la
+        // lista de botones ya no coincide con los aldeanos vivos, se
+        // reconstruye entera (mismo criterio que la lista de unidades).
+        var aldeanosVivos = jugadorHumano.Aldeanos.Where(a => a.EstaVivo).ToList();
+        bool coincide = botonesAldeanos.Count == aldeanosVivos.Count;
+        for (int i = 0; coincide && i < aldeanosVivos.Count; i++)
+            if (botonesAldeanos[i].aldeano != aldeanosVivos[i]) coincide = false;
+        if (!coincide) ReconstruirListaDeAldeanos(aldeanosVivos);
+
+        for (int i = 0; i < botonesAldeanos.Count; i++)
         {
-            var aldeano = jugadorHumano.Aldeanos[botonesAldeanos.Count];
+            var (aldeano, _, texto) = botonesAldeanos[i];
+            if (texto == null) continue;
+            bool esElSeleccionado = vistaMapa.AldeanoSeleccionado == aldeano;
+            string estado = aldeano.Ocupado ? "Recolectando..." : "Libre";
+            texto.text = $"{(esElSeleccionado ? "➤ " : "")}{aldeano.Nombre} {i + 1} — {estado} — Vida {aldeano.Vida}/{aldeano.VidaMaxima}";
+        }
+    }
+
+    private void ReconstruirListaDeAldeanos(List<Aldeano> aldeanosVivos)
+    {
+        foreach (var (_, boton, _) in botonesAldeanos) Destroy(boton);
+        botonesAldeanos.Clear();
+
+        foreach (var aldeano in aldeanosVivos)
+        {
             var botonGO = Instantiate(prefabBotonAldeano, contenedorAldeanos);
             var texto = botonGO.GetComponentInChildren<TextMeshProUGUI>();
             var boton = botonGO.GetComponentInChildren<Button>();
@@ -283,17 +306,9 @@ public class VistaHUD : MonoBehaviour
                 botonesAldeanos.Add((aldeano, botonGO, texto));
                 continue;
             }
-            boton.onClick.AddListener(() => SeleccionarAldeano(aldeano));
+            var aldeanoDelBoton = aldeano; // copia local para el closure
+            boton.onClick.AddListener(() => SeleccionarAldeano(aldeanoDelBoton));
             botonesAldeanos.Add((aldeano, botonGO, texto));
-        }
-
-        for (int i = 0; i < botonesAldeanos.Count; i++)
-        {
-            var (aldeano, _, texto) = botonesAldeanos[i];
-            if (texto == null) continue;
-            bool esElSeleccionado = vistaMapa.AldeanoSeleccionado == aldeano;
-            string estado = aldeano.Ocupado ? "Recolectando..." : "Libre";
-            texto.text = $"{(esElSeleccionado ? "➤ " : "")}{aldeano.Nombre} {i + 1} — {estado}";
         }
     }
 

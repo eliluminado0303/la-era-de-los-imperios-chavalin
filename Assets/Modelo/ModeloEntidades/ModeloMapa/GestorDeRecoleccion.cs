@@ -27,6 +27,11 @@ public class GestorRecoleccion {
             return false;
         }
 
+        // Un aldeano muerto no puede recibir órdenes.
+        if (!aldeano.EstaVivo) {
+            return false;
+        }
+
         if (tareasEnCurso.TryRemove(aldeano, out var anterior)) {
             anterior.Cancel();
         }
@@ -49,14 +54,23 @@ public class GestorRecoleccion {
        // solo durante un viaje — así el HUD muestra "Recolectando..." de
        // forma consistente mientras dure.
        private void RecolectarEnSegundoPlano(Aldeano aldeano, Recurso recurso, Jugador jugador, CancellationToken token) {
-        while (!token.IsCancellationRequested && !recurso.EstaAgotado()) {
+        while (!token.IsCancellationRequested && !recurso.EstaAgotado() && aldeano.EstaVivo) {
             try {
                 Task.Delay(2000, token).Wait();
             } catch (AggregateException) {
                 return; // se canceló: le dieron una orden nueva antes de que terminara este ciclo
             }
 
+            // Cancelado por una orden nueva: esa orden ya registró su propio
+            // token en tareasEnCurso, así que acá NO se toca el diccionario.
             if (token.IsCancellationRequested) return;
+
+            // Si lo mataron durante la espera, no entrega ese ciclo: sale y
+            // limpia su registro (Ocupado ya quedó en false al morir).
+            if (!aldeano.EstaVivo) {
+                tareasEnCurso.TryRemove(aldeano, out _);
+                return;
+            }
 
             int cantidadObtenida;
             lock (candadoRecursos) {
