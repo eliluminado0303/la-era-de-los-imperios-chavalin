@@ -563122,3 +563122,1171 @@ Turno: IA Sumerios
 Accion: Recoleccion
 Resultado: Aldeano recolecto 5 de Oro
 
+Turno: IA Griegos
+Accion: Movimiento
+Resultado: Aldeano movido a (10,51)
+
+Turno: IA Vikingos
+Accion: Movimiento
+Resultado: Aldeano movido a (49,8)
+
+Turno: IA Sumerios
+Accion: Movimiento
+Resultado: Aldeano movido a (49,49)
+
+Turno: IA Griegos
+Accion: Movimiento
+Resultado: Aldeano movido a (10,51)
+
+Turno: IA Vikingos
+Accion: Movimiento
+Resultado: Aldeano movido a (49,8)
+
+Turno: IA Sumerios
+Accion: Movimiento
+Resultado: Aldeano movido a (49,49)
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Movimiento
+Resultado: Aldeano movido a (10,51)
+
+Turno: IA Vikingos
+Accion: Movimiento
+Resultado: Aldeano movido a (49,8)
+
+Turno: IA Sumerios
+Accion: Movimiento
+Resultado: Aldeano movido a (49,49)
+
+Turno: IA Griegos
+Accion: Movimiento
+Resultado: Aldeano movido a (10,51)
+
+Turno: IA Vikingos
+Accion: Movimiento
+Resultado: Aldeano movido a (49,8)
+
+Turno: IA Sumerios
+Accion: Movimiento
+Resultado: Aldeano movido a (49,49)
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Griegos
+Accion: Movimiento
+Resultado: Movimiento de Aldeano fallido
+
+Turno: IA Vikingos
+Accion: Movimiento
+Resultado: Aldeano movido a (49,10)
+
+Turno: IA Sumerios
+Accion: Movimiento
+Resultado: Aldeano movido a (49,51)
+
+Turno: IA Griegos
+Accion: Movimiento
+Resultado: Aldeano movido a (10,51)
+
+Turno: IA Vikingos
+Accion: Movimiento
+Resultado: Aldeano movido a (49,8)
+
+Turno: IA Sumerios
+Accion: Movimiento
+Resultado: Aldeano movido a (49,49)
+
+Turno: IA Griegos
+Accion: Movimiento
+Resultado: Movimiento de Aldeano fallido
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Griegos
+Accion: Movimiento
+Resultado: Aldeano movido a (11,51)
+
+Turno: IA Sumerios
+Accion: Movimiento
+Resultado: Aldeano movido a (49,51)
+
+Turno: IA Vikingos
+Accion: Movimiento
+Resultado: Aldeano movido a (49,10)
+
+Turno: IA Griegos
+Accion: Movimiento
+Resultado: Aldeano movido a (11,49)
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano entregó 5 de Comida.
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 0 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 0 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 5 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 0 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 0 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 0 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 0 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 0 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 0 de Comida
+
+Turno: IA Sumerios
+Accion: Recoleccion
+Resultado: Aldeano recolecto 0 de Comida
+
+Turno: IA Vikingos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 0 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 0 de Comida
+
+Turno: IA Griegos
+Accion: Recoleccion
+Resultado: Aldeano recolecto 0 de Comida
+
